@@ -1,0 +1,340 @@
+\documentclass[12pt, letterpaper]{article}
+
+%%BIBLIOGRAPHY- This uses biber/biblatex to generate bibliographies according to the 
+%%Unified Style Sheet for Linguistics
+\usepackage[main=american, german]{babel}% Recommended
+\usepackage{csquotes}% Recommended
+\usepackage[backend=biber,
+		bibstyle=biblatex-sp-unified,
+		citestyle=sp-authoryear-comp,
+		maxcitenames=3,
+		maxbibnames=99,
+		natbib,
+		url=false]{biblatex}
+\addbibresource{QP1.bib}
+\setcounter{biburlnumpenalty}{100}  % allow breaks at numbers
+%\setcounter{biburlucpenalty}{100}   % allow breaks at uppercase letters
+%\setcounter{biburllcpenalty}{100}   % allow breaks at lowercase letters
+
+%%TYPOLOG
+%\usepackage[compact]{titlesec}
+%\titleformat{\section}[runin]{\normalfont\bfseries}{\thesection.}{.5em}{}[.]
+%\titleformat{\subsection}[runin]{\normalfont\scshape}{\thesubsection}{.5em}{}[.]
+\usepackage[hmargin=1in,vmargin=1in]{geometry}  %Margins          
+\usepackage{graphicx}	%Inserting graphics, pictures, images 		
+\usepackage{stackengine} %Package to allow text above or below other text, Also for HG 
+\usepackage{fontspec} %Selection of fonts must be ran in XeLaTeX
+\usepackage{amssymb} %Math symbols
+\usepackage{amsmath}
+\usepackage{setspace} %Linespacing
+\usepackage{multicol} %Multicolumn text
+\usepackage{enumitem} %Allows for continuous numbering of lists over examples, etc.
+\usepackage{multirow} %Useful for combining cells in tablesbrew 
+\usepackage{hanging}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[L]{\textit{QP Advising}} 
+\fancyhead[R]{\textit{\today}} 
+\fancyfoot[L,R]{} 
+\fancyfoot[C]{\thepage} 
+\renewcommand{\headrulewidth}{0.4pt}
+%\usepackage{fourier-orns} %More useful symbols like bombs and jolly-roger, mostly for OT
+\usepackage[colorlinks,allcolors={black},urlcolor={blue}]{hyperref} %allows for hyperlinks and pdf bookmarks
+%\usepackage{url} %allows for urls
+%\def\UrlBreaks{\do\/\do-} %allows for urls to be broken up
+\usepackage[normalem]{ulem} %strike out text. Handy for syntax
+
+%%FONTS
+\setmainfont{Linux Libertine O}
+\setsansfont{Linux Biolinum O}
+
+%%PACKAGES FOR LINGUISTICS
+%\usepackage{OTtablx} %Generating tableaux without using TIPA
+\usepackage[noipa]{OTtablx} %Generating tableaux without using TIPA
+\usepackage{linguex} %Linguistic examples
+\usepackage{tikz} %Drawing Hasse diagrams
+%\usepackage{pst-asr} %Drawing autosegmental features
+\usepackage{pstricks} % required for pst-asr, OTtablx, pst-jtree.
+\usepackage{pst-jtree} 	%Syntax tree draawing software
+%\usepackage{lingmacros} %Various linguistic macros. Does not work with linguex.
+%\usepackage{covington} %Another linguistic examples package.
+%\usepackage{gb43} %Another linguistic examples package. Works with linguex very nicely.
+\newcommand{\rcommentg}[1]{\hfill\raisebox{1.9\baselineskip}[0pt][0pt]{#1}} %This allows for hfill when doing glosses
+
+%%TITLE INFORMATION
+\title{Assignment 5}
+\author{Mykel Loren Brinkerhoff}
+\date{\today}
+
+
+\begin{document}
+	
+%%If using linguex, need the following commands to get correct LSA style spacing
+%% these have to be after  \begin{document}
+	\setlength{\Extopsep}{6pt}
+	\setlength{\Exlabelsep}{9pt}		%effect of 0.4in indent from left text edge
+%%
+	
+%% Line spacing setting. Comment out the line spacing you do not need. Comment out all if you want single spacing.
+%	\doublespacing
+%	\onehalfspacing
+	
+\begin{center}
+	{\Large \textbf{Advising Meeting }}\\
+	\vspace{6pt}
+	Mykel Loren Brinkerhoff
+\end{center}
+%\maketitle
+%\maketitleinst
+\thispagestyle{fancy}
+
+%------------------------------------
+\section{Outline}
+%------------------------------------
+
+\begin{itemize}
+	\item Discussing NegShift
+\end{itemize}
+
+%------------------------------------
+\section{NegShift}
+%------------------------------------
+
+\ex. \citet{engelsScandinavianNegativeIndefinites2012} provides a very nice table outlining the types of NegS that is allowed in the different Scandinavian languages. I will first present this table and will have examples of the different types of shifting in subsections following the table.
+
+\ex. For each of the subsections they are further subdivided into whether or not the verb remains in situ or has moved.
+
+\ex. In the following table  ✔︎ indicates that NegS occurs, * indicates that NegS cannot occur, ? means that there was idiosyncratic  variation 
+
+\begin{table}[h!]
+	\centering
+	\caption{Distribution of NegS across the different Scandinavian languages. WJ = West Jutlandic, Ic = Icelandic, Fa = Faroese, DaL = Danish Linguists, SwL = Swedish Linguists, Scan1 = literary/formal Mainland Scandinavian varieties, Scan2 = colloquial Mainland Scandinavian varieties and Norwegian}
+\begin{tabular}{llccccccccc}
+	\hline 
+	NegS across &  & WJ1 & WJ2 & Ic & Fa & DaL1 & DaL2 & SwL & Scan1 & Scan2 \\ 
+	\hline 
+	String-vacuous &  & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ \\ 
+	Verb &  & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & * \\ 
+	IO & verb in situ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & * \\ 
+	& verb moved & * & * & * & * & * & * & * & * & * \\ 
+	Preposition & verb in situ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ? & ? & * & * & * \\ 
+	& verb moved & ✔︎ & ✔︎ & ? & * & * & * & * & * & * \\ 
+	Infinitive & verb in situ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & * & ? & * & * \\ 
+	& verb moved & ✔︎ & * & * & ✔︎ & * & * & * & * & * \\ 
+	\hline 
+\end{tabular} 
+\end{table}
+
+%------------------------------------
+\subsection{String-vacuous NegS}
+%------------------------------------
+
+\ex. According to \citeauthor{engelsScandinavianNegativeIndefinites2012} all varieties allow string-vacuous NegS
+\a. Ég sagði \textit{ekkert} \I[VP t\textsubscript{v}  t\textsubscript{o}  ]\hfill Ic
+\b. Eg segði \textit{einki} \I[VP t\textsubscript{v}  t\textsubscript{o}  ]\hfill Fa
+\c. Jeg sagde \textit{ingenting} \I[VP t\textsubscript{v}  t\textsubscript{o}  ]\hfill Da
+\d. Jag sa \textit{ingenting} \I[VP t\textsubscript{v}  t\textsubscript{o}  ]\hfill Sw
+\eg. Jeg sa \textit{ingenting} \I[VP t\textsubscript{v}  t\textsubscript{o}  ]\\
+I said nothing\\
+`I said nothing'\rcommentg{No}
+\z.
+
+%------------------------------------
+\subsection{NegS across verbs}
+%------------------------------------
+
+\ex. NegS may cross a verb in situ in Insular Scandinavian languages
+\ag. Ég hef \textit{engan} \textbf{séð} t\textsubscript{o}. \\
+I have nobody seen\\
+`I haven't seen anybody.'\rcommentg{Ic}
+\bg. {Í dag} hevur Petur \textit{einki} \textbf{sagt} t\textsubscript{o}\\
+today has Peter nothing said\\
+`peter hasn't said anything today.'\rcommentg{Fa}
+
+\ex. It is claimed that NegS across a verb in situ is found in literature to be stylistically marked. However, it is reported that there is dialectal variation (e.g., West Jutlandic). It was also deemed grammatical by Danish and Swedish linguists.
+\a. Manden havde måske \textit{ingenting} \textbf{sagt} t\textsubscript{o}.\hfill Scan1
+\bg. *Manden havde måske \textit{ingenting} \textbf{sagt} t\textsubscript{o}.\\
+man-the had probably nothing said\\
+`The man hadn't said anything'\rcommentg{Scan2}
+
+
+%------------------------------------
+\subsection{NegS across IO}
+%------------------------------------
+
+\ex. NegS across IO is permitted if the verb remains in situ for Icelandic, Faroese, West Jutlandic, and Scandinavian1
+\ag. Jón hefur \textit{ekkert} \textbf{sagt} \textbf{Sveini} t\textsubscript{o}. \\
+Jón has nothing said Sveinn\\
+`John hasn't told Sveinn anything'\rcommentg{Ic}
+\bg. {Í dag} hevur Petur \textit{einki} \textbf{givið} \textbf{Mariu} t\textsubscript{o}. \\
+today has Peter nothing given Mary\\
+`Today, Peter hasn't given Mary anything.'\rcommentg{Fa}
+\cg. Jeg har \textit{ingen} \textit{bøger} \textbf{lånt} \textbf{børnene} t\textsubscript{o}.\\
+I have no books lent children-the\\
+`I haven't lent the children any books.'\rcommentg{WJ/Scan1}
+\d. *Jeg har \textbf{ingen bøger} lånt børnene t\textsubscript{o}.\hfill Scan2
+\z.
+
+\ex. If the verb has undergone V-to-T-to-C movement, NegS is deemed ungrammatical in all varieties.
+\ag. *Jón sagði \textit{ekkert} \textbf{Sveini} t\textsubscript{o}\\
+Jón said noting Sveinn\\
+Intended: `John didn't tell Sveinn anything.'\rcommentg{Ic}
+\bg. *{Í gjár} gv Petur \textit{einki} \textbf{Mariu} t\textsubscript{o}\\
+yesterday gave Peter nothing Maria\\
+Intended: `Yesterday, Peter didn't give Mary anything.'\rcommentg{Fa}
+\cg. *Jeg lånte \textit{ingen} \textit{bøger} \textbf{børnene} t\textsubscript{o}\\
+I lent no books children-the\\
+Intended: `I didn't lend the children any books.'\rcommentg{WJ/Scan1}
+
+%------------------------------------
+\subsection{NegS across preposition}
+%------------------------------------
+
+\ex. NegS across a preposition is not permitted in Mainland Scandinavian.
+\ag. *Jeg har \textit{ingen} \textbf{peget} \textbf{på} t\textsubscript{o} \\
+I have nobody pointed at\\
+Intended: `I haven't pointed at anybody.'\rcommentg{Scan1/Scan2}
+\bg. *Jeg pegede \textit{ingen} \textbf{på} t\textsubscript{o}\\
+I pointed nobody at\\
+Intended: `I didn't point at anybody.'
+
+\ex. According to \posscitet{engelsScandinavianNegativeIndefinites2012} investigation there is considerable variation in this regard. It is permitted by the majority of Danish linguists at University of Aarhus, but ungrammatical if the verb has moved.
+\a. ?Jeg har \textit{ingen} \textbf{peget på} t\textsubscript{o}. \hfill DaL
+\b. ?Jeg har pegede \textit{ingen} \textbf{på} t\textsubscript{o}
+
+\ex. Permitted in Faroese if the the verb remains in situ.
+\ag. {Í dag} hevur Petur \textit{ongan} \textbf{tosað} \textbf{við} t\textsubscript{o}.\\
+today has Peter nobody spoken with\\
+`Today Peter hasn't spoken with anybody.'\rcommentg{Fa}
+\bg. *{Í dag} tosaði Petur \textit{ongan} \textbf{við} t\textsubscript{o}.\\
+today spoke Peter nobody with\\
+Intended: `Today Peter didn't speak with anybody.'
+
+\ex. In Icelandic, NegS is permitted if the verb remains in situ. If the verb has moved, it is still grammatical but degraded.
+\ag. Ég hef \textit{engan} \textbf{talið} \textbf{við} t\textsubscript{o}.\\
+I have nobody spoke with\\
+`I have spoken to nobody'\rcommentg{Ic}
+\bg. ?Ég talaði \textit{engan} \textbf{við} t\textsubscript{o}.\\
+I spoke nobody with\\
+`I spoke with nobody.'
+
+\ex. In West Jutlandic, NegS is always permitted across prepositions.
+\ag. Måske har hun \textit{ingen} \textbf{snakket} \textbf{med} t\textsubscript{o}.\\
+maybe has she nobody spoken with\\
+`She maybe hasn't spoken with anybody.'\rcommentg{WJ}
+\bg. {I går} snakkede hun \textit{ingen} \textbf{med} t\textsubscript{o}.\\
+yesterday spoke she nobody with\\
+`Yesterday, she didn't speak with anybody.'
+
+%------------------------------------
+\subsection{NegS out of infinitival clauses}
+%------------------------------------
+
+\ex. Icelandic allows NegS out of infinitival clauses if the matrix verb has remained in situ.
+\ag. Hún hefur \textit{engan} \textbf{lofað} \textbf{að} \textbf{kyssa} t\textsubscript{o}\\
+she has nobody promised to kiss\\
+`She hasn't promised to kiss anybody.'\rcommentg{Ic}
+\bg. *Hún lofaði \textit{engan} \textbf{að} \textbf{kyssa} t\textsubscript{o}, var það nokkuð?\\
+she promised nobody to kiss {} was it rather\\
+Intended: `she didn't promise to kiss anybody, did she?'
+
+\ex. It is also reported that Icelandic allows NegS out of multiple infinitival clauses if the verb reamains in situ.
+\ag. Petúr hefur \textit{engu} \textit{bréfi} \textbf{lofað} \textbf{að} \textbf{reyna} \textbf{að} \textbf{svara} t\textsubscript{o}.\\
+Peter has no letter promised to try to reply\\
+`Peter hasn't promised to try to reply to any letter.'\rcommentg{Ic}
+
+\ex. NegS out of a infinitival clause is also permitted by some of the Danish linguists and for some west Jutlandic speakers if the verb has remained in situ. This is also the case for some of the Swedish linguists.
+\ag. Han har \textit{ingen} \textit{kager} \textbf{lovet} \textbf{at} \textbf{købe} t\textsubscript{o}.\\
+he has no cakes promised to buy\\
+`He hasn't promised to buy any cakes.'\rcommentg{DaL1/WJ2}
+\bg. *Han lovede \textit{ingen} \textit{kager} \textbf{at} \textbf{købe} t\textsubscript{o}, vel?\\
+he promised no cakes to buy {} well\\
+Intended: `He didn't promise to buy any cakes, did he?'
+\cg. ?Per har \textit{inga} \textit{tårta} \textbf{lovat} \textbf{att} \textbf{köpa} t\textsubscript{o}.\\
+ Per has no cake promised to buy\\
+ `Per hasn't promised to buy any cake'\rcommentg{SwL}
+\dg. *Per lovade \textit{ingen} \textit{tårta} \textbf{att} \textbf{köpa} t\textsubscript{o}.\\
+Per promised no cake to buy\\
+Intended: `Per didn't promise to buy any cake.'
+
+\ex. Other Danish linguists do not permit NegS out of infinitive clauses at all. This is also true for Scandinavian1 and Scandinavian2.
+\a. *Han har \textit{ingen} \textit{kager} \textbf{lovet} \textbf{at} \textbf{købe} t\textsubscript{o}. \hfill DaL2
+\b. *Han lovede \textit{ingen} \textit{kager} \textbf{at} \textbf{købe} t\textsubscript{o}, vel?
+\cg. *Han har \textit{ingen} \textit{bøker} \textbf{prød} \textbf{å} \textbf{lese} t\textsubscript{o}.\\
+he has no books tried to read\\
+Intended: `He hasn't tried to read any books.'\rcommentg{No}  
+\dg. *Han prøvde \textit{ingen} \textit{bøker} \textbf{å} \textbf{lese} t\textsubscript{o}.\\
+he tried no books to read\\
+Intended: `He didn't try to read any books.'
+ 
+\ex. For other West Jutlandic speakers and Faroese NegS is permitted regardless if the matrix verb has moved or not.
+\a. Han har \textit{ingen} \textit{kager} \textbf{lovet} \textbf{at} \textbf{købe} t\textsubscript{o}. \hfill WJ1
+\b. Han lovede \textit{ingen} \textit{kager} \textbf{at} \textbf{købe} t\textsubscript{o}, vel?
+\cg. Allarhelst hevur Petur \textit{einki} \textbf{roynt} \textbf{at} \textbf{eta} t\textsubscript{o}. \\
+probably has Peter nothing tried to eat\\
+`Peter probably hasn't tried to eat anything.'\rcommentg{Fa}
+\dg. Allarhelst royndi Petur heldur \textit{einki} \textbf{at} \textbf{eta} t\textsubscript{o}.\\
+probably tried Peter also nothing to eat\\
+`Peter probably also didn't try to eat anything.'
+
+
+%------------------------------------
+\section{\cite{penkaNegativeIndefinites2011}}
+%------------------------------------
+
+\ex. \citet[176]{penkaNegativeIndefinites2011} reports that “the possibility of shifting an NI also depends on the `heaviness' of the NI”.
+
+\ex. This is to occur in Swedish where shifting was deemed better than shifting full DPs.
+\ag. Men mänskligheten har \textbf{ingenting} lärt sig\\
+but mankind-the has nothing taught \textsc{refl}\\
+`But mankind hasn't learned anything.'\rcommentg{Sw}
+\bg. ?Vi hade \textbf{inga} \textbf{grottor} undersökt.\\
+we had no caves examined\\
+`We didn't explore any caves.'
+ 
+\ex. In Danish, NegS becomes unacceptable the heavier the NI is.
+\ag. Jeg har \textbf{intet} \textbf{nyt} hørt.\\
+I have nothing new heard\\
+`I haven't heard anything new.'\rcommentg{Da}
+\bg. *Jeg har \textbf{intet} \textbf{nyt} \textbf{i} \textbf{sagen} hørt.\\
+I have nothing new in case-the heard\\
+`I haven't heard anything new in the case.'
+
+%\ex. “The tale of two displacements: OS and NegS in Mainland Scandinavian” 
+
+%------------------------------------
+\section{Research question}
+%------------------------------------
+
+\ex. Based on these data, I think my research question should be about the size/`heaviness' of the item that is allowed to move for NegS. Something like:
+\a. “Given the wide acceptability of NegS in Scandinavian languages, is there a difference in the acceptability of NegS depending on the size of the shifted negative indefinite?”
+
+\ex. This suggests that I should probably choose two contexts that have the widest acceptance among the different Scandinavian languages. I think these should be: (i) when the verb remains in situ, and (ii) across indirect objects that still has the verb in situ (lines 2 and 3 of Table 1). 
+
+\ex. I will also do this as part of my corpus study as part of SIP to see if I can observe anything before running an experiment. 
+\a. If I am going to be running an experiment than I should also start working on getting IRB approval before running participants in a study.
+
+%------------------------------------
+%BIBLIOGRAPHY
+%------------------------------------
+
+%\singlespacing
+%\nocite{*}
+\printbibliography
+
+%------------------------------------
+%SNIPPETS
+%------------------------------------
+%\ex. 
+%\jtree[xunit=2.6em,yunit=1em] 
+%\def\\{[labelgapb=-1.2ex]}%\@1 
+%\everymath={\rm}% 
+%\! = {CP}
+%:({XP}\\{$\scriptstyle [wh]$}@A1 ) {$C’$}
+%:({$Cˆ0$}\\{$\scriptstyle [wh,Q]$})
+%{$\langle\, TP\,\rangle$}
+%<tri>{\dots\quad\rnode[b]{A2}{\it t}\quad\dots}.
+%%\nccurve[angleA=-150,angleB=-90,ncurv=1]{->}{A2}{A1} 
+%\ncbar[angleA=-90,angleB=-90,armA=1em, armB=1em,linearc=.6ex]{->}{A2}{A1}
+%\endjtree
+\end{document} 

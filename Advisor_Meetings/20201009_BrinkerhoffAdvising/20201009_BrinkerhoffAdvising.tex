@@ -1,0 +1,290 @@
+% !TeX TS-program = xelatex
+% !TeX spellcheck = en_US
+% !TeX encoding = UTF-8
+\documentclass[12pt, letterpaper]{article}
+
+%%BIBLIOGRAPHY- This uses biber/biblatex to generate bibliographies according to the 
+%%Unified Style Sheet for Linguistics
+\usepackage[main=american, german]{babel}% Recommended
+\usepackage{csquotes}% Recommended
+\usepackage[backend=biber,
+		bibstyle=biblatex-sp-unified,
+		citestyle=sp-authoryear-comp,
+		maxcitenames=3,
+		maxbibnames=99,
+		natbib,
+		url=false]{biblatex}
+\addbibresource{QP1.bib}
+\setcounter{biburlnumpenalty}{100}  % allow breaks at numbers
+%\setcounter{biburlucpenalty}{100}   % allow breaks at uppercase letters
+%\setcounter{biburllcpenalty}{100}   % allow breaks at lowercase letters
+
+%%TYPOLOG
+\usepackage{fourier}
+\usepackage[svgnames]{xcolor} % Specify colors by their 'svgnames', for a full list of all colors available see here: http://www.latextemplates.com/svgnames-colors
+%\usepackage[compact]{titlesec}
+%\titleformat{\section}[runin]{\normalfont\bfseries}{\thesection.}{.5em}{}[.]
+%\titleformat{\subsection}[runin]{\normalfont\scshape}{\thesubsection}{.5em}{}[.]
+\usepackage[hmargin=1in,vmargin=1in]{geometry}  %Margins          
+\usepackage{graphicx}	%Inserting graphics, pictures, images 		
+\usepackage{stackengine} %Package to allow text above or below other text, Also helpful for HG weights 
+\usepackage{fontspec} %Selection of fonts must be ran in XeLaTeX
+\usepackage{amssymb} %Math symbols
+\usepackage{amsmath}
+\usepackage{setspace} %Linespacing
+\usepackage{multicol} %Multicolumn text
+\usepackage{enumitem} %Allows for continuous numbering of lists over examples, etc.
+\usepackage{multirow} %Useful for combining cells in tablesbrew 
+\usepackage{hanging}
+\usepackage{fancyhdr} %Allows for the 
+\pagestyle{fancy}
+\fancyhead[L]{\textit{QP Advising}} 
+\fancyhead[R]{\textit{\today}} 
+\fancyfoot[L,R]{} 
+\fancyfoot[C]{\thepage} 
+\renewcommand{\headrulewidth}{0.4pt}
+%\usepackage{fourier-orns} %More useful symbols like bombs and jolly-roger, mostly for OT
+\usepackage[colorlinks,allcolors={black},urlcolor={blue}]{hyperref} %allows for hyperlinks and pdf bookmarks
+%\usepackage{url} %allows for urls
+%\def\UrlBreaks{\do\/\do-} %allows for urls to be broken up
+\usepackage[normalem]{ulem} %strike out text. Handy for syntax
+
+%%FONTS
+\setmainfont{Linux Libertine O}
+\setsansfont{Linux Biolinum O}
+
+%%PACKAGES FOR LINGUISTICS
+%\usepackage{OTtablx} %Generating tableaux with using TIPA
+%\usepackage[noipa]{OTtablx} % Use this one generating tableaux without using TIPA
+\usepackage[notipa]{ot-tableau} % Another tableau drawing packing use for posters.
+\usepackage{linguex} % Linguistic examples
+\usepackage{tikz} % Drawing Hasse diagrams
+%\usepackage{pst-asr} % Drawing autosegmental features
+\usepackage{pstricks} % required for pst-asr, OTtablx, pst-jtree.
+\usepackage{pst-jtree} 	% Syntax tree draawing software
+%\usepackage{lingmacros} % Various linguistic macros. Does not work with linguex.
+%\usepackage{covington} % Another linguistic examples package.
+%\usepackage{gb4e} % Another linguistic examples package. Works with linguex very nicely.
+\newcommand{\rcommentg}[1]{\hfill\raisebox{1.9\baselineskip}[0pt][0pt]{#1}} %This allows for hfill when doing glosses
+
+%%TITLE INFORMATION
+\title{QP Advising}
+\author{Mykel Loren Brinkerhoff}
+\date{\today}
+
+
+\begin{document}
+	
+%%If using linguex, need the following commands to get correct LSA style spacing
+%% these have to be after  \begin{document}
+	\setlength{\Extopsep}{6pt}
+	\setlength{\Exlabelsep}{9pt}		%effect of 0.4in indent from left text edge
+%%
+	
+%% Line spacing setting. Comment out the line spacing you do not need. Comment out all if you want single spacing.
+%	\doublespacing
+%	\onehalfspacing
+	
+\begin{center}
+	{\Large \textbf{Advising Meeting }}\\
+	\vspace{6pt}
+	Mykel Loren Brinkerhoff
+\end{center}
+%\maketitle
+%\maketitleinst
+\thispagestyle{fancy}
+
+%------------------------------------
+\section*{Outline}
+%------------------------------------
+
+\begin{itemize}
+	\item \cite{brinkerhoffMATCHINGPhrasesNorwegian2020}
+	\item Negative indefinite pronouns 
+\end{itemize}
+
+%------------------------------------
+\section*{Brinkerhoff \& Tengesdal 2020}
+%------------------------------------
+
+\ex. \cite{brinkerhoffMATCHINGPhrasesNorwegian2020} is concerned with providing an alternative analysis of Scandinavian object shift to \posscitet{erteschik-shirVariationMainlandScandinavian2019} analysis. This was done by focusing on pronoun movement instead of adverb movement with Match Theory \citep{selkirkClauseIntonationalPhrase2009, selkirkSyntaxPhonologyInterface2011}.
+
+\ex. We show that Match Theory can account for the leftward shifting of OS when the \textsc{Match} constraints are sensitive to lexical elements and their projections only. 
+
+\ex. For our analysis, we assumed that the syntactic structure that was inputted into the prosodic grammar has the pronoun remaining in its base generated position
+\a. \label{ex:tree} 
+\jtree[xunit=2.6em,yunit=1em] 
+\def\\{[labelgapb=-1.2ex]}%\@1 
+\everymath={\rm}% 
+\! = {CP}
+:({DP}\\{\textit{Jeg\textsubscript{s}}}@A1 ) {C´}
+:({C}\\{\textit{så\textsubscript{v}}}@B1 ){TP}
+:({DP}\\{\textit{t\textsubscript{s}}}@A2 ){T´}
+:({T}\\{\textit{t\textsubscript{v}}}@B2 ){\textit{v}P}
+:({AdvP}\\{\textit{aldri}}){\textit{v}P}
+:({DP}\\{\textit{t\textsubscript{s}}}@A3 ){\textit{v´}}
+:({\textit{v}}\\{\textit{t\textsubscript{v}}}@B3 ){VP}
+:({V}\\{\textit{t\textsubscript{v}}}@B4 ){DP}\\{\textit{ham}}.
+%\nccurve[angleA=-150,angleB=-90,ncurv=1]{->}{A2}{A1} 
+\ncbar[angleA=-90,angleB=-90,armA=1em, armB=1em,linearc=.6ex]{->}{A2}{A1}
+\ncbar[angleA=-90,angleB=-90,armA=1em, armB=1em,linearc=.6ex]{->}{A3}{A2}
+\ncbar[angleA=-90,angleB=-90,armA=1em, armB=1em,linearc=.6ex,linestyle=dashed]{->}{B2}{B1}
+\ncbar[angleA=-90,angleB=-90,armA=1em, armB=1em,linearc=.6ex,linestyle=dashed]{->}{B3}{B2}
+\ncbar[angleA=-90,angleB=-90,armA=1em, armB=1em,linearc=.6ex,linestyle=dashed]{->}{B4}{B3}
+\endjtree
+\vspace{1em}
+
+\ex. This assumption was also held by \cite{erteschik-shirVariationMainlandScandinavian2019} 
+
+\ex. However, work by \citet{bennettLightestRightApparently2016} suggests that the actual input is a syntactic structure that has had all phonologically empty terminals and categories removed. This results in the following trimmed syntactic structure:
+\a. \jtree[xunit=2.6em,yunit=1em] 
+\def\\{[labelgapb=-1.2ex]}%\@1 
+\everymath={\rm}% 
+\! = {CP}
+:({DP}\\{\textit{Jeg\textsubscript{s}}}@A1 ) {C´}
+:({C}\\{\textit{så\textsubscript{v}}}@B1 ){\textit{v}P}
+:({AdvP}\\{\textit{aldri}}){DP}\\{\textit{ham}}.
+%\nccurve[angleA=-150,angleB=-90,ncurv=1]{->}{A2}{A1} 
+%\ncbar[angleA=-90,angleB=-90,armA=1em, armB=1em,linearc=.6ex]{->}{A2}{A1}
+%\ncbar[angleA=-90,angleB=-90,armA=1em, armB=1em,linearc=.6ex]{->}{A3}{A2}
+%\ncbar[angleA=-90,angleB=-90,armA=1em, armB=1em,linearc=.6ex,linestyle=dashed]{->}{B2}{B1}
+%\ncbar[angleA=-90,angleB=-90,armA=1em, armB=1em,linearc=.6ex,linestyle=dashed]{->}{B3}{B2}
+%\ncbar[angleA=-90,angleB=-90,armA=1em, armB=1em,linearc=.6ex,linestyle=dashed]{->}{B4}{B3}
+\endjtree
+
+\ex. This structure is then fed into a prosodic grammar that has the following constraints:
+\a. \textsc{Match}(XP,φ):\\
+Assign a violation for every node \textit{s} of a lexical category XP in the syntactic tree for which there is no node \textit{p} of category phi (φ) in the prosodic tree such that every terminal node dominated by \textit{s} corresponds to a terminal node dominated by \textit{p}. 
+\b. \textsc{Match}(φ,XP):\\
+Assign a violation for every node \textit{p} of category phi (φ) in the prosodic tree for which there is no node \textit{s} of a lexical category XP in the syntactic tree such that every terminal node dominated by \textit{p} corresponds to a terminal node dominated by \textit{s}.
+\c. \textsc{Headedness}:\\
+Assign one violation for every prosodic constituent that is unheaded.
+\d. \textsc{NoShift}:\\
+Assign one violation for every output terminal element which does not have the same linearization as its correspondent in the input. 
+\z.
+
+\ex. Because the AdvP \textit{aldri} is the only lexical phrase, its boundary is the only one which we overtly label to show its status as a lexical projection. 
+
+\ex. \label{ex:OS} Tableau for \textit{Jeg så \textcolor{DarkGreen}{ham} \textcolor{DarkBlue}{aldri}} `I never saw him' (\textsc{Head} = \textsc{Headedness}).\\
+\resizebox{\linewidth}{!}{% Resize table to fit within \linewidth horizontally
+\begin{tableau}{c:c|c:c}
+	\inp{ {[%\textsubscript{CP},
+			[%\textsubscript{DP},
+			Jeg] så [%\textsubscript{TP},
+			[\textsubscript{AdvP} aldri] [%\textsubscript{DP},
+			ham]]]} } \const{Head} \const{M(XP,φ)} \const{NoShift} \const{M(φ,XP)}
+	\cand[\Optimal]{(\textsubscript{\textit{φ}} jeg\textsubscript{CL}=så\textsubscript{$\omega$}=\textcolor{DarkGreen}{ham}\textsubscript{CL} )(\textsubscript{\textit{φ}} \textcolor{DarkBlue}{aldri}\textsubscript{$\omega$} )} \vio{} \vio{} \vio{*}  \vio{*}
+	\cand{(\textsubscript{\textit{φ}} jeg\textsubscript{CL}=så\textsubscript{$\omega$} )(\textsubscript{\textit{φ}}  \textcolor{DarkBlue}{aldri}\textsubscript{$\omega$} )(\textsubscript{\textit{φ}} \textcolor{DarkGreen}{ham}\textsubscript{CL} ) } \vio{*W} \vio{} \vio{L}  \vio{**W}
+	\cand{(\textsubscript{\textit{φ}} jeg\textsubscript{CL}=så\textsubscript{$\omega$} )(\textsubscript{\textit{φ}}  \textcolor{DarkBlue}{aldri}\textsubscript{$\omega$}=\textcolor{DarkGreen}{ham}\textsubscript{CL} )} \vio{} \vio{*W} \vio{L} \vio{*}
+\end{tableau}}	
+
+\ex. \label{ex:noshifting} Tableau for \textit{Jeg så \textcolor{DarkBlue}{aldri} \textcolor{DarkGreen}{studenten}} `I never saw the student'.\\
+\resizebox{\linewidth}{!}{% Resize table to fit within \linewidth horizontally
+\begin{tableau}{c:c|c:c}
+	\inp{{[%\textsubscript{CP},
+			[%\textsubscript{DP},
+			Jeg] så [%\textsubscript{TP},
+			[\textsubscript{AdvP} aldri] [\textsubscript{DP}
+			studenten]]]}} \const{Head} \const{M(XP,φ)} \const{NoShift}   \const{M(φ,XP)}
+	\cand{(\textsubscript{\textit{φ}} jeg\textsubscript{CL}=så\textsubscript{$\omega$} )(\textsubscript{\textit{φ}} \textcolor{DarkGreen}{studenten}\textsubscript{$\omega$} )(\textsubscript{\textit{φ}} \textcolor{DarkBlue}{aldri}\textsubscript{$\omega$} )} \vio{} \vio{} \vio{*W} \vio{*}
+	\cand[\Optimal]{(\textsubscript{\textit{φ}} jeg\textsubscript{CL}=så\textsubscript{$\omega$} )(\textsubscript{\textit{φ}} \textcolor{DarkBlue}{aldri}\textsubscript{$\omega$} )(\textsubscript{\textit{φ}} \textcolor{DarkGreen}{studenten}\textsubscript{$\omega$} ) } \vio{} \vio{} \vio{}   \vio{*}
+	\cand{(\textsubscript{\textit{φ}} jeg\textsubscript{CL}=så\textsubscript{$\omega$} )(\textsubscript{\textit{φ}} \textcolor{DarkBlue}{aldri}\textsubscript{$\omega$} \textcolor{DarkGreen}{studenten}\textsubscript{$\omega$} ) } \vio{} \vio{*W} \vio{}   \vio{*}
+\end{tableau}
+}
+
+
+\ex. However, if we use the definition of \textsc{Match} as proposed by \cite{elfnerSyntaxProsodyInteractionsIrish2012} which is sensitive to both lexical and functional elements then our analysis fails to account for OS. Instead it predicts that shifting should never happen and the pronoun incorporates into the adverb that is adjacent to it.
+
+\ex. \label{ex:HBf} Harmonic Bounding with \textsc{Match}(XP\textsubscript{\textit{lex,fnc}},φ).\\
+%\resizebox{\linewidth}{!}{% Resize table to fit within \linewidth horizontally
+\begin{tableau}{c:c|c:c}
+	\inp{{[%\textsubscript{CP}, <-- Relevant only to Match(Illocutionary clause,ι)
+			[\textsubscript{DP} Jeg] så [\textsubscript{\textit{v}P} [\textsubscript{AdvP} aldri] [\textsubscript{DP} ham]]]}} \const{Head} \const{M(XP,φ)} \const{NoShift}   \const{M(φ,XP)}
+	\cand[\grimace]{(\textsubscript{\textit{φ}} jeg\textsubscript{CL}=så\textsubscript{$\omega$}=\textcolor{DarkGreen}{ham}\textsubscript{CL} )(\textsubscript{\textit{φ}} \textcolor{DarkBlue}{aldri}\textsubscript{$\omega$} )} \vio{}  \vio{***}  \vio{*W}  \vio{*}
+	\cand{(\textsubscript{\textit{φ}} jeg\textsubscript{CL}=så\textsubscript{$\omega$} )(\textsubscript{\textit{φ}} \textcolor{DarkBlue}{aldri}\textsubscript{$\omega$} )(\textsubscript{\textit{φ}} \textcolor{DarkGreen}{ham}\textsubscript{CL} )}   \vio{*W}  \vio{**L}  \vio{}  \vio{*}
+	\cand[\Optimal]{(\textsubscript{\textit{φ}} jeg\textsubscript{CL}=så\textsubscript{$\omega$} )(\textsubscript{\textit{φ}} \textcolor{DarkBlue}{aldri}\textsubscript{$\omega$}=\textcolor{DarkGreen}{ham}\textsubscript{CL} )}   \vio{}  \vio{***}  \vio{}  \vio{*}
+\end{tableau}
+
+
+%------------------------------------
+\section*{Negative indefinite pronouns}
+%------------------------------------
+
+\ex. In trying to figure out what makes Swedish's \textit{ingen} an indefinite pronoun or a determiner. I first turned to what the definition of an indefinite pronoun is. 
+
+\ex. According to \cite{haspelmathIndefinitePronouns1997} indefinite pronouns are pronouns because the fill the traditional role of pronominals in being used to replace something.
+
+\ex. In the case for Swedish negative indefinite pronouns (NIs), we see that these NIs are able to replace whole noun phrases.
+\begin{multicols}{2}
+	\ag. Jeg har inte sett en bok.\\
+I have not seen a book\\
+`I haven't seen a book'
+\bg. \label{ex:NI} Jeg har \textbf{ingenting} sett.\\
+I have nothing seen.\\
+`I have seen nothing'
+\z.
+\end{multicols}
+
+\ex. \citeauthor{haspelmathIndefinitePronouns1997} further claims that indefinite pronouns are indefinite because they function as an expression of indefinite reference.
+
+\ex. We see this in ()\ref{ex:NI}), where the NI \textit{ingenting} does not refer to a definite referent and instead expresses indefinitiness in the referent where anything could potentially fill the role of referent.
+
+\ex. Additionally, a criteria that is used to distinguish between determiners and indefinite pronouns comes from certain properties such as:
+\a. phonological, 
+\b. morphological,
+\c. syntactic, or
+\d. agreement
+
+\ex. Based on this we can tease the differences between \textit{ingen} the pronoun from \textit{ingen} the negative determiner.
+
+\ex. The main difference comes down to syntactic and agreement properties that they share. The pronoun \textit{ingen} is used primarily with an animate interpretation where it carries the meaning closer to 'nobody, no one' 
+\ag. Jeg har ingen sett.\\
+I have no-one seen\\
+`I haven't seen anyone'
+
+\ex. This means that the NI pronoun \textit{ingen} is used to replace something that has animacy.
+
+\ex. This is in contrast with the negative determiner \textit{ingen} which can take any noun regardless of animacy.
+\ag. Jag har inga cigaretter.\\
+I have no.\textsc{pl} cigarettes\\
+`I have no cigarettes.'
+\bg. Jag har inget barn sett.\\
+I have no.\textsc{neu} child seen\\
+`I have seen no child'
+
+\ex. From this fact alone we can be confident that there is some validity in calling one a pronoun and the other a determiner.
+
+
+%------------------------------------
+\section*{Where next}
+%------------------------------------
+\begin{itemize}
+	\item Continue to tease apart the difference between pronouns and determiners
+	\item Continue looking into automating the data analysis.
+\end{itemize}
+
+
+%------------------------------------
+%BIBLIOGRAPHY
+%------------------------------------
+
+%\singlespacing
+%\nocite{*}
+\printbibliography
+
+%------------------------------------
+%SNIPPETS
+%------------------------------------
+%\ex. 
+%\jtree[xunit=2.6em,yunit=1em] 
+%\def\\{[labelgapb=-1.2ex]}%\@1 
+%\everymath={\rm}% 
+%\! = {CP}
+%:({XP}\\{$\scriptstyle [wh]$}@A1 ) {$C’$}
+%:({$Cˆ0$}\\{$\scriptstyle [wh,Q]$})
+%{$\langle\, TP\,\rangle$}
+%<tri>{\dots\quad\rnode[b]{A2}{\it t}\quad\dots}.
+%%\nccurve[angleA=-150,angleB=-90,ncurv=1]{->}{A2}{A1} 
+%\ncbar[angleA=-90,angleB=-90,armA=1em, armB=1em,linearc=.6ex]{->}{A2}{A1}
+%\endjtree
+ \end{document} 

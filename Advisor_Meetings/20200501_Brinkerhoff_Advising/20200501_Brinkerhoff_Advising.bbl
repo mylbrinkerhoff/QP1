@@ -1,0 +1,291 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{engelsScandinavianNegativeIndefinites2012}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b7e8cacf1f17e3e04de67199dd21dc74}{%
+           family={Engels},
+           familyi={E\bibinitperiod},
+           given={Eva},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b7e8cacf1f17e3e04de67199dd21dc74}
+      \strng{fullhash}{b7e8cacf1f17e3e04de67199dd21dc74}
+      \strng{bibnamehash}{b7e8cacf1f17e3e04de67199dd21dc74}
+      \strng{authorbibnamehash}{b7e8cacf1f17e3e04de67199dd21dc74}
+      \strng{authornamehash}{b7e8cacf1f17e3e04de67199dd21dc74}
+      \strng{authorfullhash}{b7e8cacf1f17e3e04de67199dd21dc74}
+      \field{sortinit}{E}
+      \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{13680005}
+      \field{journaltitle}{Syntax}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{number}{2}
+      \field{shorttitle}{Scandinavian {{Negative Indefinites}} and {{Cyclic Linearization}}}
+      \field{title}{Scandinavian {{Negative Indefinites}} and {{Cyclic Linearization}}: {{Scandinavian Negative Indefinites}} and {{Cyclic Linearization}}}
+      \field{urlday}{29}
+      \field{urlmonth}{1}
+      \field{urlyear}{2020}
+      \field{volume}{15}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{109\bibrangedash 141}
+      \range{pages}{33}
+      \verb{doi}
+      \verb 10.1111/j.1467-9612.2011.00161.x
+      \endverb
+      \verb{file}
+      \verb /Users/mybrink/Zotero/storage/XDRQZ52P/Engels_2012_Scandinavian Negative Indefinites and Cyclic Linearization.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://doi.wiley.com/10.1111/j.1467-9612.2011.00161.x
+      \endverb
+      \verb{url}
+      \verb http://doi.wiley.com/10.1111/j.1467-9612.2011.00161.x
+      \endverb
+    \endentry
+    \entry{foxCyclicLinearizationSyntactic2005}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=07e13302540da458a575f00c26a09f7a}{%
+           family={Fox},
+           familyi={F\bibinitperiod},
+           given={Danny},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6390e5debe2d3e995095c38e4af68692}{%
+           family={Pesetsky},
+           familyi={P\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d24c791b13f5fd391294c04e9c081fde}
+      \strng{fullhash}{d24c791b13f5fd391294c04e9c081fde}
+      \strng{bibnamehash}{d24c791b13f5fd391294c04e9c081fde}
+      \strng{authorbibnamehash}{d24c791b13f5fd391294c04e9c081fde}
+      \strng{authornamehash}{d24c791b13f5fd391294c04e9c081fde}
+      \strng{authorfullhash}{d24c791b13f5fd391294c04e9c081fde}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper proposes an architecture for the mapping between syntax and phonology – in particular, that aspect of phonology that determines the linear ordering of words. We propose that linearization is restricted in two key ways. (1) the relative ordering of words is fixed at the end of each phase, or ‘‘Spell-out domain’’; and (2) ordering established in an earlier phase may not be revised or contradicted in a later phase. As a consequence, overt extraction out of a phase P may apply only if the result leaves unchanged the precedence relations established in P. We argue first that this architecture (‘‘cyclic linearization’’) gives us a means of understanding the reasons for successive-cyclic movement. We then turn our attention to more specific predictions of the proposal: in particular, the effects of Holmberg’s Generalization on Scandinavian Object Shift; and also the Inverse Holmberg Effects found in Scandinavian ‘‘Quantifier Movement’’ constructions (Rögnvaldsson (1987); Jónsson (1996); Svenonius (2000)) and in Korean scrambling configurations (Ko (2003, 2004)). The cyclic linearization proposal makes predictions that cross-cut the details of particular syntactic configurations. For example, whether an apparent case of verb fronting results from V-to-C movement or from ‘‘remnant movement’’ of a VP whose complements have been removed by other processes, the verb should still be required to precede its complements after fronting if it preceded them before fronting according to an ordering established at an earlier phase. We argue that ‘‘cross-construction’’ consistency of this sort is in fact found.}
+      \field{issn}{1613-4060}
+      \field{journaltitle}{Theoretical Linguistics}
+      \field{number}{1-2}
+      \field{title}{Cyclic {{Linearization}} of {{Syntactic Structure}}}
+      \field{urlday}{7}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{volume}{31}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 45}
+      \range{pages}{45}
+      \verb{doi}
+      \verb 10.1515/thli.2005.31.1-2.1
+      \endverb
+      \verb{file}
+      \verb /Users/mybrink/Zotero/storage/NTAPVWS9/Fox_Pesetsky_2005_Cyclic Linearization of Syntactic Structure.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.degruyter.com/view/j/thli.2005.31.issue-1-2/thli.2005.31.1-2.1/thli.2005.31.1-2.1.xml?format=INT
+      \endverb
+      \verb{url}
+      \verb https://www.degruyter.com/view/j/thli.2005.31.issue-1-2/thli.2005.31.1-2.1/thli.2005.31.1-2.1.xml?format=INT
+      \endverb
+    \endentry
+    \entry{holmbergWordOrderSyntactic1986}{thesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4d07115f283137489b04549b8ce8654e}{%
+           family={Holmberg},
+           familyi={H\bibinitperiod},
+           given={Anders},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {University of Stockholm}%
+      }
+      \list{location}{1}{%
+        {Stockholm, Sweden}%
+      }
+      \strng{namehash}{4d07115f283137489b04549b8ce8654e}
+      \strng{fullhash}{4d07115f283137489b04549b8ce8654e}
+      \strng{bibnamehash}{4d07115f283137489b04549b8ce8654e}
+      \strng{authorbibnamehash}{4d07115f283137489b04549b8ce8654e}
+      \strng{authornamehash}{4d07115f283137489b04549b8ce8654e}
+      \strng{authorfullhash}{4d07115f283137489b04549b8ce8654e}
+      \field{extraname}{1}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Word Order and Syntactic Features in the {{Scandinavian}} Languages and {{English}}.}
+      \field{type}{Doctoral dissertation}
+      \field{year}{1986}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /Users/mybrink/Zotero/storage/PGSMIEJJ/Holmberg_1986_Word order and syntactic features in the Scandinavian languages and English.pdf
+      \endverb
+    \endentry
+    \entry{holmbergRemarksHolmbergGeneralization1999}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4d07115f283137489b04549b8ce8654e}{%
+           family={Holmberg},
+           familyi={H\bibinitperiod},
+           given={Anders},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4d07115f283137489b04549b8ce8654e}
+      \strng{fullhash}{4d07115f283137489b04549b8ce8654e}
+      \strng{bibnamehash}{4d07115f283137489b04549b8ce8654e}
+      \strng{authorbibnamehash}{4d07115f283137489b04549b8ce8654e}
+      \strng{authornamehash}{4d07115f283137489b04549b8ce8654e}
+      \strng{authorfullhash}{4d07115f283137489b04549b8ce8654e}
+      \field{extraname}{2}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0039-3193, 1467-9582}
+      \field{journaltitle}{Studia Linguistica}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{number}{1}
+      \field{shortjournal}{Studia Linguistica}
+      \field{title}{Remarks on {{Holmberg}}’s {{Generalization}}}
+      \field{urlday}{29}
+      \field{urlmonth}{1}
+      \field{urlyear}{2020}
+      \field{volume}{53}
+      \field{year}{1999}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 39}
+      \range{pages}{39}
+      \verb{doi}
+      \verb 10.1111/1467-9582.00038
+      \endverb
+      \verb{file}
+      \verb /Users/mybrink/Zotero/storage/FCAR57LR/Holmberg_1999_Remarks on Holmberg’s Generalization.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/1467-9582.00038
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/1467-9582.00038
+      \endverb
+    \endentry
+    \entry{penkaNegativeIndefinites2011}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2efab3a994d1f508f2f6cda24c57d3e8}{%
+           family={Penka},
+           familyi={P\bibinitperiod},
+           given={Doris},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Oxford ; New York}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{2efab3a994d1f508f2f6cda24c57d3e8}
+      \strng{fullhash}{2efab3a994d1f508f2f6cda24c57d3e8}
+      \strng{bibnamehash}{2efab3a994d1f508f2f6cda24c57d3e8}
+      \strng{authorbibnamehash}{2efab3a994d1f508f2f6cda24c57d3e8}
+      \strng{authornamehash}{2efab3a994d1f508f2f6cda24c57d3e8}
+      \strng{authorfullhash}{2efab3a994d1f508f2f6cda24c57d3e8}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-19-956726-3 978-0-19-956727-0}
+      \field{number}{no. 32}
+      \field{pagetotal}{264}
+      \field{series}{Oxford Studies in Theoretical Linguistics}
+      \field{title}{Negative Indefinites}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1093/acprof:oso/9780199567263.001.0001
+      \endverb
+      \verb{file}
+      \verb /Users/mybrink/Zotero/storage/EFSDDZQV/Penka_2011_Negative indefinites.pdf
+      \endverb
+      \keyw{Grammar; Comparative and general,Negatives,Polarity (Linguistics),Semantics,Syntax}
+    \endentry
+    \entry{svenoniusStrainsNegationNorwegian2002}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5dc055c6941bc22fd6f19813ae1fffc6}{%
+           family={Svenonius},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5dc055c6941bc22fd6f19813ae1fffc6}
+      \strng{fullhash}{5dc055c6941bc22fd6f19813ae1fffc6}
+      \strng{bibnamehash}{5dc055c6941bc22fd6f19813ae1fffc6}
+      \strng{authorbibnamehash}{5dc055c6941bc22fd6f19813ae1fffc6}
+      \strng{authornamehash}{5dc055c6941bc22fd6f19813ae1fffc6}
+      \strng{authorfullhash}{5dc055c6941bc22fd6f19813ae1fffc6}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Working papers in Scandinavian Syntax}
+      \field{title}{Strains of Negation in {{Norwegian}}}
+      \field{volume}{69}
+      \field{year}{2002}
+      \field{dateera}{ce}
+      \field{pages}{121\bibrangedash 146}
+      \range{pages}{26}
+      \verb{file}
+      \verb /Users/mybrink/Zotero/storage/9UFXA6ZK/Svenonius_2002_Strains of negation in Norwegian.pdf
+      \endverb
+      \keyw{⛔ No DOI found}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

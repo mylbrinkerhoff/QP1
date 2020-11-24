@@ -1,0 +1,18 @@
+[0] Config.pm:312> INFO - This is Biber 2.15
+[0] Config.pm:315> INFO - Logfile is '20201112_BrinkerhoffPre290.blg'
+[181] biber-darwin:330> INFO - === Thu Nov 12, 2020, 17:03:34
+[266] Biber.pm:415> INFO - Reading '20201112_BrinkerhoffPre290.bcf'
+[451] Biber.pm:952> INFO - Found 13 citekeys in bib section 0
+[475] Biber.pm:4334> INFO - Processing section 0
+[541] Biber.pm:4523> INFO - Looking for bibtex format file 'link.bib' for section 0
+[707] bibtex.pm:1682> INFO - LaTeX decoding ...
+[7670] bibtex.pm:1494> INFO - Found BibTeX data source 'link.bib'
+[8276] Utils.pm:395> WARN - ISBN '978-0-19-956726-3 978-0-19-956727-0' in entry 'penkaNegativeIndefinites2011' is invalid - run biber with '--validate_datamodel' for details.
+[8336] Utils.pm:395> WARN - ISBN '978-0-521-59790-6 978-0-521-59190-4' in entry 'thrainssonSyntaxIcelandic2010' is invalid - run biber with '--validate_datamodel' for details.
+[8386] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[8386] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[8386] Biber.pm:4162> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[8386] Biber.pm:4168> INFO - No sort tailoring available for locale 'en-US'
+[8535] bbl.pm:651> INFO - Writing '20201112_BrinkerhoffPre290.bbl' with encoding 'UTF-8'
+[8548] bbl.pm:754> INFO - Output to 20201112_BrinkerhoffPre290.bbl
+[8548] Biber.pm:128> INFO - WARNINGS: 2

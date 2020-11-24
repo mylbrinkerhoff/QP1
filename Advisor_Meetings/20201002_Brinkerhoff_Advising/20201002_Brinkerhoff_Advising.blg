@@ -1,0 +1,17 @@
+[0] Config.pm:312> INFO - This is Biber 2.15
+[0] Config.pm:315> INFO - Logfile is '20201002_Brinkerhoff_Advising.blg'
+[91] biber-darwin:330> INFO - === Fri Oct  2, 2020, 11:46:08
+[110] Biber.pm:415> INFO - Reading '20201002_Brinkerhoff_Advising.bcf'
+[232] Biber.pm:952> INFO - Found 3 citekeys in bib section 0
+[247] Biber.pm:4334> INFO - Processing section 0
+[259] Biber.pm:4523> INFO - Looking for bibtex format file 'QP1.bib' for section 0
+[312] bibtex.pm:1682> INFO - LaTeX decoding ...
+[415] bibtex.pm:1494> INFO - Found BibTeX data source 'QP1.bib'
+[453] Utils.pm:395> WARN - ISBN '978-0-19-956726-3 978-0-19-956727-0' in entry 'penkaNegativeIndefinites2011' is invalid - run biber with '--validate_datamodel' for details.
+[482] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[482] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[482] Biber.pm:4162> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[482] Biber.pm:4168> INFO - No sort tailoring available for locale 'en-US'
+[490] bbl.pm:651> INFO - Writing '20201002_Brinkerhoff_Advising.bbl' with encoding 'UTF-8'
+[493] bbl.pm:754> INFO - Output to 20201002_Brinkerhoff_Advising.bbl
+[493] Biber.pm:128> INFO - WARNINGS: 1

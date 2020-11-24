@@ -1,0 +1,18 @@
+[1] Config.pm:312> INFO - This is Biber 2.15
+[1] Config.pm:315> INFO - Logfile is '20201030_BrinkerhoffAdvising.blg'
+[190] biber-darwin:330> INFO - === Fri Oct 30, 2020, 11:56:39
+[224] Biber.pm:415> INFO - Reading '20201030_BrinkerhoffAdvising.bcf'
+[439] Biber.pm:952> INFO - Found 7 citekeys in bib section 0
+[465] Biber.pm:4334> INFO - Processing section 0
+[494] Biber.pm:4523> INFO - Looking for bibtex format file 'link2.bib' for section 0
+[675] bibtex.pm:1682> INFO - LaTeX decoding ...
+[6799] bibtex.pm:1494> INFO - Found BibTeX data source 'link2.bib'
+[7143] Utils.pm:395> WARN - ISBN '978-1-108-37829-1 978-1-108-42186-7 978-1-108-43438-6' in entry 'broekhuisUnificationObjectShift2020' is invalid - run biber with '--validate_datamodel' for details.
+[7181] Utils.pm:395> WARN - ISBN '978-0-19-956726-3 978-0-19-956727-0' in entry 'penkaNegativeIndefinites2011' is invalid - run biber with '--validate_datamodel' for details.
+[7211] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[7211] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[7211] Biber.pm:4162> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[7211] Biber.pm:4168> INFO - No sort tailoring available for locale 'en-US'
+[7232] bbl.pm:651> INFO - Writing '20201030_BrinkerhoffAdvising.bbl' with encoding 'UTF-8'
+[7240] bbl.pm:754> INFO - Output to 20201030_BrinkerhoffAdvising.bbl
+[7240] Biber.pm:128> INFO - WARNINGS: 2

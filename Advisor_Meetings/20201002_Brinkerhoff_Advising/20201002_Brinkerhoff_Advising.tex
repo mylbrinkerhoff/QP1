@@ -1,0 +1,209 @@
+\documentclass[12pt, letterpaper]{article}
+
+%%BIBLIOGRAPHY- This uses biber/biblatex to generate bibliographies according to the 
+%%Unified Style Sheet for Linguistics
+\usepackage[main=american, german]{babel}% Recommended
+\usepackage{csquotes}% Recommended
+\usepackage[backend=biber,
+		bibstyle=biblatex-sp-unified,
+		citestyle=sp-authoryear-comp,
+		maxcitenames=3,
+		maxbibnames=99,
+		natbib,
+		url=false]{biblatex}
+\addbibresource{QP1.bib}
+\setcounter{biburlnumpenalty}{100}  % allow breaks at numbers
+%\setcounter{biburlucpenalty}{100}   % allow breaks at uppercase letters
+%\setcounter{biburllcpenalty}{100}   % allow breaks at lowercase letters
+
+%%TYPOLOG
+%\usepackage[compact]{titlesec}
+%\titleformat{\section}[runin]{\normalfont\bfseries}{\thesection.}{.5em}{}[.]
+%\titleformat{\subsection}[runin]{\normalfont\scshape}{\thesubsection}{.5em}{}[.]
+\usepackage[hmargin=1in,vmargin=1in]{geometry}  %Margins          
+\usepackage{graphicx}	%Inserting graphics, pictures, images 		
+\usepackage{stackengine} %Package to allow text above or below other text, Also for HG 
+\usepackage{fontspec} %Selection of fonts must be ran in XeLaTeX
+\usepackage{amssymb} %Math symbols
+\usepackage{amsmath}
+\usepackage{setspace} %Linespacing
+\usepackage{multicol} %Multicolumn text
+\usepackage{enumitem} %Allows for continuous numbering of lists over examples, etc.
+\usepackage{multirow} %Useful for combining cells in tablesbrew 
+\usepackage{hanging}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[L]{\textit{QP Advising}} 
+\fancyhead[R]{\textit{\today}} 
+\fancyfoot[L,R]{} 
+\fancyfoot[C]{\thepage} 
+\renewcommand{\headrulewidth}{0.4pt}
+%\usepackage{fourier-orns} %More useful symbols like bombs and jolly-roger, mostly for OT
+\usepackage[colorlinks,allcolors={black},urlcolor={blue}]{hyperref} %allows for hyperlinks and pdf bookmarks
+%\usepackage{url} %allows for urls
+%\def\UrlBreaks{\do\/\do-} %allows for urls to be broken up
+\usepackage[normalem]{ulem} %strike out text. Handy for syntax
+
+%%FONTS
+\setmainfont{Linux Libertine O}
+\setsansfont{Linux Biolinum O}
+
+%%PACKAGES FOR LINGUISTICS
+%\usepackage{OTtablx} %Generating tableaux without using TIPA
+\usepackage[noipa]{OTtablx} %Generating tableaux without using TIPA
+\usepackage{linguex} %Linguistic examples
+\usepackage{tikz} %Drawing Hasse diagrams
+%\usepackage{pst-asr} %Drawing autosegmental features
+\usepackage{pstricks} % required for pst-asr, OTtablx, pst-jtree.
+\usepackage{pst-jtree} 	%Syntax tree draawing software
+%\usepackage{lingmacros} %Various linguistic macros. Does not work with linguex.
+%\usepackage{covington} %Another linguistic examples package.
+%\usepackage{gb43} %Another linguistic examples package. Works with linguex very nicely.
+\newcommand{\rcommentg}[1]{\hfill\raisebox{1.9\baselineskip}[0pt][0pt]{#1}} %This allows for hfill when doing glosses
+
+%%TITLE INFORMATION
+\title{QP Advising}
+\author{Mykel Loren Brinkerhoff}
+\date{\today}
+
+
+\begin{document}
+	
+%%If using linguex, need the following commands to get correct LSA style spacing
+%% these have to be after  \begin{document}
+	\setlength{\Extopsep}{6pt}
+	\setlength{\Exlabelsep}{9pt}		%effect of 0.4in indent from left text edge
+%%
+	
+%% Line spacing setting. Comment out the line spacing you do not need. Comment out all if you want single spacing.
+%	\doublespacing
+%	\onehalfspacing
+	
+\begin{center}
+	{\Large \textbf{Advising Meeting }}\\
+	\vspace{6pt}
+	Mykel Loren Brinkerhoff
+\end{center}
+%\maketitle
+%\maketitleinst
+\thispagestyle{fancy}
+
+%------------------------------------
+\section*{Outline}
+%------------------------------------
+
+\begin{itemize}
+	\item Recap of what I did over the summer
+	\item Working analysis of the data
+	\item Projection of where next
+\end{itemize}
+
+%------------------------------------
+\section*{Summer Recap}
+%------------------------------------
+\begin{itemize}
+	\item This project is concerned with NegShifting and whether or not pronominal NegShifting is subject to prosodic factors as mentioned by \citet{penkaNegativeIndefinites2011} similar to pronominal OS in Scandinavian languages
+
+	\item Took a long time to find a corpus that I could use for my paper
+	\begin{itemize}
+		\item Most of the corpora that I found where very narrow and did not contain the breadth that I needed for a good statistical analysis
+		\item  I finally came across the Swedish Culturomics Gigaword Corpus \citep{eideSwedishCulturomicsGigaword2016} 
+		\begin{itemize}
+			\item This was very useful because it consisted of five different genres from the 1950s to early 2010s
+			\item This enables me to try and find genres that might correspond to different registers of Swedish. There is some discussion by \citet{engelsScandinavianNegativeIndefinites2012} that there are differences in acceptability of NegShift based on register.
+			\item I chose three different genres with the help of my intern
+			\begin{enumerate}
+				\item \textbf{Social Media:} We assumed that this would be our best chance at getting results that would be of the lowest register and potentially showing more dialectal influence
+				\item \textbf{Fiction:} We assumed that this second genre would represent a more neutral register. One that is neither too formal or too informal.
+				\item  \textbf{Government:} We assumed that this would be our best chance to see a high register or most formal variety. The other possibility was scientific writings. However, most of these where Wikipedia articles from 2015 and we felt that we would get more consistent and clearer evidence from the government genre.
+			\end{enumerate}
+		\end{itemize}
+	\end{itemize}
+	
+\item SIP
+\begin{itemize}
+	\item Worked with two interns. One left the program due to medical problems
+	\item I focused on teaching them basics of syntax and how to write computer programs
+	\item Both of my interns had very limited to no experience with programming. This took a good portion of our time in the program because I tried to limit the amount of time we were in meetings to avoid Zoom fatigue
+	\item By the end of the program my intern that remained was able to write code to extract and organize lines from the corpus for NIs
+\end{itemize}
+
+\item Presented at AMP 2020 with Eirik Tengesdal on our analysis of OS.
+\begin{itemize}
+	\item Received a lot of good feedback from several attendees.
+	\item Continuing with an analysis of more complex syntactic structures
+	\item This helps with understanding how weak pronouns interact with syntax and prosody and helps with understanding what things I need to look for in a possible prosodic answer to NegShifting.
+\end{itemize}
+\end{itemize}
+
+%------------------------------------
+\section*{Analysis}
+%------------------------------------
+\begin{itemize}
+	\item A simple look at the distribution shows that there are more instances of what appears to be bear pronouns instead of complex DPs in the tokens that I extracted.
+	\begin{itemize}
+		\item See Table 1 below
+		\item I am still working on the government files because there was an issue with extracting the genre from the corpus into a POS-tagged format for extracting NIs.
+	\end{itemize}
+	\item This is making me think about how I need to actually going analyzing the results of the data.
+	\begin{itemize}
+		\item I might be best to try and do a multiple part analysis. With comparing all NIs first for shifting. Followed by looking at the differences in percentages between the number of pronouns that shifting and the number of complex NIs that shifted.
+		\item I am planning on talking to several people that I know in the Stats department to see if this is the correct way to approach the data and to perform a statistical analysis.
+		\item This is making me think that it might be good to have Amanda or Matt on my QP committee as well to help with this portion of the analysis.
+	\end{itemize}
+\end{itemize}
+
+\begin{table}[!h]
+	\centering
+\caption{Number of lines for each genre and whether the line contained a NI pronominal}
+\begin{tabular}{lcc}
+	Genre & Pronominals & Complex NIs \\ 
+	\hline 
+	\hline
+	Fiction & 10580 & 5174 \\ 
+
+	Social & 10889 & 7106 \\ 
+
+	Government & ? & ? \\ 
+
+\end{tabular} 
+\end{table}
+
+%------------------------------------
+\section*{Where next}
+%------------------------------------
+\begin{itemize}
+	\item Extract the Government files and get the NIs from it.
+	\item See if there is a way that I can write a program that will help with classifying whether or not a NI that I see in the line is shifted or not.
+	\begin{itemize}
+		\item This will help speed up the process of annotating which means that I should then only need to pull a random sample and then see if the program correctly sorted the random sample or not.
+	\end{itemize}
+	\item Continue to synthesis what has been written concerning NegShifting.
+	\item Start to Outline the paper so I can work on adding parts as I go.
+\end{itemize}
+
+
+%------------------------------------
+%BIBLIOGRAPHY
+%------------------------------------
+
+%\singlespacing
+%\nocite{*}
+\printbibliography
+
+%------------------------------------
+%SNIPPETS
+%------------------------------------
+%\ex. 
+%\jtree[xunit=2.6em,yunit=1em] 
+%\def\\{[labelgapb=-1.2ex]}%\@1 
+%\everymath={\rm}% 
+%\! = {CP}
+%:({XP}\\{$\scriptstyle [wh]$}@A1 ) {$C’$}
+%:({$Cˆ0$}\\{$\scriptstyle [wh,Q]$})
+%{$\langle\, TP\,\rangle$}
+%<tri>{\dots\quad\rnode[b]{A2}{\it t}\quad\dots}.
+%%\nccurve[angleA=-150,angleB=-90,ncurv=1]{->}{A2}{A1} 
+%\ncbar[angleA=-90,angleB=-90,armA=1em, armB=1em,linearc=.6ex]{->}{A2}{A1}
+%\endjtree
+\end{document} 

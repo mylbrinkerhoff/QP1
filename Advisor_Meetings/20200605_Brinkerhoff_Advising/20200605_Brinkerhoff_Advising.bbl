@@ -1,0 +1,117 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{engelsScandinavianNegativeIndefinites2012}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b7e8cacf1f17e3e04de67199dd21dc74}{%
+           family={Engels},
+           familyi={E\bibinitperiod},
+           given={Eva},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b7e8cacf1f17e3e04de67199dd21dc74}
+      \strng{fullhash}{b7e8cacf1f17e3e04de67199dd21dc74}
+      \strng{bibnamehash}{b7e8cacf1f17e3e04de67199dd21dc74}
+      \strng{authorbibnamehash}{b7e8cacf1f17e3e04de67199dd21dc74}
+      \strng{authornamehash}{b7e8cacf1f17e3e04de67199dd21dc74}
+      \strng{authorfullhash}{b7e8cacf1f17e3e04de67199dd21dc74}
+      \field{sortinit}{E}
+      \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{13680005}
+      \field{journaltitle}{Syntax}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{number}{2}
+      \field{shorttitle}{Scandinavian {{Negative Indefinites}} and {{Cyclic Linearization}}}
+      \field{title}{Scandinavian {{Negative Indefinites}} and {{Cyclic Linearization}}: {{Scandinavian Negative Indefinites}} and {{Cyclic Linearization}}}
+      \field{urlday}{29}
+      \field{urlmonth}{1}
+      \field{urlyear}{2020}
+      \field{volume}{15}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{109\bibrangedash 141}
+      \range{pages}{33}
+      \verb{doi}
+      \verb 10.1111/j.1467-9612.2011.00161.x
+      \endverb
+      \verb{file}
+      \verb /Users/mybrink/Zotero/storage/XDRQZ52P/Engels_2012_Scandinavian Negative Indefinites and Cyclic Linearization.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://doi.wiley.com/10.1111/j.1467-9612.2011.00161.x
+      \endverb
+      \verb{url}
+      \verb http://doi.wiley.com/10.1111/j.1467-9612.2011.00161.x
+      \endverb
+    \endentry
+    \entry{penkaNegativeIndefinites2011}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2efab3a994d1f508f2f6cda24c57d3e8}{%
+           family={Penka},
+           familyi={P\bibinitperiod},
+           given={Doris},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Oxford ; New York}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{2efab3a994d1f508f2f6cda24c57d3e8}
+      \strng{fullhash}{2efab3a994d1f508f2f6cda24c57d3e8}
+      \strng{bibnamehash}{2efab3a994d1f508f2f6cda24c57d3e8}
+      \strng{authorbibnamehash}{2efab3a994d1f508f2f6cda24c57d3e8}
+      \strng{authornamehash}{2efab3a994d1f508f2f6cda24c57d3e8}
+      \strng{authorfullhash}{2efab3a994d1f508f2f6cda24c57d3e8}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-19-956726-3 978-0-19-956727-0}
+      \field{number}{no. 32}
+      \field{pagetotal}{264}
+      \field{series}{Oxford Studies in Theoretical Linguistics}
+      \field{title}{Negative Indefinites}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1093/acprof:oso/9780199567263.001.0001
+      \endverb
+      \verb{file}
+      \verb /Users/mybrink/Zotero/storage/EFSDDZQV/Penka_2011_Negative indefinites.pdf
+      \endverb
+      \keyw{Grammar; Comparative and general,Negatives,Polarity (Linguistics),Semantics,Syntax}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

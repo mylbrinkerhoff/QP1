@@ -1,0 +1,148 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{broekhuisUnificationObjectShift2020}{incollection}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=63dd46b9e5060e350d376377630dd683}{%
+           family={Broekhuis},
+           familyi={B\bibinitperiod},
+           given={Hans},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=eaa4486f89cf51430ef88fc3b0af8ca6}{%
+           family={Putnam},
+           familyi={P\bibinitperiod},
+           given={Michael\bibnamedelima T.},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=e2f41f25bdbb26e51fc39d5aa9d2bc53}{%
+           family={Page},
+           familyi={P\bibinitperiod},
+           given={B.\bibnamedelimi Richard},
+           giveni={B\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{63dd46b9e5060e350d376377630dd683}
+      \strng{fullhash}{63dd46b9e5060e350d376377630dd683}
+      \strng{bibnamehash}{63dd46b9e5060e350d376377630dd683}
+      \strng{authorbibnamehash}{63dd46b9e5060e350d376377630dd683}
+      \strng{authornamehash}{63dd46b9e5060e350d376377630dd683}
+      \strng{authorfullhash}{63dd46b9e5060e350d376377630dd683}
+      \strng{editorbibnamehash}{c56df1bc7eb4b2dcb031692c68def36b}
+      \strng{editornamehash}{c56df1bc7eb4b2dcb031692c68def36b}
+      \strng{editorfullhash}{c56df1bc7eb4b2dcb031692c68def36b}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The {{Cambridge Handbook}} of {{Germanic Linguistics}}}
+      \field{day}{31}
+      \field{edition}{1}
+      \field{isbn}{978-1-108-37829-1 978-1-108-42186-7 978-1-108-43438-6}
+      \field{month}{3}
+      \field{title}{The {{Unification}} of {{Object Shift}} and {{Object Scrambling}}}
+      \field{urlday}{15}
+      \field{urlmonth}{5}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{413\bibrangedash 435}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1017/9781108378291.019
+      \endverb
+      \verb{file}
+      \verb /Users/mybrink/Zotero/storage/XYXW7TMA/Broekhuis_2020_The Unification of Object Shift and Object Scrambling.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/product/identifier/9781108378291%23CN-bp-18/type/book_part
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/product/identifier/9781108378291%23CN-bp-18/type/book_part
+      \endverb
+    \endentry
+    \entry{myrbergProsodicHierarchySwedish2015}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=52fbc5107b33096660122bfb6751bdae}{%
+           family={Myrberg},
+           familyi={M\bibinitperiod},
+           given={Sara},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a412b7e6ad1dd11b8fee9208e9969b4}{%
+           family={Riad},
+           familyi={R\bibinitperiod},
+           given={Tomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{24d18992bf6c1d59d95f534393b08f4c}
+      \strng{fullhash}{24d18992bf6c1d59d95f534393b08f4c}
+      \strng{bibnamehash}{24d18992bf6c1d59d95f534393b08f4c}
+      \strng{authorbibnamehash}{24d18992bf6c1d59d95f534393b08f4c}
+      \strng{authornamehash}{24d18992bf6c1d59d95f534393b08f4c}
+      \strng{authorfullhash}{24d18992bf6c1d59d95f534393b08f4c}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We give an overview of the phonological properties and processes that define the categories of the prosodic hierarchy in Swedish: the prosodic word (ω), the prosodic phrase (φ) and the intonation phrase (ι). The separation of two types of tonal prominence, big accents versus small accents (previously called focal and word accent, e.g. Bruce 1977, 2007), is crucial for our analysis. The ω in Swedish needs to be structured on two levels, which we refer to as the minimal ω and the maximal ω, respectively. The minimal ω contains one stress, whereas the maximal ω contains one accent. We argue for a separate category φ that governs the distribution of big accents within clauses. The ι governs the distribution of clause-related edge phenomena like the initiality accent and right-edge boundary tones as well as the distribution of nuclear big accents.}
+      \field{issn}{0332-5865, 1502-4717}
+      \field{journaltitle}{Nordic Journal of Linguistics}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{2}
+      \field{shortjournal}{Nord J Linguist}
+      \field{title}{The Prosodic Hierarchy of {{Swedish}}}
+      \field{urlday}{24}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{volume}{38}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{115\bibrangedash 147}
+      \range{pages}{33}
+      \verb{doi}
+      \verb 10.1017/S0332586515000177
+      \endverb
+      \verb{file}
+      \verb /Users/mybrink/Zotero/storage/3SHLWHNI/Myrberg_Riad_2015_The prosodic hierarchy of Swedish.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/product/identifier/S0332586515000177/type/journal_article
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/product/identifier/S0332586515000177/type/journal_article
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

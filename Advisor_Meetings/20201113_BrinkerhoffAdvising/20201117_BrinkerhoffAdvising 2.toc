@@ -1,0 +1,18 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {american}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Negative indefinite shifting}{1}{section.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Scandinavian pronouns}{3}{section.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Broekhuis 2020}{5}{section.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Valentine Bordal 2017}{6}{section.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Zeijlstra 2011}{7}{section.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Interaction of NegShift and OS}{7}{section.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Next steps}{8}{section.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{References}{9}{section*.2}%

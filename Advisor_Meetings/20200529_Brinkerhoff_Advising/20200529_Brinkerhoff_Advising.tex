@@ -1,0 +1,201 @@
+\documentclass[12pt, letterpaper]{article}
+
+%%BIBLIOGRAPHY- This uses biber/biblatex to generate bibliographies according to the 
+%%Unified Style Sheet for Linguistics
+\usepackage[main=american, german]{babel}% Recommended
+\usepackage{csquotes}% Recommended
+\usepackage[backend=biber,
+		bibstyle=biblatex-sp-unified,
+		citestyle=sp-authoryear-comp,
+		maxcitenames=3,
+		maxbibnames=99,
+		natbib,
+		url=false]{biblatex}
+\addbibresource{QP1.bib}
+\setcounter{biburlnumpenalty}{100}  % allow breaks at numbers
+%\setcounter{biburlucpenalty}{100}   % allow breaks at uppercase letters
+%\setcounter{biburllcpenalty}{100}   % allow breaks at lowercase letters
+
+%%TYPOLOG
+%\usepackage[compact]{titlesec}
+%\titleformat{\section}[runin]{\normalfont\bfseries}{\thesection.}{.5em}{}[.]
+%\titleformat{\subsection}[runin]{\normalfont\scshape}{\thesubsection}{.5em}{}[.]
+\usepackage[hmargin=1in,vmargin=1in]{geometry}  %Margins          
+\usepackage{graphicx}	%Inserting graphics, pictures, images 		
+\usepackage{stackengine} %Package to allow text above or below other text, Also for HG 
+\usepackage{fontspec} %Selection of fonts must be ran in XeLaTeX
+\usepackage{amssymb} %Math symbols
+\usepackage{amsmath}
+\usepackage{setspace} %Linespacing
+\usepackage{multicol} %Multicolumn text
+\usepackage{enumitem} %Allows for continuous numbering of lists over examples, etc.
+\usepackage{multirow} %Useful for combining cells in tablesbrew 
+\usepackage{hanging}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[L]{\textit{QP Advising}} 
+\fancyhead[R]{\textit{\today}} 
+\fancyfoot[L,R]{} 
+\fancyfoot[C]{\thepage} 
+\renewcommand{\headrulewidth}{0.4pt}
+%\usepackage{fourier-orns} %More useful symbols like bombs and jolly-roger, mostly for OT
+\usepackage[colorlinks,allcolors={black},urlcolor={blue}]{hyperref} %allows for hyperlinks and pdf bookmarks
+%\usepackage{url} %allows for urls
+%\def\UrlBreaks{\do\/\do-} %allows for urls to be broken up
+\usepackage[normalem]{ulem} %strike out text. Handy for syntax
+
+%%FONTS
+\setmainfont{Linux Libertine O}
+\setsansfont{Linux Biolinum O}
+
+%%PACKAGES FOR LINGUISTICS
+%\usepackage{OTtablx} %Generating tableaux without using TIPA
+\usepackage[noipa]{OTtablx} %Generating tableaux without using TIPA
+\usepackage{linguex} %Linguistic examples
+\usepackage{tikz} %Drawing Hasse diagrams
+%\usepackage{pst-asr} %Drawing autosegmental features
+\usepackage{pstricks} % required for pst-asr, OTtablx, pst-jtree.
+\usepackage{pst-jtree} 	%Syntax tree draawing software
+%\usepackage{lingmacros} %Various linguistic macros. Does not work with linguex.
+%\usepackage{covington} %Another linguistic examples package.
+%\usepackage{gb43} %Another linguistic examples package. Works with linguex very nicely.
+\newcommand{\rcommentg}[1]{\hfill\raisebox{1.9\baselineskip}[0pt][0pt]{#1}} %This allows for hfill when doing glosses
+
+%%TITLE INFORMATION
+\title{Assignment 5}
+\author{Mykel Loren Brinkerhoff}
+\date{\today}
+
+
+\begin{document}
+	
+%%If using linguex, need the following commands to get correct LSA style spacing
+%% these have to be after  \begin{document}
+	\setlength{\Extopsep}{6pt}
+	\setlength{\Exlabelsep}{9pt}		%effect of 0.4in indent from left text edge
+%%
+	
+%% Line spacing setting. Comment out the line spacing you do not need. Comment out all if you want single spacing.
+%	\doublespacing
+%	\onehalfspacing
+	
+\begin{center}
+	{\Large \textbf{Advising Meeting }}\\
+	\vspace{6pt}
+	Mykel Loren Brinkerhoff
+\end{center}
+%\maketitle
+%\maketitleinst
+\thispagestyle{fancy}
+
+%------------------------------------
+\section{Outline}
+%------------------------------------
+
+\begin{itemize}
+	\item Discussing \citet{engelsScandinavianNegativeIndefinites2012} and \citet{foxCyclicLinearizationSyntactic2005}
+	\item Next Steps
+\end{itemize}
+
+%------------------------------------
+\section{\cite{engelsScandinavianNegativeIndefinites2012} and \cite{foxCyclicLinearizationSyntactic2005}}
+%------------------------------------
+
+\ex. According to \citet{engelsScandinavianNegativeIndefinites2012} NegS is able to be accounted for through \posscitet{foxCyclicLinearizationSyntactic2005} cyclic linearization. 
+
+\ex. Cyclic linearization has as its basic premise the idea that linearization occurs in each \textit{spell-out domain} which \citet{foxCyclicLinearizationSyntactic2005} equate with phases.
+\a. \citeauthor{foxCyclicLinearizationSyntactic2005}, following standard conventions, claim that the spell-out domains are at DP, VP, and CP.
+
+\ex. At each of these spell-out domains, the order that the syntactic elements are found in is fixed through the use of order preservation rules. 
+\a. These rules are assumed to always be in force and are added to at each spell-out domain. 
+
+\ex. As to how this relates to OS and NegS it is claimed that they are subject to two different effects and how the order preservation rules are formulated.
+\a. In the case of OS, they are subject to Holmberg's Gerneralization which states:\\
+Object Shift cannot apply across a phonologically visible category, which asymmetrically c-commands the object position except adjuncts.
+\b. NegS is claimed to adhere to something that is the mirror image of Holmberg's Generalization called the “Inverse Holmberg Effect” \citep{engelsScandinavianNegativeIndefinites2012} in those situations where NegS occurs across a verb \textit{in-situ}.
+
+\ex. The “Inverse Holmberg Effect” states:\\
+Movement of a VP-internal element is permitted only when V-raising does not take place \citep[30]{foxCyclicLinearizationSyntactic2005}.
+
+\ex. When OS and \textit{string-vacuous} NegS occur they both adhere to the same ordering relations: \\
+\a.
+\I[CP S \rnode{b1}V … \I[NegP \rnode{A1}O adv \I[VP \rnode{b2}t\textsubscript{v} \rnode{A2}t\textsubscript{o} ]]]
+\psset{linearc=2pt} 
+\ncbar[angle=90]{->}{A2}{A1}  
+\ncbar[angle=-90,linestyle=dashed]{->}{b2}{b1} 
+\\
+\b. VP Ordering: \textbf{V>O}\\
+CP Ordering: S>V \textbf{V>O} O>adv adv>VP
+\z.
+
+\ex. Because the ordering relations are maintained across the derivation there is no violation, 
+
+\ex. However when the verb  or something else remains in-situ OS is blocked from occurring because there is a rule contradiction
+\a. *\I[CP S \rnode{b1}V … \I[NegP \rnode{A1}O adv \I[VP \rnode{b2}t XP \textsubscript{v} \rnode{A2}t\textsubscript{o} ]]]
+\psset{linearc=2pt} 
+\ncbar[angle=90]{->}{A2}{A1}  
+\ncbar[angle=-90,linestyle=dashed]{->}{b2}{b1} 
+\\
+\b. VP Ordering: V>XP, \textbf{XP>O} \\
+CP Ordering: S>V, V>O, O>adv, adv>VP → \textbf{O>XP}
+\z.
+
+\ex. There two effects are associated with two different preservation rules at VP. 
+\a.  OS and string-vacuous NegS: \textbf{V>O}. 
+\b. Verb \textit{in-situ} NegS: \textbf{O>V}
+\z.
+
+\ex. These two orders are arrived at by whether or not the object has moved before the spell-out domain is closed. 
+
+\ex. We can see these differences here:\\
+\a.
+\I[CP S aux … \I[NegP \rnode{A1}O adv \I[VP \rnode{A2}t\textsubscript{o}  V \rnode{A3}t\textsubscript{o} ]]]
+\psset{linearc=2pt} 
+\ncbar[angle=90]{->}{A3}{A2}  
+\ncbar[angle=90]{->}{A2}{A1}
+\\
+\b. VP Ordering: \textbf{O>V}\\
+CP Ordering: S>V, aux>O, O>adv, adv>VP → \textbf{O>V}
+\z.
+
+\ex. However, this seems very ad-hoc and would suggest that there must be some sort of feature that motivates the movement of the Object to spec,VP. This is not explained in \citet{engelsScandinavianNegativeIndefinites2012}. 
+
+\ex. If \citet{engelsScandinavianNegativeIndefinites2012} is correct then there must be some sort of motivation for the movement to spec,VP besides as a requirement for explaining why NegS is allowed to occur across verbs \textit{in-situ}.
+
+\ex. I think this is a flaw in the analysis and needs to be spelled out if this analysis is to succeed.
+
+
+%------------------------------------
+\section{Next steps}
+%------------------------------------
+
+\ex. Moving forward I think trying to provide the motivation for why NegS first moves to spec,VP would be a good first step
+
+\ex. I think that at this point moving forward with designing an experiment to test which NegS is allowed and if there is a preference for pronominals over full DPs in the different varieties of Scandinavian should be my top priority
+ 
+%\ex. “The tale of two displacements: OS and NegS in Mainland Scandinavian” 
+
+%------------------------------------
+%BIBLIOGRAPHY
+%------------------------------------
+
+%\singlespacing
+%\nocite{*}
+\printbibliography
+
+%------------------------------------
+%SNIPPETS
+%------------------------------------
+%\ex. 
+%\jtree[xunit=2.6em,yunit=1em] 
+%\def\\{[labelgapb=-1.2ex]}%\@1 
+%\everymath={\rm}% 
+%\! = {CP}
+%:({XP}\\{$\scriptstyle [wh]$}@A1 ) {$C’$}
+%:({$Cˆ0$}\\{$\scriptstyle [wh,Q]$})
+%{$\langle\, TP\,\rangle$}
+%<tri>{\dots\quad\rnode[b]{A2}{\it t}\quad\dots}.
+%%\nccurve[angleA=-150,angleB=-90,ncurv=1]{->}{A2}{A1} 
+%\ncbar[angleA=-90,angleB=-90,armA=1em, armB=1em,linearc=.6ex]{->}{A2}{A1}
+%\endjtree
+\end{document} 

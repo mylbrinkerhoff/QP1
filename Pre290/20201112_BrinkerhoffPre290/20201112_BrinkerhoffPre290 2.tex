@@ -1,0 +1,409 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode		
+
+\documentclass[12pt, letterpaper]{article}
+
+%%BIBLIOGRAPHY- This uses biber/biblatex to generate bibliographies according to the 
+%%Unified Style Sheet for Linguistics
+\usepackage[main=american, german]{babel}% Recommended
+\usepackage{csquotes}% Recommended
+\usepackage[backend=biber,
+		style=unified,
+		maxcitenames=3,
+		maxbibnames=99,
+		natbib,
+		url=false]{biblatex}
+\addbibresource{link.bib}	%	Use when on Laptop
+\setcounter{biburlnumpenalty}{100}  % allow URL breaks at numbers
+%\setcounter{biburlucpenalty}{100}   % allow URL breaks at uppercase letters
+%\setcounter{biburllcpenalty}{100}   % allow URL breaks at lowercase letters
+
+%%TYPOLOGY
+\usepackage[svgnames]{xcolor} % Specify colors by their 'svgnames', for a full list of all colors available see here: http://www.latextemplates.com/svgnames-colors
+%\usepackage[compact]{titlesec}
+%\titleformat{\section}[runin]{\normalfont\bfseries}{\thesection.}{.5em}{}[.]
+%\titleformat{\subsection}[runin]{\normalfont\scshape}{\thesubsection}{.5em}{}[.]
+\usepackage[hmargin=1in,vmargin=1in]{geometry}  %Margins          
+\usepackage{graphicx}	%Inserting graphics, pictures, images 		
+\usepackage{stackengine} %Package to allow text above or below other text, Also helpful for HG weights 
+\usepackage{fontspec} %Selection of fonts must be ran in XeLaTeX
+\usepackage{amssymb} %Math symbols
+\usepackage{amsmath} % Mathematical enhancements for LaTeX
+\usepackage{setspace} %Linespacing
+\usepackage{multicol} %Multicolumn text
+\usepackage{enumitem} %Allows for continuous numbering of lists over examples, etc.
+\usepackage{multirow} %Useful for combining cells in tablesbrew 
+\usepackage{hanging}
+\usepackage{fancyhdr} %Allows for the 
+\pagestyle{fancy}
+\fancyhead[L]{\textit{Pre-290}} 
+\fancyhead[R]{\textit{\today}} 
+\fancyfoot[L,R]{} 
+\fancyfoot[C]{\thepage} 
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{14.5pt} % ...at least 14.49998pt
+% \usepackage{fourier} % This allows for the use of certain wingdings like bombs, frowns, etc.
+% \usepackage{fourier-orns} %More useful symbols like bombs and jolly-roger, mostly for OT
+\usepackage[colorlinks,allcolors={black},urlcolor={blue}]{hyperref} %allows for hyperlinks and pdf bookmarks
+% \usepackage{url} %allows for urls
+% \def\UrlBreaks{\do\/\do-} %allows for urls to be broken up
+\usepackage[normalem]{ulem} %strike out text. Handy for syntax
+
+%%FONTS
+\setmainfont{Linux Libertine O}
+\setsansfont{Linux Biolinum O}
+% \setmonofont{DejaVu Sans Mono}
+
+%%PACKAGES FOR LINGUISTICS
+%\usepackage{OTtablx} %Generating tableaux with using TIPA
+\usepackage[noipa]{OTtablx} % Use this one generating tableaux without using TIPA
+%\usepackage[notipa]{ot-tableau} % Another tableau drawing packing use for posters.
+% \usepackage{linguex} % Linguistic examples
+\usepackage{langsci-gb4e} % Language Science Press' modification of gb4e
+% \usepackage{langsci-avm} % Language Science Press' AVM package
+\usepackage{tikz} % Drawing Hasse diagrams
+%\usepackage{pst-asr} % Drawing autosegmental features
+\usepackage{pstricks} % required for pst-asr, OTtablx, pst-jtree.
+% \usepackage{pst-jtree} 	% Syntax tree draawing software
+\usepackage{tikz-qtree}	% Another syntax tree drawing software. Uses bracket notation.
+% \usepackage{forest}	% Another syntax tree drawing software. Uses bracket notation.
+%\usepackage{ling-macros} % Various linguistic macros. Does not work with linguex.
+%\usepackage{covington} % Another linguistic examples package.
+
+%%TITLE INFORMATION
+\title{20201112 Pre-290}
+\author{Mykel Loren Brinkerhoff}
+\date{\today}
+
+
+\begin{document}
+	
+%%If using linguex, need the following commands to get correct LSA style spacing
+%% these have to be after  \begin{document}
+	% \setlength{\Extopsep}{6pt}
+	% \setlength{\Exlabelsep}{9pt}		%effect of 0.4in indent from left text edge
+%%
+	
+%% Line spacing setting. Comment out the line spacing you do not need. Comment out all if you want single spacing.
+%	\doublespacing
+%	\onehalfspacing
+	
+\begin{center}
+	{\Large \textbf{Negative shifting in a modern Scandinavian language}}\\
+	\vspace{6pt}
+	Mykel Loren Brinkerhoff\\
+	Pre-290
+\end{center}
+%\maketitle
+%\maketitleinst
+\thispagestyle{fancy}
+
+%------------------------------------
+\section*{Outline of Handout} \label{sec:OUTLINE}
+%------------------------------------
+\begin{itemize}
+	\item Overview of Negative Indefinite Shift in §\ref{sec:NEGSHIFT}
+	\item Discussion of Scandinavian Pronoun structure in §\ref{sec:PRONOUNS}
+	% \item Discussion of \cite{broekhuisUnificationObjectShift2020} in §\ref{sec:BROEKHUIS}
+	\item Discussion of \cite{valentinebordalNegationExistentialPredications2017} in §\ref{sec:VB}
+	\item Discussion of \cite{zeijlstraSyntacticallyComplexStatus2011} in §\ref{sec:ZEIJLSTRA}
+	\item Next steps in §\ref{sec:NEXT}
+\end{itemize}
+
+%------------------------------------
+\section{Negative indefinite shifting} \label{sec:NEGSHIFT}
+%------------------------------------
+\ea Negative Shifting (NegShift) is a process in the Scandinavian languages where a negative indefinite (NI) obligatorily shifts to a position outside of the VP.
+	\ea
+	\gll Manden havde måske \textit{ingenting} [\textsubscript{VP} sagt t\textsubscript{o} ].\\
+	man-the had probably nothing ~ said\\
+	\glt `The man hadn't said anything.'
+	\ex 
+	\gll Jeg har \textit{ingen} \textit{bøger} [\textsubscript{VP} lånt børnene t\textsubscript{o}.]\\
+	I have no books ~ lent children-the\\
+	\glt `I haven't lent the children any books.'
+	\z
+\ex This process occurs to all NIs and is permissible from a large number of different contexts, depending on the variety and register, see Table \ref{tab:Distribution}. 
+\begin{table}[!h]
+	\centering
+	\caption{Distribution of NegShift across Scandinavian languages. WJ = West Jutlandic, Ic = Icelandic, Fa = Faroese, DaL = Danish Linguists, SwL = Swedish Linguists, Scan1 = literary/formal Mainland Scandinavian, Scan2 = colloquial Mainland Scandinavian and Norwegian}
+	\label{tab:Distribution}
+\begin{tabular}{llccccccccc}
+	\hline 
+	NegS across &  & WJ1 & WJ2 & Ic & Fa & DaL1 & DaL2 & SwL & Scan1 & Scan2 \\ 
+	\hline 
+	String-vacuous &  & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ \\ 
+	Verb &  & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & * \\ 
+	IO & verb in situ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & * \\ 
+	& verb moved & * & * & * & * & * & * & * & * & * \\ 
+	Preposition & verb in situ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ? & ? & * & * & * \\ 
+	& verb moved & ✔︎ & ✔︎ & ? & * & * & * & * & * & * \\ 
+	Infinitive & verb in situ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & * & ? & * & * \\ 
+	& verb moved & ✔︎ & * & * & ✔︎ & * & * & * & * & * \\ 
+	\hline 
+\end{tabular} 
+\end{table}
+
+\newpage
+\ex However, not all NegShift is treated equal. \citet[65f]{christensenInterfacesNegationSyntax2005}, speaking on Danish, claims that the "weight" of the NI plays a factor in whether or not NegShift occurs. 
+	\ea
+	\gll Jeg har \textit{intet}\textsubscript{o} hørt t\textsubscript{o}.\\
+	I have nothing heard\\
+	\glt  `I havn't heard anything.'
+	\ex 
+	\gll Jeg har [\textit{intet} \textit{nyt}]\textsubscript{o} hørt t\textsubscript{o}.\\
+	I have nothing new heard\\
+	\glt `I haven't heard anything new'
+	\ex[*] {
+	\gll Jeg har [\textit{intet} \textit{nyt} \textit{i} \textit{sagen}]\textsubscript{o} hørt t\textsubscript{o}.\\
+	I have nothing new in case-\textsc{det} heard\\
+	\glt `I haven't heard anything new about the case.'
+	}
+	\ex[*] {
+	\gll Jeg har [\textit{intet} \textit{nyt} \textit{i} \textit{sagen} \textit{om} \textit{de} \textit{stjålne} \textit{malerier}]\textsubscript{o} hørt t\textsubscript{o}.\\
+	I have nothing new in case-\textsc{det} about the stolen paintings heard\\
+	}
+	\glt `I haven't heard anything new in the case about the stolen paintings.'
+	\z
+\ex In those instances where the NI is too large one potential repair is to strand the PP while moving just the pronoun or using the negative particle \textit{ikke} and a NPI.
+	\ea Jeg har \textit{intet}\textsubscript{i} hørt t\textsubscript{i} [\textsubscript{PP} i sagen om de stjålne malerier ].
+	\ex Jeg har ikke hørt [ \textit{noget} i sagen om de stjålne malerier ].
+	\z   
+\ex This same behavior has also been remarked upon by \citet{penkaNegativeIndefinites2011} for Swedish.
+	\ea 
+	\gll Men mänskligheten har \textit{ingenting}\textsubscript{o} lärt sig t\textsubscript{o}.\\
+	but mankind-the have nothing taught themselves\\
+	\glt `But mankind haven't taught themselves anything.'
+	\ex[?] {
+	\gll Vi hade \textit{inga} \textit{grottor}\textsubscript{o} undersökt t\textsubscript{o}.\\
+	we have no caves explored\\
+	}
+	\glt `We haven't explored any caves.'
+	\z 
+\ex My QP explores whether or not there is indeed this preference for NegShift of pronouns by conducting a study on the Swedish Culturomics Gigaword Corpus \citep{eideSwedishCulturomicsGigaword2016} and how this phenomenon might relate to prosodic analyses of pronominal obejct shift.
+\ex One of the issues for this analysis is that one of the NI pronouns (\textit{ingen|inget|inga}) is identical to the NI determiner (\textit{ingen|inget|inga}).
+\z 
+
+%------------------------------------
+\section{Scandinavian pronouns} \label{sec:PRONOUNS}
+%------------------------------------
+
+\ea There two different approaches that we can take when accounting for the syntactic structure of the negative indefinite pronouns in Swedish. The two positions are: (a) the pronoun is the head of a DP on its own; or (b) the pronoun resides in D and takes a null NP complete.\footnote{This second option could also assume that the pronoun originated in NP and moved to D prior to spell-out of the DP phase.}
+	\begin{multicols}{2}
+	\begin{xlist}
+		\ex DP with no complement \label{ex:NNP}\\
+		\begin{tikzpicture} 
+		\tikzset{every tree node/.style={align=center,anchor=north}} 
+		\Tree [.DP\\\emph{pronoun} ] 
+		\end{tikzpicture}
+		\vspace{2em}\\
+		\ex DP with null NP complement \label{ex:DN} \\
+		\begin{tikzpicture} 
+		\tikzset{every tree node/.style={align=center,anchor=north}} 
+		\Tree [.DP D\\\emph{pronoun} [.NP\\$\varnothing$ ] ]
+		\end{tikzpicture}
+	\end{xlist}
+	\end{multicols}
+\ex The reason this question is interesting is the presence of two homophonous NIs. 
+	\ea the first is the negative indefinite determiner which always appears with a nominal pivot. This is equivalent to our NI determiner \emph{no}.
+		\ea 
+		\gll Jag bakade honom [\textsubscript{DP} \emph{inget} kaka ].\\
+		I baked him ~ no cake\\
+		\glt `I didn't bake him any cake.'  
+		\ex 
+		\gll Hon såg \emph{inga} barn.\\
+		she saw no children\\
+		\glt `She didn't see any children.'
+		\z  
+	\ex The second is the negative indefinite pronoun which does not take a nominal pivot and stands independent or with an adjunct, similar to English's \emph{no-one} or \emph{none}.
+		\ea 
+		\gll Jag bakade honom \emph{inget}.\\
+		I baked him none\\
+		\glt `I didn't bake him anything.'
+		\ex 
+		\gll  Jag har \textit{ingen} lånt barnen.\\
+		I have none lent children-the\\
+		\glt `I haven't lent the children anything.'
+		\z 
+	\z
+\ex Evidence for one structure over the other comes from whether or not modification of the pronoun is allowed. 
+	\ea Modification is taken to be additional material that changes what the set of things the NI refers too. 
+	\ex This is predominately done with PPs, relative clauses, or infinitival clauses (when the NI is an object of an existential clause).
+	\z 
+\ex Because of this difference in behavior between determiners and nouns, we can gather evidence that would suggest one of the two syntactic structures is the more likely one for the Swedish negative indefinite pronouns if modification of these pronouns is present.
+\ex Data will be drawn from across all of the Scandinavian languages because of the close similarity between the mainland Scandinavian languages syntactically.
+\ex We observe in Danish that their negative indefinite pronouns are able to be modified with PPs and CPs as shown in \citet[218ff]{allanDanishComprehensiveGrammar1995}.
+	\ea PPs
+		\ea 
+		\gll Det er \textit{intet} [\textsubscript{PP} i vej-an ].\\
+			It is nothing ~ in way-\textsc{det}\\
+		\glt `There is nothing wrong'
+		\ex 
+		\gll Jeg kender \textit{ingen} [\textsubscript{PP} her i byen ].\\
+			I know no-one ~ here in town\\
+		\glt `I know no one in this town.'
+		\z
+	\ex CPs
+		\ea 
+		\gll Der er \textit{ingen}, [\textsubscript{CP} der har set ham ].\\
+		there is no-one, ~ who has seen him\\
+		\glt `Nobody has seen him'
+		\ex
+		\gll Der er \textit{intet} [\textsubscript{CP} at være bange for ].\\
+		There is nothing ~ to be afraid of\\
+		\glt `There is nothing to be afraid of'
+		\z 
+	\z
+\ex This same behavior is also observed in Swedish \citep[197ff]{holmesSwedishComprehensiveGrammar2013}.
+	\ea PPs
+		\ea \label{ex:inget}
+		\gll Han äger \textit{inget} [\textsubscript{PP} av värde ].\\
+			He owns nothing ~ of value\\
+		\glt `He owns nothing of value.'
+		\z 
+	\ex CPs
+		\ea
+		\gll Jag såg \textit{ingen} [\textsubscript{CP} jag {kände igen} ].\\
+		I saw no-one ~ I recognize\\
+		\glt `I saw no one that I recognize.'
+		\ex 
+		\gll Jag har \textit{ingenting} [\textsubscript{CP} att säga ].\\
+		I have nothing ~ to say\\
+		\glt `I have nothing to say.'
+		\z 
+	\z
+\ex Example (\ref{ex:inget}) shows the use of \textit{inget} instead of \textit{ingenting} which according to \citet{holmesSwedishComprehensiveGrammar2013} are in free variation.
+
+\ex Based on this data, we see adjunct extraposition, which is assumed to be the result of the adjunction site of these PPs and CPs being within NP.
+	\ea This is a working hypothesis and I am currently looking for further independent evidence that this is is the correct analysis for pronominals in Swedish.
+	\z 
+\ex Another reason that we can assume that (\ref{ex:DN}), repeated below with a adjunct, is the correct structure, is that if we assume that (\ref{ex:NNP}) is the structure for pronouns then we are left wondering how exactly these pronominal modifiers attach to our structure.
+	\ea \attop{
+	\begin{tikzpicture} 
+	\tikzset{every tree node/.style={align=center,anchor=north}} 
+	\Tree [.DP D\\\emph{pronoun} [.NP NP\\$\varnothing$ XP\\\emph{adjunct} ] ]
+	\end{tikzpicture}
+	}
+	\z 
+\z 
+
+
+% %------------------------------------
+% \section{Broekhuis 2020} \label{sec:BROEKHUIS}
+% %------------------------------------
+
+% \ea \cite{broekhuisUnificationObjectShift2020} explores the possibility that object shift and object scrambling are the same phenomenon and concludes that this is in fact the case.
+% \ex However, \citeauthor[417f]{broekhuisUnificationObjectShift2020} does point out that weak pronominal object shift behaves differently than full DP objects in what loci there are allowed to inhabit. In the case of weak pronominals they are required to appear outside of the \textit{v}P if there is no intervening phonological material (i.e., Holmberg's Generalization \cite{holmbergWordOrderSyntactic1986,holmbergRemarksHolmbergGeneralization1999}).
+% \ex \citeauthor{broekhuisUnificationObjectShift2020} does have some interesting discussion about the interaction of NegShift and pronominal OS. 
+% \ex Citing examples from \citet[163ff]{christensenInterfacesNegationSyntax2005}, Broekhuis shows this pair of examples:
+% 	\ea \label{ex:NegShift}
+% 	\gll Jeg har <ingen bøger> lånt hende <*ingen bøger>.\\
+% 	I have no books lent her\\
+% 	\glt `I haven't lent her any books
+% 	\ex \label{ex:NegOS}
+% 	\gll Jeg lånte \textit{henda} fraktisch \textit{ingen} \textit{bøger}.\\
+% 	I lent her actually no books\\
+% 	\glt `I didn't actually lend her any books.'
+% 	\z
+% \ex In (\ref{ex:NegShift}), we see that when we have a negative object that it shifts to a position higher than the \textit{v}P if it were to remain in-situ as it would be ungrammatical and would require the use of \textit{ikke} `not' and the NPI \textit{nogen}.
+% 	\ea
+% 	\gll Jeg har \textit{ikke} lånt hende \textit{nogen} bøger.\\
+% 	I have not lent her any books.\\
+% 	\glt `I haven't lent her any books.'
+% 	\z
+% \ex However, when the main verb has raised to C⁰ as in (\ref{ex:NegOS}) then the weak pronominal moves to a position higher than the adverb \textit{fraktisch} `actually'. The negative object is not able to move to the similar position that is higher than the adverb. Additionally, this results in OS > NegShift and according to \citeauthor{broekhuisUnificationObjectShift2020} this is a universal fact.
+% \ex This does help us see that that even though these two phenomena appear to be similar they are in fact slightly different, due to the differences in the where the different movement operations' target is.
+% \z 
+
+
+%------------------------------------
+\section{Valentine Bordal 2017} \label{sec:VB}
+%------------------------------------
+
+\ea \citet{valentinebordalNegationExistentialPredications2017} is a corpus study of \textit{Språkbanken}\footnote{\url{https://spraakbanken.gu.se/en}} looking at how existential predicates are negated in Swedish.
+\ex According to \citeauthor{valentinebordalNegationExistentialPredications2017} declarative sentences are negated using the negative particle \textit{inte} only. 
+	\ea
+	\gll Anna är \textit{inte} doktor.\\
+	Anna is not doctor\\
+	\glt `Anna is not a doctor.'
+	\z 
+\ex If the verbal predicate has a non-lexical verb (i.e., modals and auxiliaries) then the sentence is negated with either the negative particle \textit{inte} or with a negative indefinite.\footnote{I disagree with her claim that NIs are only used with non-lexical verbs, because there are plenty of examples in the literature that show NIs negating sentences that contain lexical verbs (see \cite{engelsScandinavianNegativeIndefinites2012} and \cite{christensenInterfacesNegationSyntax2005} for examples).} 
+	\ea
+	\gll Jag har \textit{inte} några barn.\\
+	I have not any children\\
+	\glt `I don't have any children'
+	\ex 
+	\gll Jag har \textit{inga} barn.\\
+	I have no children\\
+	\glt `I don't have children.'
+	\z 
+\ex According to her results, NIs were the most frequent method for negating existential predicates. 
+	
+	\begin{table}[!h]
+	\centering
+	\caption{Frequency of negation strategy}
+	\begin{tabular}{lll}
+	\hline
+	Negated existential & Raw count & Proportion\\
+	\hline
+	Existential predicates negated with an indefinite pronoun & 212 918 & 89\% \\
+	Existential predicates negated with inte & 27 437 & 11\% \\
+	\hline
+	Total & 240 355 & 100\%  \\
+	\hline
+	\end{tabular}
+	\end{table}
+
+\ex Under her analysis of NIs, they are all treated as a pronomial which can or cannot appear with a nominal pivot.
+	\ea This means that her "modifier" is best treated as a NI determiner which appears with a nominal pivot and her "head" is best treated as a pronoun which doesn't appear with a nominal pivot.
+	\z 
+
+	\begin{table}[!h]
+	\centering
+	\caption{Frequency of NI property}
+	\begin{tabular}{lll}
+	Syntactic property of the NI & Frequency & Proportion\\
+	\hline
+	Modifier & 687 & 78\% \\
+	Head & 198 & 22\% \\
+	\hline
+	Total & 885 & 100\%  \\
+	\hline
+	\end{tabular}
+	\end{table}
+
+\ex She also claims that out of all the negative indefinites, \textit{inga} only appears as a modifier, \textit{ingen} and \textit{inget} both appear equally as modifiers and pronominal heads, and \textit{ingenting} only ever appear as a head. 
+\z 
+
+%------------------------------------
+\section{Zeijlstra 2011} \label{sec:ZEIJLSTRA}
+%------------------------------------
+
+\ea \cite{zeijlstraSyntacticallyComplexStatus2011} is interested in showing providing an analysis of the split-scope interpretation that exists for negative indefinites in Germanic languages. 
+\ex Split-scope is evident when modals and other auxiliaries are present and the negation scopes higher than the modal/auxiliary's scope where the indefinite resides. 
+\ex \citeauthor{zeijlstraSyntacticallyComplexStatus2011} assumes that this behavior is the result of the compositional status of negative indefinites similar to the claims made by \citet{iatridouNegativeDPsAMovement2011}. Unlike \citeauthor{iatridouNegativeDPsAMovement2011}, who simply claim that negation takes scope higher than the modal's scope and the indefinite scopes low, he claims that NIs are composed of a negative operator and an indefinite component.
+\ex He further claims that the split-scope interpretation is the result of a copy-theory of movement where the indefinite interpretation is interpreted in the lower copy while the negative operator is interpreted in the higher copy after quantifier rising. 
+\z 
+
+%------------------------------------
+\section{Next steps} \label{sec:NEXT}
+%------------------------------------
+\begin{itemize}
+	\item Looking into the interaction of object shift and NegShift with a comparison of the size of shifted elements.
+	\begin{itemize}
+		\item Additionally, looking into \citet{christensenInterfacesNegationSyntax2005}, \citet{viknerObjectShiftScandinavian2017,viknerVerbMovementVariation2001}, and \citet{thrainssonSyntaxIcelandic2010} for further descriptions of NegShift.
+		\item \citeauthor{thrainssonSyntaxIcelandic2010} also describes the fact that \emph{all} quantifiers undergo a similar process to NIs. This behavior has led him to claim that NegShift is just \textbf{Quantifier Scrambling}.
+	\end{itemize}
+	\item Looking into the Anti-Holmberg effect \citep{foxCyclicLinearizationSyntactic2005,engelsScandinavianNegativeIndefinites2012}.
+\end{itemize}
+
+
+%------------------------------------
+%BIBLIOGRAPHY
+%------------------------------------
+
+%\singlespacing
+%\nocite{*}
+\printbibliography
+
+\end{document}

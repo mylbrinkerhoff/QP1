@@ -1,0 +1,352 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{allanDanishComprehensiveGrammar1995}{book}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=dc4aef133e90495924db9f3b9ee81fa0}{%
+           family={Allan},
+           familyi={A\bibinitperiod},
+           given={Robin},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=949efe8a383e75de52b11d35676ae5a0}{%
+           family={Holmes},
+           familyi={H\bibinitperiod},
+           given={Philip},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=519b0a1986372d8226cbbe3a67e7ef0f}{%
+           family={Lundskær-Nielsen},
+           familyi={L\bibinithyphendelim N\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {London ; New York}%
+      }
+      \list{publisher}{1}{%
+        {Routledge}%
+      }
+      \strng{namehash}{4e605d7843d6c61dd7e261d526d1b637}
+      \strng{fullhash}{4e605d7843d6c61dd7e261d526d1b637}
+      \strng{bibnamehash}{4e605d7843d6c61dd7e261d526d1b637}
+      \strng{authorbibnamehash}{4e605d7843d6c61dd7e261d526d1b637}
+      \strng{authornamehash}{4e605d7843d6c61dd7e261d526d1b637}
+      \strng{authorfullhash}{4e605d7843d6c61dd7e261d526d1b637}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{isbn}{978-0-415-08206-8}
+      \field{langid}{engdan}
+      \field{pagetotal}{628}
+      \field{series}{Routledge grammars}
+      \field{shorttitle}{Danish}
+      \field{title}{Danish: a comprehensive grammar}
+      \field{year}{1995}
+      \field{dateera}{ce}
+      \keyw{Danish language,Grammar}
+    \endentry
+    \entry{broekhuisUnificationObjectShift2020}{incollection}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=63dd46b9e5060e350d376377630dd683}{%
+           family={Broekhuis},
+           familyi={B\bibinitperiod},
+           given={Hans},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=eaa4486f89cf51430ef88fc3b0af8ca6}{%
+           family={Putnam},
+           familyi={P\bibinitperiod},
+           given={Michael\bibnamedelima T.},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=e2f41f25bdbb26e51fc39d5aa9d2bc53}{%
+           family={Page},
+           familyi={P\bibinitperiod},
+           given={B.\bibnamedelimi Richard},
+           giveni={B\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{63dd46b9e5060e350d376377630dd683}
+      \strng{fullhash}{63dd46b9e5060e350d376377630dd683}
+      \strng{bibnamehash}{63dd46b9e5060e350d376377630dd683}
+      \strng{authorbibnamehash}{63dd46b9e5060e350d376377630dd683}
+      \strng{authornamehash}{63dd46b9e5060e350d376377630dd683}
+      \strng{authorfullhash}{63dd46b9e5060e350d376377630dd683}
+      \strng{editorbibnamehash}{c56df1bc7eb4b2dcb031692c68def36b}
+      \strng{editornamehash}{c56df1bc7eb4b2dcb031692c68def36b}
+      \strng{editorfullhash}{c56df1bc7eb4b2dcb031692c68def36b}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The {{Cambridge Handbook}} of {{Germanic Linguistics}}}
+      \field{day}{31}
+      \field{edition}{1}
+      \field{isbn}{978-1-108-37829-1 978-1-108-42186-7 978-1-108-43438-6}
+      \field{month}{3}
+      \field{title}{The {{Unification}} of {{Object Shift}} and {{Object Scrambling}}}
+      \field{urlday}{15}
+      \field{urlmonth}{5}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{413\bibrangedash 435}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1017/9781108378291.019
+      \endverb
+      \verb{file}
+      \verb /Users/mybrink/Zotero/storage/XYXW7TMA/Broekhuis_2020_The Unification of Object Shift and Object Scrambling.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/product/identifier/9781108378291%23CN-bp-18/type/book_part
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/product/identifier/9781108378291%23CN-bp-18/type/book_part
+      \endverb
+      \keyw{_tablet}
+    \endentry
+    \entry{christensenInterfacesNegationSyntax2005}{thesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e472442f3cefc952f8f4ab9389be4c64}{%
+           family={Christensen},
+           familyi={C\bibinitperiod},
+           given={Ken\bibnamedelima Ramshøj},
+           giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {University of Aarhus}%
+      }
+      \list{location}{1}{%
+        {Aarhus}%
+      }
+      \strng{namehash}{e472442f3cefc952f8f4ab9389be4c64}
+      \strng{fullhash}{e472442f3cefc952f8f4ab9389be4c64}
+      \strng{bibnamehash}{e472442f3cefc952f8f4ab9389be4c64}
+      \strng{authorbibnamehash}{e472442f3cefc952f8f4ab9389be4c64}
+      \strng{authornamehash}{e472442f3cefc952f8f4ab9389be4c64}
+      \strng{authorfullhash}{e472442f3cefc952f8f4ab9389be4c64}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Interfaces: {{Negation}} - {{Syntax}} - {{Brain}}}
+      \field{type}{Ph.D. dissertation}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /Users/mybrink/Zotero/storage/8IWN2B8Q/Christensen_2005_Interfaces.pdf
+      \endverb
+    \endentry
+    \entry{holmbergWordOrderSyntactic1986}{thesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4d07115f283137489b04549b8ce8654e}{%
+           family={Holmberg},
+           familyi={H\bibinitperiod},
+           given={Anders},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {University of Stockholm}%
+      }
+      \list{location}{1}{%
+        {Stockholm, Sweden}%
+      }
+      \strng{namehash}{4d07115f283137489b04549b8ce8654e}
+      \strng{fullhash}{4d07115f283137489b04549b8ce8654e}
+      \strng{bibnamehash}{4d07115f283137489b04549b8ce8654e}
+      \strng{authorbibnamehash}{4d07115f283137489b04549b8ce8654e}
+      \strng{authornamehash}{4d07115f283137489b04549b8ce8654e}
+      \strng{authorfullhash}{4d07115f283137489b04549b8ce8654e}
+      \field{extraname}{1}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Word Order and Syntactic Features in the {{Scandinavian}} Languages and {{English}}.}
+      \field{type}{Doctoral dissertation}
+      \field{year}{1986}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /Users/mybrink/Zotero/storage/PGSMIEJJ/Holmberg_1986_Word order and syntactic features in the Scandinavian languages and English.pdf
+      \endverb
+    \endentry
+    \entry{holmbergRemarksHolmbergGeneralization1999}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4d07115f283137489b04549b8ce8654e}{%
+           family={Holmberg},
+           familyi={H\bibinitperiod},
+           given={Anders},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4d07115f283137489b04549b8ce8654e}
+      \strng{fullhash}{4d07115f283137489b04549b8ce8654e}
+      \strng{bibnamehash}{4d07115f283137489b04549b8ce8654e}
+      \strng{authorbibnamehash}{4d07115f283137489b04549b8ce8654e}
+      \strng{authornamehash}{4d07115f283137489b04549b8ce8654e}
+      \strng{authorfullhash}{4d07115f283137489b04549b8ce8654e}
+      \field{extraname}{2}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0039-3193, 1467-9582}
+      \field{journaltitle}{Studia Linguistica}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{number}{1}
+      \field{shortjournal}{Studia Linguistica}
+      \field{title}{Remarks on {{Holmberg}}’s {{Generalization}}}
+      \field{urlday}{29}
+      \field{urlmonth}{1}
+      \field{urlyear}{2020}
+      \field{volume}{53}
+      \field{year}{1999}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 39}
+      \range{pages}{39}
+      \verb{doi}
+      \verb 10.1111/1467-9582.00038
+      \endverb
+      \verb{file}
+      \verb /Users/mybrink/Zotero/storage/FCAR57LR/Holmberg_1999_Remarks on Holmberg’s Generalization.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/1467-9582.00038
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/1467-9582.00038
+      \endverb
+    \endentry
+    \entry{holmesSwedishComprehensiveGrammar2013}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=949efe8a383e75de52b11d35676ae5a0}{%
+           family={Holmes},
+           familyi={H\bibinitperiod},
+           given={Philip},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4468a45789ad2b51a1a3e35150d9548c}{%
+           family={Hinchliffe},
+           familyi={H\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Routledge}%
+      }
+      \strng{namehash}{50e3f28e724f46d53ef6d5097f14f4b0}
+      \strng{fullhash}{50e3f28e724f46d53ef6d5097f14f4b0}
+      \strng{bibnamehash}{50e3f28e724f46d53ef6d5097f14f4b0}
+      \strng{authorbibnamehash}{50e3f28e724f46d53ef6d5097f14f4b0}
+      \strng{authornamehash}{50e3f28e724f46d53ef6d5097f14f4b0}
+      \strng{authorfullhash}{50e3f28e724f46d53ef6d5097f14f4b0}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{edition}{3rd edition}
+      \field{isbn}{978-0-415-66925-2}
+      \field{pagetotal}{726}
+      \field{series}{Routledge {{Comprehensive Grammars}}}
+      \field{shorttitle}{Swedish}
+      \field{title}{Swedish: {{A}} Comprehensive Grammar}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /Users/mybrink/Zotero/storage/IKAJAWCH/Holmes_Hinchliffe_2013_Swedish.pdf
+      \endverb
+      \keyw{Grammar,Swedish language}
+    \endentry
+    \entry{penkaNegativeIndefinites2011}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2efab3a994d1f508f2f6cda24c57d3e8}{%
+           family={Penka},
+           familyi={P\bibinitperiod},
+           given={Doris},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Oxford ; New York}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{2efab3a994d1f508f2f6cda24c57d3e8}
+      \strng{fullhash}{2efab3a994d1f508f2f6cda24c57d3e8}
+      \strng{bibnamehash}{2efab3a994d1f508f2f6cda24c57d3e8}
+      \strng{authorbibnamehash}{2efab3a994d1f508f2f6cda24c57d3e8}
+      \strng{authornamehash}{2efab3a994d1f508f2f6cda24c57d3e8}
+      \strng{authorfullhash}{2efab3a994d1f508f2f6cda24c57d3e8}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-19-956726-3 978-0-19-956727-0}
+      \field{number}{no. 32}
+      \field{pagetotal}{264}
+      \field{series}{Oxford Studies in Theoretical Linguistics}
+      \field{title}{Negative Indefinites}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1093/acprof:oso/9780199567263.001.0001
+      \endverb
+      \verb{file}
+      \verb /Users/mybrink/Zotero/storage/EFSDDZQV/Penka_2011_Negative indefinites.pdf
+      \endverb
+      \keyw{Grammar; Comparative and general,Negatives,Polarity (Linguistics),Semantics,Syntax}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

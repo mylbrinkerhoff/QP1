@@ -1,0 +1,32 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {american}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Negative indefinite shifting}{1}{section.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Engels 2012}{3}{section.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}String-vacuous NegS}{3}{subsection.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Scandinavian pronouns}{4}{section.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Broekhuis 2020}{6}{section.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Valentine Bordal 2017}{7}{section.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Zeijlstra 2011}{8}{section.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Interaction of NegShift and OS}{8}{section.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8}Adverbial orders}{10}{section.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9}Summary of where we are right now 20201120}{10}{section.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.1}The problem}{10}{subsection.9.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.2}Cyclic-linearization}{10}{subsection.9.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.3}Distributional properties of NegShift versus OS}{10}{subsection.9.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10}Next steps}{10}{section.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{References}{11}{section*.2}%

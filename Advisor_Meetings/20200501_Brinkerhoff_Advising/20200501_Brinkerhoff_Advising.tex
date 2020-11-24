@@ -1,0 +1,208 @@
+\documentclass[12pt, letterpaper]{article}
+
+%%BIBLIOGRAPHY- This uses biber/biblatex to generate bibliographies according to the 
+%%Unified Style Sheet for Linguistics
+\usepackage[main=american, german]{babel}% Recommended
+\usepackage{csquotes}% Recommended
+\usepackage[backend=biber,
+		bibstyle=biblatex-sp-unified,
+		citestyle=sp-authoryear-comp,
+		maxcitenames=3,
+		maxbibnames=99,
+		natbib,
+		url=false]{biblatex}
+\addbibresource{QP1.bib}
+\setcounter{biburlnumpenalty}{100}  % allow breaks at numbers
+%\setcounter{biburlucpenalty}{100}   % allow breaks at uppercase letters
+%\setcounter{biburllcpenalty}{100}   % allow breaks at lowercase letters
+
+%%TYPOLOG
+%\usepackage[compact]{titlesec}
+%\titleformat{\section}[runin]{\normalfont\bfseries}{\thesection.}{.5em}{}[.]
+%\titleformat{\subsection}[runin]{\normalfont\scshape}{\thesubsection}{.5em}{}[.]
+\usepackage[hmargin=1in,vmargin=1in]{geometry}  %Margins          
+\usepackage{graphicx}	%Inserting graphics, pictures, images 		
+\usepackage{stackengine} %Package to allow text above or below other text, Also for HG 
+\usepackage{fontspec} %Selection of fonts must be ran in XeLaTeX
+\usepackage{amssymb} %Math symbols
+\usepackage{amsmath}
+\usepackage{setspace} %Linespacing
+\usepackage{multicol} %Multicolumn text
+\usepackage{enumitem} %Allows for continuous numbering of lists over examples, etc.
+\usepackage{multirow} %Useful for combining cells in tablesbrew 
+\usepackage{hanging}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[L]{\textit{QP Advising}} 
+\fancyhead[R]{\textit{\today}} 
+\fancyfoot[L,R]{} 
+\fancyfoot[C]{\thepage} 
+\renewcommand{\headrulewidth}{0.4pt}
+%\usepackage{fourier-orns} %More useful symbols like bombs and jolly-roger, mostly for OT
+\usepackage[colorlinks,allcolors={black},urlcolor={blue}]{hyperref} %allows for hyperlinks and pdf bookmarks
+%\usepackage{url} %allows for urls
+%\def\UrlBreaks{\do\/\do-} %allows for urls to be broken up
+\usepackage[normalem]{ulem} %strike out text. Handy for syntax
+
+%%FONTS
+\setmainfont{Linux Libertine O}
+\setsansfont{Linux Biolinum O}
+
+%%PACKAGES FOR LINGUISTICS
+%\usepackage{OTtablx} %Generating tableaux without using TIPA
+\usepackage[noipa]{OTtablx} %Generating tableaux without using TIPA
+\usepackage{linguex} %Linguistic examples
+\usepackage{tikz} %Drawing Hasse diagrams
+%\usepackage{pst-asr} %Drawing autosegmental features
+\usepackage{pstricks} % required for pst-asr, OTtablx, pst-jtree.
+\usepackage{pst-jtree} 	%Syntax tree draawing software
+%\usepackage{lingmacros} %Various linguistic macros. Does not work with linguex.
+%\usepackage{covington} %Another linguistic examples package.
+%\usepackage{gb43} %Another linguistic examples package. Works with linguex very nicely.
+
+
+%%TITLE INFORMATION
+\title{Assignment 5}
+\author{Mykel Loren Brinkerhoff}
+\date{\today}
+
+
+\begin{document}
+	
+%%If using linguex, need the following commands to get correct LSA style spacing
+%% these have to be after  \begin{document}
+	\setlength{\Extopsep}{6pt}
+	\setlength{\Exlabelsep}{9pt}		%effect of 0.4in indent from left text edge
+%%
+	
+%% Line spacing setting. Comment out the line spacing you do not need. Comment out all if you want single spacing.
+%	\doublespacing
+%	\onehalfspacing
+	
+\begin{center}
+	{\Large \textbf{Advising Meeting }}\\
+	\vspace{6pt}
+	Mykel Loren Brinkerhoff
+\end{center}
+%\maketitle
+%\maketitleinst
+\thispagestyle{fancy}
+
+%------------------------------------
+\section{Outline}
+%------------------------------------
+
+\begin{itemize}
+	\item Discussing \citet{engelsScandinavianNegativeIndefinites2012}
+	\item Negation Scope
+	\item Next Steps
+\end{itemize}
+
+%------------------------------------
+\section{Engels (2012)}
+%------------------------------------
+
+\ex. According to \citet{engelsScandinavianNegativeIndefinites2012}, NegS is claimed to operate on the same principles of cyclic linearization as described for OS \citet{foxCyclicLinearizationSyntactic2005}.
+
+\ex. This means that elements are able to shift if they are located in Spec,XP or if their string is vacuous. 
+
+\ex. \citeauthor{engelsScandinavianNegativeIndefinites2012} however does not describe any crucial differences between OS and NegS using cyclic linearization except that NegS does not seem to subject to Holmberg's Generalization \citep{holmbergWordOrderSyntactic1986, holmbergRemarksHolmbergGeneralization1999}.
+
+\ex. This is seen in the following examples where the NI is able to shift across intervening phonological material
+
+\ex. This can be seen where the NI is allowed to shift across intervening phonological material in the VP.
+	\ag. Jeg har \textit{ingen} \textit{bøger} [\textsubscript{VP} lånt børnene t\textsubscript{NI} ]\\
+	I have no books {} lent children-the\\
+	`I haven't lent the children any books' \hfill WJ/Scan1
+	\bg. Studentene lånte\textsubscript{V} oss\textsubscript{IO} ingen romaner\textsubscript{IO} [\textsubscript{VP} t\textsubscript{V} t\textsubscript{IO} t\textsubscript{DO} ]\\
+	students-the lent us no novels\\	
+	`The students didn't lend us ' \hfill No/Scan1
+	\z.
+	
+\ex. This is in contrast with OS where movement is blocked by any phonological material in the VP.
+	\ag. *Jeg har dem\textsubscript{DO} [\textsubscript{VP} lånt børnene t\textsubscript{DO} ]\\
+	I have them {} lent children-the\\
+	`I have lent the children them' \hfill WJ/Scan1
+	\bg. Jeg har [\textsubscript{VP}  lånt børnene dem. ]\\
+	I have {} lent children-the them\\	
+	`I have lent the children them' \hfill WJ/Scan1
+	\z.
+
+\ex. Besides this brief description there is no discussion about anything other than OS and NegS both involve the same types of cyclic movement and that OS is subject to Holmberg's Generalization.
+
+\ex. This seems to be an area that could potentially be due for more detailed analysis especially if it is to be believed that OS and NegS both are produced by the same types of cyclic linearizatitons
+
+\ex. If however OS is not governed by cyclic linearization and is instead governed by prosody then this is not an issue for the syntax and is explained away by some other factors completely.
+
+%------------------------------------
+\section{Scope of negation}
+%------------------------------------
+
+\ex. \citet{engelsScandinavianNegativeIndefinites2012}, following \citet{svenoniusStrainsNegationNorwegian2002}, stats that there is an apparent difference in the scope of negation between shifted NIs and nonshifted NIs.
+
+\ex. It is claimed that shifted NIs are allowed to take wide scope (i.e., sentential negation) whereas nonshifted NI take narrow scope.
+
+\ex. This means that the sentence in \ref{ex:NegS} has the shifted NI taking wide scope which results in a negated sentence. This is in contrast with the sentence in \ref{ex:NoNegS} which has the nonshifted NI taking narrow scope and negating only the noun.
+	\ag. Per har måske ingen bøger\textsubscript{DO} [\textsubscript{VP} læst t\textsubscript{DO} ] \label{ex:NegS} \\
+	Peter has probably no books {} read\\
+	`Peter probably hasn't read any books'
+	\bg. Per har måske [\textsubscript{VP} læst ingen bøger ]\label{ex:NoNegS} \\
+	Peter has probably {} read no books\\
+	`It wasn't books that Peter probably read (could have been magazines)'
+	\z.
+	
+\ex. This appears to be similar to the differences in scope that quantifiers take with both a wide and narrow scope possible. However, unlike quantifiers, NI only license sentential negation, (wide scope) when they are moved to a position outside of the VP and take narrow scope when in-situ.
+
+\ex. Additionally, it seems that pronominal NI do not have the same distributions as the complex NI \citep{penkaNegativeIndefinites2011}
+
+\ex. According to \citet{penkaNegativeIndefinites2011}, Swedish prefers shifting pronominal NIs instead of shifting full DP NIs.
+	\ag. Men mänskligheten har ingenting lärt sig\\
+		but mankind-the have nothing taught \textsc{refl}\\
+		`But mankind hasn't learned anything'
+	\bg. ?Vi hade inga grottor undersökt\\
+	we have n-\textsc{det} caves examined\\
+	`We haven't explored any caves.'
+	\z.
+	
+\ex. However, there does not seem to be much in the way of pronominal negative indefinites. 
+
+\ex. This seems to be a place to do more exploration.
+
+%------------------------------------
+\section{Next steps}
+%------------------------------------
+
+\ex. I have been approved as a mentor for the Summer Internship Program, which will be held remotely this year.
+
+\ex. I plan on having my interns help me with conducting corpus research on NegS. I am planning on trying to get an outline/timeline put together for what me and my interns will be doing and what tasks we want to accomplish.
+
+\ex. I am also currently working on a project with Eirik Tengesdal on a prosodic analysis for OS and verb particles for AMP 2020.
+
+\ex. Thoughts about submitting something about the corpus research and some version of this QP to the LSA?
+
+%\ex. “The tale of two displacements: OS and NegS in Mainland Scandinavian” 
+
+%------------------------------------
+%BIBLIOGRAPHY
+%------------------------------------
+
+%\singlespacing
+%\nocite{*}
+\printbibliography
+
+%------------------------------------
+%SNIPPETS
+%------------------------------------
+%\ex. 
+%\jtree[xunit=2.6em,yunit=1em] 
+%\def\\{[labelgapb=-1.2ex]}%\@1 
+%\everymath={\rm}% 
+%\! = {CP}
+%:({XP}\\{$\scriptstyle [wh]$}@A1 ) {$C’$}
+%:({$Cˆ0$}\\{$\scriptstyle [wh,Q]$})
+%{$\langle\, TP\,\rangle$}
+%<tri>{\dots\quad\rnode[b]{A2}{\it t}\quad\dots}.
+%%\nccurve[angleA=-150,angleB=-90,ncurv=1]{->}{A2}{A1} 
+%\ncbar[angleA=-90,angleB=-90,armA=1em, armB=1em,linearc=.6ex]{->}{A2}{A1}
+%\endjtree
+\end{document} 
