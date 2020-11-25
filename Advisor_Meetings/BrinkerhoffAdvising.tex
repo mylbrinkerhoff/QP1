@@ -13,7 +13,7 @@
 		maxbibnames=99,
 		natbib,
 		url=false]{biblatex}
-\addbibresource{link_laptop.bib}	%	Use link_laptop.bib when on Laptop and link_desktop.bib when on desktop
+\addbibresource{link_desktop.bib}	%	Use link_laptop.bib when on Laptop and link_desktop.bib when on desktop
 \setcounter{biburlnumpenalty}{100}  % allow URL breaks at numbers
 %\setcounter{biburlucpenalty}{100}   % allow URL breaks at uppercase letters
 %\setcounter{biburllcpenalty}{100}   % allow URL breaks at lowercase letters
@@ -131,7 +131,7 @@
 	\label{tab:Distribution}
 \begin{tabular}{llccccccccc}
 	\hline 
-	NegS across &  & WJ1 & WJ2 & Ic & Fa & DaL1 & DaL2 & SwL & Scan1 & Scan2 \\ 
+	NegShift across &  & WJ1 & WJ2 & Ic & Fa & DaL1 & DaL2 & SwL & Scan1 & Scan2 \\ 
 	\hline 
 	String-vacuous &  & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ \\ 
 	Verb &  & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & * \\ 
@@ -144,8 +144,6 @@
 	\hline 
 \end{tabular} 
 \end{table}
-
-\newpage
 \ex However, not all NegShift is treated equal. \citet[65f]{christensenInterfacesNegationSyntax2005}, speaking on Danish, claims that the "weight" of the NI plays a factor in whether or not NegShift occurs. 
 	\ea
 	\gll Jeg har \textit{intet}\textsubscript{o} hørt t\textsubscript{o}.\\
@@ -189,17 +187,17 @@
 \section{Engels 2012} \label{sec:ENGELS}
 %------------------------------------
 
-\ea \citet{engelsScandinavianNegativeIndefinites2012} provides a very nice table outlining the types of NegS that is allowed in the different Scandinavian languages. I will first present this table and will have examples of the different types of shifting in subsections following the table.
+\ea \citet{engelsScandinavianNegativeIndefinites2012} provides a very nice table outlining the types of NegShift that is allowed in the different Scandinavian languages. I will first present this table and will have examples of the different types of shifting in subsections following the table.
 \ex For each of the subsections they are further subdivided into whether or not the verb remains in situ or has moved.
-\ex In the following table  ✔︎ indicates that NegS occurs, * indicates that NegS cannot occur, ? means that there was idiosyncratic  variation 
+\ex In the following table  ✔︎ indicates that NegShift occurs, * indicates that NegShift cannot occur, ? means that there was idiosyncratic  variation 
 \z
 
 \begin{table}[h!]
 	\centering
-	\caption{Distribution of NegS across the different Scandinavian languages. WJ = West Jutlandic, Ic = Icelandic, Fa = Faroese, DaL = Danish Linguists, SwL = Swedish Linguists, Scan1 = literary/formal Mainland Scandinavian varieties, Scan2 = colloquial Mainland Scandinavian varieties and Norwegian}
+	\caption{Distribution of NegShift across the different Scandinavian languages. WJ = West Jutlandic, Ic = Icelandic, Fa = Faroese, DaL = Danish Linguists, SwL = Swedish Linguists, Scan1 = literary/formal Mainland Scandinavian varieties, Scan2 = colloquial Mainland Scandinavian varieties and Norwegian}
 \begin{tabular}{llccccccccc}
 	\hline 
-	NegS across &  & WJ1 & WJ2 & Ic & Fa & DaL1 & DaL2 & SwL & Scan1 & Scan2 \\ 
+	NegShift across &  & WJ1 & WJ2 & Ic & Fa & DaL1 & DaL2 & SwL & Scan1 & Scan2 \\ 
 	\hline 
 	String-vacuous &  & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ \\ 
 	Verb &  & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & ✔︎ & * \\ 
@@ -214,158 +212,193 @@
 \end{table}
 
 %------------------------------------
-\subsection{String-vacuous NegS}
+\subsection{String-vacuous NegShift}
 %------------------------------------
 
-\ea According to \citeauthor{engelsScandinavianNegativeIndefinites2012} all varieties allow string-vacuous NegS
+\ea According to \citeauthor{engelsScandinavianNegativeIndefinites2012} all varieties allow string-vacuous NegShift
 	\ea 
-	\gllllll Ég sagði \textit{ekkert} \I[VP t\textsubscript{v}  t\textsubscript{o}  ]\jambox{Ic}\\
-			Eg segði \textit{einki} \I[VP t\textsubscript{v}  t\textsubscript{o}  ]\jambox{Fa}\\
-			Jeg sagde \textit{ingenting} \I[VP t\textsubscript{v}  t\textsubscript{o}  ]\jambox{Da}\\
-			Jag sa \textit{ingenting} \I[VP t\textsubscript{v}  t\textsubscript{o}  ]\jambox{Sw}\\
-			Jeg sa \textit{ingenting} \I[VP t\textsubscript{v}  t\textsubscript{o}  ]\jambox{No}\\
+	\gllllll Ég sagði \textit{ekkert} \I[VP t\textsubscript{v}  t\textsubscript{o}  ] Ic\\
+			Eg segði \textit{einki} \I[VP t\textsubscript{v}  t\textsubscript{o}  ] Fa\\
+			Jeg sagde \textit{ingenting} \I[VP t\textsubscript{v}  t\textsubscript{o}  ] Da \\
+			Jag sa \textit{ingenting} \I[VP t\textsubscript{v}  t\textsubscript{o}  ] Sw\\
+			Jeg sa \textit{ingenting} \I[VP t\textsubscript{v}  t\textsubscript{o}  ] No\\
 			I said nothing\\
 	\glt `I said nothing'
 	\z 
 \z
 
-% %------------------------------------
-% \subsection{NegS across verbs}
-% %------------------------------------
+%------------------------------------
+\subsection{NegShift across verbs}
+%------------------------------------
 
-% \ex. NegS may cross a verb in situ in Insular Scandinavian languages
-% \ag. Ég hef \textit{engan} \textbf{séð} t\textsubscript{o}. \\
-% I have nobody seen\\
-% `I haven't seen anybody.'\rcommentg{Ic}
-% \bg. {Í dag} hevur Petur \textit{einki} \textbf{sagt} t\textsubscript{o}\\
-% today has Peter nothing said\\
-% `peter hasn't said anything today.'\rcommentg{Fa}
+\ea NegShift may cross a verb in situ in Insular Scandinavian languages
+	\ea {
+		\gll Ég hef \textit{engan} \textbf{séð} t\textsubscript{o}. \\
+			I have nobody seen\\}\jambox{Ic}
+	\glt `I haven't seen anybody.'%\rcommentg{Ic}
+	\ex {
+	\gll {Í dag} hevur Petur \textit{einki} \textbf{sagt} t\textsubscript{o}\\
+	today has Peter nothing said\\}\jambox{Fa}
+	\glt `Peter hasn't said anything today.'%\rcommentg{Fa}
+	\z 
+\ex It is claimed that NegShift across a verb in situ is found in literature to be stylistically marked. However, it is reported that there is dialectal variation (e.g., West Jutlandic). It was also deemed grammatical by Danish and Swedish linguists.
+	\ea Manden havde måske \textit{ingenting} \textbf{sagt} t\textsubscript{o}.\jambox{Scan1}
+	\ex[*] {{
+		\gll Manden havde måske \textit{ingenting} \textbf{sagt} t\textsubscript{o}.\\
+		man-the had probably nothing said\\}\jambox{Scan2}}
+	\glt `The man hadn't said anything'
+	\z 
+\z 
 
-% \ex. It is claimed that NegS across a verb in situ is found in literature to be stylistically marked. However, it is reported that there is dialectal variation (e.g., West Jutlandic). It was also deemed grammatical by Danish and Swedish linguists.
-% \a. Manden havde måske \textit{ingenting} \textbf{sagt} t\textsubscript{o}.\hfill Scan1
-% \bg. *Manden havde måske \textit{ingenting} \textbf{sagt} t\textsubscript{o}.\\
-% man-the had probably nothing said\\
-% `The man hadn't said anything'\rcommentg{Scan2}
+%------------------------------------
+\subsection{NegShift across IO}
+%------------------------------------
 
+\ea  NegShift across IO is permitted if the verb remains in situ for Icelandic, Faroese, West Jutlandic, and Scandinavian 1.
+	\ea {
+	\gll Jón hefur \textit{ekkert} \textbf{sagt} \textbf{Sveini} t\textsubscript{o}. \\
+	Jón has nothing said Sveinn\\}\jambox{Ic}
+	\glt `John hasn't told Sveinn anything'%\rcommentg{Ic}
+	\ex {
+	\gll {Í dag} hevur Petur \textit{einki} \textbf{givið} \textbf{Mariu} t\textsubscript{o}. \\
+		today has Peter nothing given Mary\\}\jambox{Fa}
+	\glt `Today, Peter hasn't given Mary anything.'%\rcommentg{Fa}
+	\ex {
+	\gll Jeg har \textit{ingen} \textit{bøger} \textbf{lånt} \textbf{børnene} t\textsubscript{o}.\\
+	I have no books lent children-the\\}\jambox{WJ/Scan1}
+	\glt `I haven't lent the children any books.'
+	\ex[*] {{Jeg har \textbf{ingen bøger} lånt børnene t\textsubscript{o}.}\jambox{Scan2}}
+	\z 
+\ex If the verb has undergone V-to-T-to-C movement, NegShift is deemed ungrammatical in all varieties.
+	\ea[*] {{
+		\gll Jón sagði \textit{ekkert} \textbf{Sveini} t\textsubscript{o}\\
+		Jón said nothing Sveinn\\}\jambox{Ic}}
+	\glt Intended: `John didn't tell Sveinn anything.'%\rcommentg{Ic}
+	\ex[*] {{
+		\gll {Í gjár} gv Petur \textit{einki} \textbf{Mariu} t\textsubscript{o}\\
+		yesterday gave Peter nothing Maria\\}\jambox{Fa}}
+	\glt Intended: `Yesterday, Peter didn't give Mary anything.'%\rcommentg{Fa}
+	\ex[*] {{
+	\gll Jeg lånte \textit{ingen} \textit{bøger} \textbf{børnene} t\textsubscript{o}\\
+	I lent no books children-the\\}\jambox{WJ/Scan1}}
+	\glt Intended: `I didn't lend the children any books.'%\rcommentg{WJ/Scan1}
+	\z 
+\z 
 
-% %------------------------------------
-% \subsection{NegS across IO}
-% %------------------------------------
+%------------------------------------
+\subsection{NegShift across preposition}
+%------------------------------------
 
-% \ex. NegS across IO is permitted if the verb remains in situ for Icelandic, Faroese, West Jutlandic, and Scandinavian1
-% \ag. Jón hefur \textit{ekkert} \textbf{sagt} \textbf{Sveini} t\textsubscript{o}. \\
-% Jón has nothing said Sveinn\\
-% `John hasn't told Sveinn anything'\rcommentg{Ic}
-% \bg. {Í dag} hevur Petur \textit{einki} \textbf{givið} \textbf{Mariu} t\textsubscript{o}. \\
-% today has Peter nothing given Mary\\
-% `Today, Peter hasn't given Mary anything.'\rcommentg{Fa}
-% \cg. Jeg har \textit{ingen} \textit{bøger} \textbf{lånt} \textbf{børnene} t\textsubscript{o}.\\
-% I have no books lent children-the\\
-% `I haven't lent the children any books.'\rcommentg{WJ/Scan1}
-% \d. *Jeg har \textbf{ingen bøger} lånt børnene t\textsubscript{o}.\hfill Scan2
-% \z.
+\ea NegShift across a preposition is not permitted in Mainland Scandinavian.
+	\ea[*] {{
+		\gll Jeg har \textit{ingen} \textbf{peget} \textbf{på} t\textsubscript{o} \\
+		I have nobody pointed at\\}\jambox{Scan1/Scan2}}
+		\glt Intended: `I haven't pointed at anybody.'
+	\ex[*] {
+	\gll Jeg pegede \textit{ingen} \textbf{på} t\textsubscript{o}\\
+		I pointed nobody at\\}
+	\glt Intended: `I didn't point at anybody.'
+	\z 
+\ex According to \posscitet{engelsScandinavianNegativeIndefinites2012} investigation there is considerable variation in this regard. It is permitted by the majority of Danish linguists at the University of Aarhus, but ungrammatical if the verb has moved.
+	\ea[?] {{Jeg har \textit{ingen} \textbf{peget på} t\textsubscript{o}.}\jambox{DaL}}
+	\ex[?] {Jeg har pegede \textit{ingen} \textbf{på} t\textsubscript{o}}
+	\z 
+\ex Permitted in Faroese if the the verb remains in situ.
+	\ea {
+		\gll {Í dag} hevur Petur \textit{ongan} \textbf{tosað} \textbf{við} t\textsubscript{o}.\\
+		today has Peter nobody spoken with\\}\jambox{Fa}
+	\glt `Today Peter hasn't spoken with anybody.'
+	\ex[*] {
+	\gll {Í dag} tosaði Petur \textit{ongan} \textbf{við} t\textsubscript{o}.\\
+	today spoke Peter nobody with\\}
+	\glt Intended: `Today Peter didn't speak with anybody.'
+	\z 
+\ex In Icelandic, NegShift is permitted if the verb remains in situ. If the verb has moved, it is still grammatical but degraded.
+	\ea {
+	\gll Ég hef \textit{engan} \textbf{talið} \textbf{við} t\textsubscript{o}.\\
+	I have nobody spoke with\\}\jambox{Ic}
+	\glt `I have spoken to nobody'
+	\ex[?] {
+	\gll Ég talaði \textit{engan} \textbf{við} t\textsubscript{o}.\\
+	I spoke nobody with\\}
+	\glt `I spoke with nobody.'
+	\z 
+\ex In West Jutlandic, NegShift is always permitted across prepositions.
+	\ea {
+		\gll Måske har hun \textit{ingen} \textbf{snakket} \textbf{med} t\textsubscript{o}.\\
+		maybe has she nobody spoken with\\}\jambox{WJ}
+	\glt `She maybe hasn't spoken with anybody.'
+	\ex 
+	\gll {I går} snakkede hun \textit{ingen} \textbf{med} t\textsubscript{o}.\\
+	yesterday spoke she nobody with\\
+	\glt `Yesterday, she didn't speak with anybody.'
+	\z 
+\z 
 
-% \ex. If the verb has undergone V-to-T-to-C movement, NegS is deemed ungrammatical in all varieties.
-% \ag. *Jón sagði \textit{ekkert} \textbf{Sveini} t\textsubscript{o}\\
-% Jón said noting Sveinn\\
-% Intended: `John didn't tell Sveinn anything.'\rcommentg{Ic}
-% \bg. *{Í gjár} gv Petur \textit{einki} \textbf{Mariu} t\textsubscript{o}\\
-% yesterday gave Peter nothing Maria\\
-% Intended: `Yesterday, Peter didn't give Mary anything.'\rcommentg{Fa}
-% \cg. *Jeg lånte \textit{ingen} \textit{bøger} \textbf{børnene} t\textsubscript{o}\\
-% I lent no books children-the\\
-% Intended: `I didn't lend the children any books.'\rcommentg{WJ/Scan1}
+%------------------------------------
+\subsection{NegShift out of infinitival clauses}
+%------------------------------------
 
-% %------------------------------------
-% \subsection{NegS across preposition}
-% %------------------------------------
+ \ea Icelandic allows NegShift out of infinitival clauses if the matrix verb has remained in situ.
+	\ea {
+	\gll Hún hefur \textit{engan} \textbf{lofað} \textbf{að} \textbf{kyssa} t\textsubscript{o}\\
+	she has nobody promised to kiss\\}\jambox{Ic}
+	\glt `She hasn't promised to kiss anybody.'
+	\ex[*] {
+	\gll Hún lofaði \textit{engan} \textbf{að} \textbf{kyssa} t\textsubscript{o}, var það nokkuð?\\
+	she promised nobody to kiss {} was it rather\\}
+	\glt Intended: `She didn't promise to kiss anybody, did she?'
+	\z 
+\ex It is also reported that Icelandic allows NegShift out of multiple infinitival clauses if the verb reamains in situ.
+	\ea {
+	\gll Petúr hefur \textit{engu} \textit{bréfi} \textbf{lofað} \textbf{að} \textbf{reyna} \textbf{að} \textbf{svara} t\textsubscript{o}.\\
+	Peter has no letter promised to try to reply\\}\jambox{Ic}
+	\glt`Peter hasn't promised to try to reply to any letter.'
+	\z 
+\ex NegShift out of a infinitival clause is also permitted by some of the Danish linguists and for some west Jutlandic speakers if the verb has remained in situ. This is also the case for some of the Swedish linguists.
+	\ea {
+	\gll Han har \textit{ingen} \textit{kager} \textbf{lovet} \textbf{at} \textbf{købe} t\textsubscript{o}.\\
+	he has no cakes promised to buy\\}\jambox{DaL1/WJ2}
+	\glt`He hasn't promised to buy any cakes.'
+	\ex[*] {
+	\gll Han lovede \textit{ingen} \textit{kager} \textbf{at} \textbf{købe} t\textsubscript{o}, vel?\\
+	he promised no cakes to buy {} well\\}
+	\glt Intended: `He didn't promise to buy any cakes, did he?'
+	\ex[?] {{
+	\gll Per har \textit{inga} \textit{tårta} \textbf{lovat} \textbf{att} \textbf{köpa} t\textsubscript{o}.\\
+	 	Per has no cake promised to buy\\}\jambox{SwL}}
+ 	\glt `Per hasn't promised to buy any cake'
+	\ex[*] {
+	\gll Per lovade \textit{ingen} \textit{tårta} \textbf{att} \textbf{köpa} t\textsubscript{o}.\\
+		Per promised no cake to buy\\}
+	\glt Intended: `Per didn't promise to buy any cake.'
+	\z 
+\ex Other Danish linguists do not permit NegShift out of infinitive clauses at all. This is also true for Scandinavian1 and Scandinavian2.
+	\ea[*] {{Han har \textit{ingen} \textit{kager} \textbf{lovet} \textbf{at} \textbf{købe} t\textsubscript{o}.}\jambox{DaL2}}
+	\ex[*] {Han lovede \textit{ingen} \textit{kager} \textbf{at} \textbf{købe} t\textsubscript{o}, vel?}
+	\ex[*] {
+	\gll Han har \textit{ingen} \textit{bøker} \textbf{prød} \textbf{å} \textbf{lese} t\textsubscript{o}.\\
+	he has no books tried to read\\}
+	\glt Intended: `He hasn't tried to read any books.'\rcommentg{No}  
+	\ex[*] {
+	\gll Han prøvde \textit{ingen} \textit{bøker} \textbf{å} \textbf{lese} t\textsubscript{o}.\\
+		he tried no books to read\\}
+	\glt Intended: `He didn't try to read any books.'
+ 	\z 
+\ex For other West Jutlandic speakers and Faroese NegShift is permitted regardless if the matrix verb has moved or not.
+	\ea {Han har \textit{ingen} \textit{kager} \textbf{lovet} \textbf{at} \textbf{købe} t\textsubscript{o}.}\jambox{WJ1}
+	\ex Han lovede \textit{ingen} \textit{kager} \textbf{at} \textbf{købe} t\textsubscript{o}, vel?
+	\ex {
+	\gll Allarhelst hevur Petur \textit{einki} \textbf{roynt} \textbf{at} \textbf{eta} t\textsubscript{o}. \\
+	probably has Peter nothing tried to eat\\}\jambox{Fa}
+	\glt `Peter probably hasn't tried to eat anything.'
+	\ex 
+	\gll Allarhelst royndi Petur heldur \textit{einki} \textbf{at} \textbf{eta} t\textsubscript{o}.\\
+	probably tried Peter also nothing to eat\\
+	\glt `Peter probably also didn't try to eat anything.'
+	\z 
+\z 
 
-% \ex. NegS across a preposition is not permitted in Mainland Scandinavian.
-% \ag. *Jeg har \textit{ingen} \textbf{peget} \textbf{på} t\textsubscript{o} \\
-% I have nobody pointed at\\
-% Intended: `I haven't pointed at anybody.'\rcommentg{Scan1/Scan2}
-% \bg. *Jeg pegede \textit{ingen} \textbf{på} t\textsubscript{o}\\
-% I pointed nobody at\\
-% Intended: `I didn't point at anybody.'
-
-% \ex. According to \posscitet{engelsScandinavianNegativeIndefinites2012} investigation there is considerable variation in this regard. It is permitted by the majority of Danish linguists at University of Aarhus, but ungrammatical if the verb has moved.
-% \a. ?Jeg har \textit{ingen} \textbf{peget på} t\textsubscript{o}. \hfill DaL
-% \b. ?Jeg har pegede \textit{ingen} \textbf{på} t\textsubscript{o}
-
-% \ex. Permitted in Faroese if the the verb remains in situ.
-% \ag. {Í dag} hevur Petur \textit{ongan} \textbf{tosað} \textbf{við} t\textsubscript{o}.\\
-% today has Peter nobody spoken with\\
-% `Today Peter hasn't spoken with anybody.'\rcommentg{Fa}
-% \bg. *{Í dag} tosaði Petur \textit{ongan} \textbf{við} t\textsubscript{o}.\\
-% today spoke Peter nobody with\\
-% Intended: `Today Peter didn't speak with anybody.'
-
-% \ex. In Icelandic, NegS is permitted if the verb remains in situ. If the verb has moved, it is still grammatical but degraded.
-% \ag. Ég hef \textit{engan} \textbf{talið} \textbf{við} t\textsubscript{o}.\\
-% I have nobody spoke with\\
-% `I have spoken to nobody'\rcommentg{Ic}
-% \bg. ?Ég talaði \textit{engan} \textbf{við} t\textsubscript{o}.\\
-% I spoke nobody with\\
-% `I spoke with nobody.'
-
-% \ex. In West Jutlandic, NegS is always permitted across prepositions.
-% \ag. Måske har hun \textit{ingen} \textbf{snakket} \textbf{med} t\textsubscript{o}.\\
-% maybe has she nobody spoken with\\
-% `She maybe hasn't spoken with anybody.'\rcommentg{WJ}
-% \bg. {I går} snakkede hun \textit{ingen} \textbf{med} t\textsubscript{o}.\\
-% yesterday spoke she nobody with\\
-% `Yesterday, she didn't speak with anybody.'
-
-% %------------------------------------
-% \subsection{NegS out of infinitival clauses}
-% %------------------------------------
-
-% \ex. Icelandic allows NegS out of infinitival clauses if the matrix verb has remained in situ.
-% \ag. Hún hefur \textit{engan} \textbf{lofað} \textbf{að} \textbf{kyssa} t\textsubscript{o}\\
-% she has nobody promised to kiss\\
-% `She hasn't promised to kiss anybody.'\rcommentg{Ic}
-% \bg. *Hún lofaði \textit{engan} \textbf{að} \textbf{kyssa} t\textsubscript{o}, var það nokkuð?\\
-% she promised nobody to kiss {} was it rather\\
-% Intended: `she didn't promise to kiss anybody, did she?'
-
-% \ex. It is also reported that Icelandic allows NegS out of multiple infinitival clauses if the verb reamains in situ.
-% \ag. Petúr hefur \textit{engu} \textit{bréfi} \textbf{lofað} \textbf{að} \textbf{reyna} \textbf{að} \textbf{svara} t\textsubscript{o}.\\
-% Peter has no letter promised to try to reply\\
-% `Peter hasn't promised to try to reply to any letter.'\rcommentg{Ic}
-
-% \ex. NegS out of a infinitival clause is also permitted by some of the Danish linguists and for some west Jutlandic speakers if the verb has remained in situ. This is also the case for some of the Swedish linguists.
-% \ag. Han har \textit{ingen} \textit{kager} \textbf{lovet} \textbf{at} \textbf{købe} t\textsubscript{o}.\\
-% he has no cakes promised to buy\\
-% `He hasn't promised to buy any cakes.'\rcommentg{DaL1/WJ2}
-% \bg. *Han lovede \textit{ingen} \textit{kager} \textbf{at} \textbf{købe} t\textsubscript{o}, vel?\\
-% he promised no cakes to buy {} well\\
-% Intended: `He didn't promise to buy any cakes, did he?'
-% \cg. ?Per har \textit{inga} \textit{tårta} \textbf{lovat} \textbf{att} \textbf{köpa} t\textsubscript{o}.\\
-%  Per has no cake promised to buy\\
-%  `Per hasn't promised to buy any cake'\rcommentg{SwL}
-% \dg. *Per lovade \textit{ingen} \textit{tårta} \textbf{att} \textbf{köpa} t\textsubscript{o}.\\
-% Per promised no cake to buy\\
-% Intended: `Per didn't promise to buy any cake.'
-
-% \ex. Other Danish linguists do not permit NegS out of infinitive clauses at all. This is also true for Scandinavian1 and Scandinavian2.
-% \a. *Han har \textit{ingen} \textit{kager} \textbf{lovet} \textbf{at} \textbf{købe} t\textsubscript{o}. \hfill DaL2
-% \b. *Han lovede \textit{ingen} \textit{kager} \textbf{at} \textbf{købe} t\textsubscript{o}, vel?
-% \cg. *Han har \textit{ingen} \textit{bøker} \textbf{prød} \textbf{å} \textbf{lese} t\textsubscript{o}.\\
-% he has no books tried to read\\
-% Intended: `He hasn't tried to read any books.'\rcommentg{No}  
-% \dg. *Han prøvde \textit{ingen} \textit{bøker} \textbf{å} \textbf{lese} t\textsubscript{o}.\\
-% he tried no books to read\\
-% Intended: `He didn't try to read any books.'
- 
-% \ex. For other West Jutlandic speakers and Faroese NegS is permitted regardless if the matrix verb has moved or not.
-% \a. Han har \textit{ingen} \textit{kager} \textbf{lovet} \textbf{at} \textbf{købe} t\textsubscript{o}. \hfill WJ1
-% \b. Han lovede \textit{ingen} \textit{kager} \textbf{at} \textbf{købe} t\textsubscript{o}, vel?
-% \cg. Allarhelst hevur Petur \textit{einki} \textbf{roynt} \textbf{at} \textbf{eta} t\textsubscript{o}. \\
-% probably has Peter nothing tried to eat\\
-% `Peter probably hasn't tried to eat anything.'\rcommentg{Fa}
-% \dg. Allarhelst royndi Petur heldur \textit{einki} \textbf{at} \textbf{eta} t\textsubscript{o}.\\
-% probably tried Peter also nothing to eat\\
-% `Peter probably also didn't try to eat anything.'
 
 %------------------------------------
 \section{Scandinavian pronouns} \label{sec:PRONOUNS}
@@ -522,7 +555,7 @@
 	\z 
 \ex According to her results, NIs were the most frequent method for negating existential predicates. 
 	
-	\begin{table}[!h]
+	\begin{table}[h!]
 	\centering
 	\caption{Frequency of negation strategy}
 	\begin{tabular}{lll}
@@ -541,7 +574,7 @@
 	\ea This means that her "modifier" is best treated as a NI determiner which appears with a nominal pivot and her "head" is best treated as a pronoun which doesn't appear with a nominal pivot.
 	\z 
 
-	\begin{table}[!h]
+	\begin{table}[h!]
 	\centering
 	\caption{Frequency of NI property}
 	\begin{tabular}{lll}
@@ -574,7 +607,7 @@
 
 \ea \citet{christensenInterfacesNegationSyntax2005} provides a clear and detailed summary of the interactions of OS and NegShift. His summary is detailed below in Table \ref{tab:OSNEGS}.
 \ex In this table No\textsuperscript{+}/Sw\textsuperscript{+} represent some varieties of Norwegian and Swedish respectively in contrast to more standard Norwegian (No) and Swedish (Sw), FS represent the Swedish variety which is spoken by Swedes in Finland.
-\begin{table}[!h]
+\begin{table}[h!]
 \centering
 \caption{Summary of OS and NegShift accoriding to \citet{christensenInterfacesNegationSyntax2005}.}
 \label{tab:OSNEGS}
@@ -657,7 +690,7 @@ NegQP-DP	&	+ -	&	+ -	&	+ -	&	+ -	&	- -	\\
 
 
 %------------------------------------
-\section{Summary of where we are right now 20201120} \label{sec:RN}
+\section{Summary of where we are} \label{sec:RN}
 %------------------------------------
 %------------------------------------
 \subsection{The problem} \label{sec:PROBLEM}
