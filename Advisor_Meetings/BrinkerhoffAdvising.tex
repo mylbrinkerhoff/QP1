@@ -13,7 +13,7 @@
 		maxbibnames=99,
 		natbib,
 		url=false]{biblatex}
-\addbibresource{link_laptop.bib}	%	Use link_laptop.bib when on Laptop and link_desktop.bib when on desktop
+\addbibresource{link_desktop.bib}	%	Use link_laptop.bib when on Laptop and link_desktop.bib when on desktop
 \setcounter{biburlnumpenalty}{100}  % allow URL breaks at numbers
 %\setcounter{biburlucpenalty}{100}   % allow URL breaks at uppercase letters
 %\setcounter{biburllcpenalty}{100}   % allow URL breaks at lowercase letters
@@ -69,6 +69,7 @@
 % \usepackage{forest}	% Another syntax tree drawing software. Uses bracket notation.
 %\usepackage{ling-macros} % Various linguistic macros. Does not work with linguex.
 %\usepackage{covington} % Another linguistic examples package.
+\usepackage{leipzig}
 
 %%TITLE INFORMATION
 \title{20201120 QP Advising}
@@ -706,9 +707,36 @@ NegQP-DP	&	+ -	&	+ -	&	+ -	&	+ -	&	- -	\\
 \subsection{Distributional properties of NegShift versus OS} \label{sec:DISTRIBUTION}
 %------------------------------------
 
-\ea As mentioned above there are certain patterns that NegShift and OS share and differ in when it comes to the types of material that 
-\ex 
+\ea As mentioned above there are certain patterns that NegShift and OS share and differ in.
+\z
+
+%------------------------------------
+\subsubsection{Similarities} \label{sec:SIM}
+%------------------------------------
+
+\ea Both OS and NegShift involve the movement of elements from their base position to a position that is to the left of the VP, as seen by the movement across negation/adverbials in the case of OS, (\ref{ex:OS}), and across the verb in the case of NegShift, (\ref{ex:NS}).
+	\ea \label{ex:OS} 
+	\gll Jag kyssade\textsubscript{v} henne\textsubscript{o} inte [\textsubscript{VP} t\textsubscript{v} t\textsubscript{o} ] \\
+	I kiss.\Pst{} her \Neg{}\\
+	\glt `I didn't kiss her.'
+	\ex \label{ex:NS}
+	\gll Jag har ingen\textsubscript{o} [\textsubscript{VP} kyssat t\textsubscript{o} ]\\
+	I have no-one ~ kiss.\Pst{}.\Ptcp{} \\
+	\glt `I haven't kissed anyone.''
+	\z 
+\ex Additionally, they are similar in that they both operate on pronouns, weak object pronouns for OS and negative indefinite pronouns for NegShift.
+\ex As mentioned above NegShift has a preference for shifting pronouns \citep{christensenInterfacesNegationSyntax2005,penkaNegativeIndefinites2011}.
 \z 
+
+%------------------------------------
+\subsubsection{Differences} \label{sec:DIF}
+%------------------------------------
+
+\ea There are two primary differences when it comes to OS and NegShift.
+	\ea NegShift applies to full negative DPs such as \textit{inga böcker} `no books' in addition to pronouns. There is however a restriction in the size of the moved NI \citep{christensenInterfacesNegationSyntax2005,penkaNegativeIndefinites2011}. OS can only apply to weak object pronouns.
+	\ex NegShift \emph{is not} subject to Holmberg's Generalization but is instead subject to an "Anti-Holmberg Effect" where it can shift across phonological material, whereas OS is subject to Holmberg's Generalization. 
+	\z 
+\z
 
 %------------------------------------
 \subsection{Cyclic Linearization} \label{sec:CL}
@@ -720,21 +748,33 @@ NegQP-DP	&	+ -	&	+ -	&	+ -	&	+ -	&	- -	\\
 \ex Under this proposal QM is subject to an ``Anti-Holmberg Effect'' or an ``Inverse Holmberg Effect'', which are identical in principle
 	\ea Under Holmberg's Generalization, OS can only apply if the verb has undergone movement from V to T to C.
 	\ex The Anti-Holmberg Effect explains that only when the verb remains in situ can we have QM, which is the result of the ordering operations between the different phases being in agreement. 
-	\z 
-\ex 
+	\z
+	\vspace{6pt} 
+
+\ex In order to account for OS, \citeauthor{foxCyclicLinearizationSyntactic2005} propose that the during the spell-out of the VP phase the V is the leftmost element in its phase\footnote{The position of the V at the left-edge of the phase could be due to the movement of V to \textit{v} in which case it is actually the \textit{v}P that acts as the phase not the VP.} and at which point the ordering restrictions are in place which state that the V must precede the O. 
+
+\ex At this point the V moves to T and then to C at this point the object is free to move to a position higher because the order that existed at the VP phase continues to hold. 
+\ex OS and string-vacuous Neg-Shift
  	\ea {}[\textsubscript{CP} S \rnode{b1}V … [\textsubscript{NegP} \rnode{A1}O adv [\textsubscript{VP} \rnode{b2}t\textsubscript{v} \rnode{A2}t\textsubscript{o} ]]]
 	\psset{linearc=2pt} 
 	\ncbar[angle=90]{->}{A2}{A1}  
 	\ncbar[angle=-90,linestyle=dashed]{->}{b2}{b1} 
-	\\
+	\vspace{6pt}
 	\ex VP Ordering: \textbf{V>O}\\
 		CP Ordering: S>V, \textbf{V>O}, O>adv, adv>VP
 	\z
-\ex In order to account for OS, \citeauthor{foxCyclicLinearizationSyntactic2005} propose that the during the spell-out of the VP phase the V is the leftmost element in its phase\footnote{The position of the V at the left-edge of the phase could be due to the movement of V to \textit{v} in which case it is actually the \textit{v}P that acts as the phase not the VP.} and at which point the ordering restrictions are in place which state that the V must precede the IO, which in turn precedes the DO, implying that the V must precede the DO. 
-
-\ex At this point the V moves to T and then to C at this point the IO object is free to move to a position higher because the order that existed at the VP phase continues to hold. 
 
 \ex If the DO were to move instead of the IO this would now result in the DO being ordered before the IO at the spell-out at the CP phase. By moving the DO, we now introduce a mismatch between the ordering restrictions at the VP phase and the CP phase explaining why such utterances are ungrammatical. 
+
+\ex In the case of NegShift, where it is able to shift across various phonological material it is proposed that the NI first moves to the left edge of the VP before spell-out of that phase. 
+\vspace{6pt}
+	\ea {}[\textsubscript{CP} S aux … [\textsubscript{NegP} \rnode{A1}O [\textsubscript{VP} \rnode{A2}t\textsubscript{o}  V \rnode{A3}t\textsubscript{o} ]]]
+	\psset{linearc=2pt} 
+	\ncbar[angle=90]{->}{A3}{A2}  
+	\ncbar[angle=90]{->}{A2}{A1}
+	\ex VP Ordering: \textbf{O>V}\\
+	CP Ordering: S>V, aux>O, O>adv, adv>VP → \textbf{O>V}
+	\z
 
 \ex The benefit of using Cyclic Linearization comes from being able to account for why certain orders are fixed throughout the entire derivation.
 \z 
@@ -745,6 +785,7 @@ NegQP-DP	&	+ -	&	+ -	&	+ -	&	+ -	&	- -	\\
 %------------------------------------
 \begin{itemize}
 	\item Write my entrance paper for 290.
+	\item QP committee?
 	\item Looking into the interaction of object shift and NegShift with a comparison of the size of shifted elements.
 	\begin{itemize}
 		\item Additionally, looking into \citet{christensenInterfacesNegationSyntax2005}, \citet{viknerObjectShiftScandinavian2017,viknerVerbMovementVariation2001}, and \citet{thrainssonSyntaxIcelandic2010} for further descriptions of NegShift.
