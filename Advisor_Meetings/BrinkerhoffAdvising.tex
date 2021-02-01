@@ -781,17 +781,75 @@ NegQP-DP	&	+ -	&	+ -	&	+ -	&	+ -	&	- -	\\
 
 
 %------------------------------------
+\section{Syntactic Analysis of NegS} \label{sec:NEXT}
+%------------------------------------
+\ea In \posscitet{zeijlstraSyntacticallyComplexStatus2011} account of split-scope of NIs, he claims that the origin of split scope comes from copy movement. 
+
+\ex Copy-theory of Movement claims that the when we move items we copy them entirely and remerge them into the syntactic structure [FIND REF]. This results in multiple copies of the item being in the syntactic structure. Only at a later stage, after the syntactic structure has been spell-out, parts of the copy are removed in PF or LF. This could result in either a partial or complete deletion of any of these copied-elements at any location that they are found. 
+
+\ex For example, we see this in the following syntactic structure. 
+	\ea \attop{
+	\resizebox*{\linewidth}{!}{\begin{tikzpicture} 
+	\tikzset{every tree node/.style={align=center,anchor=north}} 
+	\Tree [.CP 	DP\\\emph{Jeg} 
+				[.C´ C\\\emph{har} 
+				[.TP <DP> 
+					[.T´ T 
+						[.NegP  
+							[.DP \edge[roof]; {intet i sagen om de stjålne malerier}
+							]
+							[.vP <DP>
+								[.v´ hørt   
+									[.VP <V> 
+										[.DP \edge[roof]; {intet i sagen om de stjålne malerier}
+										]
+									]
+								]
+							]    
+						]
+					] 
+				]
+				] 
+			] 
+	\end{tikzpicture}}
+	}
+	\z
+
+\ex At this point during PF, part of the higher copy is elided leaving only the NI determiner. This process is possibly due to the constraint *\textsc{HeavyNPShift}. In the lower copy \emph{intet} is deleted, resulting in the following structure.
+\ea \attop{
+	\resizebox*{\linewidth}{!}{\begin{tikzpicture} 
+	\tikzset{every tree node/.style={align=center,anchor=north}} 
+	\Tree [.CP 	DP\\\emph{Jeg} 
+				[.C´ C\\\emph{har} 
+				[.TP <DP> 
+					[.T´ T 
+						[.NegP  
+							[.DP \edge[roof]; {intet \sout{i sagen om de stjålne malerier}}
+							]
+							[.vP <DP>
+								[.v´ hørt   
+									[.VP <V> 
+										[.DP \edge[roof]; {\sout{intet} i sagen om de stjålne malerier}
+										]
+									]
+								]
+							]    
+						]
+					] 
+				]
+				] 
+			] 
+	\end{tikzpicture}}
+	}
+	\z
+\z 
+
+
+%------------------------------------
 \section{Next steps} \label{sec:NEXT}
 %------------------------------------
 \begin{itemize}
-	\item Write my entrance paper for 290.
-	\item QP committee?
-	\item Looking into the interaction of object shift and NegShift with a comparison of the size of shifted elements.
-	\begin{itemize}
-		\item Additionally, looking into \citet{christensenInterfacesNegationSyntax2005}, \citet{viknerObjectShiftScandinavian2017,viknerVerbMovementVariation2001}, and \citet{thrainssonSyntaxIcelandic2010} for further descriptions of NegShift.
-		\item \citeauthor{thrainssonSyntaxIcelandic2010} also describes the fact that \emph{all} quantifiers undergo a similar process to NIs. This behavior has led him to claim that NegShift is just \textbf{Quantifier Scrambling}.
-	\end{itemize}
-	\item Looking into the Anti-Holmberg effect \citep{foxCyclicLinearizationSyntactic2005,engelsScandinavianNegativeIndefinites2012}.
+
 \end{itemize}
 
 
