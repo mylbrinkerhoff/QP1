@@ -50,9 +50,9 @@
 \usepackage[normalem]{ulem} %strike out text. Handy for syntax
 
 %%FONTS
-\setmainfont{Linux Libertine O}
-\setsansfont{Linux Biolinum O}
-% \setmonofont{DejaVu Sans Mono}
+\setmainfont{Libertinus Serif}
+\setsansfont{Libertinus Sans}
+\setmonofont[Scale=MatchLowercase]{Libertinus Mono}
 
 %%PACKAGES FOR LINGUISTICS
 %\usepackage{OTtablx} %Generating tableaux with using TIPA
@@ -72,7 +72,7 @@
 \usepackage{leipzig}
 
 %%TITLE INFORMATION
-\title{20201120 QP Advising}
+\title{Motivations for Scandinavian Negative Indefinite Shift}
 \author{Mykel Loren Brinkerhoff}
 \date{\today}
 
@@ -698,7 +698,7 @@ NegQP-DP	&	+ -	&	+ -	&	+ -	&	+ -	&	- -	\\
 %------------------------------------
 
 \ea The problem that I am focusing on is about whether or not there is a prosodic motivation for NegShift in the Scandinavian languages. 
-\ex This question comes about from the fact that, on the surface, NegShift resembles Scandinavian OS which has been well-documented to be driven and determined by prosodic factors \citep{erteschik-shirSoundPatternsSyntax2005,erteschik-shirScandinavianObjectShift2017,erteschik-shirVariationMainlandScandinavian2019,brinkerhoffMATCHINGPhrasesNorwegian2020}.
+\ex This question comes about from the fact that, on the surface, NegShift resembles Scandinavian OS which has been well-documented to be driven and determined by prosodic factors \citep{erteschik-shirSoundPatternsSyntax2005,erteschik-shirScandinavianObjectShift2017,erteschik-shirVariationMainlandScandinavian2020,brinkerhoffMATCHINGPhrasesNorwegian2020}.
 \ex However, it is clear that not all instances of NegShift directly correlate to the accounts of OS. One of the chief reasons for is due to the wider range of material that is allowed to undergo NegShift whereas only prosodically weak object pronouns are allowed to undergo OS. Further discussion is in §\ref{sec:DISTRIBUTION} about the similarities and differences between OS and NegShift.
 \ex The one area that NegShift and OS are united in is the movement of pronouns. Additionally, there have been several claims that NegShift has a preference for shifting negative indefinite pronouns over the full DPs \citep{christensenInterfacesNegationSyntax2005,penkaNegativeIndefinites2011}. 
 \z 
@@ -791,7 +791,7 @@ NegQP-DP	&	+ -	&	+ -	&	+ -	&	+ -	&	- -	\\
 	\ea \attop{
 	\resizebox*{\linewidth}{!}{\begin{tikzpicture} 
 	\tikzset{every tree node/.style={align=center,anchor=north}} 
-	\Tree [.CP 	DP\\\emph{Jeg} 
+	\Tree [.CP 	DP\\\emph{Anna} 
 				[.C´ C\\\emph{har} 
 				[.TP <DP> 
 					[.T´ T 
@@ -816,11 +816,11 @@ NegQP-DP	&	+ -	&	+ -	&	+ -	&	+ -	&	- -	\\
 	\z
 
 \ex At this point during PF, part of the higher copy is elided leaving only the NI determiner. This process is possibly due to the constraint *\textsc{HeavyNPShift}. In the lower copy \emph{intet} is deleted, resulting in the following structure.
-\ea \attop{
+\ea \label{ex:tree} \attop{
 	\resizebox*{\linewidth}{!}{
 	\begin{tikzpicture} 
 	\tikzset{every tree node/.style={align=center,anchor=north}} 
-	\Tree [.CP 	DP\\\emph{Jeg} 
+	\Tree [.CP 	DP\\\emph{Anna} 
 				[.C´ C\\\emph{har} 
 				[.TP <DP> 
 					[.T´ T 
@@ -877,6 +877,25 @@ NegQP-DP	&	+ -	&	+ -	&	+ -	&	+ -	&	- -	\\
 
 \z 
 
+%------------------------------------
+\subsection{OT Account for Heavy NP Shift} \label{sec:HNPS}
+%------------------------------------
+
+\ea Based on \citet{anttilaRoleProsodyEnglish2010}, prosody plays a supporting role in linearization and can be accounted for through OT style constraints on prosodic well-formedness. 
+
+\ex This can be accounted for using Match Theory \citep{selkirkClauseIntonationalPhrase2009,selkirkSyntaxPhonologyInterface2011}.
+
+\ex Following \citet{myrbergSisterhoodProsodicBranching2013,myrbergProsodicWordSwedish2013,myrbergProsodicHierarchySwedish2015}, I assume that the subject in Scandinavian languages forms its own phonological phrase, if it is not a pronoun, separate from the rest of the clause. 
+	\ea Simplified prosodic structure for (\ref{ex:tree})\\
+	% \resizebox*{\linewidth}{!}{
+	\begin{tikzpicture} 
+	\tikzset{every tree node/.style={align=center,anchor=north}} 
+	\Tree [.ι [.φ\\Anna ] [.φ \edge[roof]; {har intet hørt i sagen om de stjålne malerier} ] ] 
+	\end{tikzpicture}%}
+
+	\z
+
+\z 
 
 %------------------------------------
 %BIBLIOGRAPHY
