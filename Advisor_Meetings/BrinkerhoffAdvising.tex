@@ -66,7 +66,7 @@
 \usepackage{pstricks} % required for pst-asr, OTtablx, pst-jtree.
 % \usepackage{pst-jtree} 	% Syntax tree draawing software
 \usepackage{tikz-qtree}	% Another syntax tree drawing software. Uses bracket notation.
-% \usepackage{forest}	% Another syntax tree drawing software. Uses bracket notation.
+\usepackage[linguistics]{forest}	% Another syntax tree drawing software. Uses bracket notation.
 %\usepackage{ling-macros} % Various linguistic macros. Does not work with linguex.
 %\usepackage{covington} % Another linguistic examples package.
 \usepackage{leipzig}
@@ -816,7 +816,7 @@ NegQP-DP	&	+ -	&	+ -	&	+ -	&	+ -	&	- -	\\
 	\z
 
 \ex At this point during PF, part of the higher copy is elided leaving only the NI determiner. This process is possibly due to the constraint *\textsc{HeavyNPShift}. In the lower copy \emph{intet} is deleted, resulting in the following structure.
-\ea \attop{
+\ea \label{ex:tree} \attop{
 	\resizebox*{\linewidth}{!}{
 	\begin{tikzpicture} 
 	\tikzset{every tree node/.style={align=center,anchor=north}} 
@@ -876,6 +876,129 @@ NegQP-DP	&	+ -	&	+ -	&	+ -	&	+ -	&	- -	\\
 
 
 \z 
+
+%------------------------------------
+\section{OT Account for Heavy NP Shift} \label{sec:HNPS}
+%------------------------------------
+
+\ea Based on \citet{anttilaRoleProsodyEnglish2010}, prosody plays a supporting role in linearization and can be accounted for through OT style constraints on prosodic well-formedness. 
+
+\ex This can be accounted for using Match Theory \citep{selkirkClauseIntonationalPhrase2009,selkirkSyntaxPhonologyInterface2011}.
+
+\ex Following \citet{myrbergSisterhoodProsodicBranching2013,myrbergProsodicWordSwedish2013,myrbergProsodicHierarchySwedish2015}, I assume that the subject in Scandinavian languages forms its own phonological phrase, if it is not a pronoun, separate from the rest of the clause. 
+	\ea \label{ex:ProsodicTree} Simplified prosodic structure for (\ref{ex:tree})\\
+	% \resizebox*{\linewidth}{!}{
+	\begin{tikzpicture} 
+	\tikzset{every tree node/.style={align=center,anchor=north}} 
+	\Tree [.ι [.φ\\Anna ] [.φ \edge[roof]; {har intet hørt i sagen om de stjålne malerier} ] ] 
+	\end{tikzpicture}%}
+
+	\z
+
+\ex Crucially, what we are concerned with the weight of the item shifting. This can be accounted for using a type of \textsc{NoShift} \citep{bennettLightestRightApparently2016} which is sensitive to lexical stresses, following \posscitet{anttilaRoleProsodyEnglish2010} definition for phonological weight.
+
+\ex \textsc{NoShift(Stress)}:
+Assign one violation for every lexical stress that is not in the same linear order as in the input.
+
+\ex This constraint operates by considering where a word bearing lexical stress is located in the input and whether it follows the same linear order as the input and assigns a violation for every lexical stress that is not in the same linear order.
+
+\ex If we take the input of (\ref{ex:tree}) this constraint should assign a violation for every item bearing lexical stress that has been relinearized. 
+
+\ex Using OT we can model how this would behave with the input of (\ref{ex:tree})
+	\resizebox*{\linewidth}{!}{
+	\begin{OTtableau}{3}
+		\OTdashes{1,2}
+		\OTtoprow [ ] {\textsc{Match(XP,φ)}, \textsc{Match(φ,XP)}, \textsc{NoShift(Stress)}}
+		\OTcandrow [\OThand] {( Anna\sub{ω} )\sub{φ} (har \textit{intet}\sub{ω} hørt i sagen om de stjålne malerier)\sub{φ}} { 1 , 1 , 1} 
+		\OTcandrow [\OThand] {( Anna\sub{ω} )\sub{φ} (har \textit{intet nyt}\sub{ω} hørt i sagen om de stjålne malerier)\sub{φ}} { 1 , 1 , 1} 
+		\OTcandrow [\OTface*] {( Anna\sub{ω} )\sub{φ} (har \textit{intet nyt\sub{ω} i sagen}\sub{ω} hørt om de stjålne malerier)\sub{φ}} { 1 , 1 , 2!} 
+		\OTcandrow [\OTface*] {( Anna\sub{ω} )\sub{φ} (har \textit{intet i sagen\sub{ω} om de stjålne\sub{ω} malerier\sub{ω}} hørt )\sub{φ}} { 1 , 1 , 3!} 
+	\end{OTtableau}}
+\z 
+%------------------------------------
+\subsection{Alternative accounts} \label{sec:MaximalW}
+%------------------------------------
+
+\ea However this could also be something to do either the maximal or minimal prosodic word that is shifting. This comes down to the fact that Swedish tonal accents are associated with the maximal prosodic word while stress is associated with the minimal prosodic word \citep{myrbergProsodicWordSwedish2013}. 
+
+\ex This is also the case in Danish where word stress is associated with the minimal prosodic word and Danish stød is associated with the maximal prosodic word \citep[see discussion of stød placement in][]{kalivodaProsodicRecursionPseudocyclicity2018}.
+
+\z 
+
+%------------------------------------
+\section{Internal prosodic structure}
+%------------------------------------
+
+\ea Following suggestions from 290, I determine what the internal prosodic structure of (\ref{ex:ProsodicTree}) is.
+
+\ex I first consider what the syntactic structure is for those cases where there is no NegShift but instead a sentential negator and an NPI. 
+\pagebreak
+\ex Syntactic structure for \textit{Anna har ikke hørt noget i sagen om de stålne malerier.}
+	\ea 
+	\resizebox*{\linewidth}{!}{
+	\begin{forest}
+	[CP
+		[DP\\\textit{Anna}]
+		[C´ [C\\\textit{har}]
+			[TP [DP\\\sout{\textit{Anna}}]
+				[T´ [T\\\sout{\textit{har}}]
+					[NegP [Neg\\\textit{ikke}]
+						[\emph{v}P [DP\\\sout{\textit{Anna}}]
+							[\emph{v´} [\emph{v}\\\textit{hørt}]
+								[VP [V\\\sout{\textit{hørt}}]
+									[DP  [DP\\\emph{noget}]
+										[PP [P\\\emph{i}]
+											[DP [DP [\emph{sag}] [D\\\emph{-en}]]
+												[PP [P\\\emph{om}]
+													[DP [D\\\emph{de}]
+														[NP [AP\\\emph{stålne}]
+															[NP\\\emph{malerier}]
+														]
+													]
+												]
+											]
+										]
+									]
+								]
+							]
+						]
+					] 
+				]
+			] 
+		]
+	]
+	\end{forest}}
+	\z 
+\pagebreak
+\ex We can assume that the following prosodic structure would correspond to the tree above
+	\ea
+	\resizebox*{\linewidth}{!}{
+	\begin{forest}
+	[ι
+		[φ\\\textit{Anna}]
+		[φ [ω\\\textit{har=ikke}]
+			[φ [ω\\\textit{hørt}]
+				[φ  [ω\\\emph{noget}]
+					[φ [ω\\\emph{i=sagen}]
+						[φ [ω\\\emph{om=de}]
+							[ω [ω\\\emph{stålne}]
+								[ω\\\emph{malerier}]
+							]
+						]	
+					]
+				]
+			]
+		]
+	]
+	\end{forest}} 
+	\z 
+
+\z 
+
+%------------------------------------
+\section{Svenonius 2002}
+%------------------------------------
+
 
 
 %------------------------------------
