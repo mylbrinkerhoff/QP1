@@ -69,7 +69,7 @@
 \usepackage{pstricks} % required for pst-asr, OTtablx, pst-jtree.
 % \usepackage{pst-jtree} 	% Syntax tree draawing software
 \usepackage{tikz-qtree}	% Another syntax tree drawing software. Uses bracket notation.
-% \usepackage{forest}	% Another syntax tree drawing software. Uses bracket notation.
+\usepackage[linguistics]{forest}	% Another syntax tree drawing software. Uses bracket notation.
 %\usepackage{ling-macros} % Various linguistic macros. Does not work with linguex.
 %\usepackage{covington} % Another linguistic examples package.
 \usepackage{leipzig}
@@ -178,23 +178,6 @@
 \centering
 I claim that NegShift is mostly a syntactic operation with prosody playing a supporting role in determining what material is allowed to surface at PF. 
 \end{tcolorbox}	
-% \ex In those instances where the NI is too large one potential repair is to strand the PP while moving just the pronoun or using the negative particle \textit{ikke} and a NPI.
-% 	\ea Jeg har \textit{intet}\textsubscript{i} hørt t\textsubscript{i} [\textsubscript{PP} i sagen om de stjålne malerier ].
-% 	\ex Jeg har ikke hørt [ \textit{noget} i sagen om de stjålne malerier ].
-% 	\z   
-% \ex This same behavior has also been remarked upon by \citet{penkaNegativeIndefinites2011} for Swedish.
-% 	\ea 
-% 	\gll Men mänskligheten har \textit{ingenting}\textsubscript{o} lärt sig t\textsubscript{o}.\\
-% 	but mankind-the have nothing taught themselves\\
-% 	\glt `But mankind haven't taught themselves anything.'
-% 	\ex[?] {
-% 	\gll Vi hade \textit{inga} \textit{grottor}\textsubscript{o} undersökt t\textsubscript{o}.\\
-% 	we have no caves explored\\
-% 	}
-% 	\glt `We haven't explored any caves.'
-% 	\z 
-% \ex My QP explores whether or not there is indeed this preference for NegShift of pronouns by conducting a study on the Swedish Culturomics Gigaword Corpus \citep{eideSwedishCulturomicsGigaword2016} and how this phenomenon might relate to prosodic analyses of pronominal obejct shift.
-% \ex One of the issues for this analysis is that one of the NI pronouns (\textit{ingen|inget|inga}) is identical to the NI determiner (\textit{ingen|inget|inga}).
 \z 
 
 %------------------------------------
@@ -217,17 +200,17 @@ I claim that NegShift is mostly a syntactic operation with prosody playing a sup
 		{\gll Ég hef \textit{engan} [\textsubscript{VP} \textbf{séð} t\textsubscript{o}	].\\
 			I have nobody ~ seen\\}\jambox*{Ic}
 		\glt `I haven't seen anybody.'
-		\ex String vacuous NegShift\\
-		{\gll Jag \textbf{sa} \textit{ingenting} [\textsubscript{VP} t\textsubscript{v}  t\textsubscript{o}  ].\\
-			I said nothing\\}\jambox*{Sw}
-		\glt `I said nothing'
+		% \ex String vacuous NegShift\\
+		% {\gll Jag \textbf{sa} \textit{ingenting} [\textsubscript{VP} t\textsubscript{v}  t\textsubscript{o}  ].\\
+		% 	I said nothing\\}\jambox*{Sw}
+		% \glt `I said nothing'
 		\z
 \ex Additional evidence from \citet{engelsScandinavianNegativeIndefinites2012} shows that NegShift is allowed out of a wider range of positions than OS, which are summarized in Table \ref{tab:Distribution}.
 
 \begin{table}[!ht]
 	\centering
-	\label{tab:Distribution}
 	\caption{Distribution of NegShift across the different Scandinavian languages. WJ = West Jutlandic, Ic = Icelandic, Fa = Faroese, DaL = Danish Linguists, SwL = Swedish Linguists, Scan1 = literary/formal Mainland Scandinavian varieties, Scan2 = colloquial Mainland Scandinavian varieties and Norwegian}
+	\label{tab:Distribution}
 \begin{tabular}{llccccccccc}
 	\hline 
 	NegShift across &  & WJ1 & WJ2 & Ic & Fa & DaL1 & DaL2 & SwL & Scan1 & Scan2 \\ 
@@ -245,73 +228,6 @@ I claim that NegShift is mostly a syntactic operation with prosody playing a sup
 \end{table}
 \z
 
-% %------------------------------------
-% \section{Svenonius 2002}
-% %------------------------------------
-
-% \ea	\citet{svenoniusStrainsNegationNorwegian2002} describes that \emph{in Norwegian} NIs only license sentential negation when it has moved to a position outside of the VP. 
-
-% \ex According to \citeauthor{svenoniusStrainsNegationNorwegian2002} there are five distinct cases involving NIs.
-% 	\ea \emph{ingen} is a \emph{licensor} of and does not in and of itself express negation.
-% 	\ex \textsc{Trifling Negation} \emph{ingen} can be narrowly interpreted to mean something like "zero" or "a trifle", when this is the case NegShift has not taken place. 
-% 	\ex \textsc{P Negation} is not as tightly confined like in trifling negation, but is not interpreted at the sentential level, this involves predicates only. 
-% 	\ex \textsc{Narrow Scope} is a cover term for trifling and P negation. 
-% 	\ex \emph{ingen} can appear in double negation expressions.
-% 	\z 
-
-% \ex Before looking at examples it is important to remember that Norwegian does not allow NegShift in colloquial Norwegian. 
-% 	\ea When it does occur it is marked and is indicative of a literary or archaic style. 
-% 	\z 
-
-% \ex I will only focus on sentential and trifling negation. 
-
-% \ex Examples of sentential negation in Norwegian, the mark (*†) shows that the interpretation is ungrammatical in the colloquial register but attested in literary or archaic styles.
-% 	\ea 
-% 	\gll Vi vant ingen konkurranse.\\
-% 	We want no competition\\
-% 	\trans `We did not win any competition'
-% 	\ex[*†] { 
-% 	\gll Vi kunne ingen konkurranse vinne.\\
-% 	We could no competition won\\}
-% 	\ex[*] {
-% 	\gll Vi vant ingen konkurranse i.\\
-% 	We won no competition in\\
-% 	}
-% 	\ex[*†] {
-% 	\gll …at vi ingen konkurranse vant\\
-% 	that we no competition won\\
-% 	}
-% 	\z  
-
-% \ex The sentential interpretation is only possible if:
-% 	\ea The NI moves outside of VP, and
-% 	\ex Is subject to Holmberg's Generalization
-% 	\z 
-
-% % \ex I disagree with \citeauthor{svenoniusStrainsNegationNorwegian2002} about NegShift being subject to Holmberg's Generalization.
-% % 	\ea As discussed in \citet{foxCyclicLinearizationSyntactic2005,engelsScandinavianNegativeIndefinites2012} there is evidence that NegShift is actually subject to an Anti-Holmberg effect. 
-% % 	\ex Anti-Holmberg states that NegShift is only possible if the verb remains \emph{in-situ}. 
-% % 	\z 
-
-% \ex When it comes to the trifling negation, it is only the constituent that is negated. This type of reading is quite restricted in Norwegian and generally means something like "zero" when used. 
-% 	\ea[*] {
-% 	\gll De har gitt Norge ingen poeng, og det har heller ikke irene. \\
-% 	they have given Norway no points and that have either not the.Irish\\
-% 	} 
-% 	\trans (intended: `They have given Norway no points, and neither have the Irish') \label{ex:neither}
-% 	\ex 
-% 	\gll De har gitt Norge ingen poeng, og det har også esterne.\\
-% 	they have given Norway no points and that have also the.Estonians\\
-% 	\trans ‘They have given Norway no points, and so have the Estonians \label{ex:ConstituentNegation}
-% 	\z 
-	
-% \ex We know that we get the constituent negation when we compare (\ref{ex:neither}), which uses \emph{neither}, with (\ref{ex:ConstituentNegation}).
-
-% \ex \citeauthor{svenoniusStrainsNegationNorwegian2002} claims that the only way that we get sentential negation is through NegShift.
-% 	\ea It is unclear if the cases involving 
-% 	\z 
-
-% \z
 
 %------------------------------------
 \section{Comparison of NegShift and OS} \label{sec:Comparison}
@@ -320,33 +236,108 @@ I claim that NegShift is mostly a syntactic operation with prosody playing a sup
 %------------------------------------
 \subsection{Holmberg's Generalization} \label{sec:HG}
 %------------------------------------
-\ea OS obeys Holmberg's Generalization 
-\ex Holmberg's Generalization:\\
-Object Shift cannot apply across a phonologically visible category asymmetrically c-commanding the object position except adjuncts \jambox*{\citep[15]{holmbergRemarksHolmbergGeneralization1999}}
-\ex NegShift obeys Anti-Holmberg not HG
-\ex The only case that could be seen as involving HG is \emph{string-vacuous} NegShift
-	\ea However it is not clear if this is actually the case because we do not see evidence for movement. 
-	\ex There is a lack of evidence  
+\ea OS only occurs if the verb has moved to its V2 position and must obey Holmberg's Generalization.
+\ea {Holmberg's Generalization:\\
+Object Shift cannot apply across a phonologically visible category asymmetrically c-commanding the object position except adjuncts} \jambox*{\citep[15]{holmbergRemarksHolmbergGeneralization1999}}
+\z
+\ex Examples of OS 
+ 	\ea {
+	\gll Peter så\textsubscript{v} \textbf{ham\textsubscript{o}} ikke [\textsubscript{VP} t\textsubscript{v} \textbf{t\textsubscript{o}}]\\
+    Peter see.\Pst{} him not \\}\jambox*{(Across negation)}
+    \glt `Peter didn't see him.' \label{ex:classic}
+    \ex {
+    \gll Peter så\textsubscript{v} \textbf{ham\textsubscript{o}} ofte [\textsubscript{VP} t\textsubscript{v} \textbf{t\textsubscript{o}}]\\
+    Peter see.\Pst{} him often \\}\jambox*{(Across adverbials)} 
+    \glt `Peter often saw him.' \label{ex:oft}
 	\z 
+
+\ex As seen in Table \ref{tab:Distribution}, NegShift occurs if the verb remains in situ. 
+
+\ex Examples of NegShfit with the verb in situ. 
+	\ea {
+		\gll Ég hef \textit{engan}\sub{o} [\sub{VP} \textbf{séð} t\textsubscript{o}.] \\
+			I have nobody {} seen\\}\jambox*{Ic}
+	\glt `I haven't seen anybody.'%\rcommentg{Ic}
+	\ex {
+	\gll {Í dag} hevur Petur \textit{einki}\sub{o} [\sub{VP} \textbf{sagt} t\textsubscript{o}].\\
+	today has Peter nothing {} said\\}\jambox*{Fa}
+	\glt `Peter hasn't said anything today.'%\rcommentg{Fa}
+	\ex {
+	\gll Manden havde måske \textit{ingenting}\sub{o} [\sub{VP} \textbf{sagt} t\textsubscript{o}].\\
+	man-the had probably nothing {} said\\}\jambox*{Da}
+	\glt `The man hadn't said anything'
+	\z  
+
+\ex Additionally, it is allowed to occur across any phonological material in the VP.
+	\ea {
+	\gll Jón hefur \textit{ekkert} [\sub{VP} \textbf{sagt} \textbf{Sveini} t\textsubscript{o}]. \\
+	Jón has nothing {} said Sveinn\\}\jambox*{Ic}
+	\glt `John hasn't told Sveinn anything'%\rcommentg{Ic}
+	\ex {
+	\gll {Í dag} hevur Petur \textit{einki} [\sub{VP} \textbf{givið} \textbf{Mariu} t\textsubscript{o}]. \\
+		today has Peter nothing {} given Mary\\}\jambox*{Fa}
+	\glt `Today, Peter hasn't given Mary anything.'%\rcommentg{Fa}
+	\ex {
+	\gll Jeg har \textit{ingen} \textit{bøger} [\sub{VP} \textbf{lånt} \textbf{børnene} t\textsubscript{o}].\\
+	I have no books {} lent children-the\\}\jambox*{WJ/Scan1}
+	\glt `I haven't lent the children any books.'
+	\z 
+
+\ex This behavior is called the \emph{Anti-Holmberg Effect} \citep{foxCyclicLinearizationSyntactic2005,engelsScandinavianNegativeIndefinites2012}
 \z
 
+\begin{tcolorbox}[width=\linewidth]
+\textsc{Claim:} OS and NegShift are not beholden to the same generalizations. 
+\end{tcolorbox}
 %------------------------------------
 \subsection{Landing site} \label{sec:Landing}
 %------------------------------------
-\ea 
+\ea When OS occurs it must occur to the left of all adverbials.
+	\ea 
+	\gll Jeg lånte \emph{hende\sub{IO}} faktisk\sub{Adv} aldri\sub{Adv} [\sub{VP} t\sub{IO} bøgerne].\\
+	I lent her actually never {} {} books-the\\
+	\glt `I actually never lent her the books' 
+	\z 
+
+\ex When NegShift occurs it is located in a position to the right of all adverbials.
+	\ea 
+	\gll Jeg har faktisk\sub{Adv} \emph{ingen} \emph{bøger}\sub{DO} [\sub{VP} lånt Othilia t\sub{DO}].\\
+	I have actually no books {} lent Othilia \\
+	\glt `I didn't actually lend Othilia any books.'
+	\z 
 \z
 
+\begin{tcolorbox}[width=\linewidth]
+\textsc{Claim: OS and NegShift move to different locations.}
+\end{tcolorbox}
 %------------------------------------
 \subsection{Interaction of NegShift and OS} \label{sec:NEG-OS}
 %------------------------------------
-\ea 
+\ea When there are both weak object pronouns and NIs in the sentence they both shift to their respective landing sites. 
+	\ea
+	\label{ex:NegOS}
+	\gll Jeg lånte \textit{hende} fraktisch \textit{ingen} \textit{bøger}.\\
+	I lent her actually no books\\
+	\glt `I didn't actually lend her any books.'
+	\z 
+\ex When the verb remains in situ OS is blocked from occurring but NegShift is still allowed to occur. 
+	\ea 
+	\gll Jeg har \emph{ingen} \emph{bøger} lånt \emph{hende}.\\
+	I have no books lent her\\
+	\glt `I haven't lent her any books
+	\z
 \z
 
+\begin{tcolorbox}[width=\linewidth]
+\textsc{Claim:} OS and NegShift are not the same.
+
+\textsc{Big Claim:} OS and NegShift are not derived by the same mechanisms. 
+\end{tcolorbox}
 %------------------------------------
 \section{Prosodic restrictions on NegShift} \label{sec:PROSODY}
 %------------------------------------
 
-\ea As noted earlier not all NegShift is treated equal. \citet[65f]{christensenInterfacesNegationSyntax2005}, speaking on Danish, claims that the ``weight" of the NI plays a crucial factor in whether or not NegShift occurs. 
+\ea \citet[65f]{christensenInterfacesNegationSyntax2005} claims that the ``weight" of the NI plays a crucial factor in whether or not NegShift occurs. 
 	\ea 
 	\gll Jeg har \textit{intet}\textsubscript{o} hørt t\textsubscript{o}.\\
 	I have nothing heard\\
@@ -383,23 +374,23 @@ Object Shift cannot apply across a phonologically visible category asymmetricall
 	}
 	\glt `We haven't explored any caves.'
 	\z 
-
 \z 
+\begin{tcolorbox}[width=\linewidth]
+\textsc{Claim:} Prosody plays a supporting role in restricting and regulating the amount of material that undergoes NegShift.
+\end{tcolorbox}
 %------------------------------------
 \section{Copy and partial deletion account} \label{sec:ZEIJLSTRA}
 %------------------------------------
 
-\ea One way to account for this behavior is following \cite{zeijlstraSyntacticallyComplexStatus2011} account for the split-scope that these NIs introduce in Germanic languages.\footnote{See \citet{svenoniusStrainsNegationNorwegian2002} which shows that there is some differences in interpretation depending on if NegShift has occurred or not.} 
-\ex Split-scope is evident when modals and other auxiliaries are present and the negation scopes higher than the modal/auxiliary's scope where the indefinite resides. 
-\ex \citeauthor{zeijlstraSyntacticallyComplexStatus2011} assumes that this behavior is the result of the compositional status of negative indefinites similar to the claims made by \citet{iatridouNegativeDPsAMovement2011}. 
-	\ea Unlike \citeauthor{iatridouNegativeDPsAMovement2011}, who simply claim that negation takes scope higher than the modal's scope and the indefinite scopes low, he claims that NIs are composed of a negative operator and an indefinite component.
-	\z 
-\ex He further claims that the split-scope interpretation is the result of a copy-theory of movement where the indefinite interpretation is interpreted in the lower copy while the negative operator is interpreted in the higher copy after quantifier rising. 
+\ea One way to account for this behavior is following \cite{zeijlstraSyntacticallyComplexStatus2011} account for the split-scope that these NIs introduce in Germanic languages.
 
-\ex He claims that the when we move items we copy them entirely and remerge them into the syntactic structure. This results in multiple copies of the item being in the syntactic structure. Following \citet{fanselowRemarksEconomyPronunciation2001,fanselowDistributedDeletion2002} only at a later stage, after the syntactic structure has been spell-out, parts of the copy are removed in PF or LF. This could result in either a partial or complete deletion of any of these copied-elements at any location that they are found. 
+\ex Split-scope is evident when modals and other auxiliaries are present and the negation scopes higher than the modal/auxiliary's scope.
 
-\ex For example, we see this in the following syntactic structure. 
-	\ea \attop{
+\ex Split-scope is the result of a copy-theory of movement where the indefinite interpretation is in the lower copy while the negative operator is interpreted in the higher copy.
+
+\ex Following \citet{fanselowRemarksEconomyPronunciation2001,fanselowDistributedDeletion2002} parts of the copy are removed in PF or LF.
+
+\ex For example, we see this in the following syntactic structure.\\
 	\resizebox*{\linewidth}{!}{\begin{tikzpicture} 
 	\tikzset{every tree node/.style={align=center,anchor=north}} 
 	\Tree [.CP 	DP\\\emph{Anna} 
@@ -423,11 +414,10 @@ Object Shift cannot apply across a phonologically visible category asymmetricall
 				] 
 			] 
 	\end{tikzpicture}}
-	}
-	\z
+	
 
-\ex At this point during PF, part of the higher copy is elided leaving only the NI pronoun. In the lower copy \emph{intet} is deleted, resulting in the following structure.
-\ea \label{ex:tree} \attop{
+\ex At this point during PF, part of the higher copy is deleted leaving only the NI pronoun. In the lower copy \emph{intet} is deleted.\\
+\label{ex:tree}
 	\resizebox*{\linewidth}{!}{
 	\begin{tikzpicture} 
 	\tikzset{every tree node/.style={align=center,anchor=north}} 
@@ -452,20 +442,20 @@ Object Shift cannot apply across a phonologically visible category asymmetricall
 				] 
 			] 
 	\end{tikzpicture}}
-	}
-	\z
-
-\ex The question arises as to what the motivation is for determining what amount of material is deleted during this process. I propose that the solution is similar to Heavy NP Shift and can be modeled using Optimality Theory \citep{princeOptimalityTheoryConstraint2004} and making reference to the prosody of these constituents.
 
 \z 
+
+\begin{tcolorbox}[width=\linewidth]
+\textsc{Question:} What decides which material is deleted?
+
+\end{tcolorbox}
 
 %------------------------------------
 \section{Prosodic motivations for Heavy NP Shift} \label{sec:HNPS}
 %------------------------------------
 
 \ea According to \citet{anttilaRoleProsodyEnglish2010}, prosody plays a supporting role in linearization and can be accounted for through OT style constraints on prosodic well-formedness. 
-\ex \citeauthor{anttilaRoleProsodyEnglish2010} are concerned with explaining the three way patterning that dative constructions have and how the different verbal arguments are linearized with respect to each other. 
-\ex The three different constructions that are possible in dative constructions are:
+\ex They are concerned with explaining the three way patterning that dative constructions have:
 	\ea Double object constructions
 	\ex Prepositional constructions
 	\ex Heavy NP Shift constructions
@@ -477,13 +467,12 @@ Object Shift cannot apply across a phonologically visible category asymmetricall
 
 \ex This means that the more lexical stresses a constituent has the heavier it is. This definition, crucially, leaves out functional items and pronouns because they lack lexical stress. 
 
-\ex Using this definition for weight, we can explain the behavior Danish and Swedish as discussed in §\ref{sec:NEGSHIFT}. This means that Danish and Swedish have an upper bound on the weight of the shifted element. In the case of Danish only elements of weight ≤1 are allowed to shift from their base generated position. 
+\ex Using this definition for weight, we can explain the behavior Danish and Swedish as discussed in §\ref{sec:NEGSHIFT}. 
 
-\ex Swedish on the other hand has a greater weight allowance before it is treated as ungrammatical. 
 \z 
 
 %------------------------------------
-\subsection{OT Account for Heavy NP Shift} \label{sec:HNPS}
+\section{OT Account for Heavy NP Shift} \label{sec:OT}
 %------------------------------------
 
 \ea Based on \citet{anttilaRoleProsodyEnglish2010}, prosody plays a supporting role in linearization and can be accounted for through OT style constraints on prosodic well-formedness. 
@@ -500,12 +489,12 @@ Object Shift cannot apply across a phonologically visible category asymmetricall
 
 	\z
 
-\ex Crucially, what we are concerned with the weight of the item shifting. This can be accounted for using a type of \textsc{NoShift} \citep{bennettLightestRightApparently2016} which is sensitive to lexical stresses, following \posscitet{anttilaRoleProsodyEnglish2010} definition for phonological weight.
+\ex Crucially, what we are concerned with the weight of the item shifting.
+	\ea This can be accounted for using a type of \textsc{NoShift} \citep{bennettLightestRightApparently2016} which is sensitive to lexical stresses.
+	\z 
 
-\ex \textsc{NoShift(Stress)}:
-Assign one violation for every lexical stress that is not in the same linear order as in the input.
-
-\ex This constraint operates by considering where a word bearing lexical stress is located in the input and whether it follows the same linear order as the input and assigns a violation for every lexical stress that is not in the same linear order.
+\ex \textsc{NoShift(Stress)}:\\
+Assign one violation for every word bearing lexical stress that is not in the same linear order as in the input.
 
 \ex If we take the input of (\ref{ex:tree}) this constraint should assign a violation for every item bearing lexical stress that has been relinearized. 
 
@@ -517,20 +506,73 @@ Assign one violation for every lexical stress that is not in the same linear ord
 		\OTcandrow [\OThand] {( Anna\sub{ω} )\sub{φ} (har \textit{intet}\sub{ω} hørt i sagen om de stjålne malerier)\sub{φ}} { 1 , 1 , 1} 
 		\OTcandrow [\OThand] {( Anna\sub{ω} )\sub{φ} (har \textit{intet nyt}\sub{ω} hørt i sagen om de stjålne malerier)\sub{φ}} { 1 , 1 , 1} 
 		\OTcandrow [\OTface*] {( Anna\sub{ω} )\sub{φ} (har \textit{intet nyt\sub{ω} i sagen}\sub{ω} hørt om de stjålne malerier)\sub{φ}} { 1 , 1 , 2!} 
-		\OTcandrow [\OTface*] {( Anna\sub{ω} )\sub{φ} (har \textit{intet i sagen\sub{ω} om de stjålne\sub{ω} malerier\sub{ω}} hørt )\sub{φ}} { 1 , 1 , } 
+		\OTcandrow [\OTface*] {( Anna\sub{ω} )\sub{φ} (har \textit{intet i sagen\sub{ω} om de stjålne\sub{ω} malerier\sub{ω}} hørt )\sub{φ}} { 1 , 1 , 3! } 
 	\end{OTtableau}
 	}
 \z 
-%------------------------------------
-\subsection{Alternative accounts} \label{sec:MaximalW}
-%------------------------------------
 
-\ea However this could also be something to do either the maximal or minimal prosodic word that is shifting. 
+%------------------------------------
+\subsection{Prosodic structure} \label{sec:OT}
+%------------------------------------
+\ea One alternative is that the prosodic structure is deciding the amount of material that is deleted.  
 
+\ex We can assume that the following prosodic structure would correspond to the tree in (\ref{ex:tree})
+	\ea
+	% \resizebox*{\linewidth}{!}{
+	\begin{forest}
+	[ι
+		[φ\\\textit{Anna}]
+		[φ [ω\\\textit{har}]
+			[φ
+				[φ  [ω\\\emph{intet}]
+					[φ [ω\\\emph{i=sagen}]
+						[φ [ω\\\emph{om=de}]
+							[ω [ω\\\emph{stålne}]
+								[ω\\\emph{malerier}]
+							]
+						]	
+					]
+				]
+				[φ [ω\\\textit{hørt}]
+					[φ  [ω\\\emph{intet}]
+						[φ [ω\\\emph{i=sagen}]
+							[φ [ω\\\emph{om=de}]
+								[ω [ω\\\emph{stålne}]
+									[ω\\\emph{malerier}]
+								]
+							]	
+						]
+					]
+				]
+			]
+		]
+	]
+	\end{forest}%} 
+	\z 
+
+\ex At this point in the derivation the we want our higher copy to consist of at most a prosodic word so all material that is larger than a prosodic word is deleted.
+
+\ex Another constraint come along and deletes the material that remains in the higher copy from the lower resulting in our final prosodic structure
+	% \resizebox*{\linewidth}{!}{
+	\begin{forest}
+	[ι
+		[φ\\\textit{Anna}]
+		[φ [ω\\\textit{har}]
+			[φ [ω\\\emph{intet}]
+				[φ [ω\\\textit{hørt}]
+					[φ [ω\\\emph{i=sagen}]
+						[φ [ω\\\emph{om=de}]
+							[ω [ω\\\emph{stålne}]
+								[ω\\\emph{malerier}]
+							]
+						]	
+					]
+				]
+			]
+		]
+	]
+	\end{forest}%} 
 \z 
-
-
-
 
 %------------------------------------
 %BIBLIOGRAPHY
@@ -548,7 +590,8 @@ Assign one violation for every lexical stress that is not in the same linear ord
 %------------------------------------
 
 \ea Cyclic Linearization is a theory that was developed by \cite{foxCyclicLinearizationSyntactic2005} as a way to account for OS and Holmberg's Generalization.
-\ex This theory works by stipulating that spell-out of the morpho-syntax is cyclic and order preserving, which means that as you spell-out each successive phase you need to ensure that whatever orders existed when that phase was spelled-out persist at the next phase's ordering restrictions. This theory also had the benefit of accounting for when OS was allowed or not allowed to occur. 
+\ex This theory works by stipulating that spell-out is cyclic and order preserving. 
+
 \ex This proposal was extended by \citet{foxCyclicLinearizationSyntactic2005} and \citet{engelsMicrovariationObjectPositions2011,engelsScandinavianNegativeIndefinites2012} to account for quantifier movement (QM), which NegShift is a subset of. 
 \ex Under this proposal QM is subject to an ``Anti-Holmberg Effect'' or an ``Inverse Holmberg Effect'', which are identical in principle
 	\ea Under Holmberg's Generalization, OS can only apply if the verb has undergone movement from V to T to C.
@@ -585,5 +628,72 @@ Assign one violation for every lexical stress that is not in the same linear ord
 \ex The benefit of using Cyclic Linearization comes from being able to account for why certain orders are fixed throughout the entire derivation.
 \z 
 
+%------------------------------------
+\section*{Svenonius 2002}
+%------------------------------------
+
+\ea	\citet{svenoniusStrainsNegationNorwegian2002} describes that \emph{in Norwegian} NIs only license sentential negation when it has moved to a position outside of the VP. 
+
+\ex According to \citeauthor{svenoniusStrainsNegationNorwegian2002} there are five distinct cases involving NIs.
+	\ea \emph{ingen} is a \emph{licensor} of and does not in and of itself express negation.
+	\ex \textsc{Trifling Negation} \emph{ingen} can be narrowly interpreted to mean something like "zero" or "a trifle", when this is the case NegShift has not taken place. 
+	\ex \textsc{P Negation} is not as tightly confined like in trifling negation, but is not interpreted at the sentential level, this involves predicates only. 
+	\ex \textsc{Narrow Scope} is a cover term for trifling and P negation. 
+	\ex \emph{ingen} can appear in double negation expressions.
+	\z 
+
+\ex Before looking at examples it is important to remember that Norwegian does not allow NegShift in colloquial Norwegian. 
+	\ea When it does occur it is marked and is indicative of a literary or archaic style. 
+	\z 
+
+\ex I will only focus on sentential and trifling negation. 
+
+\ex Examples of sentential negation in Norwegian, the mark (*†) shows that the interpretation is ungrammatical in the colloquial register but attested in literary or archaic styles.
+	\ea 
+	\gll Vi vant ingen konkurranse.\\
+	We want no competition\\
+	\trans `We did not win any competition'
+	\ex[*†] { 
+	\gll Vi kunne ingen konkurranse vinne.\\
+	We could no competition won\\}
+	\ex[*] {
+	\gll Vi vant ingen konkurranse i.\\
+	We won no competition in\\
+	}
+	\ex[*†] {
+	\gll …at vi ingen konkurranse vant\\
+	that we no competition won\\
+	}
+	\z  
+
+\ex The sentential interpretation is only possible if:
+	\ea The NI moves outside of VP, and
+	\ex Is subject to Holmberg's Generalization
+	\z 
+
+% \ex I disagree with \citeauthor{svenoniusStrainsNegationNorwegian2002} about NegShift being subject to Holmberg's Generalization.
+% 	\ea As discussed in \citet{foxCyclicLinearizationSyntactic2005,engelsScandinavianNegativeIndefinites2012} there is evidence that NegShift is actually subject to an Anti-Holmberg effect. 
+% 	\ex Anti-Holmberg states that NegShift is only possible if the verb remains \emph{in-situ}. 
+% 	\z 
+
+\ex When it comes to the trifling negation, it is only the constituent that is negated. This type of reading is quite restricted in Norwegian and generally means something like "zero" when used. 
+	\ea[*] {
+	\gll De har gitt Norge ingen poeng, og det har heller ikke irene. \\
+	they have given Norway no points and that have either not the.Irish\\
+	} 
+	\trans (intended: `They have given Norway no points, and neither have the Irish') \label{ex:neither}
+	\ex 
+	\gll De har gitt Norge ingen poeng, og det har også esterne.\\
+	they have given Norway no points and that have also the.Estonians\\
+	\trans ‘They have given Norway no points, and so have the Estonians \label{ex:ConstituentNegation}
+	\z 
+	
+\ex We know that we get the constituent negation when we compare (\ref{ex:neither}), which uses \emph{neither}, with (\ref{ex:ConstituentNegation}).
+
+\ex \citeauthor{svenoniusStrainsNegationNorwegian2002} claims that the only way that we get sentential negation is through NegShift.
+	\ea It is unclear if the cases involving 
+	\z 
+
+\z
 
 \end{document}
