@@ -13,7 +13,7 @@
 		maxbibnames=99,
 		natbib,
 		url=false]{biblatex}
-\addbibresource{link_desktop.bib}
+\addbibresource{link_laptop.bib}
 % \addbibresource{link_desktop.bib}
 \setcounter{biburlnumpenalty}{100}  % allow URL breaks at numbers
 %\setcounter{biburlucpenalty}{100}   % allow URL breaks at uppercase letters
@@ -49,6 +49,8 @@
 % \usepackage{url} %allows for urls
 % \def\UrlBreaks{\do\/\do-} %allows for urls to be broken up
 \usepackage[normalem]{ulem} %strike out text. Handy for syntax
+\usepackage{tcolorbox}
+
 
 %%FONTS
 \setmainfont{Libertinus Serif}
@@ -57,8 +59,8 @@
 
 %%PACKAGES FOR LINGUISTICS
 %\usepackage{OTtablx} %Generating tableaux with using TIPA
-\usepackage[noipa]{OTtablx} % Use this one generating tableaux without using TIPA
-%\usepackage[notipa]{ot-tableau} % Another tableau drawing packing use for posters.
+% \usepackage[noipa]{OTtablx} % Use this one generating tableaux without using TIPA
+% \usepackage[notipa]{ot-tableau} % Another tableau drawing packing use for posters.
 % \usepackage{linguex} % Linguistic examples
 % \usepackage{langsci-linguex} % Linguistic examples
 \usepackage{langsci-gb4e} % Language Science Press' modification of gb4e
@@ -128,7 +130,7 @@ NegShift bears some resemblance to the greater studied Scandinavian Object Shift
 	I kiss.\Pst{} her \Neg{}\\} \jambox*{Sw}
 	\glt `I didn't kiss her.'   
 	\z  
-Interestingly, several authors have claimed that Scandinavian OS is driven and determined by prosodic factors (see \cite{erteschik-shirSoundPatternsSyntax2005,erteschik-shirScandinavianObjectShift2017,erteschik-shirVariationMainlandScandinavian2020,brinkerhoffMATCHINGPhrasesNorwegian2020} for some recent accounts). However, there are others that claim that OS is best accounted for as syntactic movement to satisfy PF, information structure, or some other syntactic requirement (\cite{holmbergRemarksHolmbergGeneralization1999,thrainssonObjectShiftScrambling2001,bentzenObjectShiftSpoken2013}, among many others). 
+Interestingly, several authors have claimed that Scandinavian OS is driven and determined by prosodic factors (see \cite{erteschik-shirSoundPatternsSyntax2005,erteschik-shirScandinavianObjectShift2017,erteschik-shirVariationMainlandScandinavian2020,brinkerhoffMATCHINGPhrasesNorwegian2021} for some recent accounts). However, there are others that claim that OS is best accounted for as syntactic movement to satisfy PF, information structure, or some other syntactic requirement (\cite{holmbergRemarksHolmbergGeneralization1999,thrainssonObjectShiftScrambling2001,bentzenObjectShiftSpoken2013}, among many others). 
 
 However, it is clear that not all instances of NegShift directly correlate to the accounts of OS. One of the chief reasons for this difference is due to the wider range of material that is allowed to undergo NegShift, which includes both pronouns and full DPs, whereas only prosodically weak object pronouns are allowed to undergo OS. Further discussion about the similarities and differences between OS and NegShift is found in §\ref{sec:DISTRIBUTION}. However, even though there are differences the one thing that could unite them is there shared movement of pronouns. There have been several claims that NegShift has a preference for shifting "lighter" NIs over "heavier" ones \citep{christensenInterfacesNegationSyntax2005,penkaNegativeIndefinites2011}. This has the effect that speakers prefer shifting pronouns and small DPs over more complex DPs, see §\ref{sec:PROSODY} for a more detailed discussion. 
 
@@ -181,9 +183,7 @@ We can be confident that movement is occurring in (\ref{ex:String}) because of t
 	\z  
 \z
 
-Based on these observations \citet{svenoniusStrainsNegationNorwegian2002} claims that movement is required to acheive sentential negation. However, further evidence is required to determine for sure if we actually are observing movement. 
-
-In returning to NegShift, evidence collected and reported by \citet{engelsMicrovariationObjectPositions2011,engelsScandinavianNegativeIndefinites2012} shows that NegShift is in fact more complicated and subject to greater variability than was previously thought. \citeauthor{engelsScandinavianNegativeIndefinites2012} found that NegShift was permissible from a greater number of contexts and was more likely to occur depending on the variety and register that was being used, which is summarized in Table \ref{tab:Distribution} taken from \citet{engelsScandinavianNegativeIndefinites2012}. In Table \ref{tab:Distribution}, ✔︎ indicates that NegShift occurs, * indicates that NegShift cannot occur, ? means that there was idiosyncratic variation between speakers.
+Evidence collected and reported in \citet{engelsMicrovariationObjectPositions2011,engelsScandinavianNegativeIndefinites2012} shows that NegShift is in fact more complicated and subject to greater variability than was previously thought. \citeauthor{engelsScandinavianNegativeIndefinites2012} found that NegShift was permissible from a greater number of contexts and was more likely to occur depending on the variety and register that was being used, which is summarized in Table \ref{tab:Distribution} taken from \citet{engelsScandinavianNegativeIndefinites2012}. In Table \ref{tab:Distribution}, ✔︎ indicates that NegShift occurs, * indicates that NegShift cannot occur, ? means that there was idiosyncratic variation between speakers.
 \begin{table}[!ht]
 	\centering
 	\caption{Distribution of NegShift across Scandinavian languages. (WJ = West Jutlandic, Ic = Icelandic, Fa = Faroese, DaL = Danish Linguists, SwL = Swedish Linguists, Scan1 = literary/formal Mainland Scandinavian, Scan2 = colloquial Mainland Scandinavian and Norwegian)}
@@ -204,21 +204,169 @@ In returning to NegShift, evidence collected and reported by \citet{engelsMicrov
 \end{tabular} 
 \end{table}
 
+
+Of crucial interest to our discussion are the rows showing the behavior of NegShift with respect to crossing a verb and crossing an indirect object.  The reason these rows are of interest lies in how NegShift behaves to these syntactic objects when compared with OS. This comparison is carried out in the following section.
+
 %------------------------------------
 \section{Comparison of NegShift and OS} \label{sec:NEG-OS}
 %------------------------------------
+We can compare certain patterns that NegShift has against patterns that OS has. In so doing we can determine whether they are governed by the same or different factors. If OS and NegShift are derived by the same trigger then we expect them to behave the similarly to one another. If they are not similar than this suggests that they are not derived by the same trigger. 
+
+There are three different metrics that we can use to determine the governing factors. These factors will examine: (i) how obedient to Holmberg's Generalization are NegShift and OS; (2) Where the loci of movement are; and (iii) how NegShift and OS interact with one another.   
+
+I show that these two phenomenon are in fact different with NegShift being governed and derived by syntactic factors and not prosodic as described for OS in \citet{erteschik-shirSoundPatternsSyntax2005,erteschik-shirScandinavianObjectShift2017,erteschik-shirVariationMainlandScandinavian2020,brinkerhoffMATCHINGPhrasesNorwegian2021}.  
 
 %------------------------------------
 \subsection{With respect to Homlberg's Generalization} \label{sec:HG}
 %------------------------------------
 
+The most defining characteristic for OS is its adherence to Holmberg's Generalization, which is defined formally in \ref{ex:HG}.  
+\ea \label{ex:HG} {Holmberg's Generalization:\\
+Object Shift cannot apply across a phonologically visible category asymmetrically c-commanding the object position except adjuncts} \jambox*{\citep[15]{holmbergRemarksHolmbergGeneralization1999}}
+\z
+This generalization captures the fact that OS is only possible if the verb has evacuated the VP and there is no phonologically visible category present, except adverbials. 
+
+\ex Examples of OS 
+ 	\ea {
+	\gll Peter så\textsubscript{v} \textbf{ham\textsubscript{o}} ikke [\textsubscript{VP} t\textsubscript{v} \textbf{t\textsubscript{o}}]\\
+    Peter see.\Pst{} him not \\}\jambox*{(Across negation)}
+    \glt `Peter didn't see him.' \label{ex:classic}
+    \ex {
+    \gll Peter så\textsubscript{v} \textbf{ham\textsubscript{o}} ofte [\textsubscript{VP} t\textsubscript{v} \textbf{t\textsubscript{o}}]\\
+    Peter see.\Pst{} him often \\}\jambox*{(Across adverbials)} 
+    \glt `Peter often saw him.' \label{ex:oft}
+	\z 
+If, however, there is anything in the VP then OS is blocked and the object pronoun must remain in situ. Note that there is some variability when it comes to how OS interacts with verbal particles, which remain low. Verbal particles will be discussed in more detail in Section \ref{sec:Particles}.
+
+\ea Blocking OS
+	\ea Blocking by verb\\
+	\gll Peter har ikke [\sub{VP} sått ham ].\\
+	Peter has not ~ seen him\\
+	\glt `Peter didn't see him'
+	\ex Blocking by object\\
+	\gll Peter lånte\sub{v} ikke [\sub{VP}  \textbf{Tore\sub{io}} t\sub{v} {}  \textbf{dem\sub{o}}]\\
+    Peter lend.\textsc{past} not ~ Tore them \\
+	\glt `Peter didn't lend them to Thor.'
+	\z 
+\z 
+
+
+As mentioned at the end of Section \ref{sec:DISTRIBUTION}, NegShift seems to be the polar opposite of OS and generally requires the verb to have remained in situ, which is evidenced by the overwhelming acceptability of the NegShift when the verb remains in situ per Table \ref{tab:Distribution}. 
+
+\ea Examples of NegShfit with the verb in situ. 
+	\ea {
+		\gll Ég hef \textit{engan}\sub{o} [\sub{VP} \textbf{séð} t\textsubscript{o}.] \\
+			I have nobody {} seen\\}\jambox*{Ic}
+	\glt `I haven't seen anybody.'
+	\ex {
+	\gll {Í dag} hevur Petur \textit{einki}\sub{o} [\sub{VP} \textbf{sagt} t\textsubscript{o}].\\
+	today has Peter nothing {} said\\}\jambox*{Fa}
+	\glt `Peter hasn't said anything today.'
+	\ex {
+	\gll Manden havde måske \textit{ingenting}\sub{o} [\sub{VP} \textbf{sagt} t\textsubscript{o}].\\
+	man-the had probably nothing {} said\\}\jambox*{Da}
+	\glt `The man hadn't said anything'
+	\z  
+\z 
+
+NegShift is also insensitive to any phonologically visible category, which results in NegShift occurring regardless of the amount of phonological material present in the VP. We see this with NegShift being acceptable when it crosses an indirect object. 
+
+\ea NegShift across indirect objects. 
+	\ea {
+	\gll Jón hefur \textit{ekkert} [\sub{VP} \textbf{sagt} \textbf{Sveini} t\sub{o}]. \\
+	Jón has nothing {} said Sveinn\\}\jambox*{Ic}
+	\glt `John hasn't told Sveinn anything'
+	\ex {
+	\gll {Í dag} hevur Petur \textit{einki} [\sub{VP} \textbf{givið} \textbf{Mariu} t\sub{o}]. \\
+		today has Peter nothing {} given Mary\\}\jambox*{Fa}
+	\glt `Today, Peter hasn't given Mary anything.'
+	\ex {
+	\gll Jeg har \textit{ingen} \textit{bøger} [\sub{VP} \textbf{lånt} \textbf{børnene} t\sub{o}].\\
+	I have no books {} lent children-the\\}\jambox*{WJ/Scan1}
+	\glt `I haven't lent the children any books.'
+	\z 
+\z 
+
+We see that NegShift does not obey Holmberg's Generalization, whereas OS does. In fact, NegShift's generalization seems to be the exact opposite of the Holmberg's Generalization. This behavior that NegShift exhibits in requiring verbs to remain in situ and being able to cross phonologically visible material has lead some authors to call this the \emph{Anti-Holmberg Effect} \citep{foxCyclicLinearizationSyntactic2005,engelsScandinavianNegativeIndefinites2012}.
+
+
 %------------------------------------
 \subsection{With respect to landing sites} \label{sec:LANDING}
 %------------------------------------
 
+\ea OS occurs to the left of all adverbials.
+	\ea 
+	\gll Jeg lånte \emph{hende\sub{IO}} faktisk\sub{Adv} aldri\sub{Adv} [\sub{VP} t\sub{IO} bøgerne].\\
+	I lent her actually never {} {} books-the\\
+	\glt `I actually never lent her the books' 
+	\z 
+
+\ex NegShift occurs to the right of most adverbials with the exception of low adverbials \citep{nilsenAdverbsAshift1997,svenoniusStrainsNegationNorwegian2002}.
+	\ea 
+	\gll Jeg har faktisk\sub{Adv} \emph{ingen} \emph{bøger}\sub{DO} [\sub{VP} lånt Othilia t\sub{DO}].\\
+	I have actually no books {} lent Othilia \\
+	\glt `I didn't actually lend Othilia any books.'
+	\ex 
+	\gll Fænsene har på \emph{intet} \emph{tidspunkt}\sub{O} tidlig\sub{Adv} slått av TV’en.\\
+	fans-the have at no time early turned off TV-the\\
+	\glt `The fans have at no time turned the TV off early'
+	\z 
+
+
+\z
+
+\begin{tcolorbox}[width=\linewidth]
+\textsc{Claim}: OS and NegShift move to different locations.
+\end{tcolorbox}
+
 %------------------------------------
 \subsection{With respect to NegShift and OS interactions} \label{sec:INTERACTION}
 %------------------------------------
+
+\ea When there are both weak object pronouns and NIs in the sentence they both shift to their respective landing sites. 
+	\ea
+	\label{ex:NegOS}
+	\gll Jeg lånte \textit{hende} fraktisch \textit{ingen} \textit{bøger}.\\
+	I lent her actually no books\\
+	\glt `I didn't actually lend her any books.'
+	\z 
+\ex When the verb remains in situ OS is blocked from occurring but NegShift is still allowed to occur. 
+	\ea 
+	\gll Jeg har \emph{ingen} \emph{bøger} lånt \emph{hende}.\\
+	I have no books lent her\\
+	\glt `I haven't lent her any books
+	\z
+\z
+
+\begin{tcolorbox}[width=\linewidth]
+\textsc{Claim:} OS and NegShift are not the same.
+
+\textsc{Big Claim:} OS and NegShift have different triggers for movement. 
+\end{tcolorbox}
+If both OS and NegShift were allowed to occur \citeauthor{broekhuisUnificationObjectShift2020} notes that they are subject to certain ordering restrictions. Citing examples from \citet[163ff]{christensenInterfacesNegationSyntax2005}, Broekhuis shows the following pair of examples:
+	\ea 
+		\ea \label{ex:NegShift}
+		\gll Jeg har <ingen bøger> lånt hende <*ingen bøger>.\\
+		I have no books lent her\\
+		\glt `I haven't lent her any books
+		\ex \label{ex:NegOS}
+		\gll Jeg lånte \textit{henda} fraktisch \textit{ingen} \textit{bøger}.\\
+		I lent her actually no books\\
+		\glt `I didn't actually lend her any books.'
+		\z 
+	\z
+In (\ref{ex:NegShift}), we see that when we have a negative object that it shifts to a position higher than the \textit{v}P if it were to remain in-situ as it would be ungrammatical and would require the use of \textit{ikke} `not' and the negative polarity item \textit{nogen} `any'.
+	\ea
+	\gll Jeg har \textit{ikke} lånt hende \textit{nogen} bøger.\\
+	I have not lent her any books.\\
+	\glt `I haven't lent her any books.'
+	\z
+However, when the main verb has raised to C⁰ as in (\ref{ex:NegOS}) then the weak pronominal moves to a position higher than the adverb \textit{fraktisch} `actually'. The negative object is not able to move to the similar position that is higher than the adverb. Additionally, this results in OS > NegShift which \citeauthor{broekhuisUnificationObjectShift2020} reports to a universal. This does help us see that that even though these two phenomena appear to be similar they are in fact slightly different, due to the differences in the where the two different movement operations' targets are.
+
+
+%------------------------------------------------
+
+
 One of the most interesting aspects from Table \ref{tab:Distribution} is the sharp contrast as to whether or not NegShift can happen with an indirect object. From the table we see that all varieties, except Scandinavian 2 which is equivalent to Norwegian and some colloquial varieties, allow shifting across an indirect object if the verb remains in situ. If the verb has moved for V2 then there are no varieties that allow shifting across the indirect object.
 
 \citet{christensenInterfacesNegationSyntax2005} reports on this behavior between NegShift and indirect objects and summarizes his findings in Table \ref{tab:OSNEGS}. In this table No\textsuperscript{+}/Sw\textsuperscript{+} represent some varieties of Norwegian and Swedish respectively in contrast to more standard Norwegian (No) and Swedish (Sw), FS represent the Swedish variety which is spoken by Swedes in Finland.
@@ -267,77 +415,9 @@ If, however, the IO is a NegQP and the DO is a pronoun then the pronoun is block
 
 This is actually a very important point for the question of the prosodic nature of the shifting. If we assume that these are moving to a position outside of the VP or are some sort of adjunct to VP then we would assume that OS should be allowed according to Holmberg's Generalization.\footnote{See \citet{thrainssonSyntaxIcelandic2010} for discussion and debate about where negation is located in Scandinavian languages.} However, this is not the case if we follow the logic from Holmberg's Generalization. Holmberg's Generalization requires that OS occur if there is not a phonologically visible category that asymmetrically c-commands the object's base position. Because OS is blocked, then Neg is a phonologically visible category that asymmetrically c-commands the object.\footnote{Another possibility is that we are concerned with the }
 
-An additional case that is interesting is when both the indirect and direct objects are allowed to shift. \citet[417f]{broekhuisUnificationObjectShift2020} observes that weak pronominal object shift behaves differently than full DP objects in what loci there are allowed to inhabit. In the case of weak pronominals they are required to appear outside of the \textit{v}P if there is no intervening phonological material (i.e., Holmberg's Generalization \cite{holmbergWordOrderSyntactic1986,holmbergRemarksHolmbergGeneralization1999}). If both OS and NegShift were allowed to occur \citeauthor{broekhuisUnificationObjectShift2020} notes that they are subject to certain ordering restrictions. Citing examples from \citet[163ff]{christensenInterfacesNegationSyntax2005}, Broekhuis shows the following pair of examples:
-	\ea 
-		\ea \label{ex:NegShift}
-		\gll Jeg har <ingen bøger> lånt hende <*ingen bøger>.\\
-		I have no books lent her\\
-		\glt `I haven't lent her any books
-		\ex \label{ex:NegOS}
-		\gll Jeg lånte \textit{henda} fraktisch \textit{ingen} \textit{bøger}.\\
-		I lent her actually no books\\
-		\glt `I didn't actually lend her any books.'
-		\z 
-	\z
-In (\ref{ex:NegShift}), we see that when we have a negative object that it shifts to a position higher than the \textit{v}P if it were to remain in-situ as it would be ungrammatical and would require the use of \textit{ikke} `not' and the negative polarity item \textit{nogen} `any'.
-	\ea
-	\gll Jeg har \textit{ikke} lånt hende \textit{nogen} bøger.\\
-	I have not lent her any books.\\
-	\glt `I haven't lent her any books.'
-	\z
-However, when the main verb has raised to C⁰ as in (\ref{ex:NegOS}) then the weak pronominal moves to a position higher than the adverb \textit{fraktisch} `actually'. The negative object is not able to move to the similar position that is higher than the adverb. Additionally, this results in OS > NegShift which \citeauthor{broekhuisUnificationObjectShift2020} reports to a universal. This does help us see that that even though these two phenomena appear to be similar they are in fact slightly different, due to the differences in the where the two different movement operations' targets are.
-
-
+An additional case that is interesting is when both the indirect and direct objects are allowed to shift. \citet[417f]{broekhuisUnificationObjectShift2020} observes that weak pronominal object shift behaves differently than full DP objects in what loci there are allowed to inhabit. In the case of weak pronominals they are required to appear outside of the \textit{v}P if there is no intervening phonological material (i.e., Holmberg's Generalization \cite{holmbergWordOrderSyntactic1986,holmbergRemarksHolmbergGeneralization1999}). 
 %------------------------------------
-\section{Prosodic restrictions on NegShift} \label{sec:PROSODY}
-%------------------------------------
-
-However, as noted earlier not all NegShift is treated equal. \citet[65f]{christensenInterfacesNegationSyntax2005}, speaking on Danish, claims that the ``weight" of the NI plays a crucial factor in whether or not NegShift occurs. 
-	\ea \label{ex:weight}
-		\ea 
-		\gll Jeg har \textit{intet}\textsubscript{o} hørt t\textsubscript{o}.\\
-		I have nothing heard\\
-		\glt  `I havn't heard anything.'
-		\ex 
-		\gll Jeg har [\textit{intet} \textit{nyt}]\textsubscript{o} hørt t\textsubscript{o}.\\
-		I have nothing new heard\\
-		\glt `I haven't heard anything new'
-		\ex[*] {
-		\gll Jeg har [\textit{intet} \textit{nyt} \textit{i} \textit{sagen}]\textsubscript{o} hørt t\textsubscript{o}.\\
-		I have nothing new in case-\textsc{det} heard\\
-		\glt `I haven't heard anything new about the case.'
-		}
-		\ex[*] {
-		\gll Jeg har [\textit{intet} \textit{nyt} \textit{i} \textit{sagen} \textit{om} \textit{de} \textit{stjålne} \textit{malerier}]\textsubscript{o} hørt t\textsubscript{o}.\\
-		I have nothing new in case-\textsc{det} about the stolen paintings heard\\
-		}
-		\glt `I haven't heard anything new in the case about the stolen paintings.'
-		\z 
-	\z
-In those instances where the NI is too large one potential repair is to strand the PP while moving just the pronoun or using the negative particle \textit{ikke} and a NPI.
-	\ea 
-		\ea Jeg har \textit{intet}\textsubscript{i} hørt t\textsubscript{i} [\textsubscript{PP} i sagen om de stjålne malerier ]. \label{ex:split}
-		\ex Jeg har \textit{ikke} hørt [ \textit{noget} i sagen om de stjålne malerier ].
-		\z 
-	\z   
-This same behavior has also been remarked upon by \citet{penkaNegativeIndefinites2011} for Swedish.
-	\ea 
-		\ea 
-		\gll Men mänskligheten har \textit{ingenting}\textsubscript{o} lärt sig t\textsubscript{o}.\\
-		but mankind-the have nothing taught themselves\\
-		\glt `But mankind haven't taught themselves anything.'
-		\ex[?] {
-		\gll Vi hade \textit{inga} \textit{grottor}\textsubscript{o} undersökt t\textsubscript{o}.\\
-		we have no caves explored\\
-		}
-		\glt `We haven't explored any caves.'
-		\z 
-	\z 
-
-My qualifying paper will explore whether or not there is indeed this preference for NegShift of pronouns by conducting a study on the Swedish Culturomics Gigaword Corpus \citep{eideSwedishCulturomicsGigaword2016} and how this phenomenon might relate to prosodic analyses of OS such as those from \citet{erteschik-shirVariationMainlandScandinavian2020} and \citet{brinkerhoffMATCHINGPhrasesNorwegian2020} and the more syntactically motivated accounts using Cyclic Linearization \citep{foxCyclicLinearizationSyntactic2005,engelsScandinavianNegativeIndefinites2012} or following \citet{zeijlstraSyntacticallyComplexStatus2011} and \posscitet{iatridouNegativeDPsAMovement2011} accounts for NI movement.
-
-%------------------------------------
-\section{Zeijlstra (2011) and copy-theory of movement} \label{sec:ZEIJLSTRA}
+\section{Deriving NegShift} \label{sec:ZEIJLSTRA}
 %------------------------------------
 
 \citet{zeijlstraSyntacticallyComplexStatus2011} is interested in showing providing an analysis of the split-scope interpretation that exists for negative indefinites in Germanic languages. Split-scope is evident when modals and other auxiliaries are present and the negation scopes higher than the modal/auxiliary's scope where the indefinite resides. \citeauthor{zeijlstraSyntacticallyComplexStatus2011} assumes that this behavior is the result of the compositional status of negative indefinites similar to the claims made by \citet{iatridouNegativeDPsAMovement2011}. He claims that NIs are composed of a negative operator and an indefinite component and that the split-scope interpretation is the result of a copy-theory of movement \citep{chomskyMinimalistProgram2015}. 
@@ -345,7 +425,7 @@ My qualifying paper will explore whether or not there is indeed this preference 
 Following \citeauthor{chomskyMinimalistProgram2015} movement is not a unique operation that literally moves one element to position higher in the syntax. Instead movement is similar the product of copying a constituent and then remerging it into the syntactic hierarchy. This then results in two or more instances of the constituent, as seen in the syntactic structure for (\ref{ex:Copy}). 
 
 We see as we proceed along the derivation that the verb is first copied and then merged with \emph{v} leaving behind a complete copy of itself in its base-generated position. This operation of copying and then remerging is then continued until we arrive at spell-out. According to \citet{chomskyMinimalistProgram2015}, only the highest copy will be pronounced at PF, this is represented by the lower copies having a strike through them. 
-\pagebreak
+% \pagebreak
 
 \ea Derivation of \emph{Anna har intet hørt.} \label{ex:Copy}\\
 \begin{forest}
@@ -445,9 +525,187 @@ interesting books me has Mary interesting books recommended\\
 \z  
 According to \citet{fanselowRemarksEconomyPronunciation2001,fanselowDistributedDeletion2002} the motivation for when partial deletion is possible has its motivations in PF or LF. My QP will explore more about what exactly these motivations are in light of \citeauthor{fanselowRemarksEconomyPronunciation2001,fanselowDistributedDeletion2002} and whether prosody plays a role in what is allowed to delete. The other possibility is that this deletion is motivated by LF considerations. If this is prosodically motivated what drives this deletion?
 
-% %------------------------------------
-% \section{Prosodic motivations for Heavy NP Shift} \label{sec:HNPS}
-% %------------------------------------
+%------------------------------------
+\section{Prosodic restrictions on NegShift} \label{sec:PROSODY}
+%------------------------------------
+
+However, as noted earlier not all NegShift is treated equal. \citet[65f]{christensenInterfacesNegationSyntax2005}, speaking on Danish, claims that the ``weight" of the NI plays a crucial factor in whether or not NegShift occurs. 
+	\ea \label{ex:weight}
+		\ea 
+		\gll Jeg har \textit{intet}\textsubscript{o} hørt t\textsubscript{o}.\\
+		I have nothing heard\\
+		\glt  `I havn't heard anything.'
+		\ex 
+		\gll Jeg har [\textit{intet} \textit{nyt}]\textsubscript{o} hørt t\textsubscript{o}.\\
+		I have nothing new heard\\
+		\glt `I haven't heard anything new'
+		\ex[*] {
+		\gll Jeg har [\textit{intet} \textit{nyt} \textit{i} \textit{sagen}]\textsubscript{o} hørt t\textsubscript{o}.\\
+		I have nothing new in case-\textsc{det} heard\\
+		\glt `I haven't heard anything new about the case.'
+		}
+		\ex[*] {
+		\gll Jeg har [\textit{intet} \textit{nyt} \textit{i} \textit{sagen} \textit{om} \textit{de} \textit{stjålne} \textit{malerier}]\textsubscript{o} hørt t\textsubscript{o}.\\
+		I have nothing new in case-\textsc{det} about the stolen paintings heard\\
+		}
+		\glt `I haven't heard anything new in the case about the stolen paintings.'
+		\z 
+	\z
+In those instances where the NI is too large one potential repair is to strand the PP while moving just the pronoun or using the negative particle \textit{ikke} and a NPI.
+	\ea 
+		\ea Jeg har \textit{intet}\textsubscript{i} hørt t\textsubscript{i} [\textsubscript{PP} i sagen om de stjålne malerier ]. \label{ex:split}
+		\ex Jeg har \textit{ikke} hørt [ \textit{noget} i sagen om de stjålne malerier ].
+		\z 
+	\z   
+This same behavior has also been remarked upon by \citet{penkaNegativeIndefinites2011} for Swedish.
+	\ea 
+		\ea 
+		\gll Men mänskligheten har \textit{ingenting}\textsubscript{o} lärt sig t\textsubscript{o}.\\
+		but mankind-the have nothing taught themselves\\
+		\glt `But mankind haven't taught themselves anything.'
+		\ex[?] {
+		\gll Vi hade \textit{inga} \textit{grottor}\textsubscript{o} undersökt t\textsubscript{o}.\\
+		we have no caves explored\\
+		}
+		\glt `We haven't explored any caves.'
+		\z 
+	\z 
+
+My qualifying paper will explore whether or not there is indeed this preference for NegShift of pronouns by conducting a study on the Swedish Culturomics Gigaword Corpus \citep{eideSwedishCulturomicsGigaword2016} and how this phenomenon might relate to prosodic analyses of OS such as those from \citet{erteschik-shirVariationMainlandScandinavian2020} and \citet{brinkerhoffMATCHINGPhrasesNorwegian2020} and the more syntactically motivated accounts using Cyclic Linearization \citep{foxCyclicLinearizationSyntactic2005,engelsScandinavianNegativeIndefinites2012} or following \citet{zeijlstraSyntacticallyComplexStatus2011} and \posscitet{iatridouNegativeDPsAMovement2011} accounts for NI movement.
+
+%------------------------------------
+\subsection{PF deletion} \label{sec:NEXT}
+%------------------------------------
+\ea  Following the copy theory of movement \citet{chomskyMinimalistProgramLinguistic1993}, multiple copies of the NI will be present at PF spell-out. 
+\ex A question arises as to whether or not phases are have any bearing on the facts presented above. 
+\ex There are two potential answers
+	\ea Phases do not play a role in determining phonological/prosodic behavior.  
+	\ex Phases do play a role in determining phonological/prosodic behavior.
+	\z 
+\ex Recent evidence from \citet{weberPhasebasedConstraintsMatch2020} suggests that phases do in fact play a role in determining phonological behavior. 
+\ex In order for the phonology to interact with two copies at the same time, the base generated position and the landing site both must belong to the same phase. 
+	\ea This requires that NegP and the rest of the Cinquean hierarchy of adverbials \citep{cinqueAdverbsFunctionalHeads1999} belong to the same phase as \emph{v}P.
+	\z
+
+\ex \citet{kandybowiczGrammarRepetitionNupe2008} makes the observation that multiple copies that are generated by the narrow syntax can be \emph{phonologically} realized when there is a identifiable PF well-formedness condition is avoided. 
+	\ea Similarly, I argue that PF can also dictate the amount of material that is deleted in those copies. 
+	\ex PF being able to delete is not new and was argued for by \citet{ottDeletionClausalEllipsis2016} to account for German clausal ellipsis. 
+	\z 
+
+\ex In the case of NegShift, there are restrictions on \emph{Mittelfeld} well-formedness, which I will call the \textsc{Light Mittelfeld Condition} (LMC).
+	\ea It has been observed that only a limited amount of structure is allowed and a wide degree of variation is permitted in the \emph{Mittelfeld} (see \cite{haiderMittelfeldPhenomenaScrambling2017}). 
+
+	\ex I argue that the largest unit that is allowed to remain in the \emph{Mittelfeld} in Scandinavian is a maximal prosodic word (ω\sub{max}).
+	\z 
+
+\ex Evidence for this comes from the size of the material that is allowed to ``shift" in these languages. 
+
+\ex As observed for Danish only a pronoun or DP, consisting of just a D and NP, is allowed to occupy the \emph{Mittelfeld} when NegShift occurs. 
+	\ea 
+	\gll Jeg har \textit{intet}\textsubscript{o} hørt t\textsubscript{o}.\\
+	I have nothing heard\\
+	\glt  `I havn't heard anything.'
+	\ex 
+	\gll Jeg har [\textit{intet} \textit{nyt}]\textsubscript{o} hørt t\textsubscript{o}.\\
+	I have nothing new heard\\
+	\glt `I haven't heard anything new'
+	\ex[*] {
+	\gll Jeg har [\textit{intet} \textit{nyt} \textit{i} \textit{sagen}]\textsubscript{o} hørt t\textsubscript{o}.\\
+	I have nothing new in case-\textsc{det} heard\\
+	\glt `I haven't heard anything new about the case.'
+	}
+	\z  	
+
+\ex This difference between Danish, which allows full DPs, and Swedish which tolerates full DPs, but prefers pronouns, suggests the \emph{Mittelfeld} in Swedish will delete copies until they are just the NI pronoun. 
+	\ea This potential comes down to Swedish being a tonal language and Danish not being a tonal language.
+	\z 
+
+\ex The LMC deleting different amounts of material in Danish and Swedish can also explain Norwegian's lack of NegShift. 
+	\ea Norwegian deletes everything as it prefers not to have any copies in the \emph{Mittelfeld}
+	\ex This deleteion would then leave the valued [\textsc{Neg}] feature which gets pronounced as negation which then causes the lower copy to surface with a NPI.  
+	\ex This behavior of total deletion is also attested in Danish and Swedish where negation and a NPI is always a potential instead of NegShift.
+	\z  
+
+\ex This results in a three-way system in Scandinavian languages. 
+	\ea Those that delete until a full DP is left.
+	\ex Those that delete until a pronoun is left.
+	\ex Those that delete everything and have negation and a NPI.
+	\z 
+
+\ex There seems to be some differences in behavior between the tonal and atonal Scandinavian languages. 
+	\ea According to \citet{thrainssonFaroeseOverviewReference2004,thrainssonSyntaxIcelandic2010} Faroese and Icelandic pattern the same as Danish in this regard. 
+	\ex This further suggests that there is something unique about being a tonal language that limits the acceptability of NegShifting. 
+	\z 
+
+\ex This is summarized in Table \ref{tab:Paradigm}.
+	\ea It will be noted that if you allow full NI DPs than you also allow pronouns and complete deletion, which results in a negation particle and an NPI.
+	\ex If you allow NI pronouns then you allow a negation particle and an NPI
+	\z 
+\begin{table}[!ht]
+	\centering
+	\caption{Scandinavian acceptance of NegShift or NPI}
+	\label{tab:Paradigm}
+\begin{tabular}{lccc}
+	\hline 
+	& Full DPs & Pronouns & NPI\\
+	\hline
+	Icelandic & ✔︎ & ✔︎ & ✔︎ \\
+	Faroese & ✔︎ & ✔︎ & ✔︎ \\
+	Danish & ✔︎ & ✔︎ & ✔︎ \\
+	Swedish & * & ✔︎ & ✔︎ \\
+	Norwegian & * & * & ✔︎ \\
+	\hline 
+\end{tabular} 
+\end{table}
+\z 
+%------------------------------------
+\subsection{Scandinavian particle shift} \label{sec:Particles}
+%------------------------------------
+\ea Independent evidence for shifting full DPs into the \emph{Mittelfeld} is observed in particle shifting in Scandinavian languages. 
+
+\ex Following \citet[2]{holmbergRemarksHolmbergGeneralization1999} and \citet{faarlundSyntaxMainlandScandinavian2019} there is a difference in behavior between the different Scandinavian languages with what is allowed to shift across a verbal particle.
+	\ea Danish objects, regardless of size, always precedes the verb particle. 
+	\ex Norweigan, Icelandic, and Faroese are like English by shifting a pronoun across a particle and optionally for DPs.
+	\ex Swedish does not allow anything to shift across the particles. 
+	\z 
+
+\ex \gllll Jeg skrev (nummeret/det) op (*nummeret/*det). \hfill Da\\
+		Jeg skrev (nummeret/det) opp (nummeret/*det). \hfill No\\
+		Jag skrev (*numret/*det) upp (numret/det). \hfill Sw\\
+		I wrote (the-number/it) up (the-number/it)\\
+\glt `I wrote the number/it down.'
+
+\ex Additionally, Danish places restriction on the verbal compliment if it is too ``heavy" \citep[44f]{mullerDanishHeadDrivenPhraseInpreparation}. 
+	\ea If it is larger than a simple DP shifting is blocked.\footnote{Examples are from \emph{KorpusDK} as reported by \citet{mullerDanishHeadDrivenPhraseInpreparation}.} 
+	\ex \gll {[…]} så må partiet melde [holdninger] [ud], {[…]}\\
+	~ then must party.\Def{} make stances out\\
+	\glt `{[…]} then the party must make its stances clear, {[…]}'
+	\ex \gll Den danske regering bør snart melde [ud], [at den støtter de amerikanske planer]\\
+	the Danish government must soon make out that it supports the American plans\\
+	\glt `The Danish government must soon make clear that it supports the American plans.'
+	\z 
+
+\ex This is further evidence that the LMC is an active constraint in these languages. 
+
+\ex One explanation for this behavior is the difference in tonal quality between Danish, Norwegian, and Swedish \citep{erteschik-shirVariationMainlandScandinavian2020}.
+\z 
+
+\begin{tcolorbox}[width=\linewidth]
+
+Prosody, in the form of the \textsc{Light Mittelfeld Condition}, plays an active role in regulating the size of the material in the \emph{Mittelfeld}
+\end{tcolorbox}
+%------------------------------------
+\section{Conclusion} \label{sec:CONCLUSION}
+%------------------------------------
+
+\begin{tcolorbox}[width=\linewidth]
+\centering
+NegShift is derived by both syntactic and prosodic factors. It is syntactic in movement and prosody is responsible for restricting and regulating the amount of material that is allowed the surface in the higher copy.
+\end{tcolorbox}
+
+%------------------------------------
+\section{Alternative syntactic accounts} \label{sec:HNPS}
+%------------------------------------
 
 % According to \citet{anttilaRoleProsodyEnglish2010}, prosody plays a supporting role in linearization and can be accounted for through OT style constraints on prosodic well-formedness. They are concerned with explaining the three way patterning that dative constructions have: (i) double object constructions, (ii) Prepositional constructions, (iii) Heavy NP Shift constructions.
 
@@ -488,7 +746,7 @@ According to \citet{fanselowRemarksEconomyPronunciation2001,fanselowDistributedD
 
 % I am continuing to explore what the analysis would look like 
 %------------------------------------
-\section{Cyclic Linearization account} \label{sec:CL}
+\subsection{Cyclic Linearization account} \label{sec:CL}
 %------------------------------------
 
 An alternative to the theory presented above, Cyclic Linearization is a theory that was developed by \cite{foxCyclicLinearizationSyntactic2005} as a way to account for OS and Holmberg's Generalization. This theory works by stipulating that spell-out of the morphosyntax is cyclic and order preserving, which means that as you spell-out each successive spell-out domain you need to ensure that whatever orders existed when that domain was spelled-out persist at the next spell-out domain's ordering restrictions. This theory also had the benefit of accounting for when OS was allowed or not allowed to occur. 
@@ -521,6 +779,10 @@ In the case of NegShift, where it is able to shift across various phonological m
 	\z
 
 As part of my QP, I will be providing an alternative account using cyclic linearization and compare it against the account I proposal in §\ref{sec:ZEIJLSTRA}.
+
+
+
+
 
 %------------------------------------
 \section{Next steps} \label{sec:NEXT}

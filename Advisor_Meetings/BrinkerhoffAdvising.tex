@@ -1150,7 +1150,7 @@ Assign one violation for every lexical stress that is not in the same linear ord
 \z 
 
 %------------------------------------
-\section{Blaeman 2021}
+\section{Bleaman 2021}
 %------------------------------------
 
 \ea \citet{bleamanPredicateFrontingYiddish2021} is concerned with explaining predicate fronting with doubling (predicate cleft) in Yiddish.
@@ -1159,7 +1159,7 @@ Assign one violation for every lexical stress that is not in the same linear ord
 		\ex The lower copy appears with finite morphology
 		\z 
 	\z 
-\ex Verbs can be topicalized with their compliments and when that happens the compliment is only pronounced once.
+\ex Verbs can be topicalized with their complements and when that happens the complement is only pronounced once.
 
 \ex The goal of this paper is to arrive at what the explicit conditions that need to exist in Spell-Out which account for these seemingly contradictory facts.
 	\ea \citeauthor{bleamanPredicateFrontingYiddish2021} does this by showing that the facs fall out from \citet{collinsFormalizationMinimalistSyntax2016} spell-out formalizations with the addition of head movement
@@ -1203,12 +1203,52 @@ Assign one violation for every lexical stress that is not in the same linear ord
 		\z 
 	\z 
 
-\ex Additionally, assumptions about how spell-out occurs need to be explicitly clear in any description of spell-out phenomenon.
+\ex Finality is determined based on structural positions and notions of containment
+	\ea Immediately containment is set membership where the syntactic object is a daughter of some node.
+	\ex Containment means that it is a daughter, granddaughter, etc. to some node.
+	\z
+
+\ex An object is final iff it is not a daughter and granddaughter at the same time. 
+
+\ex Using the following trees we can see concrete examples of finality
+	\begin{multicols}{2}
+	\ea Tree 1 \label{ex:a-finality}\\
+	\begin{forest}
+		[D [A\sub{2},name=a-tgt] 
+			[C [A\sub{1},name=a-src] [B]
+			]
+		]	
+		\draw[->] (a-src) to[out=south west,in=south] (a-tgt);
+	\end{forest}
+
+	\ex Tree 2 \label{ex:head-finality}\\
+	\begin{forest}
+		[\emph{v}P [\emph{v}\sub{2} [V,name=tgt] [\emph{v}]
+			]
+			[VP [V,name=src] 
+				[DP]
+
+			]
+		]	
+		]
+		\draw[->] (src) to[out=south west,in=south] (tgt);
+	\end{forest}
+	\z 
+	\end{multicols}
+	
+
+\ex A\sub{1} is an element of the set \{A,B\} = C and raises to become a sister to C in (\ref{ex:a-finality}). A\sub{1} is nonfinal within D because D immediately contains A and the set \{A,B\}. 
+
+\ex A\sub{2} is final because it is in the set \{A,C\} and there is no object that contains both A\sub{2} and the set \{A,C\}.
+
+\ex Head movement (\ref{ex:head-finality}) causes each successive head to become final becasue there is no object that immediately contains an occurrence of the moved V and also contains the set \{V,DP\}. 
+
+\ex This requires \citeauthor{bleamanPredicateFrontingYiddish2021} to redefine immediate containment to also include pair-merge. This results in the highest complex head becoming final and all others to become non-final.
+
+\ex Assumptions about how spell-out occurs need to be explicitly clear in any description of spell-out phenomenon.
+
 \z 
 
-I do not know how exactly this would help explain how NegShift is occurring. It could be possible to explain the basic cases but the standard assumptions about PF spell-out from \citet{chomskyMinimalistProgramLinguistic1993} already explains the basic facts. Another issue that I see comes from the ``weight'' factors that NegShift is sensitive to. 
-
-I do think that \citet{bleamanPredicateFrontingYiddish2021} is useful in showing that the considerations for spell-out need to be explicitly stated and clear especially when it deviates from the standard assumptions. 
 
 %------------------------------------
 \section{Weber 2021}
