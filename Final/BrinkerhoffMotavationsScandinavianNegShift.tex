@@ -35,9 +35,10 @@
 \usepackage{enumitem} %Allows for continuous numbering of lists over examples, etc.
 \usepackage{multirow} %Useful for combining cells in tablesbrew 
 \usepackage{hanging}
+\usepackage{datetime2}
 \usepackage{fancyhdr} %Allows for the 
 \pagestyle{fancy}
-\fancyhead[L]{\textit{290 Final}} 
+\fancyhead[L]{\textit{Qualifying Paper}} 
 \fancyhead[R]{\textit{\today}} 
 \fancyfoot[L,R]{} 
 \fancyfoot[C]{\thepage} 
@@ -68,7 +69,7 @@
 \usepackage{tikz} % Drawing Hasse diagrams
 % \usepackage{pst-asr} % Drawing autosegmental features
 \usepackage{pstricks} % required for pst-asr, OTtablx, pst-jtree.
-% \usepackage{pst-jtree} 	% Syntax tree draawing software
+\usepackage{pst-jtree} 	% Syntax tree drawing software 
 \usepackage{tikz-qtree}	% Another syntax tree drawing software. Uses bracket notation.
 \usepackage[linguistics]{forest}	% Another syntax tree drawing software. Uses bracket notation.
 % \usepackage{ling-macros} % Various linguistic macros. Does not work with linguex.
@@ -226,7 +227,7 @@ Object Shift cannot apply across a phonologically visible category asymmetricall
 \z
 This generalization captures the fact that OS is only possible if the verb has evacuated the VP and there is no phonologically visible category present, except adverbials. 
 
-\ex Examples of OS 
+\ea Examples of OS 
  	\ea {
 	\gll Peter så\textsubscript{v} \textbf{ham\textsubscript{o}} ikke [\textsubscript{VP} t\textsubscript{v} \textbf{t\textsubscript{o}}]\\
     Peter see.\Pst{} him not \\}\jambox*{(Across negation)}
@@ -236,6 +237,7 @@ This generalization captures the fact that OS is only possible if the verb has e
     Peter see.\Pst{} him often \\}\jambox*{(Across adverbials)} 
     \glt `Peter often saw him.' \label{ex:oft}
 	\z 
+\z 
 If, however, there is anything in the VP then OS is blocked and the object pronoun must remain in situ. Note that there is some variability when it comes to how OS interacts with verbal particles, which remain low. Verbal particles will be discussed in more detail in Section \ref{sec:Particles}.
 
 \ea Blocking OS
@@ -251,7 +253,7 @@ If, however, there is anything in the VP then OS is blocked and the object prono
 \z 
 
 
-As mentioned at the end of Section \ref{sec:DISTRIBUTION}, NegShift seems to be the polar opposite of OS and generally requires the verb to have remained in situ, which is evidenced by the overwhelming acceptability of the NegShift when the verb remains in situ per Table \ref{tab:Distribution}. 
+As mentioned at the end of Section \ref{sec:DISTRIBUTION}, NegShift seems to be the polar opposite of OS and generally requires the verb to have remained in situ, which is evidenced by the overwhelming acceptability of the NegShift when the verb remains in situ. 
 
 \ea Examples of NegShfit with the verb in situ. 
 	\ea {
@@ -287,32 +289,35 @@ NegShift is also insensitive to any phonologically visible category, which resul
 	\z 
 \z 
 
-We see that NegShift does not obey Holmberg's Generalization, whereas OS does. In fact, NegShift's generalization seems to be the exact opposite of the Holmberg's Generalization. This behavior that NegShift exhibits in requiring verbs to remain in situ and being able to cross phonologically visible material has lead some authors to call this the \emph{Anti-Holmberg Effect} \citep{foxCyclicLinearizationSyntactic2005,engelsScandinavianNegativeIndefinites2012}.
-
+We see that NegShift does not obey Holmberg's Generalization, whereas OS does. In fact, NegShift's generalization seems to be the exact opposite of the Holmberg's Generalization. This behavior that NegShift exhibits in requiring verbs to remain in situ and being able to cross phonologically visible material has lead some authors to call this the \emph{Anti-Holmberg Effect} \citep{foxCyclicLinearizationSyntactic2005,engelsScandinavianNegativeIndefinites2012}. 
 
 %------------------------------------
 \subsection{With respect to landing sites} \label{sec:LANDING}
 %------------------------------------
 
-\ea OS occurs to the left of all adverbials.
-	\ea 
+We further observe a difference between OS and NegShift as it relates to where the moved elements land. In terms of OS, it is always located to a position higher than all of the adverbials.  
+\ea 
 	\gll Jeg lånte \emph{hende\sub{IO}} faktisk\sub{Adv} aldri\sub{Adv} [\sub{VP} t\sub{IO} bøgerne].\\
-	I lent her actually never {} {} books-the\\
+	I lent her actually never ~ ~ books-the\\
 	\glt `I actually never lent her the books' 
-	\z 
+\z 
 
-\ex NegShift occurs to the right of most adverbials with the exception of low adverbials \citep{nilsenAdverbsAshift1997,svenoniusStrainsNegationNorwegian2002}.
+This movement always results in the verb and weak pronoun being adjacent, after linearization. This behavior lead \citet{erteschik-shirSoundPatternsSyntax2005} to claim that the phonologically weak pronouns incorporate into the verb prior to the verb movement to C. This incorporation causes the weak object pronoun to appear in position higher than the adverbials, which reside in a hierarchy of functional heads \citep{cinqueAdverbsFunctionalHeads1999}. 
+\ea
+\z 
+
+More recent accounts assume that this is entirely prosodic and the positioning of the 
+
+\ea NegShift occurs to the right of most adverbials with the exception of low adverbials \citep{nilsenAdverbsAshift1997,svenoniusStrainsNegationNorwegian2002}.
 	\ea 
 	\gll Jeg har faktisk\sub{Adv} \emph{ingen} \emph{bøger}\sub{DO} [\sub{VP} lånt Othilia t\sub{DO}].\\
-	I have actually no books {} lent Othilia \\
+	I have actually no books ~ lend.\Pst{}.\Ptcp{} Othilia \\
 	\glt `I didn't actually lend Othilia any books.'
 	\ex 
 	\gll Fænsene har på \emph{intet} \emph{tidspunkt}\sub{O} tidlig\sub{Adv} slått av TV’en.\\
 	fans-the have at no time early turned off TV-the\\
 	\glt `The fans have at no time turned the TV off early'
 	\z 
-
-
 \z
 
 \begin{tcolorbox}[width=\linewidth]
@@ -325,7 +330,6 @@ We see that NegShift does not obey Holmberg's Generalization, whereas OS does. I
 
 \ea When there are both weak object pronouns and NIs in the sentence they both shift to their respective landing sites. 
 	\ea
-	\label{ex:NegOS}
 	\gll Jeg lånte \textit{hende} fraktisch \textit{ingen} \textit{bøger}.\\
 	I lent her actually no books\\
 	\glt `I didn't actually lend her any books.'
@@ -785,7 +789,7 @@ As part of my QP, I will be providing an alternative account using cyclic linear
 
 
 %------------------------------------
-\section{Next steps} \label{sec:NEXT}
+\section{Next steps} 
 %------------------------------------
 
 As previously mentioned, I plan on investigating the prosodic nature of NegShift I, additionally, have been considering the different accounts that have been given for both OS and NegShift with an eye on seeing which account is able to provide the most sensible explanation for the shifting of ``light'' NIs to aid me in presenting my own theoretical analysis of the NegShift.
