@@ -13,7 +13,7 @@
 		maxbibnames=99,
 		natbib,
 		url=false]{biblatex}
-\addbibresource{link_laptop.bib}
+\addbibresource{QP1.bib}
 % \addbibresource{link_desktop.bib}
 \setcounter{biburlnumpenalty}{100}  % allow URL breaks at numbers
 %\setcounter{biburlucpenalty}{100}   % allow URL breaks at uppercase letters
@@ -72,6 +72,7 @@
 \usepackage{pst-jtree} 	% Syntax tree drawing software 
 \usepackage{tikz-qtree}	% Another syntax tree drawing software. Uses bracket notation.
 \usepackage[linguistics]{forest}	% Another syntax tree drawing software. Uses bracket notation.
+% \forestset{ default preamble={for tree={s sep=10mm, inner sep=0, l=0} }
 % \usepackage{ling-macros} % Various linguistic macros. Does not work with linguex.
 % \usepackage{covington} % Another linguistic examples package.
 \usepackage{leipzig} %	Offers support for Leipzig Glossing Rules
@@ -170,19 +171,19 @@ Holmberg's Generalization states that ``[OS] cannot apply across a phonologicall
 		\z
 	\z 
 
-We can be confident that movement is occurring in (\ref{ex:String}) because of the interaction of the NI and certain low aspectual adverbials. As discussed in \citet{nilsenAdverbsAshift1997} adverbs are allowed to appear below negation in Norwegian in the exact same order \citet{cinqueAdverbsFunctionalHeads1999} observed for Italian. \citet{svenoniusStrainsNegationNorwegian2002} further remarks that we can see this interaction between negation and low adverbs like \emph{tidlig} `early'. 
+% We can be confident that movement is occurring in (\ref{ex:String}) because of the interaction of the NI and certain low aspectual adverbials. As discussed in \citet{nilsenAdverbsAshift1997} adverbs are allowed to appear below negation in Norwegian in the exact same order \citet{cinqueAdverbsFunctionalHeads1999} observed for Italian. \citet{svenoniusStrainsNegationNorwegian2002} further remarks that we can see this interaction between negation and low adverbs like \emph{tidlig} `early'. 
 
-\ea
-	\ea 
-	\gll Fænsene har \emph{på} \emph{intet} \emph{tidspunkt} \emph{tidlig} slått av TV’en.\\
-	the.fans have on no time early turned off the.TV\\
-	\glt `The fans have at no time turned the TV off early’ 
-	\ex[*] {
-	\gll Fænsene har \emph{tidlig} \emph{på} \emph{intet} \emph{tidspunkt} slått av TV’en.\\
-	the.fans have early on no time turned off the.TV\\
-	}
-	\z  
-\z
+% \ea
+% 	\ea 
+% 	\gll Fænsene har \emph{på} \emph{intet} \emph{tidspunkt} \emph{tidlig} slått av TV’en.\\
+% 	the.fans have on no time early turned off the.TV\\
+% 	\glt `The fans have at no time turned the TV off early’ 
+% 	\ex[*] {
+% 	\gll Fænsene har \emph{tidlig} \emph{på} \emph{intet} \emph{tidspunkt} slått av TV’en.\\
+% 	the.fans have early on no time turned off the.TV\\
+% 	}
+% 	\z  
+% \z
 
 Evidence collected and reported in \citet{engelsMicrovariationObjectPositions2011,engelsScandinavianNegativeIndefinites2012} shows that NegShift is in fact more complicated and subject to greater variability than was previously thought. \citeauthor{engelsScandinavianNegativeIndefinites2012} found that NegShift was permissible from a greater number of contexts and was more likely to occur depending on the variety and register that was being used, which is summarized in Table \ref{tab:Distribution} taken from \citet{engelsScandinavianNegativeIndefinites2012}. In Table \ref{tab:Distribution}, ✔︎ indicates that NegShift occurs, * indicates that NegShift cannot occur, ? means that there was idiosyncratic variation between speakers.
 \begin{table}[!ht]
@@ -297,83 +298,94 @@ We see that NegShift does not obey Holmberg's Generalization, whereas OS does. I
 
 We further observe a difference between OS and NegShift as it relates to where the moved elements land. In terms of OS, it is always located to a position higher than all of the adverbials.  
 \ea 
-	\gll Jeg lånte \emph{hende\sub{IO}} faktisk\sub{Adv} aldri\sub{Adv} [\sub{VP} t\sub{IO} bøgerne].\\
-	I lent her actually never ~ ~ books-the\\
-	\glt `I actually never lent her the books' 
+	\gll Jeg lånte \emph{ham\sub{IO}} faktisk\sub{Adv} aldri\sub{Adv} [\sub{VP} t\sub{IO} bøgerne].\\
+	I lent him actually never ~ ~ books-the\\
+	\glt `I actually never lent him the books' 
 \z 
 
-This movement always results in the verb and weak pronoun being adjacent, after linearization. This behavior lead \citet{erteschik-shirSoundPatternsSyntax2005} to claim that the phonologically weak pronouns incorporate into the verb prior to the verb movement to C. This incorporation causes the weak object pronoun to appear in position higher than the adverbials, which reside in a hierarchy of functional heads between TP and \emph{v}P \citep{cinqueAdverbsFunctionalHeads1999}. 
-\ea
+This movement always results in the verb and weak pronoun being adjacent, after linearization. This behavior lead \citet{erteschik-shirSoundPatternsSyntax2005} to claim that the phonologically weak pronouns incorporate into the verb prior to the verb movement to C, indicated by the dashed line in (\ref{ex:incorporation}). This incorporation causes the weak object pronoun to appear in position higher than the adverbials, which reside in a hierarchy of functional heads between TP and \emph{v}P \citep{cinqueAdverbsFunctionalHeads1999}. 
+\ea \label{ex:incorporation}
+\begin{forest}
+for tree={s sep=5mm, inner sep=0, l=0}
+	[CP [DP\\Jeg] 
+		[C´ [C [T [\emph{v} [V\\så{=}ham ] [\emph{v}]] [T]] [C] ]
+			[TP [DP\\Jeg]
+				[T´ [<T> [\emph{v} [V\\så{=}ham ] [\emph{v}]] [T]]
+					[EpistP [Epist\\faktisk]
+						[NegP [Neg\\aldri]
+							[\emph{v}P [<DP>\\Jeg]
+								[\emph{v´} [<\emph{v}> [V\\så{=}ham ] [\emph{v}]]
+									[VP [<V>\\så]
+										[<DP>\\ham]
+									]
+								]
+							]
+						]
+					]
+				]
+			]	
+		]
+	]
+\end{forest}
 \z 
 
-More recent accounts assume that this is entirely prosodic and the positioning of the 
+More recent accounts \citep[e.g.,][]{erteschik-shirVariationMainlandScandinavian2020,brinkerhoffMATCHINGPhrasesNorwegian2021} assume that OS is entirely conditioned on phonological phrasing. \citet{brinkerhoffMATCHINGPhrasesNorwegian2021} argue that OS is the result of pressures from \textsc{Match}-style prosodic constraint that prevent the pronoun from forming a phonological phrase with the adverb. This results in the pronoun leaving the adverb's phonological phrase and forming a phonological phrase with the subject and moved verb where it is then allowed to incorporate because of its status as a prosodically weak element. 
 
-\ea NegShift occurs to the right of most adverbials with the exception of low adverbials \citep{nilsenAdverbsAshift1997,svenoniusStrainsNegationNorwegian2002}.
+\ea Prosodic structure according to \citet{brinkerhoffMATCHINGPhrasesNorwegian2021}.\\
+( (jeg\sub{\textsc{cl}}=så\sub{$\omega$}=ham\sub{\textsc{cl}})\sub{$\phi$} (faktisk\sub{$\omega$} aldri\sub{$\omega$})\sub{$\phi$} )\sub{$\iota$}
+\z 
+
+However, this is not the position that is observed for negation and NegShift in these languages. \citet{nilsenAdverbsAshift1997} shows that negation resides in a position between `high' adverbials (e.g., \emph{faktisk} `actually') and `low' adverbials, such as \emph{lenger} `any longer' and \emph{alltid} `always'. In the following examples from \citet{nilsenAdverbsAshift1997} We see in (\ref{ex:low_adverbials}) that negation has to be above certain `low' adverbials.
+
+\ea \label{ex:low_adverbials} Examples of the Neg above `low' adverbials. 
 	\ea 
-	\gll Jeg har faktisk\sub{Adv} \emph{ingen} \emph{bøger}\sub{DO} [\sub{VP} lånt Othilia t\sub{DO}].\\
-	I have actually no books ~ lend.\Pst{}.\Ptcp{} Othilia \\
-	\glt `I didn't actually lend Othilia any books.'
-	\ex 
-	\gll Fænsene har på \emph{intet} \emph{tidspunkt}\sub{O} tidlig\sub{Adv} slått av TV’en.\\
-	fans-the have at no time early turned off TV-the\\
-	\glt `The fans have at no time turned the TV off early'
+	\gll Jon aksepterer \emph{ikke} lenger\sub{\textsc{adv}} alltid\sub{\textsc{adv}} vår invitasjon.\\ 
+	Jon accepts \Neg{} any.longer always our invitation\\
+	\glt `Jon no longer always accepts our invitation'
+	\ex[*] {Jon aksepterer \emph{ikke}\sub{\textsc{neg}} alltid\sub{\textsc{adv}} lenger\sub{\textsc{adv}}  vår invitasjon. }
+	\ex[*] {Jon aksepterer alltid\sub{\textsc{adv}} \emph{ikke}\sub{\textsc{neg}} lenger\sub{\textsc{adv}}  vår invitasjon.}
 	\z 
 \z
+In \ref{ex:high_adverbials}, we see that negation needs to be in a position lower than `high' adverbials.
+\ea \label{ex:high_adverbials} Examples of Neg below `high' adverbials
+	\ea 
+	\gll Per kommer {ærlig talt} heldigvis \emph{ikke} tilbake.\\
+	Per comes frankly fortunately \Neg{} back.\\
+	\glt `Frankly, Per is fortunately not comming back.'
+	\ex[*] {Per kommer heldigvis \emph{ikke} {ærlig talt} tilbake.}
+	\ex[*] {Per kommer heldigvis {ærlig talt} \emph{ikke} tilbake.}
+	\ex[*] {Per kommer {ærlig talt} \emph{ikke} heldigvis tilbake.}
+	\z 
+\z 
+Finally, we see that negation needs to reside between the `high' and `low' adverbials. 
+\ea Example of Neg between `high' and `low' adverbials\\
+\gll Per går klokelig vanligvis ikke lenger hjem før {klokka 8}.\\
+Per goes wisely usually not any.longer home before {8 o'clock}\\
+\z 
+Based on these observations, \citet{nilsenAdverbsAshift1997} convincingly shows how negation interacts with other adverbs in Norwegian. He also shows how this is in line with the Cinquean hierarchy of adverbs \citep{cinqueAdverbsFunctionalHeads1999}.  
 
-\begin{tcolorbox}[width=\linewidth]
-\textsc{Claim}: OS and NegShift move to different locations.
-\end{tcolorbox}
+\citet{svenoniusStrainsNegationNorwegian2002} shows that is same positional restrictions for where the negative particle is located also exist for NegShifted objects. In (\ref{ex:negshift_lowadverbs}), we see that when a NI object, in this instance the negative PP \emph{på intet tidspunkt} `at no point in time', is shifted it must occur higher than `low' adverbs.  
+\ea \label{ex:negshift_lowadverbs}
+	\ea 
+	\gll Fænsene har \emph{på} \emph{intet} \emph{tidspunkt} \emph{tidlig} slått av TV’en.\\
+	the.fans have on no time early turned off the.TV\\
+	\glt `The fans have at no time turned the TV off early’ 
+	\ex[*] {
+	\gll Fænsene har \emph{tidlig} \emph{på} \emph{intet} \emph{tidspunkt} slått av TV’en.\\
+	the.fans have early on no time turned off the.TV\\
+	}
+	\z  
+\z
+
+We have seen that the final positions that NegShift and OS occupy are located in different positions. When OS occurs it is always to a position higher than all adverbials \citep{holmbergWordOrderSyntactic1986,holmbergRemarksHolmbergGeneralization1999}. When NegShift occurs it is to a position that is between `high' and `low' adverbs, exactly in the position that is predicted for negation in Cinque's hierarchy of adverbs \citep{nilsenAdverbsAshift1997,svenoniusStrainsNegationNorwegian2002}. 
 
 %------------------------------------
 \subsection{With respect to NegShift and OS interactions} \label{sec:INTERACTION}
 %------------------------------------
 
-\ea When there are both weak object pronouns and NIs in the sentence they both shift to their respective landing sites. 
-	\ea
-	\gll Jeg lånte \textit{hende} fraktisch \textit{ingen} \textit{bøger}.\\
-	I lent her actually no books\\
-	\glt `I didn't actually lend her any books.'
-	\z 
-\ex When the verb remains in situ OS is blocked from occurring but NegShift is still allowed to occur. 
-	\ea 
-	\gll Jeg har \emph{ingen} \emph{bøger} lånt \emph{hende}.\\
-	I have no books lent her\\
-	\glt `I haven't lent her any books
-	\z
-\z
+This observation that OS is higher than the adverbials and NegShift is to NegP in the middle of the adverbs predicts that when we have both OS and NegShift than we should always have NegShift lower than OS. In fact this is exactly what we see.
 
-\begin{tcolorbox}[width=\linewidth]
-\textsc{Claim:} OS and NegShift are not the same.
-
-\textsc{Big Claim:} OS and NegShift have different triggers for movement. 
-\end{tcolorbox}
-If both OS and NegShift were allowed to occur \citeauthor{broekhuisUnificationObjectShift2020} notes that they are subject to certain ordering restrictions. Citing examples from \citet[163ff]{christensenInterfacesNegationSyntax2005}, Broekhuis shows the following pair of examples:
-	\ea 
-		\ea \label{ex:NegShift}
-		\gll Jeg har <ingen bøger> lånt hende <*ingen bøger>.\\
-		I have no books lent her\\
-		\glt `I haven't lent her any books
-		\ex \label{ex:NegOS}
-		\gll Jeg lånte \textit{henda} fraktisch \textit{ingen} \textit{bøger}.\\
-		I lent her actually no books\\
-		\glt `I didn't actually lend her any books.'
-		\z 
-	\z
-In (\ref{ex:NegShift}), we see that when we have a negative object that it shifts to a position higher than the \textit{v}P if it were to remain in-situ as it would be ungrammatical and would require the use of \textit{ikke} `not' and the negative polarity item \textit{nogen} `any'.
-	\ea
-	\gll Jeg har \textit{ikke} lånt hende \textit{nogen} bøger.\\
-	I have not lent her any books.\\
-	\glt `I haven't lent her any books.'
-	\z
-However, when the main verb has raised to C⁰ as in (\ref{ex:NegOS}) then the weak pronominal moves to a position higher than the adverb \textit{fraktisch} `actually'. The negative object is not able to move to the similar position that is higher than the adverb. Additionally, this results in OS > NegShift which \citeauthor{broekhuisUnificationObjectShift2020} reports to a universal. This does help us see that that even though these two phenomena appear to be similar they are in fact slightly different, due to the differences in the where the two different movement operations' targets are.
-
-
-%------------------------------------------------
-
-
-One of the most interesting aspects from Table \ref{tab:Distribution} is the sharp contrast as to whether or not NegShift can happen with an indirect object. From the table we see that all varieties, except Scandinavian 2 which is equivalent to Norwegian and some colloquial varieties, allow shifting across an indirect object if the verb remains in situ. If the verb has moved for V2 then there are no varieties that allow shifting across the indirect object.
-
-\citet{christensenInterfacesNegationSyntax2005} reports on this behavior between NegShift and indirect objects and summarizes his findings in Table \ref{tab:OSNEGS}. In this table No\textsuperscript{+}/Sw\textsuperscript{+} represent some varieties of Norwegian and Swedish respectively in contrast to more standard Norwegian (No) and Swedish (Sw), FS represent the Swedish variety which is spoken by Swedes in Finland.
+\citet{christensenInterfacesNegationSyntax2005} reports on this behavior between NegShift and sentential objects and summarizes his findings in Table \ref{tab:OSNEGS}. In this table No\textsuperscript{+}/Sw\textsuperscript{+} represent some varieties of Norwegian and Swedish in contrast to more standard Norwegian (No) and Swedish (Sw), FS represent the Swedish variety which is spoken by Swedes in Finland.
 \begin{table}[h!]
 \centering
 \caption{Summary of OS and NegShift accoriding to \citet{christensenInterfacesNegationSyntax2005}.}
@@ -417,9 +429,28 @@ If, however, the IO is a NegQP and the DO is a pronoun then the pronoun is block
 		\z 
 	\z
 
-This is actually a very important point for the question of the prosodic nature of the shifting. If we assume that these are moving to a position outside of the VP or are some sort of adjunct to VP then we would assume that OS should be allowed according to Holmberg's Generalization.\footnote{See \citet{thrainssonSyntaxIcelandic2010} for discussion and debate about where negation is located in Scandinavian languages.} However, this is not the case if we follow the logic from Holmberg's Generalization. Holmberg's Generalization requires that OS occur if there is not a phonologically visible category that asymmetrically c-commands the object's base position. Because OS is blocked, then Neg is a phonologically visible category that asymmetrically c-commands the object.\footnote{Another possibility is that we are concerned with the }
+This is actually a very important point for the question of the prosodic nature of the shifting. If we assume that these are moving to a position outside of the VP or are some sort of adjunct to VP then we would assume that OS should be allowed according to Holmberg's Generalization.\footnote{See \citet{thrainssonSyntaxIcelandic2010} for discussion and debate about where negation is located in Scandinavian languages.} However, this is not the case if we follow the logic from Holmberg's Generalization. Holmberg's Generalization requires that OS occur if there is not a phonologically visible category that asymmetrically c-commands the object's base position. Because OS is blocked, then Neg is a phonologically visible category that asymmetrically c-commands the object. Following \citet{chomskyMinimalistProgramLinguistic1993,chomskyMinimalistProgram1995} notion of the copy theory of movement than there is something in the same phrase which prevents it from shifting to a position. 
 
-An additional case that is interesting is when both the indirect and direct objects are allowed to shift. \citet[417f]{broekhuisUnificationObjectShift2020} observes that weak pronominal object shift behaves differently than full DP objects in what loci there are allowed to inhabit. In the case of weak pronominals they are required to appear outside of the \textit{v}P if there is no intervening phonological material (i.e., Holmberg's Generalization \cite{holmbergWordOrderSyntactic1986,holmbergRemarksHolmbergGeneralization1999}). 
+An additional case involving OS and NegShift is when both the indirect and direct objects are allowed to shift. \citet[417f]{broekhuisUnificationObjectShift2020} observes that weak pronominal object shift behaves differently than full DP objects in what loci there are allowed to inhabit. In the case of weak pronominals they are required to appear outside of the \textit{v}P if there is no intervening phonological material (i.e., Holmberg's Generalization \cite{holmbergWordOrderSyntactic1986,holmbergRemarksHolmbergGeneralization1999}). \citeauthor{broekhuisUnificationObjectShift2020} observes that when OS and NegShift are both allowed to occur they are subject to certain ordering restrictions. Citing examples from \citet[163ff]{christensenInterfacesNegationSyntax2005}, Broekhuis shows the following pair of examples:
+	\ea 
+		\ea \label{ex:NegShift}
+		\gll Jeg har <ingen bøger> lånt hende <*ingen bøger>.\\
+		I have no books lent her\\
+		\glt `I haven't lent her any books
+		\ex \label{ex:NegOS}
+		\gll Jeg lånte \textit{henda} fraktisch \textit{ingen} \textit{bøger}.\\
+		I lent her actually no books\\
+		\glt `I didn't actually lend her any books.'
+		\z 
+	\z
+In (\ref{ex:NegShift}), we see that when we have a negative object that it shifts to a position higher than the \textit{v}P if it were to remain in-situ as it would be ungrammatical and would require the use of \textit{ikke} `not' and the negative polarity item \textit{nogen} `any'.
+	\ea
+	\gll Jeg har \textit{ikke} lånt hende \textit{nogen} bøger.\\
+	I have not lent her any books.\\
+	\glt `I haven't lent her any books.'
+	\z
+However, when the main verb has risen to C as in (\ref{ex:NegOS}) then the weak pronominal moves to a position higher than the adverb \textit{fraktisch} `actually'. The negative object is not able to move to the similar position that is higher than the adverb. Additionally, this results in OS > NegShift which \citeauthor{broekhuisUnificationObjectShift2020} reports to be a universal. This does help us see that that even though these two phenomena appear to be similar they are in fact slightly different, due to the differences in the where the two different movement operations' targets are.
+
 %------------------------------------
 \section{Deriving NegShift} \label{sec:ZEIJLSTRA}
 %------------------------------------
