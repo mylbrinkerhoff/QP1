@@ -78,7 +78,7 @@
 \usepackage{leipzig} %	Offers support for Leipzig Glossing Rules
 
 %%TITLE INFORMATION
-\title{TITLE}
+\title{Motivations for Scandinavian Negative Indefinite Shift}
 \author{Mykel Loren Brinkerhoff}
 \date{\today}
 
@@ -477,6 +477,11 @@ We have seen that each of the different criteria that I laid out at the start of
 \section{Deriving NegShift} \label{sec:DERIVING}
 %------------------------------------
 
+\citet{iatridouNegativeDPsAMovement2011,zeijlstraSyntacticallyComplexStatus2011} show that in NIs exhibit split-scope where negation has wide scope while the indefinite has narrow scope. This is seen when there are modal auxiliaries present the negation scopes higher than the modals while the indefinite scopes lower than the modals. We can see this in the following example from \citet{iatridouNegativeDPsAMovement2011}. 
+
+\ea 
+\z 
+
 \citet{zeijlstraSyntacticallyComplexStatus2011} is interested in showing providing an analysis of the split-scope interpretation that exists for negative indefinites in Germanic languages. Split-scope is evident when modals and other auxiliaries are present and the negation scopes higher than the modal/auxiliary's scope where the indefinite resides. \citeauthor{zeijlstraSyntacticallyComplexStatus2011} assumes that this behavior is the result of the compositional status of negative indefinites similar to the claims made by \citet{iatridouNegativeDPsAMovement2011}. He claims that NIs are composed of a negative operator and an indefinite component and that the split-scope interpretation is the result of a copy-theory of movement \citep{chomskyMinimalistProgram2015}. 
 
 Following \citeauthor{chomskyMinimalistProgram2015} movement is not a unique operation that literally moves one element to position higher in the syntax. Instead movement is similar the product of copying a constituent and then remerging it into the syntactic hierarchy. This then results in two or more instances of the constituent, as seen in the syntactic structure for (\ref{ex:Copy}). 
@@ -521,7 +526,7 @@ For NI DPs that are too heavy to shift as a whole constituent one of the potenti
 \ea Jeg har \textit{intet}\textsubscript{i} hørt t\textsubscript{i} [\textsubscript{PP} i sagen om de stjålne malerier ].
 \z 
 
-Folloowing \posscitet{chomskyMinimalistProgram2015} theory of copy-movement and \posscitet{zeijlstraSyntacticallyComplexStatus2011} theoy, we would assume that the NI DP would be fully copied from its base-position and merged into NegP.
+Following \posscitet{chomskyMinimalistProgram2015} theory of copy-movement and \posscitet{zeijlstraSyntacticallyComplexStatus2011} theoy, we would assume that the NI DP would be fully copied from its base-position and merged into NegP.
 
 \ea \resizebox*{\linewidth}{!}{\begin{tikzpicture} 
 	\tikzset{every tree node/.style={align=center,anchor=north}} 
@@ -576,12 +581,44 @@ At this point during PF, part of the higher copy is deleted leaving only the NI 
 \z 
 If \citet{chomskyMinimalistInquiriesFramework2000} is correct and only the higher copy should be pronounced, then the question arises as to why only a part of the copy is deleted. 
 
-This is not the first time this sort of problem has arisen. \citet{fanselowRemarksEconomyPronunciation2001,fanselowDistributedDeletion2002} present evidence that partial deletion is in fact possible and the type of deletion that we observe in (\ref{ex:tree}) is found in other Germanic languages and in Slavic as seen in this example from Croatian.
-\ea 
-\gll \emph{\sout{zanimljive}} \emph{knijge} mi je Marija \emph{zanimljive} \emph{\sout{knijge}} preporučila\\
-interesting books me has Mary interesting books recommended\\
-\z  
+% This is not the first time this sort of problem has arisen. \citet{fanselowRemarksEconomyPronunciation2001,fanselowDistributedDeletion2002} present evidence that partial deletion is in fact possible and the type of deletion that we observe in (\ref{ex:tree}) is found in other Germanic languages and in Slavic as seen in this example from Croatian.
+% \ea 
+% \gll \emph{\sout{zanimljive}} \emph{knijge} mi je Marija \emph{zanimljive} \emph{\sout{knijge}} preporučila\\
+% interesting books me has Mary interesting books recommended\\
+% \z 
+
 According to \citet{fanselowRemarksEconomyPronunciation2001,fanselowDistributedDeletion2002} the motivation for when partial deletion is possible has its motivations in PF or LF. My QP will explore more about what exactly these motivations are in light of \citeauthor{fanselowRemarksEconomyPronunciation2001,fanselowDistributedDeletion2002} and whether prosody plays a role in what is allowed to delete. The other possibility is that this deletion is motivated by LF considerations. If this is prosodically motivated what drives this deletion?
+
+An alternative to the theory presented above comes from Cyclic Linearization, which is a theory that was developed by \citet{foxCyclicLinearizationSyntactic2005} as a way to account for OS and Holmberg's Generalization. This theory works by stipulating that spell-out of the morphosyntax is cyclic and order preserving, which means that as you spell-out each successive spell-out domain you need to ensure that whatever linearization existed when that domain was spelled-out persist at the next spell-out domain's ordering restrictions. This theory also had the benefit of accounting for when OS was allowed or not allowed to occur. 
+
+This proposal was extended by \citet{foxCyclicLinearizationSyntactic2005} and \citet{engelsMicrovariationObjectPositions2011,engelsScandinavianNegativeIndefinites2012} to account for quantifier movement (QM), of which NegShift is claimed to be a subset under their analyses. QM is subject to an ``Anti-Holmberg Effect'' or an ``Inverse Holmberg Effect''. As previously discussed above Holmberg's Generalization stipulates that OS can only apply if the verb has undergone movement from V-to-T-to-C. The Anti-Holmberg Effect explains that only when the verb remains in situ can we have QM, which is the result of the ordering operations between the different phases being in agreement. 
+
+In order to account for OS, \citeauthor{foxCyclicLinearizationSyntactic2005} propose that the during the spell-out of the VP domain the V is the leftmost element in its domain\footnote{The position of the V at the left-edge of the phase could be due to the movement of V to \textit{v} in which case it is actually the \textit{v}P that acts as the spell-out domain not the VP.} and at which point the ordering restrictions are in place which state that the V must precede the O. At this point the V moves to T and then to C which results in the object being free to move to its higher position because the order that existed at the VP domain continues to hold at the CP spell-out domain. 
+\ea OS and string-vacuous Neg-Shift
+\vspace{6pt}
+ 	\ea {}[\textsubscript{CP} S \rnode{b1}V … [\textsubscript{NegP} \rnode{A1}O adv [\textsubscript{VP} \rnode{b2}t\textsubscript{v} \rnode{A2}t\textsubscript{o} ]]]
+	\psset{linearc=2pt} 
+	\ncbar[angle=90]{->}{A2}{A1}  
+	\ncbar[angle=-90,linestyle=dashed]{->}{b2}{b1} 
+	\vspace{6pt}
+	\ex VP Ordering: \textbf{V>O}\\
+		CP Ordering: S>V, \textbf{V>O}, O>adv, adv>VP
+	\z
+\z
+
+In the case of NegShift, where it is able to shift across various phonological material, it is proposed that the NI first moves to the left edge of the VP before spell-out of that domain. Once that domain is spelled-out the NI is free to shift to its position outside of the VP, in the case of (\ref{ex:n}) this is to NegP.
+	\ea NegShift when V is in-situ. \label{ex:n}
+	\vspace{6pt}
+		\ea {}[\textsubscript{CP} S aux … [\textsubscript{NegP} \rnode{A1}O [\textsubscript{VP} \rnode{A2}t\textsubscript{o}  V \rnode{A3}t\textsubscript{o} ]]]
+		\psset{linearc=2pt} 
+		\ncbar[angle=90]{->}{A3}{A2}  
+		\ncbar[angle=90]{->}{A2}{A1}
+		\ex VP Ordering: \textbf{O>V}\\
+		CP Ordering: S>V, aux>O, O>adv, adv>VP → \textbf{O>V}
+		\z 
+	\z
+
+As part of my QP, I will be providing an alternative account using cyclic linearization and compare it against the account I proposal in §\ref{sec:ZEIJLSTRA}.
 
 %------------------------------------
 \section{Prosodic restrictions on NegShift} \label{sec:PROSODY}
@@ -669,29 +706,13 @@ Evidence for this comes from the size of the material that is allowed to ``shift
 
 This difference between Danish, which allows simple DPs, and Swedish which tolerates full DPs, but prefers pronouns, suggests the LMC in Swedish will delete copies until they are just the NI pronoun. This potential comes down to Swedish being a tonal language and how tonal accents are assigned to maximal prosodic words \citep{myrbergProsodicWordSwedish2013,myrbergProsodicHierarchySwedish2015,riadPhonologySwedish2014} and Danish not being a tonal language.
 
-Another possibility instead of the LMC controlling the size of material is that prosody is responsible for moving the NI to NegP. One such system comes from \citet{zubizarretaProsodyFocusWord1998}. In \citet{zubizarretaProsodyFocusWord1998}, she argues that certain word order restrictions that exist comes down to prosodic restrictions that directly 
-\ea The LMC deleting different amounts of material in Danish and Swedish can also explain Norwegian's lack of NegShift. 
-	\ea Norwegian deletes everything as it prefers not to have any copies in the \emph{Mittelfeld}
-	\ex This deleteion would then leave the valued [\textsc{Neg}] feature which gets pronounced as negation which then causes the lower copy to surface with a NPI.  
-	\ex This behavior of total deletion is also attested in Danish and Swedish where negation and a NPI is always a potential instead of NegShift.
-	\z  
+The LMC deleting different amounts of material in Danish and Swedish can also explain Norwegian's general lack of NegShift. The LMC would cause Norwegian to delete everything as it prefers not to have any moved copies in the \emph{Mittelfeld}. This deleteion would then leave the valued [\textsc{Neg}] feature which gets pronounced as negation which then causes the lower copy to surface with a NPI. This behavior of total deletion is also attested in Danish and Swedish where negation and a NPI is always a potential instead of NegShift.
 
-\ex This results in a three-way system in Scandinavian languages. 
-	\ea Those that delete until a simple DP is left.
-	\ex Those that delete until a pronoun is left.
-	\ex Those that delete everything and have negation and a NPI.
-	\z 
+This results in a three-way system in Scandinavian languages: (i) those that delete until a simple DP is left, (ii) those that delete until a pronoun is left, and (iii) those that delete everything and have negation and an NPI. There seems to be some differences in behavior between the tonal and atonal Scandinavian languages. According to \citet{thrainssonFaroeseOverviewReference2004,thrainssonSyntaxIcelandic2010} Faroese and Icelandic pattern the same as Danish in this regard. This further suggests that there is something unique about being a tonal language that limits the acceptability of NegShifting. 
 
-\ex There seems to be some differences in behavior between the tonal and atonal Scandinavian languages. 
-	\ea According to \citet{thrainssonFaroeseOverviewReference2004,thrainssonSyntaxIcelandic2010} Faroese and Icelandic pattern the same as Danish in this regard. 
-	\ex This further suggests that there is something unique about being a tonal language that limits the acceptability of NegShifting. 
-	\z 
+These facts about NegShift are summarized in Table \ref{tab:Paradigm}. It will be noted that if you allow full NI DPs than you also allow pronouns and complete deletion, which results in a negation particle and an NPI. If you allow NI pronouns then you allow a negation particle and an NPI. This is suggestive of a conditional hierarchy. 
 
-\ex This is summarized in Table \ref{tab:Paradigm}.
-	\ea It will be noted that if you allow full NI DPs than you also allow pronouns and complete deletion, which results in a negation particle and an NPI.
-	\ex If you allow NI pronouns then you allow a negation particle and an NPI
-	\z 
-\begin{table}[!ht]
+\begin{table}[!hb]
 	\centering
 	\caption{Scandinavian acceptance of NegShift or NPI}
 	\label{tab:Paradigm}
@@ -707,27 +728,25 @@ Another possibility instead of the LMC controlling the size of material is that 
 	\hline 
 \end{tabular} 
 \end{table}
-\z 
+
+Another possibility instead of the LMC controlling the size of material is that prosody is responsible for moving the NI to NegP. One such system comes from \citet{zubizarretaProsodyFocusWord1998}. In \citet{zubizarretaProsodyFocusWord1998}, she argues that certain word order restrictions that exist comes down to prosodic restrictions that directly manipulate the syntax. In her system there are prosodic features that the syntax will manipulate in order to insure that the the syntactic object obey certain prosodic factors. This view assumes that there is no distinct PF and LF branches and all that exists is the syntax. This means that any displacement can be caused by syntactic, semantic, or prosodic factors. 
+
+One of the chief issues with this system, besides abandoning the Y-model, has to do with the phonologically/prosodically derived movement. The \citeauthor{zubizarretaProsodyFocusWord1998} system makes the prediction that any sort of later phonological restriction will directly operate on the narrow syntax in order to satisfy those restrictions. This means that such syntactic movements and operations should produce interpretational effects. This is not what we observe. It was noted by \citep{holmbergRemarksHolmbergGeneralization1999} that OS, which he attributes to the presence of a [+/-Focus] feature must move during PF because of a lack changes in anaphor binding that happen with the shifted pronouns. Similarly, if the \citeauthor{zubizarretaProsodyFocusWord1998} system was correct than any phonological/prosodic derived movement should have semantic consequences on interpretation. One of the clearest pieces of evidence that NegShift is syntactic in origin comes from the split-scope that NIs exhibit \citep{iatridouNegativeDPsAMovement2011,zeijlstraSyntacticallyComplexStatus2011} discussed above. This is something that the \citeauthor{zubizarretaProsodyFocusWord1998} system cannot account for. 
+
 %------------------------------------
 \subsection{Scandinavian particle shift} \label{sec:Particles}
 %------------------------------------
-\ea Independent evidence for shifting full DPs into the \emph{Mittelfeld} is observed in particle shifting in Scandinavian languages. 
 
-\ex Following \citet[2]{holmbergRemarksHolmbergGeneralization1999} and \citet{faarlundSyntaxMainlandScandinavian2019} there is a difference in behavior between the different Scandinavian languages with what is allowed to shift across a verbal particle.
-	\ea Danish objects, regardless of size, always precedes the verb particle. 
-	\ex Norweigan, Icelandic, and Faroese are like English by shifting a pronoun across a particle and optionally for DPs.
-	\ex Swedish does not allow anything to shift across the particles. 
-	\z 
-
-\ex \gllll Jeg skrev (nummeret/det) op (*nummeret/*det). \hfill Da\\
-		Jeg skrev (nummeret/det) opp (nummeret/*det). \hfill No\\
-		Jag skrev (*numret/*det) upp (numret/det). \hfill Sw\\
-		I wrote (the-number/it) up (the-number/it)\\
+If all the evidence we had for the LMC comes from the weight restrictions found in NegShift then it would be easy to dismiss such possibilities. However, independent evidence for weight restrictions on shifting full DPs into the \emph{Mittelfeld} is observed in particle shifting in Scandinavian languages. Following \citet[2]{holmbergRemarksHolmbergGeneralization1999} and \citet{faarlundSyntaxMainlandScandinavian2019} there is a difference in behavior between the different Scandinavian languages with what is allowed to shift across a verbal particle. Danish objects always precedes the verb particle. Norweigan, Icelandic, and Faroese are like English by shifting a pronoun across a particle and optionally for DPs. Swedish does not allow anything to shift across the particles (see \cite{erteschik-shirVariationMainlandScandinavian2020} for a potential explanation for why ). 
+\ea \gllll Jeg skrev (nummeret/det) op (*nummeret/*det). \hfill (Danish)\\
+		Jeg skrev (nummeret/det) opp (nummeret/*det). \hfill (Norwegian)\\
+		Jag skrev (*numret/*det) upp (numret/det). \hfill (Swedish)\\
+		I wrote (number-the/it) up (number-the/it)\\
 \glt `I wrote the number/it down.'
+\z 
 
-\ex Additionally, Danish places restriction on the verbal compliment if it is too ``heavy" \citep[44f]{mullerDanishHeadDrivenPhraseInpreparation}. 
-	\ea If it is larger than a simple DP shifting is blocked.\footnote{Examples are from \emph{KorpusDK} as reported by \citet{mullerDanishHeadDrivenPhraseInpreparation}.} 
-	\ex \gll {[…]} så må partiet melde [holdninger] [ud], {[…]}\\
+Additionally, Danish places restriction on the verbal compliment if it is too ``heavy" \citep[44f]{mullerDanishHeadDrivenPhraseInpreparation}. If it is larger than a simple DP shifting is blocked.\footnote{Examples are from \emph{KorpusDK} as reported by \citet{mullerDanishHeadDrivenPhraseInpreparation}.} 
+	\ea \gll {[…]} så må partiet melde [holdninger] [ud], {[…]}\\
 	~ then must party.\Def{} make stances out\\
 	\glt `{[…]} then the party must make its stances clear, {[…]}'
 	\ex \gll Den danske regering bør snart melde [ud], [at den støtter de amerikanske planer]\\
@@ -735,10 +754,7 @@ Another possibility instead of the LMC controlling the size of material is that 
 	\glt `The Danish government must soon make clear that it supports the American plans.'
 	\z 
 
-\ex This is further evidence that the LMC is an active constraint in these languages. 
-
-\ex One explanation for this behavior is the difference in tonal quality between Danish, Norwegian, and Swedish \citep{erteschik-shirVariationMainlandScandinavian2020}.
-\z 
+This is further evidence that the LMC is an active constraint in these languages. 
 
 \begin{tcolorbox}[width=\linewidth]
 
@@ -753,92 +769,8 @@ Prosody, in the form of the \textsc{Light Mittelfeld Condition}, plays an active
 NegShift is derived by both syntactic and prosodic factors. It is syntactic in movement and prosody is responsible for restricting and regulating the amount of material that is allowed the surface in the higher copy.
 \end{tcolorbox}
 
-%------------------------------------
-\section{Alternative syntactic accounts} \label{sec:HNPS}
-%------------------------------------
-
-% According to \citet{anttilaRoleProsodyEnglish2010}, prosody plays a supporting role in linearization and can be accounted for through OT style constraints on prosodic well-formedness. They are concerned with explaining the three way patterning that dative constructions have: (i) double object constructions, (ii) Prepositional constructions, (iii) Heavy NP Shift constructions.
-
-% Of crucial interest is how they explain Heavy NP Shift and what their criteria for determining weight. \citet[949]{anttilaRoleProsodyEnglish2010} say that the ``weight" of an NP is ``a function of the number of lexically stressed words in [the constituent]". This means that the more lexical stresses a constituent has the heavier it is. This definition, crucially, leaves out functional items and pronouns because they lack lexical stress. Using this definition for weight, we can explain the behavior Danish and Swedish as discussed in §\ref{sec:PROSODY}. 
-
-% %------------------------------------
-% \section{OT Account for Heavy NP Shift} \label{sec:OT}
-% %------------------------------------
-
-% Based on \citet{anttilaRoleProsodyEnglish2010}, prosody plays a supporting role in linearization and can be accounted for through OT style constraints on prosodic well-formedness. This can be accounted for using Match Theory \citep{selkirkClauseIntonationalPhrase2009,selkirkSyntaxPhonologyInterface2011}. Following \citet{myrbergSisterhoodProsodicBranching2013,myrbergProsodicWordSwedish2013,myrbergProsodicHierarchySwedish2015}, I assume that the subject in Scandinavian languages forms its own phonological phrase, if it is not a pronoun, separate from the rest of the clause. 
-% 	\ea Simplified prosodic structure for (\ref{ex:tree})\\
-% 	% \resizebox*{\linewidth}{!}{
-% 	\begin{tikzpicture} 
-% 	\tikzset{every tree node/.style={align=center,anchor=north}} 
-% 	\Tree [.ι [.φ\\Anna ] [.φ \edge[roof]; {har intet hørt i sagen om de stjålne malerier} ] ] 
-% 	\end{tikzpicture}%}
-% 	\z
-
-% Crucially, what we are concerned with the weight of the item shifting. This can be accounted for using a type of \textsc{NoShift} \citep{bennettLightestRightApparently2016} which is sensitive to lexical stresses.
-
-% \ea \textsc{NoShift(Stress)}:\\
-% Assign one violation for every word bearing lexical stress that is not in the same linear order as in the input.
-% \z 
-
-% If we take the input of (\ref{ex:tree}), this constraint should assign a violation for every item bearing lexical stress that has been relinearized. Using OT we can model how this would behave with the input of (\ref{ex:tree})
-
-% \ea \resizebox*{\linewidth}{!}{
-% 	\begin{OTtableau}{3}
-% 		\OTdashes{1,2}
-% 		\OTtoprow [ ] {\textsc{Match(XP,φ)}, \textsc{Match(φ,XP)}, \textsc{NoShift(Stress)}}
-% 		\OTcandrow [\OThand] {( Anna\sub{ω} )\sub{φ} (har \textit{intet}\sub{ω} hørt i sagen om de stjålne malerier)\sub{φ}} { 1 , 1 , 1} 
-% 		\OTcandrow [\OThand] {( Anna\sub{ω} )\sub{φ} (har \textit{intet nyt}\sub{ω} hørt i sagen om de stjålne malerier)\sub{φ}} { 1 , 1 , 1} 
-% 		\OTcandrow [\OTface*] {( Anna\sub{ω} )\sub{φ} (har \textit{intet nyt\sub{ω} i sagen}\sub{ω} hørt om de stjålne malerier)\sub{φ}} { 1 , 1 , 2!} 
-% 		\OTcandrow [\OTface*] {( Anna\sub{ω} )\sub{φ} (har \textit{intet i sagen\sub{ω} om de stjålne\sub{ω} malerier\sub{ω}} hørt )\sub{φ}} { 1 , 1 , 3! } 
-% 	\end{OTtableau}
-% 	}
-% \z 
-
-% I am continuing to explore what the analysis would look like 
-%------------------------------------
-\subsection{Cyclic Linearization account} \label{sec:CL}
-%------------------------------------
-
-An alternative to the theory presented above, Cyclic Linearization is a theory that was developed by \cite{foxCyclicLinearizationSyntactic2005} as a way to account for OS and Holmberg's Generalization. This theory works by stipulating that spell-out of the morphosyntax is cyclic and order preserving, which means that as you spell-out each successive spell-out domain you need to ensure that whatever orders existed when that domain was spelled-out persist at the next spell-out domain's ordering restrictions. This theory also had the benefit of accounting for when OS was allowed or not allowed to occur. 
-
-This proposal was extended by \citet{foxCyclicLinearizationSyntactic2005} and \citet{engelsMicrovariationObjectPositions2011,engelsScandinavianNegativeIndefinites2012} to account for quantifier movement (QM), of which NegShift is a subset under their analyses. QM is subject to an ``Anti-Holmberg Effect'' or an ``Inverse Holmberg Effect''. As previously discussed above Holmberg's Generalization stipulates that OS can only apply if the verb has undergone movement from V-to-T-to-C. The Anti-Holmberg Effect explains that only when the verb remains in situ can we have QM, which is the result of the ordering operations between the different phases being in agreement. 
-
-In order to account for OS, \citeauthor{foxCyclicLinearizationSyntactic2005} propose that the during the spell-out of the VP spell-out domain the V is the leftmost element in its domain\footnote{The position of the V at the left-edge of the phase could be due to the movement of V to \textit{v} in which case it is actually the \textit{v}P that acts as the spell-out domain not the VP.} and at which point the ordering restrictions are in place which state that the V must precede the O. At this point the V moves to T and then to C which results in the object being free to move to its higher position because the order that existed at the VP domain continues to hold at the CP spell-out domain. 
-\ea OS and string-vacuous Neg-Shift
-\vspace{6pt}
- 	\ea {}[\textsubscript{CP} S \rnode{b1}V … [\textsubscript{NegP} \rnode{A1}O adv [\textsubscript{VP} \rnode{b2}t\textsubscript{v} \rnode{A2}t\textsubscript{o} ]]]
-	\psset{linearc=2pt} 
-	\ncbar[angle=90]{->}{A2}{A1}  
-	\ncbar[angle=-90,linestyle=dashed]{->}{b2}{b1} 
-	\vspace{6pt}
-	\ex VP Ordering: \textbf{V>O}\\
-		CP Ordering: S>V, \textbf{V>O}, O>adv, adv>VP
-	\z
-\z
-
-In the case of NegShift, where it is able to shift across various phonological material, it is proposed that the NI first moves to the left edge of the VP before spell-out of that domain. Once that domain is spelled-out the NI is free to shift to its position outside of the VP, in the case of (\ref{ex:n}) this is to NegP.
-	\ea NegShift when V is in-situ. \label{ex:n}
-	\vspace{6pt}
-		\ea {}[\textsubscript{CP} S aux … [\textsubscript{NegP} \rnode{A1}O [\textsubscript{VP} \rnode{A2}t\textsubscript{o}  V \rnode{A3}t\textsubscript{o} ]]]
-		\psset{linearc=2pt} 
-		\ncbar[angle=90]{->}{A3}{A2}  
-		\ncbar[angle=90]{->}{A2}{A1}
-		\ex VP Ordering: \textbf{O>V}\\
-		CP Ordering: S>V, aux>O, O>adv, adv>VP → \textbf{O>V}
-		\z 
-	\z
-
-As part of my QP, I will be providing an alternative account using cyclic linearization and compare it against the account I proposal in §\ref{sec:ZEIJLSTRA}.
 
 
-
-
-
-%------------------------------------
-\section{Next steps} 
-%------------------------------------
-
-As previously mentioned, I plan on investigating the prosodic nature of NegShift I, additionally, have been considering the different accounts that have been given for both OS and NegShift with an eye on seeing which account is able to provide the most sensible explanation for the shifting of ``light'' NIs to aid me in presenting my own theoretical analysis of the NegShift.
 %------------------------------------
 %BIBLIOGRAPHY
 %------------------------------------
