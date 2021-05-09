@@ -477,12 +477,15 @@ We have seen that each of the different criteria that I laid out at the start of
 \section{Deriving NegShift} \label{sec:DERIVING}
 %------------------------------------
 
-\citet{iatridouNegativeDPsAMovement2011,zeijlstraSyntacticallyComplexStatus2011} show that in NIs exhibit split-scope where negation has wide scope while the indefinite has narrow scope. This is seen when there are modal auxiliaries present the negation scopes higher than the modals while the indefinite scopes lower than the modals. We can see this in the following example from \citet{iatridouNegativeDPsAMovement2011}. 
+\citet{iatridouNegativeDPsAMovement2011} show that in NIs exhibit split-scope, which is evident when modals and other auxiliaries are present and the negation scopes higher than the modal/auxiliary's scope where the indefinite resides. We can see this in the following example from \citet{iatridouNegativeDPsAMovement2011}. 
 
-\ea 
+\ea There has to be no doctor present for the nurses to administer the medicine.\\
+Neg-split: It isn’t required that a doctor be present
 \z 
 
-\citet{zeijlstraSyntacticallyComplexStatus2011} is interested in showing providing an analysis of the split-scope interpretation that exists for negative indefinites in Germanic languages. Split-scope is evident when modals and other auxiliaries are present and the negation scopes higher than the modal/auxiliary's scope where the indefinite resides. \citeauthor{zeijlstraSyntacticallyComplexStatus2011} assumes that this behavior is the result of the compositional status of negative indefinites similar to the claims made by \citet{iatridouNegativeDPsAMovement2011}. He claims that NIs are composed of a negative operator and an indefinite component and that the split-scope interpretation is the result of a copy-theory of movement \citep{chomskyMinimalistProgram2015}. 
+In this example the negation is allowed to scope higher than the auxiliary \emph{has to} while doctor resides within the scope of this auxiliary. This is what allows for the reading that it isn't necessary for a doctor to be present for nurses to administer medicine. 
+
+\citet{zeijlstraSyntacticallyComplexStatus2011} takes these observations in English as well as this same behavior in Dutch and German provides an analysis of the split-scope interpretation that exists for negative indefinites in these languages.  \citeauthor{zeijlstraSyntacticallyComplexStatus2011} assumes that this behavior is the result of the compositional status of negative indefinites. He claims that NIs are composed of a negative operator and an indefinite component and that the split-scope interpretation is the result of a copy-theory of movement \citep{chomskyMinimalistProgramLinguistic1993}. 
 
 Following \citeauthor{chomskyMinimalistProgram2015} movement is not a unique operation that literally moves one element to position higher in the syntax. Instead movement is similar the product of copying a constituent and then remerging it into the syntactic hierarchy. This then results in two or more instances of the constituent, as seen in the syntactic structure for (\ref{ex:Copy}). 
 
@@ -496,7 +499,38 @@ for tree={s sep=5mm, inner sep=0, l=0}
 \end{forest}
 \z 
 
-If we assume that \citet{zeijlstraSyntacticallyComplexStatus2011} is correct in that negative indefinites exist in their base-generated position and in this higher copy because of feature-checking and for interpretation at LF then we expect that the higher copy is the only one that is ever pronounced. However, the facts discussed in §\ref{sec:PROSODY} present a problem. 
+If we assume that \citet{zeijlstraSyntacticallyComplexStatus2011} is correct in that negative indefinites exist in their base-generated position and in this higher copy because of feature-checking and for interpretation at LF then we expect that the higher copy is the only one that is ever pronounced.
+
+An alternative to the theory presented above comes from Cyclic Linearization, which is a theory that was developed by \citet{foxCyclicLinearizationSyntactic2005} as a way to account for OS and Holmberg's Generalization. This theory works by stipulating that spell-out of the morphosyntax is cyclic and order preserving, which means that as you spell-out each successive spell-out domain you need to ensure that whatever linearization existed when that domain was spelled-out persist at the next spell-out domain's ordering restrictions. This theory also had the benefit of accounting for when OS was allowed or not allowed to occur. 
+
+This proposal was extended by \citet{foxCyclicLinearizationSyntactic2005} and \citet{engelsMicrovariationObjectPositions2011,engelsScandinavianNegativeIndefinites2012} to account for quantifier movement (QM), of which NegShift is claimed to be a subset under their analyses. QM is subject to an ``Anti-Holmberg Effect'' or an ``Inverse Holmberg Effect''. As previously discussed above Holmberg's Generalization stipulates that OS can only apply if the verb has undergone movement from V-to-T-to-C. The Anti-Holmberg Effect explains that only when the verb remains in situ can we have QM, which is the result of the ordering operations between the different phases being in agreement. 
+
+In order to account for OS, \citeauthor{foxCyclicLinearizationSyntactic2005} propose that the during the spell-out of the VP domain the V is the leftmost element in its domain\footnote{The position of the V at the left-edge of the phase could be due to the movement of V to \textit{v} in which case it is actually the \textit{v}P that acts as the spell-out domain not the VP.} and at which point the ordering restrictions are in place which state that the V must precede the O. At this point the V moves to T and then to C which results in the object being free to move to its higher position because the order that existed at the VP domain continues to hold at the CP spell-out domain. 
+\ea OS and string-vacuous Neg-Shift
+% \vspace{6pt}
+ 	\ea ~[\textsubscript{CP} S \rnode{B1}V … [\textsubscript{NegP} \rnode{A1}O adv [\textsubscript{VP} \rnode{B2}t\textsubscript{v} \rnode{A2}t\textsubscript{o} ]]]
+	% \psset{linearc=2pt} 
+	% \ncbar[angle=90]{->}{A2}{A1}  
+	% \ncbar[angle=-90,linestyle=dashed]{->}{b2}{b1} 
+	% \vspace{6pt}
+	\ex VP Ordering: \textbf{V>O}\\
+		CP Ordering: S>V, \textbf{V>O}, O>adv, adv>VP
+	\z
+\z
+
+In the case of NegShift, where it is able to shift across various phonological material, it is proposed that the NI first moves to the left edge of the VP before spell-out of that domain. Once that domain is spelled-out the NI is free to shift to its position outside of the VP, in the case of (\ref{ex:n}) this is to NegP.
+	\ea NegShift when V is in-situ. \label{ex:n}
+	% \vspace{6pt}
+		\ea {}[\textsubscript{CP} S aux … [\textsubscript{NegP} \rnode{A1}O [\textsubscript{VP} \rnode{A2}t\textsubscript{o}  V \rnode{A3}t\textsubscript{o} ]]]
+		% \psset{linearc=2pt} 
+		% \ncbar[angle=90]{->}{A3}{A2}  
+		% \ncbar[angle=90]{->}{A2}{A1}
+		\ex VP Ordering: \textbf{O>V}\\
+		CP Ordering: S>V, aux>O, O>adv, adv>VP → \textbf{O>V}
+		\z 
+	\z
+
+ However, the facts discussed in §\ref{sec:PROSODY} present a problem. 
 
 As discussed above Danish allows for a pattern where only a negative indefinite of a certain weight is allowed to shift, repeated here from (\ref{ex:weight}). 
 	\ea
@@ -526,7 +560,7 @@ For NI DPs that are too heavy to shift as a whole constituent one of the potenti
 \ea Jeg har \textit{intet}\textsubscript{i} hørt t\textsubscript{i} [\textsubscript{PP} i sagen om de stjålne malerier ].
 \z 
 
-Following \posscitet{chomskyMinimalistProgram2015} theory of copy-movement and \posscitet{zeijlstraSyntacticallyComplexStatus2011} theoy, we would assume that the NI DP would be fully copied from its base-position and merged into NegP.
+Following \citet{zeijlstraSyntacticallyComplexStatus2011} theory, we would assume that the NI DP would be fully copied from its base-position and merged into NegP.
 
 \ea \resizebox*{\linewidth}{!}{\begin{tikzpicture} 
 	\tikzset{every tree node/.style={align=center,anchor=north}} 
@@ -579,46 +613,7 @@ At this point during PF, part of the higher copy is deleted leaving only the NI 
 	\end{tikzpicture}}
 
 \z 
-If \citet{chomskyMinimalistInquiriesFramework2000} is correct and only the higher copy should be pronounced, then the question arises as to why only a part of the copy is deleted. 
-
-% This is not the first time this sort of problem has arisen. \citet{fanselowRemarksEconomyPronunciation2001,fanselowDistributedDeletion2002} present evidence that partial deletion is in fact possible and the type of deletion that we observe in (\ref{ex:tree}) is found in other Germanic languages and in Slavic as seen in this example from Croatian.
-% \ea 
-% \gll \emph{\sout{zanimljive}} \emph{knijge} mi je Marija \emph{zanimljive} \emph{\sout{knijge}} preporučila\\
-% interesting books me has Mary interesting books recommended\\
-% \z 
-
-According to \citet{fanselowRemarksEconomyPronunciation2001,fanselowDistributedDeletion2002} the motivation for when partial deletion is possible has its motivations in PF or LF. My QP will explore more about what exactly these motivations are in light of \citeauthor{fanselowRemarksEconomyPronunciation2001,fanselowDistributedDeletion2002} and whether prosody plays a role in what is allowed to delete. The other possibility is that this deletion is motivated by LF considerations. If this is prosodically motivated what drives this deletion?
-
-An alternative to the theory presented above comes from Cyclic Linearization, which is a theory that was developed by \citet{foxCyclicLinearizationSyntactic2005} as a way to account for OS and Holmberg's Generalization. This theory works by stipulating that spell-out of the morphosyntax is cyclic and order preserving, which means that as you spell-out each successive spell-out domain you need to ensure that whatever linearization existed when that domain was spelled-out persist at the next spell-out domain's ordering restrictions. This theory also had the benefit of accounting for when OS was allowed or not allowed to occur. 
-
-This proposal was extended by \citet{foxCyclicLinearizationSyntactic2005} and \citet{engelsMicrovariationObjectPositions2011,engelsScandinavianNegativeIndefinites2012} to account for quantifier movement (QM), of which NegShift is claimed to be a subset under their analyses. QM is subject to an ``Anti-Holmberg Effect'' or an ``Inverse Holmberg Effect''. As previously discussed above Holmberg's Generalization stipulates that OS can only apply if the verb has undergone movement from V-to-T-to-C. The Anti-Holmberg Effect explains that only when the verb remains in situ can we have QM, which is the result of the ordering operations between the different phases being in agreement. 
-
-In order to account for OS, \citeauthor{foxCyclicLinearizationSyntactic2005} propose that the during the spell-out of the VP domain the V is the leftmost element in its domain\footnote{The position of the V at the left-edge of the phase could be due to the movement of V to \textit{v} in which case it is actually the \textit{v}P that acts as the spell-out domain not the VP.} and at which point the ordering restrictions are in place which state that the V must precede the O. At this point the V moves to T and then to C which results in the object being free to move to its higher position because the order that existed at the VP domain continues to hold at the CP spell-out domain. 
-\ea OS and string-vacuous Neg-Shift
-\vspace{6pt}
- 	\ea {}[\textsubscript{CP} S \rnode{b1}V … [\textsubscript{NegP} \rnode{A1}O adv [\textsubscript{VP} \rnode{b2}t\textsubscript{v} \rnode{A2}t\textsubscript{o} ]]]
-	\psset{linearc=2pt} 
-	\ncbar[angle=90]{->}{A2}{A1}  
-	\ncbar[angle=-90,linestyle=dashed]{->}{b2}{b1} 
-	\vspace{6pt}
-	\ex VP Ordering: \textbf{V>O}\\
-		CP Ordering: S>V, \textbf{V>O}, O>adv, adv>VP
-	\z
-\z
-
-In the case of NegShift, where it is able to shift across various phonological material, it is proposed that the NI first moves to the left edge of the VP before spell-out of that domain. Once that domain is spelled-out the NI is free to shift to its position outside of the VP, in the case of (\ref{ex:n}) this is to NegP.
-	\ea NegShift when V is in-situ. \label{ex:n}
-	\vspace{6pt}
-		\ea {}[\textsubscript{CP} S aux … [\textsubscript{NegP} \rnode{A1}O [\textsubscript{VP} \rnode{A2}t\textsubscript{o}  V \rnode{A3}t\textsubscript{o} ]]]
-		\psset{linearc=2pt} 
-		\ncbar[angle=90]{->}{A3}{A2}  
-		\ncbar[angle=90]{->}{A2}{A1}
-		\ex VP Ordering: \textbf{O>V}\\
-		CP Ordering: S>V, aux>O, O>adv, adv>VP → \textbf{O>V}
-		\z 
-	\z
-
-As part of my QP, I will be providing an alternative account using cyclic linearization and compare it against the account I proposal in §\ref{sec:ZEIJLSTRA}.
+If \citet{chomskyMinimalistProgramLinguistic1993} is correct and only the higher copy should be pronounced, then the question arises as to why only a part of the copy is deleted. According to \citet{fanselowRemarksEconomyPronunciation2001,fanselowDistributedDeletion2002} the motivation for when partial deletion is possible has its motivations in PF or LF. If this is prosodically motivated what drives this deletion?
 
 %------------------------------------
 \section{Prosodic restrictions on NegShift} \label{sec:PROSODY}
@@ -675,7 +670,7 @@ The question arises as to how exactly does the grammar account for these variati
 
 Assuming that the copy theory of movement is correct then multiple copies of the NI will be present during PF spell-out \citep{chomskyMinimalistProgramLinguistic1993}. Under the standard view of this theory only the highest copy is pronounced in its entirety and the lower copy is deleted. \citet{kandybowiczGrammarRepetitionNupe2008} makes the observation that multiple copies that are generated by the narrow syntax can be \emph{phonologically} realized when pronouncing both copies results in avoiding an identifiable PF well-formedness condition. Similarly, I argue that PF can also dictate the amount of material that is deleted in those copies. PF being able to delete is not new and was argued for by \citet{ottDeletionClausalEllipsis2016} to account for German clausal ellipsis. 
 
-If PF is responsible for deleting the material than the crucial question is how are the two copies coordinated. This is easily accounted for if we turn to phase boundaries. It is assumed under phase theory \citep{chomskyPhases2008} that material is spelled-out at certain stages of the derivation instead of waiting until the complete tree is ready to be spelled-out at PF. Additionally, it is assumed that once a phase is spelled-out that the material in those phases become unaccessible for further manipulation by the syntax in what is known as the Phase Impenetrability Condition (PIC). 
+If PF is responsible for deleting the material than the crucial question is how are the two copies coordinated. This is easily accounted for if we turn to phase boundaries. It is assumed under phase theory \citep{chomskyDerivationPhase2001,chomskyPhases2008} that material is spelled-out at certain stages of the derivation instead of waiting until the complete tree is ready to be spelled-out at PF. Additionally, it is assumed that once a phase is spelled-out that the material in those phases become unaccessible for further manipulation by the syntax in what is known as the Phase Impenetrability Condition (PIC). 
 
 Assuming that phases play a crucial role in accounting for the NegShift there are two potential answers that arise: (i) phases do not play a role in determining phonological/prosodic behavior during PF, or (ii) Phases do play a role in determining phonological/prosodic behavior during PF.
 
@@ -754,12 +749,8 @@ Additionally, Danish places restriction on the verbal compliment if it is too ``
 	\glt `The Danish government must soon make clear that it supports the American plans.'
 	\z 
 
-This is further evidence that the LMC is an active constraint in these languages. 
+This is further evidence that the LMC is an active constraint in these languages. Prosody, in the form of the \textsc{Light Mittelfeld Condition}, plays an active role in regulating the size of the material in the \emph{Mittelfeld}
 
-\begin{tcolorbox}[width=\linewidth]
-
-Prosody, in the form of the \textsc{Light Mittelfeld Condition}, plays an active role in regulating the size of the material in the \emph{Mittelfeld}
-\end{tcolorbox}
 %------------------------------------
 \section{Conclusion} \label{sec:CONCLUSION}
 %------------------------------------
