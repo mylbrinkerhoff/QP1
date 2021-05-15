@@ -209,7 +209,7 @@ We can compare certain patterns that NegShift has against patterns that OS has. 
 
 There are three different metrics that we can use to determine the governing factors. These factors will examine: (i) how obedient to Holmberg's Generalization are NegShift and OS; (2) Where the loci of movement are; and (iii) how NegShift and OS interact with one another.   
 
-I show that these two phenomenon are in fact different with NegShift being governed and derived by syntactic factors and not prosodic as described for OS in \citet{erteschik-shirSoundPatternsSyntax2005,erteschik-shirScandinavianObjectShift2017,erteschik-shirVariationMainlandScandinavian2020,brinkerhoffMATCHINGPhrasesNorwegian2021}.  
+I show that these two phenomena are in fact different with NegShift being governed and derived by syntactic factors and not prosodic as described for OS in \citet{erteschik-shirSoundPatternsSyntax2005,erteschik-shirScandinavianObjectShift2017,erteschik-shirVariationMainlandScandinavian2020,brinkerhoffMATCHINGPhrasesNorwegian2021}.  
 
 %------------------------------------
 \subsection{Homlberg's Generalization} \label{sec:HG}
@@ -240,7 +240,7 @@ If, however, there is anything in the VP then OS is blocked and the object prono
 	Peter has not ~ seen him\\
 	\glt `Peter didn't see him'
 	\ex[*]{ 
-	\gll Peter har \texit{ham\sub{o}} ikke [\sub{VP} \textbf{sått} \textbf{t\sub{o}}] \\
+	\gll Peter har \textit{ham\sub{o}} ikke [\sub{VP} \textbf{sått} \textbf{t\sub{o}}] \\
 	Peter has him not ~ seen \\}
 	\glt Intended: `Peter didn't see him'
 	\z
@@ -312,15 +312,15 @@ This movement always results in the verb and weak pronoun being adjacent, after 
 \begin{forest}
 for tree={s sep=5mm, inner sep=0, l=0}
 	[CP [DP\\Jeg] 
-		[C´ [C [T [\emph{v} [V\\så{=}ham ] [\emph{v}]] [T]] [C] ]
+		[C´ [C [T [\emph{v} [V\\så{=}ham,name=C ] [\emph{v}]] [T]] [C] ]
 			[TP [DP\\Jeg]
-				[T´ [<T> [\emph{v} [V\\så{=}ham ] [\emph{v}]] [T]]
+				[T´ [<T> [\emph{v} [V\\så{=}ham,name=T ] [\emph{v}]] [T]]
 					[EpistP [Epist\\faktisk]
 						[NegP [Neg\\aldri]
 							[\emph{v}P [<DP>\\Jeg]
-								[\emph{v´} [<\emph{v}> [V\\så{=}ham ] [\emph{v}]]
-									[VP [<V>\\så]
-										[<DP>\\ham]
+								[\emph{v´} [<\emph{v}> [V\\så{=}ham,name=v ] [\emph{v}]]
+									[VP [<V>\\så,name=verb]
+										[<DP>\\ham,name=pro]
 									]
 								]
 							]
@@ -330,10 +330,14 @@ for tree={s sep=5mm, inner sep=0, l=0}
 			]	
 		]
 	]
+\draw[dashed,<->] (pro) to[out=south,in=south east] (verb);
+\draw[->] (verb) to[out=south, in=south east] (v);
+\draw[->] (v) to[out=south, in=south east] (T);
+\draw[->] (T) to[out=south, in=south east] (C);
 \end{forest}
 \z 
 
-More recent accounts \citep[e.g.,][]{erteschik-shirVariationMainlandScandinavian2020,brinkerhoffMATCHINGPhrasesNorwegian2021} assume that OS is entirely conditioned on phonological phrasing. \citet{brinkerhoffMATCHINGPhrasesNorwegian2021} argue that OS is the result of pressures from \textsc{Match}-style prosodic constraint that prevent the pronoun from forming a phonological phrase with the adverb. This results in the pronoun leaving the adverb's phonological phrase and forming a phonological phrase with the subject and moved verb where it is then allowed to incorporate because of its status as a prosodically weak element. 
+More recent accounts \citep[e.g.,][]{erteschik-shirVariationMainlandScandinavian2020,brinkerhoffMATCHINGPhrasesNorwegian2021} assume that OS is entirely conditioned on phonological phrasing. \citet{brinkerhoffMATCHINGPhrasesNorwegian2021} argue that OS is the result of pressures from \textsc{Match}-style prosodic constraints \citep{selkirkClauseIntonationalPhrase2009,selkirkSyntaxPhonologyInterface2011} that prevent the pronoun from forming a phonological phrase with the adverb. This results in the pronoun leaving the adverb's phonological phrase and forming a phonological phrase with the verb and subject where it is then allowed to incorporate into the verb because of its status as a prosodically weak element, i.e., a clitic.\footnote{It is important to note that I am treating the weak object pronouns as prosodic clitics instead of syntactic clitics following \citet{cardinalettiTypologyStructuralDeficiency1999}. I believe that there are two reasons for accepting this analysis over the \citeauthor{cardinalettiTypologyStructuralDeficiency1999} approach: (i) syllabification and (ii) word accents.} 
 
 \ea Prosodic structure according to \citet{brinkerhoffMATCHINGPhrasesNorwegian2021}.\\
 ( (jeg\sub{\textsc{cl}}=så\sub{$\omega$}=ham\sub{\textsc{cl}})\sub{$\phi$} (faktisk\sub{$\omega$} aldri\sub{$\omega$})\sub{$\phi$} )\sub{$\iota$}
@@ -380,7 +384,7 @@ Based on these observations, \citet{nilsenAdverbsAshift1997} convincingly shows 
 	}
 	\z  
 \z
-The evidence that NegShift targets NegP comes from the fact that these shifted elements establish sentential negation. \citet{svenoniusStrainsNegationNorwegian2002} shows that if the NI remains in situ then it only was narrow scope and does not establish sentential negation. We see this in the following sentences where the NI is only establishing the negation of the NP and not the negation of the whole sentence. We observe this with using the `neither' tag in (\ref{ex:NEITHER}). The `neither' tag is way to test whether sentiental negation is allowed for an otherwise positive sentence \citep{klimaNegationEnglish1964}. If the resulting sentence with the `neither' tag – or in our Norwegian case \emph{heller ikke} – is grammatical than `neither' is allowed for sentiential negation. 
+The evidence that NegShift targets NegP comes from a combination of these positional facts and the fact that these shifted elements establish sentential negation. \citet{svenoniusStrainsNegationNorwegian2002} shows that if the NI remains in situ then it only was narrow scope and does not establish sentential negation. We see this in the following sentences where the NI is only establishing the negation of the NP and not the negation of the whole sentence. We observe this with using the `neither' tag in (\ref{ex:NEITHER}). The `neither' tag is way to test whether sentiental negation is allowed for an otherwise positive sentence \citep{klimaNegationEnglish1964}. If the resulting sentence with the `neither' tag – or in our Norwegian case \emph{heller ikke} – is grammatical than `neither' is allowed for sentential negation. Because (\ref{ex:NEITHER}) is ungrammatical with the `neither' tag, something is already occupying Neg, in this case \emph{ingen poeng}. 
 
 \ea 
 	\ea[*] {
@@ -395,7 +399,7 @@ The evidence that NegShift targets NegP comes from the fact that these shifted e
 \z  
 
 
-We have seen that the final positions that NegShift and OS occupy are located in different positions. When OS occurs it is always to a position higher than all adverbials \citep{holmbergWordOrderSyntactic1986,holmbergRemarksHolmbergGeneralization1999}. When NegShift occurs it is to a position that is between `high' and `low' adverbs, exactly in the position that is predicted for negation in Cinque's hierarchy of adverbs \citep{nilsenAdverbsAshift1997,svenoniusStrainsNegationNorwegian2002}. 
+We have seen that the final positions that NegShift and OS occupy are located in different positions. When OS occurs it is always to a position higher than all adverbials and always adjacent to the verb \citep{holmbergWordOrderSyntactic1986,holmbergRemarksHolmbergGeneralization1999,erteschik-shirSoundPatternsSyntax2005}. When NegShift occurs it is to a position that is between `high' and `low' adverbs, exactly in the position that is predicted for negation in Cinque's hierarchy of adverbs \citep{nilsenAdverbsAshift1997,svenoniusStrainsNegationNorwegian2002}. 
 
 If NegShift and OS were governed by the same principles than it would stand to reason that they would both be moving to identical positions. We fail to observe NegShift and OS moving to identical locations. Instead what we observe is OS moving to a position higher than the adverbials and NegShift moving to a position that lies between the `high' and `low' adverbials, exactly to the position that negation takes, i.e. NegP. This difference between locations shows that OS and NegShift are not the same because the different positions that the moved elements take.
 
@@ -495,19 +499,19 @@ Following \citeauthor{chomskyMinimalistProgramLinguistic1993} movement is not a 
 
 We see as we proceed along the derivation that the verb is first copied and then merged with \emph{v} leaving behind a complete copy of itself in its base-generated position. This operation of copying and then remerging is then continued until we arrive at spell-out. According to \citet{chomskyMinimalistProgramLinguistic1993}, only the highest copy will be pronounced at PF, this is represented by the lower copies having a strike through them. 
 \pagebreak
-\ea Derivation of \emph{Anna har intet hørt.} \label{ex:Copy}
+\ea Derivation of \emph{Jeg har ingen bøger læst.} `I have not read any books.' \label{ex:Copy}
 \begin{forest}
 for tree={s sep=5mm, inner sep=0, l=0}
-	[CP [DP\\\emph{Anna}] 
+	[CP [DP\\\emph{Jeg}] 
 		[C´ [C [T\\\emph{har} ] [C] ] 
-			[TP [<DP>\\\sout{\emph{Anna}} ] 
+			[TP [<DP>\\\sout{\emph{Jeg}} ] 
 				[T´ [<T>\\\sout{\emph{har}} ] 
-					[NegP [DP\\\emph{intet}] 
+					[NegP [DP [\emph{ingen bøger}, roof] ]
 						[Neg´ [Neg] 
-							[\emph{v}P [<DP>\\\sout{\emph{Anna}}] 
-								[\emph{v´} [\emph{v} [V\\\emph{hørt}] [\emph{v}] ] 
-									[VP [<V>\\\emph{\sout{hørt}}] 
-										[<DP>\\\sout{\emph{intet}}] 
+							[\emph{v}P [<DP>\\\sout{\emph{Jeg}}] 
+								[\emph{v´} [\emph{v} [V\\\emph{læst},name=tgt] [\emph{v}] ] 
+									[VP [<V>\\\emph{\sout{læst}},name=src] 
+										[<DP> [\sout{\emph{ingen bøger}}, roof] ]
 									] 
 								] 
 							] 
@@ -517,6 +521,7 @@ for tree={s sep=5mm, inner sep=0, l=0}
 			] 
 		] 
 	] 
+\draw[->] (src) to[out=south, in=south] (tgt);
 \end{forest}
 \z 
 
