@@ -28,8 +28,9 @@
 \usepackage{graphicx}	%Inserting graphics, pictures, images 		
 \usepackage{stackengine} %Package to allow text above or below other text, Also helpful for HG weights 
 \usepackage{fontspec} %Selection of fonts must be ran in XeLaTeX
-\usepackage{amssymb} %Math symbols
-\usepackage{amsmath} % Mathematical enhancements for LaTeX
+\usepackage{amsfonts, amssymb, amsmath}
+\usepackage{mathtools} % also loads amsmath
+\usepackage{stmaryrd} % nice denotation brackets and a few other flourishes
 \usepackage{setspace} %Linespacing
 \usepackage{multicol} %Multicolumn text
 \usepackage{enumitem} %Allows for continuous numbering of lists over examples, etc.
@@ -65,7 +66,7 @@
 % \usepackage{linguex} % Linguistic examples
 % \usepackage{langsci-linguex} % Linguistic examples
 \usepackage{langsci-gb4e} % Language Science Press' modification of gb4e
-% \usepackage{langsci-avm} % Language Science Press' AVM package
+\usepackage{langsci-avm} % Language Science Press' AVM package
 \usepackage{tikz} % Drawing Hasse diagrams
 % \usepackage{pst-asr} % Drawing autosegmental features
 \usepackage{pstricks} % required for pst-asr, OTtablx, pst-jtree.
@@ -85,6 +86,12 @@
 %%MACROS
 \newcommand{\sub}[1]{\textsubscript{#1}}
 \newcommand{\supr}[1]{\textsuperscript{#1}}
+
+%%TIKZ PREAMBLE STUFF 
+% \tikzset{exarrows/.style={semithick,
+% 						arrows={-Stealth[scale=1, scale length=1,
+% 							 			scale width=1]}}}
+
 
 \begin{document}
 	
@@ -311,16 +318,16 @@ This movement always results in the verb and weak pronoun being adjacent, after 
 \ea \label{ex:incorporation}
 \begin{forest}
 for tree={s sep=5mm, inner sep=0, l=0}
-	[CP [DP\\Jeg] 
-		[C´ [C [T [\emph{v} [V\\så{=}ham,name=C ] [\emph{v}]] [T]] [C] ]
-			[TP [DP\\Jeg]
-				[T´ [<T> [\emph{v} [V\\så{=}ham,name=T ] [\emph{v}]] [T]]
-					[EpistP [Epist\\faktisk]
-						[NegP [Neg\\aldri]
-							[\emph{v}P [<DP>\\Jeg]
-								[\emph{v´} [<\emph{v}> [V\\så{=}ham,name=v ] [\emph{v}]]
-									[VP [<V>\\så,name=verb]
-										[<DP>\\ham,name=pro]
+	[CP [DP\\\emph{Jeg}] 
+		[C´ [C [T [\emph{v} [V\\\emph{så{=}ham},name=C ] [\emph{v}]] [T]] [C] ]
+			[TP [<DP>\\\emph{Jeg}]
+				[T´ [<T> [\emph{v} [V\\\emph{så{=}ham},name=T ] [\emph{v}]] [T]]
+					[EpistP [Epist\\\emph{faktisk}]
+						[NegP [Neg\\\emph{aldri}]
+							[\emph{v}P [<DP>\\\emph{Jeg}]
+								[\emph{v´} [<\emph{v}> [V\\\emph{så{=}ham},name=v ] [\emph{v}]]
+									[VP [<V>\\\emph{så},name=verb]
+										[<DP>\\\emph{ham},name=pro]
 									]
 								]
 							]
@@ -337,8 +344,8 @@ for tree={s sep=5mm, inner sep=0, l=0}
 \end{forest}
 \z 
 
-More recent accounts \citep[e.g.,][]{erteschik-shirVariationMainlandScandinavian2020,brinkerhoffMATCHINGPhrasesNorwegian2021} assume that OS is entirely conditioned on phonological phrasing. \citet{brinkerhoffMATCHINGPhrasesNorwegian2021} argue that OS is the result of pressures from \textsc{Match}-style prosodic constraints \citep{selkirkClauseIntonationalPhrase2009,selkirkSyntaxPhonologyInterface2011} that prevent the pronoun from forming a phonological phrase with the adverb. This results in the pronoun leaving the adverb's phonological phrase and forming a phonological phrase with the verb and subject where it is then allowed to incorporate into the verb because of its status as a prosodically weak element, i.e., a clitic.\footnote{It is important to note that I am treating the weak object pronouns as prosodic clitics instead of syntactic clitics following \citet{cardinalettiTypologyStructuralDeficiency1999}. I believe that there are two reasons for accepting this analysis over the \citeauthor{cardinalettiTypologyStructuralDeficiency1999} approach: (i) syllabification and (ii) word accents.} 
-
+More recent accounts \citep[e.g.,][]{erteschik-shirVariationMainlandScandinavian2020,brinkerhoffMATCHINGPhrasesNorwegian2021} assume that OS is entirely conditioned on phonological phrasing. \citet{brinkerhoffMATCHINGPhrasesNorwegian2021} argue that OS is the result of pressures from \textsc{Match}-style prosodic constraints \citep{selkirkClauseIntonationalPhrase2009,selkirkSyntaxPhonologyInterface2011} that prevent the pronoun from forming a phonological phrase with the adverb. This results in the pronoun leaving the adverb's phonological phrase and forming a phonological phrase with the verb and subject where it is then allowed to incorporate into the verb because of its status as a prosodically weak element, i.e., a clitic.\footnote{It is important to note that I am treating the weak object pronouns as prosodic clitics instead of syntactic clitics following \citet{cardinalettiTypologyStructuralDeficiency1999}. I believe that there are two reasons for accepting this analysis over the \citeauthor{cardinalettiTypologyStructuralDeficiency1999} approach: (i) syllabification of the clitic as part of the verb and (ii) the tonal accent of the verb overrides the tonal accent of the pronoun. See \citet{myrbergProsodicWordSwedish2013,myrbergProsodicHierarchySwedish2015,riadPhonologySwedish2014} for a detailed discussion into the facts about syllabification and word accents. } 
+\newline
 \ea Prosodic structure according to \citet{brinkerhoffMATCHINGPhrasesNorwegian2021}.\\
 ( (jeg\sub{\textsc{cl}}=så\sub{$\omega$}=ham\sub{\textsc{cl}})\sub{$\phi$} (faktisk\sub{$\omega$} aldri\sub{$\omega$})\sub{$\phi$} )\sub{$\iota$}
 \z 
@@ -453,7 +460,7 @@ If, however, the IO is a NegQP and the DO is a pronoun then the pronoun is block
 		\z 
 	\z
 
-This is actually a very important point for the question of the prosodic nature of the shifting. If we assume that these are moving to a position outside of the VP or are some sort of adjunct to VP then we would assume that OS should be allowed according to Holmberg's Generalization.\footnote{See \citet{thrainssonSyntaxIcelandic2010} for discussion and debate about where negation is located in Scandinavian languages.} However, this is not the case if we follow the logic from Holmberg's Generalization. Holmberg's Generalization requires that OS occur if there is not a phonologically visible category that asymmetrically c-commands the object's base position. Because OS is blocked, then Neg is a phonologically visible category that asymmetrically c-commands the object. Following \citet{chomskyMinimalistProgramLinguistic1993,chomskyMinimalistProgram1995} notion of the copy theory of movement than there is something in the same phrase which prevents it from shifting to a position. 
+This is actually a very important point for the question of the prosodic nature of the shifting. OS takes a weak pronominal object and is subject to Holmberg's Generalization, which prevents OS if there is a phonologically visible category in the VP. The question arises why are there freezing effects for OS when NegShift has occurred? One way to understand this freezing effect is that it is not actually sensitive to the VP edge but instead sensitive to phase boundaries \citep{chomskyMinimalistInquiriesFramework2000,chomskyDerivationPhase2001,chomskyPhases2008}. It is commonly assumed that adverbs belong to the \emph{v}P phase and if we also believe that adverbs form this Cinquean hierarchy of functional heads then these phrases that form from the functional heads also must belong to the same phase as the material residing in \emph{v}P. This results in having the moved NI asymmetrically c-commanding the weak pronominal object (see discussion in \cite{brinkerhoffMATCHINGPhrasesNorwegian2021} about discussion why adverbs do not present problems for OS). We will see in Section \ref{sec:PROSODY}that this notion of a phase boundary encompassing both the NI in NegP and its base generated position in \emph{v}P will be important for explaining the prosodic restrictions on NegShift that we do.
 
 An additional case involving OS and NegShift is when both the indirect and direct objects are allowed to shift. \citet[417f]{broekhuisUnificationObjectShift2020} observes that weak pronominal object shift behaves differently than full DP objects in what loci there are allowed to inhabit. In the case of weak pronominals they are required to appear outside of the \textit{v}P if there is no intervening phonological material (i.e., Holmberg's Generalization \cite{holmbergWordOrderSyntactic1986,holmbergRemarksHolmbergGeneralization1999}). \citeauthor{broekhuisUnificationObjectShift2020} observes that when OS and NegShift are both allowed to occur they are subject to certain ordering restrictions. Citing examples from \citet[163ff]{christensenInterfacesNegationSyntax2005}, Broekhuis shows the following pair of examples:
 	\ea 
@@ -473,7 +480,7 @@ In (\ref{ex:NegShift}), we see that when we have a negative object that it shift
 	I have not lent her any books.\\
 	\glt `I haven't lent her any books.'
 	\z
-However, when the main verb has risen to C as in (\ref{ex:NegOS}) then the weak pronominal moves to a position higher than the adverb \textit{fraktisch} `actually'. The negative object is not able to move to the similar position that is higher than the adverb. Additionally, this results in OS > NegShift which \citeauthor{broekhuisUnificationObjectShift2020} reports to be a universal. This does help us see that that even though these two phenomena appear to be similar they are in fact slightly different, due to the differences in the where the two different movement operations' targets are.
+However, when the main verb has risen to C as in (\ref{ex:NegOS}) then the weak pronominal moves to a position higher than the adverb \textit{fraktisch} `actually'. Additionally, this results in OS > NegShift, which \citeauthor{broekhuisUnificationObjectShift2020} reports to be a universal. This does help us see that even though these two phenomena appear to be similar they are in fact slightly different, due to the differences in the where the two different movement operations' targets are.
 
 %------------------------------------
 \subsection{Interim Summary} \label{sec:SUMMARY}
@@ -493,25 +500,38 @@ Neg-split: It isn’t required that a doctor be present
 
 In this example the negation is allowed to scope higher than the auxiliary \emph{has to} while doctor resides within the scope of this auxiliary. This is what allows for the reading that it isn't necessary for a doctor to be present for nurses to administer medicine. 
 
-\citet{zeijlstraSyntacticallyComplexStatus2011} takes these observations in English as well as this same behavior in Dutch and German provides an analysis of the split-scope interpretation that exists for negative indefinites in these languages.  \citeauthor{zeijlstraSyntacticallyComplexStatus2011} assumes that this behavior is the result of the compositional status of negative indefinites. He claims that NIs are composed of a negative operator and an indefinite component and that the split-scope interpretation is the result of a copy-theory of movement \citep{chomskyMinimalistProgramLinguistic1993}. 
+\citet{zeijlstraSyntacticallyComplexStatus2011} takes these observations in English as well as this same behavior in Dutch and German provides an analysis of the split-scope interpretation that exists for negative indefinites in these languages.  \citeauthor{zeijlstraSyntacticallyComplexStatus2011} assumes that this behavior is the result of the compositional status of negative indefinites. He claims that NIs are composed of a negative operator and an indefinite component, (\ref{ex:NIComposition}).
+\ea \label{ex:NIComposition} NI composition according to \citet{zeijlstraSyntacticallyComplexStatus2011}.\\
+$\begin{bmatrix}
+\begin{forest}
+	[	[$Op_\neg$]
+		[$\exists$]
+	]
+\end{forest}
+\end{bmatrix}$ $\Leftrightarrow$  /ingen/
+\z 
+In order for the sentence to receive negation this $Op_\neg$ needs to be located within NegP otherwise the sentence fails to receive negation. The fact that NIs have split-scope where negation scopes wide suggests that this $Op_\neg$ ultimately does resides in NegP. \citeauthor{zeijlstraSyntacticallyComplexStatus2011} accounts for this behavior by drawing on the copy-theory of movement \citep{chomskyMinimalistProgramLinguistic1993}. 
 
-Following \citeauthor{chomskyMinimalistProgramLinguistic1993} movement is not a unique operation that literally moves one element to a position higher in the syntax. Instead, movement is the product of copying a constituent and then remerging it into the syntactic structure. This then results in two or more instances of the constituent, as seen in the syntactic structure for (\ref{ex:Copy}). 
+Following \citeauthor{chomskyMinimalistProgramLinguistic1993}, movement is not a unique operation that literally moves one element to a position higher in the syntax. Instead, movement is the product of copying a constituent and then remerging it into the syntactic structure. This then results in two or more instances of the constituent, as seen in the syntactic structure for (\ref{ex:Copy}). 
 
-We see as we proceed along the derivation that the verb is first copied and then merged with \emph{v} leaving behind a complete copy of itself in its base-generated position. This operation of copying and then remerging is then continued until we arrive at spell-out. According to \citet{chomskyMinimalistProgramLinguistic1993}, only the highest copy will be pronounced at PF, this is represented by the lower copies having a strike through them. 
-\pagebreak
-\ea Derivation of \emph{Jeg har ingen bøger læst.} `I have not read any books.' \label{ex:Copy}
+We see as we proceed along the derivation that the verb is first copied and then merged with \emph{v} leaving behind a complete copy of itself in its base-generated position. This operation of copying and then remerging is then continued until we arrive at spell-out. This movement is always driven by the need to value features. In the case of the the NI moving to Spec,NegP it is to value the [{$u$\textsc{Neg}}] feature in NegP with the $Op_\neg$ which bears an interpretable negation feature. After moving to value the feature at PF spell out only the highest copy will be pronounced, this is represented by the lower copies having a strike through them. 
+% \pagebreak
+\ea Derivation of \emph{Jeg har ingen bøger lånt børnene.} `I have not lent any books to the children.' \label{ex:Copy}
+\resizebox*{0.8\linewidth}{!}{
 \begin{forest}
 for tree={s sep=5mm, inner sep=0, l=0}
-	[CP [DP\\\emph{Jeg}] 
-		[C´ [C [T\\\emph{har} ] [C] ] 
-			[TP [<DP>\\\sout{\emph{Jeg}} ] 
-				[T´ [<T>\\\sout{\emph{har}} ] 
-					[NegP [DP [\emph{ingen bøger}, roof] ]
-						[Neg´ [Neg] 
-							[\emph{v}P [<DP>\\\sout{\emph{Jeg}}] 
-								[\emph{v´} [\emph{v} [V\\\emph{læst},name=tgt] [\emph{v}] ] 
-									[VP [<V>\\\emph{\sout{læst}},name=src] 
-										[<DP> [\sout{\emph{ingen bøger}}, roof] ]
+	[CP [DP\\\emph{Jeg},name=Sloci] 
+		[C´ [C [T\\\emph{har},name=AUXtgt ] [C] ] 
+			[TP [<DP>\\\sout{\emph{Jeg}},name=Stgt ] 
+				[T´ [<T>\\\sout{\emph{har}},name=AUXsrc ] 
+					[NegP [DP [\emph{ingen bøger}\\{[\textsc{Neg}]}, roof,name=NItgt] ]
+						[Neg´ [Neg\\\emph{Op$_\neg$}\\{[\sout{$u$\textsc{Neg}}]}] 
+							[\emph{v}P [<DP>\\\sout{\emph{Jeg}},name=Ssrc] 
+								[\emph{v´} [\emph{v} [V\\\emph{lånt},name=tgt] [\emph{v}] ] 
+									[VP [DP\\\emph{børnene}] 
+										[V´ [<V>\\\emph{\sout{lånt}},name=src] 
+											[<DP> [\sout{\emph{ingen bøger}}\\{[\textsc{Neg}]}, roof,name=NIsrc] ]
+										]	
 									] 
 								] 
 							] 
@@ -521,8 +541,8 @@ for tree={s sep=5mm, inner sep=0, l=0}
 			] 
 		] 
 	] 
-\draw[->] (src) to[out=south, in=south] (tgt);
-\end{forest}
+\draw[->] (NIsrc) to[out=south, in=south] (NItgt);
+\end{forest}}
 \z 
 
 If we assume that \citet{zeijlstraSyntacticallyComplexStatus2011} is correct in that negative indefinites exist in their base-generated position and in this higher copy because of feature-checking and for interpretation at LF then we expect that the higher copy is the only one that is ever pronounced.
@@ -531,135 +551,138 @@ If we assume that \citet{zeijlstraSyntacticallyComplexStatus2011} is correct in 
 \subsection{Alternative Account} \label{sec:alternative}
 %------------------------------------
 
-An alternative to the theory presented above comes from Cyclic Linearization, which is a theory that was developed by \citet{foxCyclicLinearizationSyntactic2005} as a way to account for OS and Holmberg's Generalization. This theory works by stipulating that spell-out of the morphosyntax is cyclic and order preserving, which means that as you spell-out each successive spell-out domain you need to ensure that whatever linearization existed when that domain was spelled-out persist at the next spell-out domain's ordering restrictions. This theory also had the benefit of accounting for when OS was allowed or not allowed to occur. 
+An alternative to the theory presented above comes from Cyclic Linearization, which is a theory that was developed by \citet{foxCyclicLinearizationSyntactic2005} as a way to account for OS and Holmberg's Generalization. This theory works by stipulating that spell-out of the morphosyntax is cyclic and order preserving, which means that as you spell-out each successive spell-out domain (i.e., phases) you need to ensure that whatever linearization existed when that domain was spelled-out persist at the next spell-out domain's ordering restrictions. This ensures that at the end of the derivation the verb and the object pronoun have the correct linearization where the object pronouns are always to the right of the verb. This theory also had the benefit of accounting for when OS was allowed or not allowed to occur based on whether or not these ordering restrictions between spell-out domains are the same or different.  
 
-This proposal was extended by \citet{foxCyclicLinearizationSyntactic2005} and \citet{engelsMicrovariationObjectPositions2011,engelsScandinavianNegativeIndefinites2012} to account for quantifier movement (QM), of which NegShift is claimed to be a subset under their analyses. QM is subject to an ``Anti-Holmberg Effect'' or an ``Inverse Holmberg Effect''. As previously discussed above Holmberg's Generalization stipulates that OS can only apply if the verb has undergone movement from V-to-T-to-C. The Anti-Holmberg Effect explains that only when the verb remains in situ can we have QM, which is the result of the ordering operations between the different phases being in agreement. 
-
-In order to account for OS, \citeauthor{foxCyclicLinearizationSyntactic2005} propose that the during the spell-out of the VP domain the V is the leftmost element in its domain\footnote{The position of the V at the left-edge of the phase could be due to the movement of V to \textit{v} in which case it is actually the \textit{v}P that acts as the spell-out domain not the VP.} and at which point the ordering restrictions are in place which state that the V must precede the O. At this point the V moves to T and then to C which results in the object being free to move to its higher position because the order that existed at the VP domain continues to hold at the CP spell-out domain. 
+In order to account for OS, \citeauthor{foxCyclicLinearizationSyntactic2005} propose that during the spell-out of the VP domain the V is the leftmost element in its domain\footnote{The position of the V at the left-edge of the phase could be due to the movement of V to \textit{v} in which case it is actually the \textit{v}P that acts as the spell-out domain not the VP.} and at which point the ordering restrictions are in place which state that the V must precede the O. At this point the V moves to T and then to C which results in the object being free to move to its higher position because the order that existed at the VP domain continues to hold at the CP spell-out domain. 
 \ea OS and string-vacuous Neg-Shift
 % \vspace{6pt}
- 	\ea ~[\textsubscript{CP} S \rnode{B1}V … [\textsubscript{NegP} \rnode{A1}O adv [\textsubscript{VP} \rnode{B2}t\textsubscript{v} \rnode{A2}t\textsubscript{o} ]]]
-	% \psset{linearc=2pt} 
-	% \ncbar[angle=90]{->}{A2}{A1}  
-	% \ncbar[angle=-90,linestyle=dashed]{->}{b2}{b1} 
-	% \vspace{6pt}
+ 	\ea%
+ 	\tikzstyle{every picture}+=[remember picture, inner sep=0pt, baseline, anchor=base]%
+ 	 ~[\sub{CP} S \tikz\node(B2){V}; … [\sub{NegP} \tikz\node(A2){O}; adv [\sub{VP} \tikz\node(B1){t\sub{v}}; \tikz\node(A1){t\sub{o}}; ]]]
+ 	 \begin{tikzpicture}[overlay]
+	\draw [->] (A1.south) -- ++(south:1.5ex) -| (A2.south); 
+	\draw [->, dashed] (B1.north) -- ++(north:1.5ex) -| (B2.north); 
+	\end{tikzpicture}
 	\ex VP Ordering: \textbf{V>O}\\
 		CP Ordering: S>V, \textbf{V>O}, O>adv, adv>VP
 	\z
 \z
 
-In the case of NegShift, where it is able to shift across various phonological material, it is proposed that the NI first moves to the left edge of the VP before spell-out of that domain. Once that domain is spelled-out the NI is free to shift to its position outside of the VP, in the case of (\ref{ex:n}) this is to NegP.
+% \ea%
+% \tikzstyle{every picture}+=[remember picture, inner sep=0pt, baseline, anchor=base]%
+% {}[\textsubscript{CP} \tikz\node(wh2){Which}; did John say [\textsubscript{CP} PRO to move \tikz\node(wh1){\textunderscore}; ]]? 
+% \begin{tikzpicture}[overlay]
+% \draw [->] (wh1.south) -- ++(south:1.5ex) -| (wh2.south); 
+% \draw [->, dashed] (wh1.north) -- ++(north:1.5ex) -| (wh2.north); 
+% \end{tikzpicture}
+% \z 
+
+This proposal was extended by \citet{foxCyclicLinearizationSyntactic2005} and \citet{engelsMicrovariationObjectPositions2011,engelsScandinavianNegativeIndefinites2012} to account for quantifier movement (QM), of which NegShift is claimed to be a subset under their analyses. QM is subject to an ``Anti-Holmberg Effect'' or an ``Inverse Holmberg Effect''. As previously discussed above Holmberg's Generalization stipulates that OS can only apply if the verb has undergone movement from V-to-T-to-C. The Anti-Holmberg Effect explains that only when the verb remains in situ can we have QM, which is the result of the ordering operations between the different phases being in agreement. 
+
+In the case of NegShift, where it is able to shift across various phonological material as opposed to OS which cannot shift across intervening phonological material, it is proposed that the NI first moves to the left edge of the VP before spell-out of that domain. Once that domain is spelled-out the NI is free to shift to its position outside of the VP, in the case of (\ref{ex:n}) this is to NegP.
 	\ea NegShift when V is in-situ. \label{ex:n}
-	% \vspace{6pt}
-		\ea {}[\textsubscript{CP} S aux … [\textsubscript{NegP} \rnode{A1}O [\textsubscript{VP} \rnode{A2}t\textsubscript{o}  V \rnode{A3}t\textsubscript{o} ]]]
-		% \psset{linearc=2pt} 
-		% \ncbar[angle=90]{->}{A3}{A2}  
-		% \ncbar[angle=90]{->}{A2}{A1}
+		\ea%
+ 	\tikzstyle{every picture}+=[remember picture, inner sep=0pt, baseline, anchor=base]%
+ 	 ~[\sub{CP} S aux … [\sub{NegP} \tikz\node(A3){O}; [\sub{VP} \tikz\node(A2){t\sub{o}};  V \tikz\node(A1){t\sub{o}}; ]]]
+ 	 \begin{tikzpicture}[overlay]
+	\draw [->] (A1.south) -- ++(south:1.5ex) -| (A2.south); 
+	\draw [->] (A2.south) -- ++(south:1.5ex) -| (A3.south); 
+	\end{tikzpicture}
 		\ex VP Ordering: \textbf{O>V}\\
 		CP Ordering: S>V, aux>O, O>adv, adv>VP → \textbf{O>V}
 		\z 
 	\z
 
-This account does seem to account for the basic pattern of shifting. However, this account is ultimately unable to account for the split scope that exists. Under this account there is no copies that move but instead the whole item moves leaving only a trace. This trace does not bear any features or content. This theory predicts that we should only have interpretation in the higher position. 
-
-Another issue that arises is if we assume that we have copies instead of traces, in order to satisfy the split-scope behavior in NIs. This would then result in several incorrect ordering restrictions at each spell-out domain.
-	\ea NegShift when V is in-situ. \label{ex:VInSitu}
-	% \vspace{6pt}
-		\ea {}[\textsubscript{CP} S aux … [\textsubscript{NegP} \rnode{A1}O [\textsubscript{VP} \rnode{A2}O\textsubscript{o}  V \rnode{A3}O\textsubscript{o} ]]]
-		\ex VP Ordering: \textbf{O>V}, \textbf{V>O}\\
-		CP Ordering: S>V, aux>O, O>adv, adv>VP → \textbf{O>V}
-		\z 
-	\z
-We see that assuming we have copies produces multiple ordering restrictions for the V and NI object and the grammar is unable to determine which order is correct. 
+This account does seem to explain the basic pattern of shifting found for both OS and NegShift. However, one of the biggest issues for this account ultimately has to do with the requirement for NegShift and other quantifier movement to first move to Spec,VP before moving to its final position outside of the verb phrase. The reason that this `micro' movement is problematic is because there is no direct evidence that this movement occurs, other than being motivated by the theory. 
 
 %------------------------------------
 \subsection{Prosodic factors of NegShift} \label{sec:Confound}
 %------------------------------------
 
-Danish allows for a pattern where only a negative indefinite of a certain size is allowed to shift. 
-	\ea
+In addition to the standard case of NegShift where you shift a pronoun or a NI DP, there appears to be size restrictions in place which prevent movement of the NI if it is to large. This is particularly true for the Danish examples in (\ref{ex:NIinteractions}). 
+	\ea\label{ex:NIinteractions}
 		\ea 
 		\gll Jeg har \textit{intet}\textsubscript{o} hørt t\textsubscript{o}.\\
 		I have nothing heard\\
-		\glt  `I havn't heard anything.'
+		\glt  `I havn't heard anything.'\label{ex:NIPro}
 		\ex 
 		\gll Jeg har [\textit{intet} \textit{nyt}]\textsubscript{o} hørt t\textsubscript{o}.\\
 		I have nothing new heard\\
-		\glt `I haven't heard anything new'
+		\glt `I haven't heard anything new'\label{ex:NIDP}
 		\ex[*] {
 		\gll Jeg har [\textit{intet} \textit{nyt} \textit{i} \textit{sagen}]\textsubscript{o} hørt t\textsubscript{o}.\\
 		I have nothing new in case-\textsc{det} heard\\
-		\glt `I haven't heard anything new about the case.'
+		\glt `I haven't heard anything new about the case.'\label{ex:NIHeavy}
 		}
 		\ex[*] {
 		\gll Jeg har [\textit{intet} \textit{nyt} \textit{i} \textit{sagen} \textit{om} \textit{de} \textit{stjålne} \textit{malerier}]\textsubscript{o} hørt t\textsubscript{o}.\\
 		I have nothing new in case-\textsc{det} about the stolen paintings heard\\
 		}
-		\glt `I haven't heard anything new in the case about the stolen paintings.'
+		\glt `I haven't heard anything new in the case about the stolen paintings.'\label{ex:NISuper}
 		\z 
 	\z
-These examples will be discussed further in Section \ref{sec:PROSODY}. It is enough that they present a challenge for the analysis presented above.
+Both (\ref{ex:NIPro}) and (\ref{ex:NIDP}) are grammatical because a pronoun (\emph{intet}) and simple DP (\emph{intet nyt}) have undergone NegShift. However, once the NI gets sufficiently heavy (e.g., the addition of the PPs \emph{i sagen} and \emph{i sagen om de stjålne malerier}) in (\ref{ex:NIHeavy}) and (\ref{ex:NISuper}) NegShift becomes ungrammatical. 
 
-If we had, for example, the sentence \emph{Anna har intet hørt i sagen om de stjålne malerier} `Anna hasn't hear anything in the case about the stolen painting' and tried to derive this tree we would have no way to explain this behavior. Following \citet{zeijlstraSyntacticallyComplexStatus2011} theory, we would assume that the DP containing the NI and its complement would be fully copied from its base-position and merged into NegP as in the tree in (\ref{ex:tree-problem}). This would result in two copies. 
-\pagebreak
-\ea \label{ex:tree-problem}\resizebox*{\linewidth}{!}{\begin{tikzpicture} 
-	\tikzset{every tree node/.style={align=center,anchor=north}} 
-	\Tree [.CP 	DP\\\emph{Anna} 
-				[.C´ C\\\emph{har} 
-				[.TP <DP> 
-					[.T´ T 
-						[.NegP  
-							[.DP \edge[roof]; {intet i sagen om de stjålne malerier}
-							]
-							[.vP <DP>
-								[.v´ \emph{hørt}   
-									[.VP <V> 
-										[.DP \edge[roof]; {intet i sagen om de stjålne malerier}
-										]
-									]
-								]
-							]    
-						]
+These facts require refinement of the proposal presented above. If we had, for example, the sentence \emph{Jeg har intet hørt i sagen om de stjålne malerier} `I haven't heard anything new in the case about the stolen painting' and tried to derive this tree we would have no way to explain this behavior. Following \citet{zeijlstraSyntacticallyComplexStatus2011} theory, we would assume that the DP containing the NI and its complement would be fully copied from its base-position and merged into NegP as in the tree in (\ref{ex:tree}). This would result in two copies of the NI expression. 
+% \pagebreak
+\ea	\label{ex:tree} \resizebox*{\linewidth}{!}{
+	\begin{forest}
+	for tree={s sep=10mm, inner sep=0, l=0}
+	[CP [DP\\\emph{Jeg}] 
+		[C´ [C [T\\\emph{har} ] [C] ] 
+			[TP [<DP>\\\sout{\emph{Jeg}} ] 
+				[T´ [<T>\\\sout{\emph{har}} ] 
+					[NegP [DP [\emph{intet nyt i sagen om de stjålne malerier}, roof] ]
+						[Neg´ [Neg] 
+							[\emph{v}P [<DP>\\\sout{\emph{Jeg}}] 
+								[\emph{v´} [\emph{v} [V\\\emph{hørt},name=tgt] [\emph{v}] ] 
+									[VP [<V>\\\emph{\sout{hørt}},name=src] 
+										[DP [\emph{intet nyt i sagen om de stjålne malerier}, roof] ]
+									] 
+								] 
+							] 
+						] 
 					] 
-				]
 				] 
 			] 
-	\end{tikzpicture}}
+		] 
+	] 
+	\end{forest}	
+	}
 \z 
 At this point during PF, part of the higher copy is deleted leaving only the NI pronoun. In the lower copy that same pronoun is deleted. 
-\ea	\label{ex:tree} \resizebox*{\linewidth}{!}{
-	\begin{tikzpicture} 
-	\tikzset{every tree node/.style={align=center,anchor=north}} 
-	\Tree [.CP 	DP\\\emph{Anna} 
-				[.C´ C\\\emph{har} 
-				[.TP <DP> 
-					[.T´ T 
-						[.NegP  
-							[.DP \edge[roof]; {intet \sout{i sagen om de stjålne malerier}}
-							]
-							[.vP <DP>
-								[.v´ hørt   
-									[.VP <V> 
-										[.DP \edge[roof]; {\sout{intet} i sagen om de stjålne malerier}
-										]
-									]
-								]
-							]    
-						]
+\ea \label{ex:tree-problem}\resizebox*{\linewidth}{!}{
+\begin{forest}
+for tree={s sep=10mm, inner sep=0, l=0}
+	[CP [DP\\\emph{Jeg}] 
+		[C´ [C [T\\\emph{har} ] [C] ] 
+			[TP [<DP>\\\sout{\emph{Jeg}} ] 
+				[T´ [<T>\\\sout{\emph{har}} ] 
+					[NegP [DP [\emph{intet nyt \sout{i sagen om de stjålne malerier}}, roof] ]
+						[Neg´ [Neg] 
+							[\emph{v}P [<DP>\\\sout{\emph{Jeg}}] 
+								[\emph{v´} [\emph{v} [V\\\emph{hørt},name=tgt] [\emph{v}] ] 
+									[VP [<V>\\\emph{\sout{hørt}},name=src] 
+										[DP [\emph{\sout{intet nyt} i sagen om de stjålne malerier}, roof] ]
+									] 
+								] 
+							] 
+						] 
 					] 
-				]
 				] 
 			] 
-	\end{tikzpicture}}
-
+		] 
+	] 
+\end{forest}	
+}
 \z 
-If \citet{chomskyMinimalistProgramLinguistic1993} is correct and only the higher copy should be pronounced, then the question arises as to why only a part of the copy is deleted. According to \citet{fanselowRemarksEconomyPronunciation2001,fanselowDistributedDeletion2002} the motivation for when partial deletion is possible has its motivations in PF or LF. If this is prosodically motivated what drives this deletion?
+If \citet{chomskyMinimalistProgramLinguistic1993} is correct and only the higher copy should be pronounced, then the question arises as to why only a part of the copy is deleted. According to \citet{fanselowRemarksEconomyPronunciation2001,fanselowDistributedDeletion2002} the motivation for when partial deletion is possible has its motivations in PF. If this is prosodically motivated what drives this deletion?
 
 %------------------------------------
 \section{Prosodic restrictions on NegShift} \label{sec:PROSODY}
 %------------------------------------
 
-However, as noted earlier not all NegShift is treated equal. \citet[65f]{christensenInterfacesNegationSyntax2005}, speaking on Danish, claims that the ``weight" of the NI plays a crucial factor in whether or not NegShift occurs. 
+As noted earlier not all NegShift is treated equal. \citet[65f]{christensenInterfacesNegationSyntax2005}, speaking on Danish, claims that the ``weight" of the NI plays a crucial factor in whether or not NegShift occurs. 
 	\ea \label{ex:weight}
 		\ea \label{ex:weight-pronoun}
 		\gll Jeg har \textit{intet}\textsubscript{o} hørt t\textsubscript{o}.\\
@@ -681,7 +704,13 @@ However, as noted earlier not all NegShift is treated equal. \citet[65f]{christe
 	\z
 We observe in (\ref{ex:weight}) that if the NI is either a pronoun (\ref{ex:weight-pronoun}) or a simple DP (\ref{ex:weight-simple}), consisting of just the NI determiner and noun, then Danish treats such constructions as grammatical. If, however, the NI is larger than a simple DP, as in (\ref{ex:weight-heavy}) and (\ref{ex:weight-superheavy}), it suddenly becomes ungrammatical. 
 
-In those instances where the NI is too large there are two potential repair strategies. One option is to strand the PP which results in moving just the pronoun (\ref{ex:split}) or using the negative particle \textit{ikke} in NegP and an NPI in the lower position (\ref{ex:NPI}).
+In those instances where the NI is too large there are two potential repair strategies. One option is to strand the PP which results in moving just the pronoun (\ref{ex:split}) or using the negative particle \textit{ikke} in NegP and an NPI in the lower position (\ref{ex:NPI}).\footnote{I have yet to find any evidence that \emph{intet nyt} is allowed to shift while stranding the PP. I found one example on a Danish website that shows the negative particle and an NPI. 
+\ea
+\gll Selvom der ikke er noget nyt i sagen om det stjålne Nolde-maleri, tror de stadig på miraklet i Ølstrup.\\
+though there not is anything new in case-the about the stolen {Nolde painting} believe they still in miracle-the in Ølstrup\\
+\glt `Although there is nothing new in the case of the stolen Nolde painting, they still believe in the miracle in Ølstrup.' \hfill (\href{https://www.tvmidtvest.dk/midt-og-vestjylland/overblik-storste-kunsttyverier-i-danmark}{Overblik: Største kunsttyverier i Danmark})
+\z 
+  }
 	\ea 
 		\ea Jeg har \textit{intet}\textsubscript{i} hørt t\textsubscript{i} [\textsubscript{PP} i sagen om de stjålne malerier ]. \label{ex:split}
 		\ex Jeg har \textit{ikke} hørt [ \textit{noget} i sagen om de stjålne malerier ]. \label{ex:NPI}
@@ -702,8 +731,9 @@ Restrictions on the weight of the NI has also been observed for Swedish \citep{p
 		\z 
 	\z 
 
-The question arises as to how exactly does the grammar account for these variations based on the NI's weight. The fact that the `weight' of the NI somehow conditions the grammaticality of the utterance suggests that prosody must be constraining the size of the moved material. I show, in the rest of this section, that this weight restriction is regulated by a constraint on the size of material that is allowed to occupy the \emph{Mittelfeld} during PF.
+The question arises as to how exactly does the grammar account for these variations based on the NI's weight. The fact that the `weight' of the NI somehow conditions the grammaticality of the utterance suggests that prosody must be constraining the size of the moved material. I show, in the rest of this section, that this weight restriction is regulated by a prosodic constraint on the size of material that is allowed to occupy the \emph{Mittelfeld} during PF. 
 
+[WHY IS THIS PROSODY. SIZE SEEMS TO ONLY ALLOW PROSODIC WORDS OR SMALLER. TELL THEM WHY NOW INSTEAD OF LATER].
 %------------------------------------
 \subsection{PF deletion} \label{sec:NEXT}
 %------------------------------------
@@ -774,15 +804,16 @@ One of the chief issues with this system, besides abandoning the Y-model, has to
 \subsection{Scandinavian particle shift} \label{sec:Particles}
 %------------------------------------
 
-If all the evidence we had for the LMC comes from the weight restrictions found in NegShift then it would be easy to dismiss such possibilities. However, independent evidence for weight restrictions on shifting full DPs into the \emph{Mittelfeld} is observed in particle shifting in Scandinavian languages. Following \citet[2]{holmbergRemarksHolmbergGeneralization1999} and \citet{faarlundSyntaxMainlandScandinavian2019} there is a difference in behavior between the different Scandinavian languages with what is allowed to shift across a verbal particle. Danish objects always precedes the verb particle. Norweigan, Icelandic, and Faroese are like English by shifting a pronoun across a particle and optionally for DPs. Swedish does not allow anything to shift across the particles (see \cite{erteschik-shirVariationMainlandScandinavian2020} for a potential explanation for why ). 
+If all the evidence we had for the LMC comes from the weight restrictions found in NegShift then it would be easy to dismiss such possibilities. However, independent evidence for weight restrictions on shifting full DPs into the \emph{Mittelfeld} is observed in particle shifting in Scandinavian languages. Following \citet[2]{holmbergRemarksHolmbergGeneralization1999} and \citet{faarlundSyntaxMainlandScandinavian2019} there is a difference in behavior between the different Scandinavian languages with what is allowed to shift across a verbal particle. Danish objects always precedes the verb particle. Norweigan, Icelandic, and Faroese are like English by shifting a pronoun across a particle and optionally for DPs. Swedish does not allow anything to shift across the particles (see \cite{erteschik-shirVariationMainlandScandinavian2020} for a potential explanation for why).
 \ea \gllll Jeg skrev (nummeret/det) op (*nummeret/*det). \hfill (Danish)\\
 		Jeg skrev (nummeret/det) opp (nummeret/*det). \hfill (Norwegian)\\
 		Jag skrev (*numret/*det) upp (numret/det). \hfill (Swedish)\\
 		I wrote (number-the/it) up (number-the/it)\\
 \glt `I wrote the number/it down.'
 \z 
+It is interesting to note that this behavior, with respect to particle shift, is remarkable similar to what is allowed to undergo NegShift. In both cases we are dealing with pronouns and small DPs, again consisting of a determiner and a NP. In Danish, NegShift and particle shift both prefer moving pronouns and these small DPs and allowing them to occupy the \emph{Mittelfeld}. There is a difference, however, between Norwegian and Swedish. One would expect, based on the behavior of NegShift, that Swedish would prefer to undergo particle shift in the same fashion as Norwegian. This behavior, however, is not a problem as there are independent prosodic facts that contribute to why Swedish does not undergo particle shift. The reason has to do with particles forming tonal accent units (i.e., $\omega_{max}$) with whatever material is lower \citep[see]{erteschik-shirVariationMainlandScandinavian2020}. The fact that we still see a pattern that is reminiscent of Swedish NegShift and Norwegian NegShift is what is important to show that prosodically light elements are preferred in the \emph{Mittelfeld}, exactly as predicted by the LMC. 
 
-Additionally, Danish places restriction on the verbal compliment if it is too ``heavy" \citep[44f]{mullerDanishHeadDrivenPhraseInpreparation}. If it is larger than a simple DP shifting is blocked.\footnote{Examples are from \emph{KorpusDK} as reported by \citet{mullerDanishHeadDrivenPhraseInpreparation}.} 
+Another piece of evidence in favor for the LMC comes from how Danish places restriction on the verbal complement if it is too ``heavy" \citep[44f]{mullerDanishHeadDrivenPhraseInpreparation}. If the complement is larger than a simple DP particle shifting is blocked, exactly as was observed with Danish NegShift.\footnote{Examples are from \emph{KorpusDK} as reported by \citet{mullerDanishHeadDrivenPhraseInpreparation}.} 
 	\ea \gll {[…]} så må partiet melde [holdninger] [ud], {[…]}\\
 	~ then must party.\Def{} make stances out\\
 	\glt `{[…]} then the party must make its stances clear, {[…]}'
@@ -790,7 +821,6 @@ Additionally, Danish places restriction on the verbal compliment if it is too ``
 	the Danish government must soon make out that it supports the American plans\\
 	\glt `The Danish government must soon make clear that it supports the American plans.'
 	\z 
-
 This is further evidence that the LMC is an active constraint in these languages. Prosody, in the form of the \textsc{Light Mittelfeld Condition}, plays an active role in regulating the size of the material in the \emph{Mittelfeld}
 
 %------------------------------------
