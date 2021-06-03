@@ -39,8 +39,8 @@
 \usepackage{hanging}
 \usepackage{fancyhdr} %Allows for the 
 \pagestyle{fancy}
-\fancyhead[L]{\textit{Graduate Research Symposium 2021}} 
-\fancyhead[R]{\textit{Brinkerhoff}} 
+\fancyhead[L]{\textit{QP Defense}} 
+\fancyhead[R]{\textit{\today}} 
 \fancyfoot[L,R]{} 
 \fancyfoot[C]{\thepage} 
 \renewcommand{\headrulewidth}{1pt}
@@ -178,8 +178,8 @@ for tree={s sep=4mm}
 \ex There has been some evidence that OS is prosodically driven \citep{erteschik-shirSoundPatternsSyntax2005,erteschik-shirScandinavianObjectShift2017,erteschik-shirVariationMainlandScandinavian2020,brinkerhoffMATCHINGPhrasesNorwegian2021}. 
 
 \ex Despite similarities between NegShift and OS, NegShift doesn't directly correlate to the accounts of OS. 
-
-\ex Chiefly, a wider range of material is allowed to undergo NegShift, which includes both pronouns and full DPs, whereas only prosodically weak object pronouns are allowed to undergo OS.
+	\ea A wider range of material is allowed with NegShift, which includes both pronouns and full DPs, whereas only prosodically weak pronouns are allowed with OS.
+	\z 
 
 \ex However, not all NegShift is treated equal. \citet[65f]{christensenInterfacesNegationSyntax2005}, speaking on Danish, claims that the ``weight" of the NI plays a factor in whether or not NegShift occurs. 
 	\ea
@@ -322,25 +322,59 @@ Object Shift cannot apply across a phonologically visible category asymmetricall
 %------------------------------------
 \subsection{Landing site} \label{sec:Landing}
 %------------------------------------
-\ea OS occurs to the left of all adverbials.
+\ea OS is always moves to a position adjacent to the verb.
 	\ea 
-	\gll Jeg lånte \emph{hende\sub{IO}} faktisk\sub{Adv} aldri\sub{Adv} [\sub{VP} t\sub{IO} bøgerne].\\
-	I lent her actually never {} {} books-the\\
-	\glt `I actually never lent her the books' 
+	\gll Jeg lånte \emph{ham\sub{IO}} faktisk\sub{Adv} aldri\sub{Adv} [\sub{VP} t\sub{IO} bøgerne].\\
+	I lent him actually never {} {} books-the\\
+	\glt `I actually never lent him the books' 
 	\z 
 
-\ex NegShift occurs to the right of most adverbials with the exception of low adverbials \citep{nilsenAdverbsAshift1997,svenoniusStrainsNegationNorwegian2002}.
+\ex This is not the same position that negation and NegShifted elements occupy. 
+
+\ex NegShift occurs in a position that is between `high' adverbials (e.g., \emph{faktisk} `actually') and `low' adverbials like \emph{lenger} `any longer' and \emph{alltid} `always' \citep{nilsenAdverbsAshift1997,svenoniusStrainsNegationNorwegian2002}.
+	
+\ex \label{ex:low_adverbials} Examples of the Neg above `low' adverbials. 
 	\ea 
-	\gll Jeg har faktisk\sub{Adv} \emph{ingen} \emph{bøger}\sub{DO} [\sub{VP} lånt Othilia t\sub{DO}].\\
-	I have actually no books {} lent Othilia \\
-	\glt `I didn't actually lend Othilia any books.'
+	\gll Jon aksepterer \emph{ikke} lenger\sub{\textsc{adv}} alltid\sub{\textsc{adv}} vår invitasjon.\\ 
+	Jon accepts \Neg{} any.longer always our invitation\\
+	\glt `Jon no longer always accepts our invitation'
+	\ex[*] {Jon aksepterer \emph{ikke}\sub{\textsc{neg}} alltid\sub{\textsc{adv}} lenger\sub{\textsc{adv}}  vår invitasjon. }
+	\ex[*] {Jon aksepterer alltid\sub{\textsc{adv}} \emph{ikke}\sub{\textsc{neg}} lenger\sub{\textsc{adv}}  vår invitasjon.}
+	\z 
+\ex \label{ex:high_adverbials} Examples of Neg below `high' adverbials
+	\ea 
+	\gll Per kommer {ærlig talt} heldigvis \emph{ikke} tilbake.\\
+	Per comes frankly fortunately \Neg{} back.\\
+	\glt `Frankly, Per is fortunately not comming back.'
+	\ex[*] {Per kommer heldigvis \emph{ikke} {ærlig talt} tilbake.}
+	\ex[*] {Per kommer heldigvis {ærlig talt} \emph{ikke} tilbake.}
+	\ex[*] {Per kommer {ærlig talt} \emph{ikke} heldigvis tilbake.}
+	\z 
+\ex Example of Neg between `high' and `low' adverbials\\
+\gll Per går klokelig\sub{\textsc{adv}} vanligvis\sub{\textsc{adv}} \emph{ikke}\sub{\textsc{neg}} lenger\sub{\textsc{adv}} hjem før {klokka 8}.\\
+Per goes wisely usually \textsc{neg} any.longer home before {8 o'clock}\\
+
+\ex \citet{svenoniusStrainsNegationNorwegian2002} shows this same positional restrictions for where the negative particle is located also exist for NegShifted objects.
+	\ea 
+	\gll Fænsene har \emph{på} \emph{intet} \emph{tidspunkt} \emph{tidlig} slått av TV’en.\\
+	the.fans have on no time early turned off the.TV\\
+	\glt `The fans have at no time turned the TV off early’ 
+	\ex[*] {
+	\gll Fænsene har \emph{tidlig} \emph{på} \emph{intet} \emph{tidspunkt} slått av TV’en.\\
+	the.fans have early on no time turned off the.TV\\
+	}
+	\z  
+
+\ex Evidence that NegShift targets NegP comes from a combination of these positional facts and the fact that these shifted elements establish sentential negation.
+	\ea[*] {
+	\gll De har gitt Norge ingen poeng, og det har heller ikke irene.\\
+	they have given Norway no points and that have either not Irish-the\\} 
+	\glt (intended: ‘They have given Norway no points, and neither have the Irish) \label{ex:NEITHER}
 	\ex 
-	\gll Fænsene har på \emph{intet} \emph{tidspunkt}\sub{O} tidlig\sub{Adv} slått av TV’en.\\
-	fans-the have at no time early turned off TV-the\\
-	\glt `The fans have at no time turned the TV off early'
+	\gll De har gitt Norge ingen poeng, og det har også irerne.\\
+	they have given Norway no points, and that have also Irish-the\\
+	\glt `They have given Norway no points, and so have the Irish'
 	\z 
-
-
 \z
 
 \begin{tcolorbox}[width=\linewidth]
@@ -351,18 +385,16 @@ Object Shift cannot apply across a phonologically visible category asymmetricall
 \subsection{Interaction of NegShift and OS} \label{sec:NEG-OS}
 %------------------------------------
 \ea When there are both weak object pronouns and NIs in the sentence they both shift to their respective landing sites. 
-	\ea
-	\label{ex:NegOS}
-	\gll Jeg lånte \textit{hende} fraktisch \textit{ingen} \textit{bøger}.\\
+	\ea \label{ex:NegShift}
+	\gll Jeg har <ingen bøger> lånt hende <*ingen bøger>.\\
+	I have no books lent her\\
+	\glt `I haven't lent her any books
+	\ex \label{ex:NegOS}
+	\gll Jeg lånte \textit{henda} fraktisch \textit{ingen} \textit{bøger}.\\
 	I lent her actually no books\\
 	\glt `I didn't actually lend her any books.'
 	\z 
-\ex When the verb remains in situ OS is blocked from occurring but NegShift is still allowed to occur. 
-	\ea 
-	\gll Jeg har \emph{ingen} \emph{bøger} lånt \emph{hende}.\\
-	I have no books lent her\\
-	\glt `I haven't lent her any books
-	\z
+
 \z
 
 \begin{tcolorbox}[width=\linewidth]
@@ -381,32 +413,45 @@ Object Shift cannot apply across a phonologically visible category asymmetricall
 	\ex Split-scope is evident when modals and other auxiliaries are present and the indefinite interpretation is in the lower copy while the negative operator is interpreted in the higher copy.
 	\z 
 
-\ex
-\resizebox*{0.75\linewidth}{!}{
+\ex Split-scope is the result of the compositional nature of NIs.
+
+\ex \label{ex:NIComposition} NI composition according to \citet{zeijlstraSyntacticallyComplexStatus2011}.\\
+$\begin{bmatrix}
 \begin{forest}
-for tree={s sep=10mm, inner sep=0, l=0}
-[CP [DP\\\emph{Jeg}]
-	[C´ [C\\\emph{har}]
-		[TP [<DP>]
-			[T´ [<T>]
-				[NegP [DP\\\emph{ingen bøger}\\{[\textsc{Neg}]}, name=tgt]
-					[Neg´ [Neg\\{[\sout{$u$\textsc{Neg}}]}]
-						[\emph{v}P [<DP>]
-							[\emph{v´} [\emph{v}\\\emph{lånt}]
-								[VP [DP\\\emph{børnene}]
-									[V´ [<V>]
-										[DP\\\emph{ingen bøger}\\{[\textsc{Neg}]}, name=src]
-									]
-								]
-							]
-						]
-					]
-				]
-			]
-		]
+	[	[$Op_\neg$]
+		[$\exists$]
 	]
-] 
-\draw[->] (src) to[out=south west,in=south] (tgt); 
+\end{forest}
+\end{bmatrix}$ $\Leftrightarrow$  /ingen/
+
+\ex The $Op_\neg$ needs to reside in NegP in order for sentential negation to occur. 
+
+\ex
+\resizebox*{0.8\linewidth}{!}{
+\begin{forest}
+for tree={s sep=5mm, inner sep=0, l=0}
+	[CP [DP\\\emph{Jeg},name=Sloci] 
+		[C´ [C [T\\\emph{har},name=AUXtgt ] [C] ] 
+			[TP [<DP>\\\sout{\emph{Jeg}},name=Stgt ] 
+				[T´ [<T>\\\sout{\emph{har}},name=AUXsrc ] 
+					[NegP [DP [\emph{ingen bøger}\\{[\textsc{Neg}]}, roof,name=NItgt] ]
+						[Neg´ [Neg\\\emph{Op$_\neg$}\\{[\sout{$u$\textsc{Neg}}]}] 
+							[\emph{v}P [<DP>\\\sout{\emph{Jeg}},name=Ssrc] 
+								[\emph{v´} [\emph{v} [V\\\emph{lånt},name=tgt] [\emph{v}] ] 
+									[VP [DP\\\emph{børnene}] 
+										[V´ [<V>\\\emph{\sout{lånt}},name=src] 
+											[<DP> [\sout{\emph{ingen bøger}}\\{[\textsc{Neg}]}, roof,name=NIsrc] ]
+										]	
+									] 
+								] 
+							] 
+						] 
+					] 
+				] 
+			] 
+		] 
+	] 
+\draw[->] (NIsrc) to[out=south, in=south] (NItgt);
 \end{forest}}
 
 \ex The derivation is then sent to PF where the higher copy is pronounced and the lower copy is deleted.
@@ -492,10 +537,112 @@ for tree={s sep=10mm, inner sep=0, l=0}
 			] 
 	\end{tikzpicture}}
 \z 
+
+
+
 \begin{tcolorbox}[width=\linewidth]
 \textsc{Question:} What decides which material is deleted?\\
-\textsc{Claim:} Prosody is responsible for restricting and regulating the amount of material that is allowed in the \textit{Mittelfeld}.
 \end{tcolorbox}
+
+%------------------------------------
+\subsection{Bleaman 2021}
+%------------------------------------
+
+\ea \citet{bleamanPredicateFrontingYiddish2021} is concerned with explaining predicate fronting with doubling (predicate cleft) in Yiddish.
+	\ea Predicate clefts are where a verb phrase is fronted and the verb is pronounced in two locations. The fronted position and C. 
+		\ea The higher copy always appears with non-finite morphology
+		\ex The lower copy appears with finite morphology
+		\z 
+	\z 
+\ex Verbs can be topicalized with their complements and when that happens the complement is only pronounced once.
+
+\ex The goal of this paper is to arrive at what the explicit conditions that need to exist in Spell-Out which account for these seemingly contradictory facts.
+	\ea \citeauthor{bleamanPredicateFrontingYiddish2021} does this by showing that the facs fall out from \citet{collinsFormalizationMinimalistSyntax2016} spell-out formalizations with the addition of head movement
+
+	\ex Adopting this view serves two purposes:
+		\ea It shows why predicate clefets are problematic
+		\ex The adoption of this also shows how the predicates are altered 
+		\z 
+	\ex An update to the framework in \citet{collinsFormalizationMinimalistSyntax2016} is needed to prevent multiple copies of heads being spelled-out. 
+	\z 
+
+\ex PF repairs need to be defined in such a way that they modify or override the ppredictions of default spell-out conditions as discussed in \citet{chomskyMinimalistProgram1995}. 
+
+\ex When topicalization the verb, the initial infinitive must immediately proceed the finite copy. 
+	\ea 
+	\gll red-n, red ikh mame-loshn\\
+	speak.\Inf{} speak.\textsc{1}.\textsc{Pres} I mama-language\\
+	\z 
+
+\ex The alternative is to front the entire VP. In those case the verbal complement appears between the infinitive and the finite verb. 
+	\ea 
+	\gll red-n mame-loshn, red ikh \\
+	speak.\Inf{} mama-language speak.\textsc{1}.\textsc{Pres} I\\
+	\z 
+
+\ex These facts show that the infinitival constituent is preverbal with respect to V2 and proves that movement is occurring. 
+	\ea Island effects further support that movement has occurred.
+		\ea According to Davis \& Prince (1986), the first copy can cross finite clause boundaries but not RCs and \emph{wh-}islands
+		\ex Further extraction from adjunct islands is unacceptable.
+		\ex Also co-ordinate structures are unacceptable. 
+		\z   
+	\z 
+
+\ex Complements, when fronted, never double. 
+
+\ex According to \citeauthor{bleamanPredicateFrontingYiddish2021} the notion of finality and non-finality are important for determining what ultimately gets spell-out. 
+	\ea This comes from \citet{collinsFormalizationMinimalistSyntax2016} where it is only items that are considered final in the syntax are able to be pronounced. 
+	\ex Finality and PF spell-out are defined as:\\
+		\ea X ∈ {X,Y} is final in a syntactic object SO iff there is no Z contained in (or equal to) SO such that Z immediately contains X, and Z contains the set {X,Y}. Otherwise, X is nonfinal in SO. 
+		\ex If SO = {X,Y} and X in SO is final in Phase but Y is not, TransferPF(Phase,SO) = TransferPF(Phase, X). 
+		\z 
+	\z 
+
+\ex Finality is determined based on structural positions and notions of containment
+	\ea Immediately containment is set membership where the syntactic object is a daughter of some node.
+	\ex Containment means that it is a daughter, granddaughter, etc. to some node.
+	\z
+
+\ex An object is final iff it is not a daughter and granddaughter at the same time. 
+
+\ex Using the following trees we can see concrete examples of finality
+	\begin{multicols}{2}
+	\ea Tree 1 \label{ex:a-finality}\\
+	\begin{forest}
+		[D [A\sub{2},name=a-tgt] 
+			[C [A\sub{1},name=a-src] [B]
+			]
+		]	
+		\draw[->] (a-src) to[out=south west,in=south] (a-tgt);
+	\end{forest}
+
+	\ex Tree 2 \label{ex:head-finality}\\
+	\begin{forest}
+		[\emph{v}P [\emph{v}\sub{2} [V,name=tgt] [\emph{v}]
+			]
+			[VP [V,name=src] 
+				[DP]
+
+			]
+		]	
+		]
+		\draw[->] (src) to[out=south west,in=south] (tgt);
+	\end{forest}
+	\z 
+	\end{multicols}
+	
+
+\ex A\sub{1} is an element of the set \{A,B\} = C and raises to become a sister to C in (\ref{ex:a-finality}). A\sub{1} is nonfinal within D because D immediately contains A and the set \{A,B\}. 
+
+\ex A\sub{2} is final because it is in the set \{A,C\} and there is no object that contains both A\sub{2} and the set \{A,C\}.
+
+\ex Head movement (\ref{ex:head-finality}) causes each successive head to become final becasue there is no object that immediately contains an occurrence of the moved V and also contains the set \{V,DP\}. 
+
+\ex This requires \citeauthor{bleamanPredicateFrontingYiddish2021} to redefine immediate containment to also include pair-merge. This results in the highest complex head becoming final and all others to become non-final.
+
+\ex Assumptions about how spell-out occurs need to be explicitly clear in any description of spell-out phenomenon.
+
+\z 
 
 %------------------------------------
 \subsection{PF deletion} \label{sec:PFDeletion}
@@ -553,8 +700,7 @@ for tree={s sep=10mm, inner sep=0, l=0}
 \ex This results in a three-way system in Scandinavian languages. 
 	\ea Those that delete until a full DP is left.
 	\ex Those that delete until a pronoun is left.
-	\ex Those that delete everything and have negation and a NPI.
-	\z 
+	\ex Those that undergo LF movement
 
 \ex There seems to be some differences in behavior between the tonal and atonal Scandinavian languages. 
 	\ea According to \citet{thrainssonFaroeseOverviewReference2004,thrainssonSyntaxIcelandic2010} Faroese and Icelandic pattern the same as Danish in this regard. 
