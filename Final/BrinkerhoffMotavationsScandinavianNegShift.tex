@@ -304,7 +304,7 @@ We further observe a difference between OS and NegShift as it relates to where t
 
 This movement always results in the verb and weak pronoun being adjacent, after linearization. This behavior lead \citet{erteschik-shirSoundPatternsSyntax2005} to claim that the phonologically weak pronouns incorporate into the verb prior to the verb movement to C, indicated by the dashed line in (\ref{ex:incorporation}). This incorporation causes the weak object pronoun to appear in a position higher than the adverbials, which reside in a hierarchy of functional heads between TP and \emph{v}P \citep{cinqueAdverbsFunctionalHeads1999}. 
 \ea \label{ex:incorporation}
-% \resizebox*{0.8\linewidth}{!}{
+\resizebox*{0.8\linewidth}{!}{
 \begin{forest}
 for tree={s sep=5mm, inner sep=0, l=0}
 	[CP [DP\\\emph{Jeg}] 
@@ -330,7 +330,7 @@ for tree={s sep=5mm, inner sep=0, l=0}
 \draw[->] (verb) to[out=south, in=south east] (v);
 \draw[->] (v) to[out=south, in=south east] (T);
 \draw[->] (T) to[out=south, in=south east] (C);
-\end{forest}%}
+\end{forest}}
 \z 
 
 More recent accounts \citep[e.g.,][]{erteschik-shirVariationMainlandScandinavian2020,brinkerhoffMATCHINGPhrasesNorwegian2021} assume that OS is entirely conditioned on phonological phrasing. \citet{brinkerhoffMATCHINGPhrasesNorwegian2021} argue that OS is the result of pressures from \textsc{Match}-style prosodic constraints \citep{selkirkClauseIntonationalPhrase2009,selkirkSyntaxPhonologyInterface2011} that prevent the pronoun from forming a phonological phrase with the adverb. This results in the pronoun leaving the adverb's phonological phrase and forming a phonological phrase with the verb and subject where it is then allowed to incorporate into the verb because of its status as a prosodically weak element, i.e., a clitic.\footnote{I am considering weak pronouns and clitics from \citet{cardinalettiTypologyStructuralDeficiency1999} as prosodic clitics, which has to do with their status as prosodically deficient elements (i.e., lacking stress). Two reasons why we should treat the object pronouns as clitics comes from: (i) syllabification of the clitic as part of the verb and (ii) the tonal accent of the verb overrides the tonal accent of the pronoun. See \citet{myrbergProsodicWordSwedish2013,myrbergProsodicHierarchySwedish2015,riadPhonologySwedish2014} for a detailed discussion into the facts about syllabification and word accents. } 
@@ -380,12 +380,12 @@ Based on these observations, \citet{nilsenAdverbsAshift1997} convincingly shows 
 	}
 	\z  
 \z
-The evidence that NegShift targets NegP comes from a combination of these positional facts and the fact that these shifted elements don't scope from the position of sentential negation. \citet{svenoniusStrainsNegationNorwegian2002} shows that if the NI remains in situ then it only was narrow scope and does not establish sentential negation. We see this in the following sentences where the NI is only establishing the negation of the NP and not the negation of the whole sentence. We observe this with using the `neither' tag in (\ref{ex:NEITHER}). The `neither' tag is a method of testing whether or not sentiental negation is occurring \citep{klimaNegationEnglish1964}. If the resulting sentence with the `neither' tag – or in our Norwegian case \emph{heller ikke} – is grammatical then `neither' shows that the original sentence without `neither' was not negated. If, however, the sentence is ungrammatical with the addition of `neither', then something is already supply negation to the sentence. Because (\ref{ex:NEITHER}) is ungrammatical with the `neither' tag, then something is already providing negation to the sentence, in this case it is the PP  \emph{ingen poeng}. 
+The evidence that NegShift targets NegP comes from a combination of these positional facts and the fact that these shifted elements don't scope from the position of sentential negation. \citet{svenoniusStrainsNegationNorwegian2002} shows that if the NI remains in situ then it only was narrow scope and does not establish sentential negation. We see this in the following sentences where the NI is only establishing the negation of the NP and not the negation of the whole sentence. We observe this with using the `neither' tag in (\ref{ex:NEITHER}). The `neither' tag is a method of testing whether or not sentiental negation is occurring \citep{klimaNegationEnglish1964}. If the resulting sentence with the `neither' tag – or in our Norwegian case \emph{heller ikke} – is grammatical, `neither' shows that the original sentence without `neither' was not negated. If, however, the sentence is ungrammatical with the addition of `neither', then something is already supply negation to the sentence. Because (\ref{ex:NEITHER}) is ungrammatical with the `neither' tag, then something is already providing negation to the sentence, in this case it is the PP  \emph{ingen poeng}. 
 
 \ea 
-	\ea[*] {
+	\ea[*] {{
 	\gll De har gitt Norge ingen poeng, og det har heller ikke irene.\\
-	they have given Norway no points and that have either not Irish-the\\} 
+	they have given Norway no points and that have either not Irish-the\\}\jambox*{No}}
 	\glt (intended: ‘They have given Norway no points, and neither have the Irish) \label{ex:NEITHER}
 	\ex 
 	\gll De har gitt Norge ingen poeng, og det har også irerne.\\
@@ -430,8 +430,8 @@ NegQP-DP	&	+ -	&	+ -	&	+ -	&	+ -	&	- -	\\
 The sections on this table that are most interesting are those involving what \citeauthor{christensenInterfacesNegationSyntax2005} calls Negative Quantifier Phrases (equivalent to NIs). However, this does conflate NI determiners and NI pronouns into a single category. According to \citeauthor{christensenInterfacesNegationSyntax2005}, when the IO is a pronoun and the DO is a NegQP both obligatorily shift when the verb has been able to swift to C, (\ref{ex:HER}), otherwise only the NegQP shifts, (\ref{ex:BOOKS}).
 	\ea 
 		\ea \label{ex:HER}
-		\gll Jeg lånte \textit{hende(IO)} faktisk \textit{ingen} \textit{bøger(DO)}\\
-		I lent her actually no books\\
+		{\gll Jeg lånte \textit{hende(IO)} faktisk \textit{ingen} \textit{bøger(DO)}\\
+		I lent her actually no books\\}\jambox*{Da}
 		\glt `I actually didn't lend her any books'
 		\ex \label{ex:BOOKS}
 		\gll Jeg har \textit{ingen} \textit{bøger(DO)} lånt \textit{hende(IO)}\\
@@ -442,20 +442,20 @@ The sections on this table that are most interesting are those involving what \c
 If, however, the IO is a NegQP and the DO is a pronoun then the pronoun is blocked from shifting, producing a freezing effect on OS. 
 	\ea Freezing effects on OS
 		\ea 
-		\gll Jeg lånte faktisk \textit{ingen(IO)} \textit{den(DO)}\\
-		I lent actually no-one it\\
+		{\gll Jeg lånte faktisk \textit{ingen(IO)} \textit{den(DO)}\\
+		I lent actually no-one it\\}\jambox*{Da}
 		\glt `I actually lent it to no-one.'
 		\ex[*] {Jeg lånte \textit{den(DO)} faktisk \textit{ingen(IO)}} 
 		\z 
 	\z
 
-One explanation for this freezing effect is found in \posscitet{foxCyclicLinearizationSyntactic2005} account of ordering restrictions where the verb first moves to the edge of \emph{v}P which establishes the ordering that must occur through the remainder of the derivation. Another possibility has to due with Holmberg's Generalization. The fact that NegShift blocks OS from occurring suggests that whatever position the NI is occupies it must be in a phonologically visible position that asymmetrically c-commands the object pronoun. This question is actually a very important point for the prosodic nature of the shifting. OS takes a weak pronominal object and is subject to Holmberg's Generalization, which prevents OS if there is a phonologically visible category in the VP. The question arises why are there freezing effects for OS when NegShift has occurred? One way to understand this freezing effect is that it is not actually sensitive to the VP edge but instead sensitive to phase boundaries \citep{chomskyMinimalistInquiriesFramework2000,chomskyDerivationPhase2001,chomskyPhases2008}. It is commonly assumed that adverbs belong to the \emph{v}P phase and if we also believe that adverbs form this Cinquean hierarchy of functional heads then these phrases that form the functional heads also must belong to the same phase as the material residing in \emph{v}P. This results in having the moved NI asymmetrically c-commanding the weak pronominal object (see discussion in \cite{brinkerhoffMATCHINGPhrasesNorwegian2021} about discussion why adverbs do not present problems for OS). We will see in Section \ref{sec:PROSODY}that this notion of a phase boundary encompassing both the NI in NegP and its base generated position in \emph{v}P will be important for explaining the prosodic restrictions on NegShift that we do.
+One explanation for this freezing effect is found in \posscitet{foxCyclicLinearizationSyntactic2005} account of ordering restrictions where the verb first moves to the edge of \emph{v}P which establishes the ordering that must occur through the remainder of the derivation. Another possibility has to due with Holmberg's Generalization. The fact that NegShift blocks OS from occurring suggests that whatever position the NI is occupies it must be in a phonologically visible position that asymmetrically c-commands the object pronoun. This question is actually a very important point for the prosodic nature of the shifting. OS takes a weak pronominal object and is subject to Holmberg's Generalization, which prevents OS if there is a phonologically visible category in the VP. The question arises why are there freezing effects for OS when NegShift has occurred? One way to understand this freezing effect is that it is not actually sensitive to the VP edge but instead sensitive to phase boundaries \citep{chomskyMinimalistInquiriesFramework2000,chomskyDerivationPhase2001,chomskyPhases2008}. It is commonly assumed that adverbs belong to the \emph{v}P phase and if we also believe that adverbs form this Cinquean hierarchy of functional heads then these phrases that form the functional heads also must belong to the same phase as the material residing in \emph{v}P. This results in having the moved NI asymmetrically c-commanding the weak pronominal object (see discussion in \cite{brinkerhoffMATCHINGPhrasesNorwegian2021} about discussion why adverbs do not present problems for OS). We will see in Section \ref{sec:PROSODY} that this notion of a phase boundary encompassing both the NI in NegP and its base generated position in \emph{v}P will be important for explaining the prosodic restrictions on NegShift that we do.
 
 An additional case involving OS and NegShift is when both the indirect and direct objects are allowed to shift. \citet[417f]{broekhuisUnificationObjectShift2020} observes that weak pronominal object shift behaves differently than full DP objects in what loci they are allowed to inhabit. In the case of weak pronominals they are required to appear outside of the \textit{v}P if there is no intervening phonological material (i.e., Holmberg's Generalization \cite{holmbergWordOrderSyntactic1986,holmbergRemarksHolmbergGeneralization1999}). \citeauthor{broekhuisUnificationObjectShift2020} observes that when OS and NegShift are both allowed to occur they are subject to certain ordering restrictions. Citing examples from \citet[163ff]{christensenInterfacesNegationSyntax2005}, Broekhuis shows the following pair of examples:
 	\ea 
 		\ea \label{ex:NegShift}
-		\gll Jeg har <ingen bøger> lånt hende <*ingen bøger>.\\
-		I have no books lent her\\
+		{\gll Jeg har <ingen bøger> lånt hende <*ingen bøger>.\\
+		I have no books lent her\\}\jambox*{Da}
 		\glt `I haven't lent her any books
 		\ex \label{ex:NegOS}
 		\gll Jeg lånte \textit{henda} fraktisch \textit{ingen} \textit{bøger}.\\
@@ -463,10 +463,10 @@ An additional case involving OS and NegShift is when both the indirect and direc
 		\glt `I didn't actually lend her any books.'
 		\z 
 	\z
-In (\ref{ex:NegShift}), we see that when we have a negative object that it shifts to a position higher than the \textit{v}P. If it were to remain in-situ it would be ungrammatical and would require the use of \textit{ikke} `not' and the negative polarity item \textit{nogen} `any'.
+In (\ref{ex:NegShift}), we see that when we have a negative object it shifts to a position higher than the \textit{v}P. If it were to remain in-situ it would be ungrammatical and would require the use of \textit{ikke} `not' and the negative polarity item \textit{nogen} `any'.
 	\ea
-	\gll Jeg har \textit{ikke} lånt hende \textit{nogen} bøger.\\
-	I have not lent her any books.\\
+	{\gll Jeg har \textit{ikke} lånt hende \textit{nogen} bøger.\\
+	I have not lent her any books.\\}\jambox*{Da}
 	\glt `I haven't lent her any books.'
 	\z
 However, when the main verb has risen to C as in (\ref{ex:NegOS}) then the weak pronominal moves to a position higher than the adverb \textit{fraktisk} `actually'. Additionally, this results in OS > NegShift, which \citeauthor{broekhuisUnificationObjectShift2020} reports to be a universal. This does help us see that even though these two phenomena appear to be similar they are in fact slightly different, due to the differences in the where the two different movement operations' targets are.
@@ -481,15 +481,15 @@ We have seen that each of the different criteria that I laid out at the start of
 \section{Deriving NegShift} \label{sec:DERIVING}
 %------------------------------------
 
-\citet{iatridouNegativeDPsAMovement2011} show that in NIs exhibit split-scope, which is evident when modals and other auxiliaries are present and the negation scopes higher than the modal/auxiliary's scope where the indefinite resides. We can see this in the following example from \citet{iatridouNegativeDPsAMovement2011}. 
+\citet{iatridouNegativeDPsAMovement2011} show that NIs exhibit split-scope, which is evident when modals and other auxiliaries are present and the negation scopes higher than the modal/auxiliary's scope where the indefinite resides. We can see this in the following example from \citet{iatridouNegativeDPsAMovement2011}. 
 
 \ea There has to be no doctor present for the nurses to administer the medicine.\\
 Neg-split: It isn’t required that a doctor be present
 \z 
 
-In this example the negation is allowed to scope higher than the auxiliary \emph{has to} while doctor resides within the scope of this auxiliary. This is what allows for the reading that it isn't necessary for a doctor to be present for nurses to administer medicine. 
+In this example the negation is allowed to scope higher than the auxiliary \emph{has to} while \emph{doctor} resides within the scope of this auxiliary. This is what allows for the reading that it isn't necessary for a doctor to be present for nurses to administer medicine. 
 
-\citet{zeijlstraSyntacticallyComplexStatus2011} takes these observations in English as well as this same behavior in Dutch and German provides an analysis of the split-scope interpretation that exists for negative indefinites in these languages.  \citeauthor{zeijlstraSyntacticallyComplexStatus2011} assumes that this behavior is the result of the compositional status of negative indefinites. He claims that NIs are composed of a negative operator and an indefinite component, (\ref{ex:NIComposition}).
+\citet{zeijlstraSyntacticallyComplexStatus2011} takes these observations in English, as well as this same behavior in Dutch and German, and provides an analysis of the split-scope interpretation that exists for negative indefinites in these languages.  \citeauthor{zeijlstraSyntacticallyComplexStatus2011} assumes that this behavior is the result of the compositional status of negative indefinites. He claims that NIs are composed of a negative operator and an indefinite component, (\ref{ex:NIComposition}).
 \ea \label{ex:NIComposition} NI composition according to \citet{zeijlstraSyntacticallyComplexStatus2011}.\\
 $\begin{bmatrix}
 \begin{forest}
@@ -592,8 +592,8 @@ This account does seem to explain the basic pattern of shifting found for both O
 In addition to the standard case of NegShift where you shift a pronoun or a NI DP, there appears to be size restrictions in place which prevent movement of the NI if it is too large. This is particularly true for the Danish examples in (\ref{ex:NIinteractions}). 
 	\ea\label{ex:NIinteractions}
 		\ea
-		\gll Jeg har \textit{intet}\textsubscript{o} hørt t\textsubscript{o}.\\
-		I have nothing heard\\
+		{\gll Jeg har \textit{intet}\textsubscript{o} hørt t\textsubscript{o}.\\
+		I have nothing heard\\}}\jambox*{Da}
 		\glt  `I havn't heard anything.'\label{ex:NIPro}
 		\ex 
 		\gll Jeg har [\textit{intet} \textit{nyt}]\textsubscript{o} hørt t\textsubscript{o}.\\
@@ -666,7 +666,7 @@ for tree={s sep=10mm, inner sep=0, l=0}
 \end{forest}	
 }
 \z 
-If \citet{chomskyMinimalistProgramLinguistic1993} is correct and only the higher copy should be pronounced, then the question arises as to why only a part of the copy is deleted. According to \citet{fanselowRemarksEconomyPronunciation2001,fanselowDistributedDeletion2002} the motivation for when partial deletion is possible has its motivations in PF. They argue that this comes from constraints on whether the different formal features need a ``proper phonetic realization".\footnote{\citet{fanselowRemarksEconomyPronunciation2001,fanselowDistributedDeletion2002} do not go into great detail about what exactly is forcing which features and where those features receive their ``proper phonetic realization''. The only thing that they do say is that the notion of partial deletion is analogous to partial reconstruction at LF and ``as involving (partial) reconstruction of phonetic material in the overt component''.} If this is prosodically motivated what drives this deletion?
+If \citet{chomskyMinimalistProgramLinguistic1993} is correct and only the higher copy should be pronounced, then the question arises as to why only a part of the copy is deleted. According to \citet{fanselowRemarksEconomyPronunciation2001,fanselowDistributedDeletion2002} the motivation for when partial deletion is possible has its motivations in PF. They argue that this comes from constraints on whether the different formal features need a ``proper phonetic realization".\footnote{\citet{fanselowRemarksEconomyPronunciation2001,fanselowDistributedDeletion2002} do not go into detail about what is forcing which and where features receive their ``proper phonetic realization''. They say that the notion of partial deletion is analogous to partial reconstruction at LF and ``involve[s] (partial) reconstruction of phonetic material in the overt component''.} If this is prosodically motivated what drives this deletion?
 
 %------------------------------------
 \section{Prosodic restrictions on NegShift} \label{sec:PROSODY}
@@ -675,8 +675,8 @@ If \citet{chomskyMinimalistProgramLinguistic1993} is correct and only the higher
 As noted earlier not all NegShift is treated equal. \citet[65f]{christensenInterfacesNegationSyntax2005}, speaking on Danish, claims that the ``weight" of the NI plays a crucial factor in whether or not NegShift occurs. 
 	\ea \label{ex:weight}
 		\ea \label{ex:weight-pronoun}
-		\gll Jeg har \textit{intet}\textsubscript{o} hørt t\textsubscript{o}.\\
-		I have nothing heard\\
+		{\gll Jeg har \textit{intet}\textsubscript{o} hørt t\textsubscript{o}.\\
+		I have nothing heard\\}\jambox*{Da}
 		\glt  `I havn't heard anything.'
 		\ex \label{ex:weight-simple}
 		\gll Jeg har [\textit{intet} \textit{nyt}]\textsubscript{o} hørt t\textsubscript{o}.\\
@@ -694,15 +694,14 @@ As noted earlier not all NegShift is treated equal. \citet[65f]{christensenInter
 	\z
 We observe in (\ref{ex:weight}) that if the NI is either a pronoun (\ref{ex:weight-pronoun}) or a simple DP (\ref{ex:weight-simple}), consisting of just the NI determiner and noun, then Danish treats such constructions as grammatical. If, however, the NI is larger then a simple DP, as in (\ref{ex:weight-heavy}) and (\ref{ex:weight-superheavy}), it suddenly becomes ungrammatical. 
 
-In those instances where the NI is too large there are two potential repair strategies. One option is to strand the PP which results in moving just the pronoun (\ref{ex:split}) or using the negative particle \textit{ikke} in NegP and an NPI in the lower position (\ref{ex:NPI}).\footnote{I have yet to find any evidence that \emph{intet nyt} is allowed to shift while stranding the PP. I found one example on a Danish website that shows the negative particle and an NPI. 
+In those instances where the NI is too large there are two potential repair strategies. One option is to strand the PP which results in moving just the pronoun (\ref{ex:split}) or using the negative particle \textit{ikke} in NegP and an NPI in the lower position (\ref{ex:NPI}).\footnote{I have not found any evidence that \emph{intet nyt} is allowed to shift while stranding the PP. I found one example that shows the negative particle and an NPI. 
 \ea
 \gll Selvom der ikke er noget nyt i sagen om det stjålne Nolde-maleri, tror de stadig på miraklet i Ølstrup.\\
 though there not is anything new in case-the about the stolen {Nolde painting} believe they still in miracle-the in Ølstrup\\
 \glt `Although there is nothing new in the case of the stolen Nolde painting, they still believe in the miracle in Ølstrup.' \hfill (\href{https://www.tvmidtvest.dk/midt-og-vestjylland/overblik-storste-kunsttyverier-i-danmark}{Overblik: Største kunsttyverier i Danmark})
-\z 
-  }
+\z}
 	\ea 
-		\ea Jeg har \textit{intet}\textsubscript{i} hørt t\textsubscript{i} [\textsubscript{PP} i sagen om de stjålne malerier ]. \label{ex:split}
+		\ea {Jeg har \textit{intet}\textsubscript{i} hørt t\textsubscript{i} [\textsubscript{PP} i sagen om de stjålne malerier ]. \label{ex:split}}\jambox*{Da}
 		\ex Jeg har \textit{ikke} hørt [ \textit{noget} i sagen om de stjålne malerier ]. \label{ex:NPI}
 		\z 
 	\z  
@@ -710,20 +709,19 @@ though there not is anything new in case-the about the stolen {Nolde painting} b
 Restrictions on the weight of the NI has also been observed for Swedish \citep{penkaNegativeIndefinites2011}. In (\ref{ex:swedish-weight}), which comes from \citet{penkaNegativeIndefinites2011}, when a pronoun is moved it is fully grammatical. When we, however, move a simple DP it is still grammatical but is dispreferred or degraded, indicated by the question mark. 
 	\ea \label{ex:swedish-weight}
 		\ea 
-		\gll Men mänskligheten har \textit{ingenting}\textsubscript{o} lärt sig t\textsubscript{o}.\\
-		but mankind-the have nothing taught themselves\\
+		{\gll Men mänskligheten har \textit{ingenting}\textsubscript{o} lärt sig t\textsubscript{o}.\\
+		but mankind-the have nothing taught themselves\\}\jambox*{Sw}
 		\glt `But mankind haven't taught themselves anything.'
 		\ex[?] {
 		\gll Vi hade \textit{inga} \textit{grottor}\textsubscript{o} undersökt t\textsubscript{o}.\\
-		we have no caves explored\\
-		}
+		we have no caves explored\\}
 		\glt `We haven't explored any caves.'
 		\z 
 	\z 
 
 The question arises as to how exactly does the grammar account for these variations based on the NI's weight. The fact that the `weight' of the NI somehow conditions the grammaticality of the utterance suggests that prosody might be constraining the size of the moved material. One reason why to think that this is prosody has to do with the fact that only items that would normally form a prosodic word undergo NegShift. 
 
-Assuming that Match Theory \citep{selkirkClauseIntonationalPhrase2009,selkirkSyntaxPhonologyInterface2011} is a correct way of understanding the relationship between syntax and prosody, there are several predictions that this theory makes when mapping the syntax to the prosody. Under Match Theory a XP corresponds to a phonological phrase unless that XP is both syntactically minimal and maximal, which is where the syntactic phrase consists of just its head. When this occurs it forms a prosodic word, which has to do with the non-branching nature of the of the XP and will only ever result in a prosodic word  \citep{bennettLightestRightApparently2016}. Additionally, if the XP is a CP then it forms a intonational phrase.
+Assuming that Match Theory \citep{selkirkClauseIntonationalPhrase2009,selkirkSyntaxPhonologyInterface2011} is a correct way of understanding the relationship between syntax and prosody, there are several predictions that this theory makes when mapping the syntax to the prosody. Under Match Theory an XP corresponds to a phonological phrase unless that XP is both syntactically minimal and maximal, which is where the syntactic phrase consists of just its head. When this occurs it forms a prosodic word, which has to do with the non-branching nature of the of the XP and will only ever result in a prosodic word  \citep{bennettLightestRightApparently2016}. Additionally, if the XP is a CP then it forms a intonational phrase.
 \begin{table}[!h]
 \caption{Syntax-prosody category mappings (modified from \cite{tylerSimplifyingMATCHWORD2019})}
 \label{tab:Mappings}
@@ -739,7 +737,7 @@ X & Prosodic Word ($\omega$)\\
 \end{tabular}
 \end{table}  
 
-Additionally, it is well documented that functional heads often cliticize into a prosodic head which is able to bear stress (\cite{zwickyClitics1977,selkirkProsodicStructureIts1981,zwickyCliticizationVsInflection1983,inkelasProsodicConstituencyLexicon1990} among many other). Often this means that determiners and their NP complement form a single prosodic word. This means that our cases of pronouns and simple DPs correspond to prosodic words, explicitly maximal prosodic words ($\omega_{max}$) based on the fact that the determiners and the noun receive a single tonal accent in Swedish and Norwegian, which according to \posscitet{myrbergProsodicWordSwedish2013,myrbergProsodicHierarchySwedish2015,riadPhonologySwedish2014} claim is strictly the domain of $\omega_{max}$. Even though most Danish varieties lack tonal accents, they do have a something that patterns similarly to these tonal accents in the other Scandinavian languages. Stød is a suprasegmental unit found in Danish, which is a type of creakiness or glottal closure \citep{basbollPhonologyDanish2005}. Recent research shows that its distribution is restricted to only having one stød per maximal prosodic word \citep{kalivodaProsodicRecursionPseudocyclicity2018}. I show, in the rest of this section, that this weight restriction is regulated by a prosodic constraint on the size of material that is allowed to occupy the \emph{Mittelfeld} during PF, namely prosodic words. 
+Additionally, it is well documented that functional heads often cliticize into a prosodic head which is able to bear stress (\cite{zwickyClitics1977,selkirkProsodicStructureIts1981,zwickyCliticizationVsInflection1983,inkelasProsodicConstituencyLexicon1990} among others). Often this means that determiners and their NP complement form a single prosodic word. This means that our cases of pronouns and simple DPs correspond to prosodic words, explicitly maximal prosodic words ($\omega_{max}$) based on the fact that the determiners and the noun receive a single tonal accent in Swedish and Norwegian, which according to \posscitet{myrbergProsodicWordSwedish2013,myrbergProsodicHierarchySwedish2015,riadPhonologySwedish2014} claim is strictly the domain of $\omega_{max}$. Even though most Danish varieties lack tonal accents, they do have a something that patterns similarly to these tonal accents in the other Scandinavian languages. Stød is a suprasegmental unit found in Danish, which is a type of creakiness or glottal closure \citep{basbollPhonologyDanish2005}. Recent research shows that its distribution is restricted to only having one stød per maximal prosodic word \citep{kalivodaProsodicRecursionPseudocyclicity2018}. I show, in the rest of this section, that this weight restriction is regulated by a prosodic constraint on the size of material that is allowed to occupy the \emph{Mittelfeld} during PF, namely prosodic words. 
 
 %------------------------------------
 \subsection{PF deletion} \label{sec:NEXT}
@@ -751,11 +749,11 @@ If PF is responsible for deleting the material then the crucial question is how 
 
 Assuming that phases play a crucial role in accounting for the NegShift there are two potential answers that arise: (i) phases do not play a role in determining phonological/prosodic behavior during PF, or (ii) Phases do play a role in determining phonological/prosodic behavior during PF.
 
-Recent evidence from \citet{weberPhaseBasedConstraints2021} suggests that phases do in fact play a role in determining phonological behavior. The crucial evidence for \citeauthor{weberPhaseBasedConstraints2021} comes from vowel epenthesis in Blackfoot verbs. Verbs in Blackfoot are highly complex allowing for a large number of affixes and a single verb often corresponds to a CP. Citing internal vowel epenthesis, which only occurs if the root of the verb will begin with a stop, \citeauthor{weberPhaseBasedConstraints2021} shows that the location where epenthesis occurs corresponds with a phase boundary in the syntax. Assuming \citeauthor{weberPhaseBasedConstraints2021} and the PIC are correct, then it bears to reason that in order for the phonology to interact with two copies at the same time, the base generated position and the landing site both must belong to the same phase. This requires that NegP and the rest of the Cinquean hierarchy of adverbials \citep{cinqueAdverbsFunctionalHeads1999} belonging to the same phase as \emph{v}P.
+Recent evidence from \citet{weberPhaseBasedConstraints2021} suggests that phases do in fact play a role in determining phonological behavior. The crucial evidence for \citeauthor{weberPhaseBasedConstraints2021} comes from vowel epenthesis in Blackfoot verbs. Verbs in Blackfoot are highly complex allowing for a large number of affixes and a single verb often corresponding to a CP. Citing internal vowel epenthesis, which only occurs if the root of the verb will begin with a stop, \citeauthor{weberPhaseBasedConstraints2021} shows that the location where epenthesis occurs corresponds with a phase boundary in the syntax. Assuming \citeauthor{weberPhaseBasedConstraints2021} and the PIC are correct, then it bears to reason that in order for the phonology to interact with two copies at the same time, the base generated position and the landing site both must belong to the same phase. This requires that NegP and the rest of the Cinquean hierarchy of adverbials \citep{cinqueAdverbsFunctionalHeads1999} belong to the same phase as \emph{v}P.
 
 In the case of NegShift, there are restrictions on \emph{Mittelfeld} well-formedness, which I will call the \textsc{Light Mittelfeld Condition} (LMC), more specifically what is allowed to move into the \emph{Mittelfeld}. It was observed above that only a limited amount of structure is allowed and a wide degree of variation is permitted in the \emph{Mittelfeld} (see \cite{haiderMittelfeldPhenomenaScrambling2017}). I argue that the largest unit that is allowed to remain in the \emph{Mittelfeld} in Scandinavian is a maximal prosodic word (ω\sub{max}).
 
-Evidence for this comes from the size of the material that is allowed to ``shift" in these languages. As observed for Danish only a pronoun or simple DP, which both correspond to maximal prosodic words, is allowed to occupy the \emph{Mittelfeld} when NegShift occurs. Additionally, we see that if the NI would form a phonological phrase, because it contains a PP complement, in the \emph{Mittelfeld} 
+Evidence for this comes from the size of the material that is allowed to ``shift" in these languages. As observed for Danish only a pronoun or simple DP, which both correspond to maximal prosodic words, is allowed to occupy the \emph{Mittelfeld} when NegShift occurs. Additionally, we see that if the NI would form a phonological phrase, because it contains a PP complement, in the \emph{Mittelfeld} it is treated as ungrammatical. 
 \ea 
 	\ea 
 		\gll Jeg har \textit{intet}\textsubscript{o} hørt t\textsubscript{o}.\\
@@ -776,13 +774,13 @@ Evidence for this comes from the size of the material that is allowed to ``shift
 	\z  	
 \z 
 
-This difference between Danish, which allows simple DPs, and Swedish which tolerates full DPs, but prefers pronouns, suggests the LMC in Swedish will delete copies until they are just the NI pronoun. This potentially comes down to Swedish being a tonal language and how tonal accents are assigned to maximal prosodic words \citep{myrbergProsodicWordSwedish2013,myrbergProsodicHierarchySwedish2015,riadPhonologySwedish2014} and Danish not being a tonal language. However, this is not the case but instead has to do with the status of allowing compounds in the \emph{Mittelfeld}.
+This difference between Danish, which allows simple DPs, and Swedish, which tolerates full DPs but prefers pronouns, suggests the LMC in Swedish will delete copies until they are just the NI pronoun. This potentially comes down to Swedish being a tonal language and how tonal accents are assigned to maximal prosodic words \citep{myrbergProsodicWordSwedish2013,myrbergProsodicHierarchySwedish2015,riadPhonologySwedish2014} and Danish not being a tonal language. However, this is not the case and has to do with the status of allowing compounds in the \emph{Mittelfeld}.
 
 LMC allowing for the deletion of the offending material would explain what the correct size of the material being pronounced in the \emph{Mittelfeld} needs to be. Once the LMC has done its work the standard notion of PF spell-out will preserve the portion of the shifted NI that remains in the high copy while deleting that portion in the lower copy. This works if the LMC operates left-to-right after linearization has taken place but prior to full pronunciation. The difference that we observe with Norwegian's lack of NegShift is the result of one of two possibilities. First; we instead have covert movement in LF, which is due to the [$u$\textsc{Neg}] feature being weak and will get valued during LF, similar to what \citet{zeijlstraSyntacticallyComplexStatus2011} proposes for NIs in German, Dutch, and English. The second possibility is that there are even tighter prosodic restrictions on what is allowed to move into the \emph{Mittelfeld}, which results in no NI being able to move into the \emph{Mittelfeld}. Further research is needed to determine which of these principles are at work. 
 
 This results in a three-way system in Scandinavian languages: (i) those that delete until a simple DP is left, (ii) those that delete until a pronoun is left, and (iii) those that lack overt movement in the syntax. There seems to be some differences in behavior between the tonal and atonal Scandinavian languages. According to \citet{thrainssonFaroeseOverviewReference2004,thrainssonSyntaxIcelandic2010} Faroese and Icelandic pattern the same as Danish in this regard. This further suggests that there is something unique about being a tonal language that limits the acceptability of NegShifting.
 
-This is due to the fact that, in Swedish, NI determiners and NPs form single maximal prosodic words, as evidenced by the tonal melodies on the resulting prosodic word. In Swedish, when the NI and the NP coalesce, tonal accent 2 emerges. This accent corresponds with a word compounds.\footnote{See discussion in \cite{myrbergProsodicWordSwedish2013,myrbergProsodicHierarchySwedish2015} for more information about word compounds in Swedish} This indicates that, in Swedish, these structures are not composed of a clitic and its host, but rather the structure in (\ref{ex:ProsodicStructure}), in which two minimal prosodic words combining to create a maximal prosodic word. Evidence for this comes from the fact that both the NI and the NP bear stress, which is a characteristic restricted to the minimal prosodic word \citep{myrbergProsodicWordSwedish2013,myrbergProsodicHierarchySwedish2015}. 
+This is due to the fact that, in Swedish, NI determiners and NPs form single maximal prosodic words, as evidenced by the tonal melodies on the resulting prosodic word. In Swedish, when the NI and the NP coalesce, tonal accent 2 emerges. This accent corresponds with word compounds.\footnote{See discussion in \cite{myrbergProsodicWordSwedish2013,myrbergProsodicHierarchySwedish2015} for more information about word compounds in Swedish} This indicates that, in Swedish, these structures are not composed of a clitic and its host, but rather the structure in (\ref{ex:ProsodicStructure}), in which two minimal prosodic words combine to create a maximal prosodic word. Evidence for this comes from the fact that both the NI and the NP bear stress, which is a characteristic restricted to the minimal prosodic word \citep{myrbergProsodicWordSwedish2013,myrbergProsodicHierarchySwedish2015}. 
 \ea \label{ex:ProsodicStructure}
 \begin{forest}
 	[$\omega_{max}$
@@ -790,7 +788,7 @@ This is due to the fact that, in Swedish, NI determiners and NPs form single max
 	]
 \end{forest} 
 \z 
-It seems, then, that Swedish prefers having only minimal prosodic words, rather than, maximal prosodic words in the \emph{Mittelfeld}. The reason that NI pronouns do not present a problem in Swedish is because they are both maximal and \emph{minimal} prosodic words, which means that they do not contain any branching prosodic structure. This difference in behavior is the result of what is considered too much prosodic structure for the LMC to tolerate moving into the \emph{Mittelfeld}. If the prosodic structure contains any branching, then it is treated as a heavier element than one that doesn't contain any branching structure. However, this only true for prosodic words because any prosodic structure higher than a prosodic word is not tolerated. This is evidenced by the fact that NIs that contain additional PP complements are treated as ungrammatical because these would correspond to phonological phrases. 
+It seems, then, that Swedish prefers having only minimal prosodic words, rather than maximal prosodic words in the \emph{Mittelfeld}. The reason that NI pronouns do not present a problem in Swedish is because they are both maximal and \emph{minimal} prosodic words, which means that they do not contain any branching prosodic structure. This difference in behavior is the result of what is considered too much prosodic structure for the LMC to tolerate moving into the \emph{Mittelfeld}. If the prosodic structure contains any branching, then it is treated as a heavier element than one that doesn't contain any branching structure. However, this is only true for prosodic words because any prosodic structure higher than a prosodic word is not tolerated. This is evidenced by the fact that NIs that contain additional PP complements are treated as ungrammatical because these would correspond to phonological phrases. 
 
 These facts about NegShift are summarized in Table \ref{tab:Paradigm}. It will be noted that if you allow full NI DPs then you also allow pronouns and complete deletion, which results in a negation particle and an NPI. If you allow NI pronouns then you allow a negation particle and an NPI. This is suggestive of a conditional hierarchy. 
 
@@ -836,7 +834,7 @@ Another piece of evidence in favor for the LMC comes from how Danish places rest
 	the Danish government must soon make out that it supports the American plans\\
 	\glt `The Danish government must soon make clear that it supports the American plans.'
 	\z 
-This is further evidence that the LMC is an active constraint in these languages. Prosody, in the form of the \textsc{Light Mittelfeld Condition}, plays an active role in regulating the size of the material in the \emph{Mittelfeld}
+This is further evidence that the LMC is an active constraint in these languages. Prosody, in the form of the \textsc{Light Mittelfeld Condition}, plays an active role in regulating the size of the material in the \emph{Mittelfeld}.
 
 %------------------------------------
 \section{Conclusion} \label{sec:CONCLUSION}
