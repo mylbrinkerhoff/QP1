@@ -1,0 +1,451 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, letterpaper]{article}
+
+%%BIBLIOGRAPHY- This uses biber/biblatex to generate bibliographies according to the 
+%%Unified Style Sheet for Linguistics
+\usepackage[main=american, german]{babel}% Recommended
+\usepackage{csquotes}% Recommended
+\usepackage[backend=biber,
+             style=unified,
+             maxcitenames=3,
+             maxbibnames=99,
+             natbib,
+             url=false]{biblatex}
+\addbibresource{link.bib}
+\setcounter{biburlnumpenalty}{100}  % allow URL breaks at numbers
+%\setcounter{biburlucpenalty}{100}   % allow URL breaks at uppercase letters
+%\setcounter{biburllcpenalty}{100}   % allow URL breaks at lowercase letters
+
+%%TYPOLOGY
+\usepackage[svgnames]{xcolor} % Specify colors by their 'svgnames', for a full list of all colors available see here: http://www.latextemplates.com/svgnames-colors
+%\usepackage[compact]{titlesec}
+%\titleformat{\section}[runin]{\normalfont\bfseries}{\thesection.}{.5em}{}[.]
+%\titleformat{\subsection}[runin]{\normalfont\scshape}{\thesubsection}{.5em}{}[.]
+\usepackage[hmargin=1in,vmargin=1in]{geometry}  %Margins
+\usepackage{graphicx} % 
+\usepackage{stackengine} %Package to allow text above or below other text, Also helpful for HG weights 
+\usepackage{fontspec} %Selection of fonts must be ran in XeLaTeX
+\usepackage{amssymb} %Math symbols
+\usepackage{amsmath} % Mathematical enhancements for LaTeX
+\usepackage{setspace} %Linespacing
+\usepackage{multicol} %Multicolumn text
+\usepackage{enumitem} %Allows for continuous numbering of lists over examples, etc.
+\usepackage{multirow} %Useful for combining cells in tablesbrew 
+\usepackage{booktabs}
+\usepackage{hanging}
+\usepackage{fancyhdr} %Allows for the 
+\pagestyle{fancy}
+\fancyhead[L]{\textit{Brinkerhoff}} 
+\fancyhead[R]{\textit{\today}} 
+\fancyfoot[L,R]{} 
+\fancyfoot[C]{\thepage} 
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{14.5pt} % ...at least 14.49998pt
+% \usepackage{fourier} % This allows for the use of certain wingdings like bombs, frowns, etc.
+% \usepackage{fourier-orns} %More useful symbols like bombs and jolly-roger, mostly for OT
+\usepackage[colorlinks,allcolors={black},urlcolor={blue}]{hyperref} %allows for hyperlinks and pdf bookmarks
+% \usepackage{url} %allows for urls
+% \def\UrlBreaks{\do\/\do-} %allows for urls to be broken up
+\usepackage[normalem]{ulem} %strike out text. Handy for syntax
+\usepackage{tcolorbox}
+\usepackage{datetime2}
+
+%%FONTS
+\setmainfont{Libertinus Serif}
+\setsansfont{Libertinus Sans}
+\setmonofont[Scale=MatchLowercase]{Libertinus Mono}
+
+%%PACKAGES FOR LINGUISTICS
+%\usepackage{OTtablx} %Generating tableaux with using TIPA
+\usepackage[noipa]{OTtablx} % Use this one generating tableaux without using TIPA
+%\usepackage[notipa]{ot-tableau} % Another tableau drawing packing use for posters.
+% \usepackage{linguex} % Linguistic examples
+% \usepackage{langsci-linguex} % Linguistic examples
+\usepackage{langsci-gb4e} % Language Science Press' modification of gb4e
+\usepackage{langsci-avm} % Language Science Press' AVM package
+\usepackage{tikz} % Drawing Hasse diagrams
+% \usepackage{pst-asr} % Drawing autosegmental features
+\usepackage{pstricks} % required for pst-asr, OTtablx, pst-jtree.
+% \usepackage{pst-jtree} %Syntax tree draawing software
+% \usepackage{tikz-qtree} % Another syntax tree drawing software. Uses bracket notation.
+\usepackage[linguistics]{forest} % Another syntax tree drawing software. Uses bracket notation.
+% \usepackage{ling-macros} % Various linguistic macros. Does not work with linguex.
+% \usepackage{covington} % Another linguistic examples package.
+\usepackage{leipzig} % Offers support for Leipzig Glossing Rules
+
+%%LEIPZIG GLOSSING FOR ZAPOTEC
+\newleipzig{el}{el}{elder} % Elder pronouns
+\newleipzig{hu}{hu}{human} % Human pronouns
+\newleipzig{an}{an}{animate} % Animate pronouns
+\newleipzig{in}{in}{inanimate} % Inanimate pronouns
+\newleipzig{pot}{pot}{potential} % Potential Aspect
+\newleipzig{cont}{cont}{continuative} % Continuative Aspect
+% \newleipzig{pot}{pot}{potential} % Potential Aspect
+\newleipzig{stat}{stat}{stative} % Potential Aspect
+\newleipzig{and}{and}{andative} % Andative Aspect
+\newleipzig{ven}{ven}{venative} % Venative Aspect
+% \newleipzig{res}{res}{restitutive} % Restitutive Aspect
+\newleipzig{rep}{rep}{repetitive} % Repetitive Aspect
+
+%%TITLE INFORMATION
+\title{TITLE}
+\author{Mykel Loren Brinkerhoff}
+\date{\today}
+
+%%MACROS
+\newcommand{\sub}[1]{\textsubscript{#1}}
+\newcommand{\supr}[1]{\textsuperscript{#1}}
+\providecommand{\lsptoprule}{\midrule\toprule}
+\providecommand{\lspbottomrule}{\bottomrule\midrule}
+\newcommand{\fittable}[1]{\resizebox{\textwidth}{!}{#1}}
+
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}%
+  {\z@}{0ex \@plus 1ex \@minus .2ex}{-1em}%
+  {\normalfont\normalsize\bfseries}%
+}
+\makeatother
+\parindent=10pt
+
+
+\begin{document}
+
+%%If using linguex, need the following commands to get correct LSA style spacing
+%% these have to be after  \begin{document}
+    % \setlength{\Extopsep}{6pt}
+    % \setlength{\Exlabelsep}{9pt}%effect of 0.4in indent from left text edge
+%%
+
+%% Line spacing setting. Comment out the line spacing you do not need. Comment out all if you want single spacing.
+% \doublespacing
+\onehalfspacing
+
+\begin{center}
+    {\LARGE \textbf{Minimizing prosody in Scandinavian shifting}}
+    \vspace{6pt}
+
+    Mykel Loren Brinkerhoff
+\end{center}
+%\maketitle
+%\maketitleinst
+\thispagestyle{fancy}
+
+% \tableofcontents
+
+%------------------------------------
+\section{Introduction} \label{sec:Introduction}
+%------------------------------------
+Economy considerations have played an important role in Minimalist Sytnax \citep{chomskyMinimalistProgram1995}. Often theses economy considerations function as a way to rule out one derivation or structure from another. This is done by making reference to whether or the closest thing was moved \citep{chomskyMinimalistProgramLinguistic1993}, there is a minimal amount of structure \citep{cardinalettiTypologyStructuralDeficiency1999}, or we are pronouncing the end of a PF-chain \citep{landauChainResolutionHebrew2006,vanurkPronounCopyingDinka2018}. Often these economy principles will make specific reference to interactions at the interface at PF or LF \citep{boskovicDerivationalEconomySyntax2017}. Of special interest to this paper are economy principles at PF.
+
+This paper investigates two phenomena in Mainland Scandinavian: Negative Indefinite Shifting (NegShift) and Particle shift. NegShift is a process in the Scandinavian languages where a negative indefinite expression (NI) obligatorily shifts to a position outside of the VP. 
+\ea NegShift of pronouns and complex DPs\label{ex:PRIMA}
+    \ea {
+    \gll Manden havde måske \textit{ingenting} [\textsubscript{VP} sagt t\textsubscript{o} ].\\
+    man-the had probably nothing ~ said\\} \jambox*{Da}
+    \glt `The man hadn't said anything.'
+    \ex 
+    \gll Jeg har \textit{ingen} \textit{bøger} [\textsubscript{VP} lånt børnene t\textsubscript{o}.]\\
+    I have no books ~ lent children-the\\
+    \glt `I haven't lent the children any books.'
+    \z
+\z 
+Similarly, particle shift involves the shifting of pronouns and DPs across verbal particles. 
+\ea \gllll Jeg skrev (nummeret/det) op (*nummeret/*det). \hfill (Danish)\\
+		Jeg skrev (nummeret/det) opp (nummeret/*det). \hfill (Norwegian)\\
+		Jag skrev (*numret/*det) upp (numret/det). \hfill (Swedish)\\
+		I wrote (number-the/it) up (number-the/it)\\
+\glt `I wrote the number/it down.'
+\z 
+In both NegShift and particle shift there are restrictions on what is allowed to undergo the shifting. It's been observed that NegShift only occurs with ``light'' elements \citep{christensenInterfacesNegationSyntax2005,penkaNegativeIndefinites2011}. What this means in practice is that only pronouns and simple DPs are allowed. When something becomes sufficiently large the shifting is ungrammatical. This same pattern also exists for particle shift \citep{svenoniusOptionalityParticleShift1996,deheParticleVerbsGermanic2015,mullerDanishHeadDrivenPhraseInpreparation}.
+
+I argue that the reason for this restriction comes down to the requirement to on economy principle to minimize structure similar to \posscitet{cardinalettiTypologyStructuralDeficiency1999} account for the typology of pronouns. Unlike \citet{cardinalettiTypologyStructuralDeficiency1999} where minimize structure is about the internal syntactic structure of pronouns, I argue that the structure that is minimized is the prosodic structure. 
+
+This paper will first present a summary of \posscitet{cardinalettiTypologyStructuralDeficiency1999} minimize structure and how it makes cuts in the typology of pronouns based on the syntactic structure of those pronouns. Following this summary in Section \ref{sec:Minimize}, I present data about NegShift, Section \ref{sec:NegShift}, and particle shift, Section \ref{sec:ParticleShift}, in general and there restrictions. This description is then followed by the 
+
+%------------------------------------
+\section{Minimize structure} \label{sec:Minimize}
+%------------------------------------
+
+Following the work from \citet{cardinalettiTypologyStructuralDeficiency1999}, pronouns fall into one of three classes: strong, weak, and clitic. These pronouns each are associated with specific patterns which are summarized in Table \ref{tab:CSSummary}.
+
+\begin{table}[!ht]
+    \centering
+    \caption{Summary of \posscitet{cardinalettiTypologyStructuralDeficiency1999} pronoun typology.}
+    \label{tab:CSSummary}
+    \begin{tabular}{|l|c|c|c|c|c|c|c|c|}
+    \hline
+     & Morphology & Choice & \multicolumn{2}{|c|}{Distribution} & Interpretation & \multicolumn{2}{|c|}{Prosody} & X-bar  \\
+    \hline 
+    & reduced & & in FP at SS & coord & no range & reduction & no stress & X˚ \\
+    \hline
+    Clitic & 1 & 1 & + & + & + & + & + & + \\
+    Weak & 2 & 2 & + & + & + & + & - & - \\
+    Strong & 3 & 3 & - & - & - & - & - & - \\
+    \hline
+    \end{tabular}
+\end{table}
+
+Ultimately, \citet{cardinalettiTypologyStructuralDeficiency1999} relates these differences in behavior to differences in structure. According to \citeauthor{cardinalettiTypologyStructuralDeficiency1999} clitic pronouns have the least amount of syntactic structure and strong pronouns have the largest amount of structure. This is represented in (\ref{ex:Pronouns})
+
+\ea \label{ex:Pronouns}
+    \begin{multicols}{3}
+        \ea Strong Pronouns\\
+        \begin{forest}
+            for tree={s sep=10mm, inner sep=0, l=0}
+            [C\sub{L}P [C\sub{L}] 
+                [$\Sigma$\sub{L}P [$\Sigma$\sub{L}]
+                    [I\sub{L}P [I\sub{L}] 
+                        [LP [Pronoun, roof]]
+                    ]
+                ] 
+            ] 
+        \end{forest}
+        \ex Weak Pronouns\\
+        \begin{forest}
+            for tree={s sep=10mm, inner sep=0, l=0}
+            [$\Sigma$\sub{L}P [$\Sigma$\sub{L}]
+                [I\sub{L}P [I\sub{L}] 
+                    [LP [Pronoun, roof]]
+                ]
+            ] 
+        \end{forest}
+        \vspace{1cm}
+        \ex Clitic Pronouns\\
+        \begin{forest}
+            for tree={s sep=10mm, inner sep=0, l=0}
+            [I\sub{L}P [I\sub{L}] 
+                [LP [Pronoun, roof]]
+            ]
+        \end{forest}
+        \z    
+    \end{multicols}
+\z 
+
+\citeauthor{cardinalettiTypologyStructuralDeficiency1999} describe this as a type of economy, more specifically they call this an \textsc{Economy of Representations} which they define as simply minimizing the structure present. During the syntactic derivation, the grammar evaluates these different structures and chooses the most optimal solution based on the situation under consideration.
+
+I will argue that this Economy of Representations is also present in PF and is responsible for restricting both NegShift and particle shift in Scandinavian by minimizing the \textit{prosodic} structure. 
+
+%------------------------------------
+\section{NegShift} \label{sec:NegShift}
+%------------------------------------
+NegShift is a process in the Scandinavian languages where a negative indefinite expression (NI) obligatorily shifts to a position outside of the VP. The Danish examples in (\ref{ex:PRIMA}), repeated here as (\ref{ex:PRIMARepeat}), show that the NI pronoun \textit{ingenting} `nothing' and the simple DP \textit{ingen bøger} `no books' both shift across the verb into a position that is higher than the VP, but lower than certain high adverbials. 
+
+\ea NegShift of pronouns and complex DPs\label{ex:PRIMARepeat}
+    \ea {
+    \gll Manden havde måske \textit{ingenting} [\textsubscript{VP} sagt t\textsubscript{o} ].\\
+    man-the had probably nothing ~ said\\} \jambox*{Da}
+    \glt `The man hadn't said anything.'
+    \ex 
+    \gll Jeg har \textit{ingen} \textit{bøger} [\textsubscript{VP} lånt børnene t\textsubscript{o}.]\\
+    I have no books ~ lent children-the\\
+    \glt `I haven't lent the children any books.'
+    \z
+\z 
+
+In addition to the standard case of NegShift where you shift a pronoun or a NI DP, there appears to be size restrictions in place which prevent movement of the NI if it is too large. This is particularly true for the Danish examples in (\ref{ex:NIinteractions}). 
+
+\ea\label{ex:NIinteractions}
+	\ea
+	{{\gll Jeg har \textit{intet}\textsubscript{o} hørt t\textsubscript{o}.\\
+	I have nothing heard\\}}\jambox*{Da}
+	\glt  `I havn't heard anything.'\label{ex:NIPro}
+	\ex 
+	\gll Jeg har [\textit{intet} \textit{nyt}]\textsubscript{o} hørt t\textsubscript{o}.\\
+	I have nothing new heard\\
+	\glt `I haven't heard anything new'\label{ex:NIDP}
+	\ex[*] {
+	\gll Jeg har [\textit{intet} \textit{nyt} \textit{i} \textit{sagen}]\textsubscript{o} hørt t\textsubscript{o}.\\
+	I have nothing new in case-\textsc{det} heard\\
+	\glt `I haven't heard anything new about the case.'\label{ex:NIHeavy}
+	}
+	\ex[*] {
+	\gll Jeg har [\textit{intet} \textit{nyt} \textit{i} \textit{sagen} \textit{om} \textit{de} \textit{stjålne} \textit{malerier}]\textsubscript{o} hørt t\textsubscript{o}.\\
+	I have nothing new in case-\textsc{det} about the stolen paintings heard\\
+	}
+	\glt `I haven't heard anything new in the case about the stolen paintings.'\label{ex:NISuper}
+	\z 
+\z
+
+Both (\ref{ex:NIPro}) and (\ref{ex:NIDP}) are grammatical because a pronoun (\emph{intet}) and simple DP (\emph{intet nyt}) have undergone NegShift. However, once the NI gets sufficiently heavy (e.g., the addition of the PPs \emph{i sagen} and \emph{i sagen om de stjålne malerier}) in (\ref{ex:NIHeavy}) and (\ref{ex:NISuper}) NegShift becomes ungrammatical. 
+
+These facts require refinement of the proposal presented above. If we had, for example, the sentence \emph{Jeg har intet hørt i sagen om de stjålne malerier} `I haven't heard anything new in the case about the stolen painting' and tried to derive this tree we would have no way to explain this behavior. Following \citet{zeijlstraSyntacticallyComplexStatus2011} theory, we would assume that the DP containing the NI and its complement would be fully copied from its base-position and merged into NegP as in the tree in (\ref{ex:tree}). This would result in two copies of the NI expression. 
+% \pagebreak
+\ea	\label{ex:tree} \resizebox*{\linewidth}{!}{
+	\begin{forest}
+	for tree={s sep=10mm, inner sep=0, l=0}
+	[CP [DP\\\emph{Jeg}] 
+		[C´ [C [T\\\emph{har} ] [C] ] 
+			[TP [<DP>\\\sout{\emph{Jeg}} ] 
+				[T´ [<T>\\\sout{\emph{har}} ] 
+					[NegP [DP [\emph{intet nyt i sagen om de stjålne malerier}, roof] ]
+						[Neg´ [Neg] 
+							[\emph{v}P [<DP>\\\sout{\emph{Jeg}}] 
+								[\emph{v´} [\emph{v} [V\\\emph{hørt},name=tgt] [\emph{v}] ] 
+									[VP [<V>\\\emph{\sout{hørt}},name=src] 
+										[DP [\emph{intet nyt i sagen om de stjålne malerier}, roof] ]
+									] 
+								] 
+							] 
+						] 
+					] 
+				] 
+			] 
+		] 
+	] 
+	\end{forest}	
+	}
+\z 
+At this point during PF, part of the higher copy is deleted leaving only the NI pronoun. In the lower copy that same pronoun is deleted. 
+\ea \label{ex:tree-problem}\resizebox*{\linewidth}{!}{
+\begin{forest}
+for tree={s sep=10mm, inner sep=0, l=0}
+	[CP [DP\\\emph{Jeg}] 
+		[C´ [C [T\\\emph{har} ] [C] ] 
+			[TP [<DP>\\\sout{\emph{Jeg}} ] 
+				[T´ [<T>\\\sout{\emph{har}} ] 
+					[NegP [DP [\emph{intet nyt \sout{i sagen om de stjålne malerier}}, roof] ]
+						[Neg´ [Neg] 
+							[\emph{v}P [<DP>\\\sout{\emph{Jeg}}] 
+								[\emph{v´} [\emph{v} [V\\\emph{hørt},name=tgt] [\emph{v}] ] 
+									[VP [<V>\\\emph{\sout{hørt}},name=src] 
+										[DP [\emph{\sout{intet nyt} i sagen om de stjålne malerier}, roof] ]
+									] 
+								] 
+							] 
+						] 
+					] 
+				] 
+			] 
+		] 
+	] 
+\end{forest}	
+}
+\z 
+If \citet{chomskyMinimalistProgramLinguistic1993} is correct and only the higher copy should be pronounced, then the question arises as to why only a part of the copy is deleted. According to \citet{fanselowRemarksEconomyPronunciation2001,fanselowDistributedDeletion2002} the motivation for when partial deletion is possible has its motivations in PF. They argue that this comes from constraints on whether the different formal features need a ``proper phonetic realization".\footnote{\citet{fanselowRemarksEconomyPronunciation2001,fanselowDistributedDeletion2002} do not go into detail about what is forcing which and where features receive their ``proper phonetic realization''. They say that the notion of partial deletion is analogous to partial reconstruction at LF and ``involve[s] (partial) reconstruction of phonetic material in the overt component''.} If this is prosodically motivated what drives this deletion?
+
+%------------------------------------
+\subsection{Prosodic restrictions on NegShift} \label{sec:PROSODY}
+%------------------------------------
+
+As noted earlier not all NegShift is treated equal. \citet[65f]{christensenInterfacesNegationSyntax2005}, speaking on Danish, claims that the ``weight" of the NI plays a crucial factor in whether or not NegShift occurs. 
+	\ea \label{ex:weight}
+		\ea \label{ex:weight-pronoun}
+		{\gll Jeg har \textit{intet}\textsubscript{o} hørt t\textsubscript{o}.\\
+		I have nothing heard\\}\jambox*{Da}
+		\glt  `I havn't heard anything.'
+		\ex \label{ex:weight-simple}
+		\gll Jeg har [\textit{intet} \textit{nyt}]\textsubscript{o} hørt t\textsubscript{o}.\\
+		I have nothing new heard\\
+		\glt `I haven't heard anything new'
+		\ex[*] {
+		\gll Jeg har [\textit{intet} \textit{nyt} \textit{i} \textit{sagen}]\textsubscript{o} hørt t\textsubscript{o}.\\
+		I have nothing new in case-\textsc{det} heard\\}
+		\glt `I haven't heard anything new about the case.' \label{ex:weight-heavy}
+		\ex[*] {
+		\gll Jeg har [\textit{intet} \textit{nyt} \textit{i} \textit{sagen} \textit{om} \textit{de} \textit{stjålne} \textit{malerier}]\textsubscript{o} hørt t\textsubscript{o}.\\
+		I have nothing new in case-\textsc{det} about the stolen paintings heard\\}
+		\glt `I haven't heard anything new in the case about the stolen paintings.' \label{ex:weight-superheavy}
+		\z 
+	\z
+We observe in (\ref{ex:weight}) that if the NI is either a pronoun (\ref{ex:weight-pronoun}) or a simple DP (\ref{ex:weight-simple}), consisting of just the NI determiner and noun, then Danish treats such constructions as grammatical. If, however, the NI is larger then a simple DP, as in (\ref{ex:weight-heavy}) and (\ref{ex:weight-superheavy}), it suddenly becomes ungrammatical. 
+
+In those instances where the NI is too large there are two potential repair strategies. One option is to strand the PP which results in moving just the pronoun (\ref{ex:split}) or using the negative particle \textit{ikke} in NegP and an NPI in the lower position (\ref{ex:NPI}).\footnote{I have not found any evidence that \emph{intet nyt} is allowed to shift while stranding the PP. I found one example that shows the negative particle and an NPI. 
+\ea
+\gll Selvom der ikke er noget nyt i sagen om det stjålne Nolde-maleri, tror de stadig på miraklet i Ølstrup.\\
+though there not is anything new in case-the about the stolen {Nolde painting} believe they still in miracle-the in Ølstrup\\
+\glt `Although there is nothing new in the case of the stolen Nolde painting, they still believe in the miracle in Ølstrup.' \hfill (\href{https://www.tvmidtvest.dk/midt-og-vestjylland/overblik-storste-kunsttyverier-i-danmark}{Overblik: Største kunsttyverier i Danmark})
+\z}
+	\ea 
+		\ea {Jeg har \textit{intet}\textsubscript{i} hørt t\textsubscript{i} [\textsubscript{PP} i sagen om de stjålne malerier ]. \label{ex:split}}\jambox*{Da}
+		\ex Jeg har \textit{ikke} hørt [ \textit{noget} i sagen om de stjålne malerier ]. \label{ex:NPI}
+		\z 
+	\z  
+
+Restrictions on the weight of the NI has also been observed for Swedish \citep{penkaNegativeIndefinites2011}. In (\ref{ex:swedish-weight}), which comes from \citet{penkaNegativeIndefinites2011}, when a pronoun is moved it is fully grammatical. When we, however, move a simple DP it is still grammatical but is dispreferred or degraded, indicated by the question mark. 
+	\ea \label{ex:swedish-weight}
+		\ea 
+		{\gll Men mänskligheten har \textit{ingenting}\textsubscript{o} lärt sig t\textsubscript{o}.\\
+		but mankind-the have nothing taught themselves\\}\jambox*{Sw}
+		\glt `But mankind haven't taught themselves anything.'
+		\ex[?] {
+		\gll Vi hade \textit{inga} \textit{grottor}\textsubscript{o} undersökt t\textsubscript{o}.\\
+		we have no caves explored\\}
+		\glt `We haven't explored any caves.'
+		\z 
+	\z 
+
+The question arises as to how exactly does the grammar account for these variations based on the NI's weight. The fact that the `weight' of the NI somehow conditions the grammaticality of the utterance suggests that prosody might be constraining the size of the moved material. One reason why to think that this is prosody has to do with the fact that only items that would normally form a prosodic word undergo NegShift. 
+
+Assuming that Match Theory \citep{selkirkClauseIntonationalPhrase2009,selkirkSyntaxPhonologyInterface2011} is a correct way of understanding the relationship between syntax and prosody, there are several predictions that this theory makes when mapping the syntax to the prosody. Under Match Theory an XP corresponds to a phonological phrase unless that XP is both syntactically minimal and maximal, which is where the syntactic phrase consists of just its head. When this occurs it forms a prosodic word, which has to do with the non-branching nature of the of the XP and will only ever result in a prosodic word  \citep{bennettLightestRightApparently2016}. Additionally, if the XP is a CP then it forms a intonational phrase.
+\begin{table}[!h]
+\caption{Syntax-prosody category mappings (modified from \cite{tylerSimplifyingMATCHWORD2019})}
+\label{tab:Mappings}
+\centering
+\begin{tabular}{ll}
+\hline
+\textbf{Syntactic}&\textbf{Prosodic}\\
+\hline
+CP & Intonational Phrase ($\iota$)\\
+XP & Phonological Phrase ($\phi$) \\
+X & Prosodic Word ($\omega$)\\
+\hline
+\end{tabular}
+\end{table}  
+
+Additionally, it is well documented that functional heads often cliticize into a prosodic head which is able to bear stress (\cite{zwickyClitics1977,selkirkProsodicStructureIts1981,zwickyCliticizationVsInflection1983,inkelasProsodicConstituencyLexicon1990} among others). 
+Often this means that determiners and their NP complement form a single prosodic word. 
+This means that our cases of pronouns and simple DPs correspond to prosodic words, explicitly maximal prosodic words based on the fact that the determiners and the noun receive a single tonal accent in Swedish and Norwegian, which according to claims made by \citet{myrbergProsodicWordSwedish2013,myrbergProsodicHierarchySwedish2015,riadPhonologySwedish2014}, is strictly the domain of maximal prosodic words. 
+Even though most Danish varieties lack tonal accents, they do have a something that patterns similarly to these tonal accents in the other Scandinavian languages. 
+Stød is a suprasegmental unit found in Danish, which is a type of creakiness or glottal closure \citep{basbollPhonologyDanish2005}. 
+Recent research shows that its distribution is restricted to only having one stød per maximal prosodic word \citep{kalivodaProsodicRecursionPseudocyclicity2018}. 
+I show, in the rest of this section, that this weight restriction is regulated by a prosodic constraint on the size of material that is allowed to occupy the \emph{Mittelfeld} during PF, namely prosodic words. 
+
+
+%------------------------------------
+\section{Particle Shift} \label{sec:ParticleShift}
+%------------------------------------
+
+If all the evidence we had for the LMC comes from the weight restrictions found in NegShift then it would be easy to dismiss such possibilities. However, independent evidence for weight restrictions on shifting full DPs into the \emph{Mittelfeld} is observed in particle shifting in Scandinavian languages. Following \citet[2]{holmbergRemarksHolmbergGeneralization1999} and \citet{faarlundSyntaxMainlandScandinavian2019} there is a difference in behavior between the different Scandinavian languages with what is allowed to shift across a verbal particle. Danish objects always precedes the verb particle. Norweigan, Icelandic, and Faroese are like English by shifting a pronoun across a particle and optionally for DPs. Swedish does not allow anything to shift across the particles (see \cite{erteschik-shirVariationMainlandScandinavian2020} for a potential explanation for why).
+\ea \gllll Jeg skrev (nummeret/det) op (*nummeret/*det). \hfill (Danish)\\
+		Jeg skrev (nummeret/det) opp (nummeret/*det). \hfill (Norwegian)\\
+		Jag skrev (*numret/*det) upp (numret/det). \hfill (Swedish)\\
+		I wrote (number-the/it) up (number-the/it)\\
+\glt `I wrote the number/it down.'
+\z 
+It is interesting to note that this behavior, with respect to particle shift, is remarkable similar to what is allowed to undergo NegShift. In both cases we are dealing with pronouns and small DPs, again consisting of a determiner and a NP. In Danish, NegShift and particle shift both prefer moving pronouns and these small DPs and allowing them to occupy the \emph{Mittelfeld}. There is a difference, however, between Norwegian and Swedish. One would expect, based on the behavior of NegShift, that Swedish would prefer to undergo particle shift in the same fashion as Norwegian. This behavior, however, is not a problem as there are independent prosodic facts that contribute to why Swedish does not undergo particle shift. The reason has to do with particles forming tonal accent units (i.e., $\omega_{max}$) with whatever material is lower \citep[see]{erteschik-shirVariationMainlandScandinavian2020}. The fact that we still see a pattern that is reminiscent of Swedish NegShift and Norwegian NegShift is what is important to show that prosodically light elements are preferred in the \emph{Mittelfeld}, exactly as predicted by the LMC. 
+
+Another piece of evidence in favor for the LMC comes from how Danish places restriction on the verbal complement if it is too ``heavy" \citep[44f]{mullerDanishHeadDrivenPhraseInpreparation}. If the complement is larger then a simple DP particle shifting is blocked, exactly as was observed with Danish NegShift.\footnote{Examples are from \emph{KorpusDK} as reported by \citet{mullerDanishHeadDrivenPhraseInpreparation}.} 
+	\ea \gll {[…]} så må partiet melde [holdninger] [ud], {[…]}\\
+	~ then must party.\Def{} make stances out\\
+	\glt `{[…]} then the party must make its stances clear, {[…]}'
+	\ex \gll Den danske regering bør snart melde [ud], [at den støtter de amerikanske planer]\\
+	the Danish government must soon make out that it supports the American plans\\
+	\glt `The Danish government must soon make clear that it supports the American plans.'
+	\z 
+This is further evidence that the LMC is an active constraint in these languages. Prosody, in the form of the \textsc{Light Mittelfeld Condition}, plays an active role in regulating the size of the material in the \emph{Mittelfeld}.
+
+%------------------------------------
+\section{Minimizing prosodic structure} \label{sec:PF}
+%------------------------------------
+
+
+
+%------------------------------------
+% \section{} \label{}
+%------------------------------------
+%------------------------------------
+\section{Conclusion} \label{sec:Conclusion}
+%------------------------------------
+
+%------------------------------------
+%BIBLIOGRAPHY
+%------------------------------------
+
+%\singlespacing
+%\nocite{*}
+\printbibliography[heading=bibintoc]
+
+\end{document} 
